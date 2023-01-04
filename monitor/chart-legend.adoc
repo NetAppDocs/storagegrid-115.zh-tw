@@ -1,0 +1,60 @@
+---
+permalink: monitor/chart-legend.html 
+sidebar: sidebar 
+keywords: chart, legend 
+summary: 用來繪製圖表的線條和色彩具有特定意義。 
+---
+= 圖表圖例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+用來繪製圖表的線條和色彩具有特定意義。
+
+|===
+| 範例 | 意義 
+
+
+ a| 
+image:../media/dark_green_chart_line.gif["顯示深綠色線的快照"]
+ a| 
+報告的屬性值會使用深綠色線來繪製。
+
+
+
+ a| 
+image:../media/light_green_chart_line.gif["顯示陰影的快照、表示資料正在抽稀"]
+ a| 
+暗綠色線周圍的淺綠色陰影表示該時間範圍內的實際值各不相同、並已「合併」以加快繪圖速度。黑線代表加權平均值。淡綠色範圍代表出紙槽內的最大值和最小值。淺褐色陰影用於區域圖形、以指出體積資料。
+
+
+
+ a| 
+image:../media/no_data_plotted_chart.gif["顯示繪圖線上空白區域的快照"]
+ a| 
+空白區域（未繪製資料）表示屬性值無法使用。背景可以是藍色、灰色或灰色與藍色的混合、視報告屬性的服務狀態而定。
+
+
+
+ a| 
+image:../media/light_blue_chart_shading.gif["螢幕擷取畫面顯示淺藍色陰影、表示值不確定"]
+ a| 
+淺藍色陰影表示當時的部分或全部屬性值尚未確定、因為服務處於未知狀態、所以屬性並未報告值。
+
+
+
+ a| 
+image:../media/gray_chart_shading.gif["螢幕擷取畫面顯示由於不明值而產生的灰色陰影"]
+ a| 
+灰色陰影表示當時的部分或全部屬性值並不知道、因為報告屬性的服務是以管理方式關閉。
+
+
+
+ a| 
+image:../media/gray_blue_chart_shading.gif["顯示混合不確定值和未知值的螢幕快照"]
+ a| 
+灰色與藍色陰影的混合表示當時的部分屬性值未確定（因為服務處於未知狀態）、而其他屬性值則不知道、因為報告屬性的服務因管理性關機而關閉。
+
+|===

@@ -1,0 +1,22 @@
+---
+permalink: admin/managing-high-availability-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: 高可用度（HA）群組可用於為S3和Swift用戶端提供高可用度的資料連線。HA群組也可用來提供高可用度的網格管理程式和租戶管理程式連線。 
+---
+= 管理高可用度群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+高可用度（HA）群組可用於為S3和Swift用戶端提供高可用度的資料連線。HA群組也可用來提供高可用度的網格管理程式和租戶管理程式連線。
+
+* link:what-ha-group-is.html["什麼是HA群組"]
+* link:how-ha-groups-are-used.html["HA群組的使用方式"]
+* link:configuration-options-for-ha-groups.html["HA群組的組態選項"]
+* link:creating-high-availability-group.html["建立高可用度群組"]
+* link:editing-high-availability-group.html["編輯高可用度群組"]
+* link:removing-high-availability-group.html["移除高可用度群組"]
+

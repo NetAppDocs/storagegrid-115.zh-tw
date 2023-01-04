@@ -1,0 +1,22 @@
+---
+permalink: swift/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 使用Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解用戶端應用程式如何使用OpenStack Swift API與StorageGRID 該系統進行介面。
+
+* link:openstack-swift-api-support-in-storagegrid.html["OpenStack Swift API支援StorageGRID 功能"]
+* link:configuring-tenant-accounts-and-connections.html["設定租戶帳戶和連線"]
+* link:swift-rest-api-supported-operations.html["Swift REST API支援的作業"]
+* link:storagegrid-swift-rest-api-operations.html["Swift REST API作業StorageGRID"]
+* link:configuring-security-for-rest-api.html["設定REST API的安全性"]
+* link:monitoring-and-auditing-operations.html["監控與稽核作業"]
+

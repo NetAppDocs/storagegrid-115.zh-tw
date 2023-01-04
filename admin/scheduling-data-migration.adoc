@@ -1,0 +1,19 @@
+---
+permalink: admin/scheduling-data-migration.html 
+sidebar: sidebar 
+keywords:  
+summary: 避免在核心作業時間內移轉資料。將資料移轉限制在系統使用率偏低的晚上、週末和其他時間。 
+---
+= 排程資料移轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+避免在核心作業時間內移轉資料。將資料移轉限制在系統使用率偏低的晚上、週末和其他時間。
+
+如果可能、請勿在高活動期間排程資料移轉。然而、如果完全避免高活動期間是不實際的、只要您密切監控相關屬性、並在超出可接受的值時採取行動、就可以安全地繼續。
+
+.相關資訊
+link:monitoring-data-migration.html["監控資料移轉"]

@@ -1,0 +1,531 @@
+---
+permalink: s3/operations-on-buckets.html 
+sidebar: sidebar 
+keywords: bucket, buckets, operations on buckets 
+summary: 這個系統最多可為每個S3租戶帳戶支援1、000個貯體。StorageGRID 
+---
+= 在貯體上作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這個系統最多可為每個S3租戶帳戶支援1、000個貯體。StorageGRID
+
+儲存區名稱限制遵循AWS US Standard地區限制、但您應該進一步限制它們使用DNS命名慣例、以支援S3虛擬託管型要求。
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html["Amazon Web Services（AWS）文件：儲存區限制與限制"]
+
+link:configuring-tenant-accounts-and-connections.html["S3要求的端點網域名稱"]
+
+Get Bucket（列出物件）和Get Bucket版本作業支援StorageGRID 一致性控管。
+
+您可以檢查是否為個別的儲存區啟用或停用上次存取時間的更新。
+
+下表說明StorageGRID 了為什麼由Ss哪些 人執行S3 REST API貯體作業。若要執行上述任何作業、必須為帳戶提供必要的存取認證資料。
+
+|===
+| 營運 | 實作 
+
+
+ a| 
+刪除時段
+ a| 
+以所有Amazon S3 REST API行為來實作。
+
+
+
+ a| 
+刪除庫位檢查
+ a| 
+此作業會刪除儲存區的CORS組態。
+
+
+
+ a| 
+刪除時段加密
+ a| 
+此作業會從儲存區刪除預設加密。現有的加密物件仍會保持加密狀態、但新增至儲存區的任何新物件都不會加密。
+
+
+
+ a| 
+刪除時段生命週期
+ a| 
+此作業會從儲存庫中刪除生命週期組態。
+
+
+
+ a| 
+刪除庫位原則
+ a| 
+此作業會刪除附加至儲存貯體的原則。
+
+
+
+ a| 
+刪除時段複寫
+ a| 
+此作業會刪除附加至儲存區的複寫組態。
+
+
+
+ a| 
+刪除庫位標記
+ a| 
+此作業使用 `tagging` SubResource可移除庫位中的所有標記。
+
+
+
+ a| 
+Get Bucket（列出物件）、版本1和版本2
+ a| 
+此作業會傳回某個儲存區中的部分或全部（最多1、000個）物件。物件的儲存類別可以有兩個值之一、即使物件是使用擷取的 `REDUCED_REDUNDANCY` 儲存類別選項：
+
+* `STANDARD`（表示物件儲存在儲存節點所組成的儲存資源池中）。
+* `GLACIER`、表示物件已移至Cloud Storage Pool指定的外部儲存區。
+
+
+如果儲存區包含大量具有相同前置碼的刪除金鑰、回應可能會包含部分金鑰 `CommonPrefixes` 不含金鑰。
+
+
+
+ a| 
+取得Bucket ACL
+ a| 
+此作業會傳回正面回應、並傳回貯體擁有者的ID、顯示名稱和權限、表示擁有者對該貯體具有完整存取權。
+
+
+
+ a| 
+獲取庫位檢查器
+ a| 
+此作業會傳回 `cors` 鏟斗組態。
+
+
+
+ a| 
+取得Bucket加密
+ a| 
+此作業會傳回儲存區的預設加密組態。
+
+
+
+ a| 
+取得生命週期
+ a| 
+此作業會傳回該儲存庫的生命週期組態。
+
+
+
+ a| 
+取得理想位置
+ a| 
+此作業會傳回使用設定的區域 `LocationConstraint` 置入庫位要求中的元素。如果庫位所在的區域是 `us-east-1`，則會傳回區域的空白字串。
+
+
+
+ a| 
+取得庫存箱通知
+ a| 
+此作業會傳回附加至儲存貯體的通知組態。
+
+
+
+ a| 
+取得Bucket物件版本
+ a| 
+此作業可透過鏟斗的讀取存取權限 `versions` 子資源會列出儲存區中所有物件版本的中繼資料。
+
+
+
+ a| 
+取得庫存管理政策
+ a| 
+此作業會傳回附加至庫位的原則。
+
+
+
+ a| 
+取得庫位複寫
+ a| 
+此作業會傳回附加至儲存區的複寫組態。
+
+
+
+ a| 
+取得庫位標記
+ a| 
+此作業使用 `tagging` SubResource可傳回某個儲存區的所有標記。
+
+
+
+ a| 
+取得版本管理
+ a| 
+此實作使用 `versioning` SubResource可傳回儲存區的版本管理狀態。傳回的版本管理狀態會指出儲存區是「未版本」、或儲存區是「已啟用」或「已待定」版本。
+
+
+
+ a| 
+取得物件鎖定組態
+ a| 
+此作業可決定是否為儲存區啟用S3物件鎖定。 link:s3-rest-api-supported-operations-and-limitations.html["使用S3物件鎖定"]
+
+
+
+ a| 
+鏟斗
+ a| 
+此作業會判斷儲存區是否存在、且您是否有權存取它。
+
+
+
+ a| 
+放入鏟斗
+ a| 
+此作業會建立新的儲存桶。建立貯體後、您就成為了貯體的擁有者。
+
+* 庫位名稱必須符合下列規則：
++
+** 必須在各個StorageGRID 方面都是獨一無二的（不只是租戶帳戶內的獨特功能）。
+** 必須符合DNS規範。
+** 必須包含至少3個字元、且不得超過63個字元。
+** 可以是一或多個標籤的系列、相鄰的標籤以句點分隔。每個標籤都必須以英文字母或數字開頭和結尾、而且只能使用英文字母、數字和連字號。
+** 不得看起來像是文字格式的IP位址。
+** 不應在虛擬託管樣式要求中使用期間。期間會導致伺服器萬用字元憑證驗證發生問題。
+
+
+* 根據預設、會在中建立儲存區 `us-east-1` 區域；不過、您可以使用 `LocationConstraint` 要求主體中的要求元素、以指定不同的區域。使用時 `LocationConstraint` 元素、您必須指定已使用Grid Manager或Grid Management API定義的區域確切名稱。如果您不知道應該使用的地區名稱、請聯絡系統管理員。*附註*：如果您的Pet Bucket要求使用StorageGRID 未在功能區中定義的區域、就會發生錯誤。
+* 您可以加入 `x-amz-bucket-object-lock-enabled` 要求標頭以建立啟用S3物件鎖定的儲存區。
++
+建立儲存區時、您必須啟用S3物件鎖定。建立儲存區之後、您無法新增或停用S3物件鎖定。S3物件鎖定需要儲存區版本管理、這會在您建立儲存區時自動啟用。
+
++
+link:s3-rest-api-supported-operations-and-limitations.html["使用S3物件鎖定"]
+
+
+
+
+
+ a| 
+放入庫位
+ a| 
+此作業會設定儲存區的CORS組態、以便儲存區能夠處理跨來源要求。跨來源資源共用（CORS）是一種安全機制、可讓單一網域中的用戶端Web應用程式存取不同網域中的資源。例如、假設您使用名為的S3儲存區 `images` 儲存圖形。設定的CORS組態 `images` 儲存庫、您可以讓該儲存庫中的影像顯示在網站上 `+http://www.example.com+`。
+
+
+
+ a| 
+使用資源桶加密
+ a| 
+此作業會設定現有儲存區的預設加密狀態。啟用桶層級加密時、任何新增至桶的新物件都會加密。StorageGRID支援使用StorageGRID管理的金鑰進行伺服器端加密。指定伺服器端加密組態規則時、請設定 `SSEAlgorithm` 參數至 `AES256`、且請勿使用 `KMSMasterKeyID` 參數。
+
+如果物件上傳要求已指定加密（亦即、如果要求包含、則會忽略儲存區預設加密組態 `x-amz-server-side-encryption-*` 要求標頭）。
+
+
+
+ a| 
+放入鏟斗生命週期
+ a| 
+此作業會為儲存庫建立新的生命週期組態、或取代現有的生命週期組態。在生命週期組態中、支援多達1、000個生命週期規則。StorageGRID每個規則可包含下列XML元素：
+
+* 到期日（天數、日期）
+* 非目前版本過期（非目前日期）
+* 篩選器（前置、標記）
+* 狀態
+* ID
+
+
+不支援下列動作：StorageGRID
+
+* AbortIncompleteMultiPart上 傳
+* ExpiredObjectDelete標記
+* 移轉
+
+
+若要瞭解儲存庫生命週期中的到期行動如何與ILM放置指示互動、請參閱資訊生命週期管理物件說明中的「ILM在物件生命週期內的運作方式」。
+
+*附註*：鏟斗生命週期組態可搭配已啟用S3物件鎖定的鏟斗使用、但舊型符合標準的鏟斗不支援鏟斗生命週期組態。
+
+
+
+ a| 
+放置時段通知
+ a| 
+此作業會使用要求內文所含的通知組態XML來設定儲存區的通知。您應該瞭解下列實作詳細資料：
+
+* 支援簡單通知服務（SNS）主題作為目的地。StorageGRID不支援簡單佇列服務（SQS）或Amazon Lambda端點。
+* 通知的目的地必須指定為StorageGRID 一個端點的URN。端點可以使用租戶管理程式或租戶管理API來建立。
++
+端點必須存在、通知組態才能成功。如果端點不存在、則為 `400 Bad Request` 程式碼傳回錯誤 `InvalidArgument`。
+
+* 您無法設定下列事件類型的通知。這些事件類型*不支援*。
++
+** `s3:ReducedRedundancyLostObject`
+** `s3:ObjectRestore:Completed`
+
+
+* 從Suse傳送的事件通知StorageGRID 會使用標準Json格式、但不包含某些金鑰、而且會針對其他金鑰使用特定值、如下列清單所示：
+* *事件來源*
++
+`sgws:s3`
+
+* * awsRegion *
++
+不含
+
+* * X-amz-id-2*
++
+不含
+
+* * arn*
++
+`urn:sgws:s3:::bucket_name`
+
+
+
+
+
+ a| 
+資源桶政策
+ a| 
+此作業會設定附加至庫位的原則。
+
+
+
+ a| 
+放入資源桶複寫
+ a| 
+此作業會使用StorageGRID 要求本文中提供的複寫組態XML、為儲存區設定「CloudMirror複寫」。對於CloudMirror複寫、您應該瞭解下列實作詳細資料：
+
+* 僅支援複寫組態的V1。StorageGRID這表示StorageGRID 、不支援使用 `Filter` 規則元素、並遵循刪除物件版本的V1慣例。如需詳細資訊、請參閱Amazon複寫組態文件。
+* 儲存區複寫可在版本控制或未版本控制的儲存區上進行設定。
+* 您可以在複寫組態XML的每個規則中指定不同的目的地儲存區。來源儲存區可複寫至多個目的地儲存區。
+* 目的地貯體必須指定為StorageGRID 租戶管理程式或租戶管理API中指定的非功能性端點的URN。
++
+複寫組態必須存在端點才能成功。如果端點不存在、則要求會以的形式失敗 `400 Bad Request`。錯誤訊息指出： `Unable to save the replication policy. The specified endpoint URN does not exist: _URN_.`
+
+* 您不需要指定 `Role` 在組態XML中。此值不供StorageGRID Some使用、如果提交、將會忽略此值。
+* 如果您從組態XML中省略儲存類別、StorageGRID 則無法使用 `STANDARD` 預設為儲存類別。
+* 如果您從來源儲存區刪除物件、或是刪除來源儲存區本身、跨區域複寫行為如下：
++
+** 如果您在複寫物件或儲存區之前先將其刪除、則不會複寫物件/儲存區、也不會通知您。
+** 如果您在複寫物件或儲存區之後將其刪除、StorageGRID 則針對跨區域複寫的V1、執行標準Amazon S3刪除行為。
+
+
+
+
+
+
+ a| 
+置入庫位標記
+ a| 
+此作業使用 `tagging` 子資源：新增或更新一組庫位的標記。新增庫位標記時、請注意下列限制：
+
+* 支援每個儲存區最多50個標籤的支援功能包括：StorageGRID
+* 與庫位關聯的標記必須具有唯一的標記金鑰。標籤金鑰長度最多可達128個UNICODE字元。
+* 標記值長度最多可達256個UNICODE字元。
+* 金鑰和值區分大小寫。
+
+
+
+
+ a| 
+放入資源桶版本管理
+ a| 
+此實作使用 `versioning` SubResource可設定現有儲存區的版本管理狀態。您可以使用下列其中一個值來設定版本設定狀態：
+
+* 已啟用：啟用儲存區中物件的版本管理。新增至儲存庫的所有物件都會收到唯一的版本ID。
+* 暫停：停用儲存區中物件的版本設定。新增至儲存庫的所有物件都會收到版本ID `null`。
+
+
+|===
+.相關資訊
+http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html["Amazon Web Services（AWS）文件：跨區域複寫"]
+
+link:consistency-controls.html["一致性控管"]
+
+link:storagegrid-s3-rest-api-operations.html["取得時段上次存取時間要求"]
+
+link:bucket-and-group-access-policies.html["儲存庫和群組存取原則"]
+
+link:s3-rest-api-supported-operations-and-limitations.html["使用S3物件鎖定"]
+
+link:s3-operations-tracked-in-audit-logs.html["稽核記錄中追蹤的S3作業"]
+
+link:../ilm/index.html["使用ILM管理物件"]
+
+link:../tenant/index.html["使用租戶帳戶"]
+
+
+
+== 建立S3生命週期組態
+
+您可以建立S3生命週期組態、以控制何時從StorageGRID 作業系統刪除特定物件。
+
+本節的簡單範例說明S3生命週期組態如何控制從特定S3儲存區刪除（過期）特定物件的時間。本節範例僅供說明用途。如需建立S3生命週期組態的完整詳細資料、請參閱《Amazon簡易儲存服務開發人員指南》中的物件生命週期管理一節。請注意StorageGRID 、僅支援過期行動、不支援轉換行動。
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html["Amazon Simple Storage Service開發人員指南：物件生命週期管理"]
+
+
+
+=== 什麼是生命週期組態
+
+生命週期組態是套用至特定S3儲存區中物件的一組規則。每個規則都會指定受影響的物件、以及這些物件何時到期（在特定日期或幾天之後）。
+
+在生命週期組態中、支援多達1、000個生命週期規則。StorageGRID每個規則可包含下列XML元素：
+
+* 過期：在達到指定日期或達到指定天數時刪除物件、從擷取物件開始算起。
+* 非目前版本過期：在達到指定天數時刪除物件、從物件變成非目前的開始算起。
+* 篩選器（前置、標記）
+* 狀態
+* ID
+
+
+如果您將生命週期組態套用至貯體、則該貯體的生命週期設定一律會覆寫StorageGRID 「ILM」設定。使用儲存區的到期設定、而非ILM來決定是否要刪除或保留特定物件。StorageGRID
+
+因此、即使ILM規則中的放置指示仍套用至物件、也可能從網格中移除物件。或者、即使物件的任何ILM放置指示失效、物件仍可能保留在網格上。如需詳細資訊、請參閱資訊生命週期管理物件說明中的「ILM在物件生命週期內的運作方式」。
+
+
+NOTE: 庫位生命週期組態可搭配已啟用S3物件鎖定的庫位使用、但庫位生命週期組態不支援舊型符合標準的庫位。
+
+支援使用下列庫位作業來管理生命週期組態：StorageGRID
+
+* 刪除時段生命週期
+* 取得生命週期
+* 放入鏟斗生命週期
+
+
+
+
+=== 建立生命週期組態
+
+建立生命週期組態的第一步、就是建立一個包含一或多個規則的Json檔案。例如、此Json檔案包含三個規則、如下所示：
+
+. 規則1僅適用於符合前置碼的物件 `category1`/而且有 `key2` 的價值 `tag2`。。 `Expiration` 參數指定符合篩選條件的物件將於2020年8月22日午夜到期。
+. 規則2僅適用於符合前置碼的物件 `category2`/。。 `Expiration` 參數指定符合篩選條件的物件在擷取後100天過期。
++
+
+IMPORTANT: 指定天數的規則是相對於擷取物件的時間。如果目前日期超過擷取日期加上天數、則在套用生命週期組態後、部分物件可能會立即從儲存庫中移除。
+
+. 規則3僅適用於符合前置碼的物件 `category3`/。。 `Expiration` 參數指定任何非目前版本的相符物件在變成非目前物件50天後過期。
+
+
+[listing]
+----
+{
+	"Rules": [
+        {
+		    "ID": "rule1",
+			"Filter": {
+                "And": {
+                    "Prefix": "category1/",
+                    "Tags": [
+                        {
+                            "Key": "key2",
+							"Value": "tag2"
+                        }
+                    ]
+                }
+            },
+			"Expiration": {
+                "Date": "2020-08-22T00:00:00Z"
+            },
+            "Status": "Enabled"
+        },
+		{
+            "ID": "rule2",
+			"Filter": {
+                "Prefix": "category2/"
+            },
+			"Expiration": {
+                "Days": 100
+            },
+            "Status": "Enabled"
+        },
+		{
+            "ID": "rule3",
+			"Filter": {
+                "Prefix": "category3/"
+            },
+			"NoncurrentVersionExpiration": {
+                "NoncurrentDays": 50
+            },
+            "Status": "Enabled"
+        }
+    ]
+}
+----
+
+
+=== 將生命週期組態套用至儲存庫
+
+建立生命週期組態檔案之後、您可以發出「放入庫位」生命週期要求、將其套用至庫位。
+
+此要求會將範例檔案中的生命週期組態套用至名為的儲存區中的物件 `testbucket`：桶
+
+[listing]
+----
+aws s3api --endpoint-url <StorageGRID endpoint> put-bucket-lifecycle-configuration
+--bucket testbucket --lifecycle-configuration file://bktjson.json
+----
+若要驗證生命週期組態是否已成功套用至儲存庫、請發出「Get Bucket生命週期」要求。例如：
+
+[listing]
+----
+aws s3api --endpoint-url <StorageGRID endpoint> get-bucket-lifecycle-configuration
+ --bucket testbucket
+----
+成功的回應會列出您剛套用的生命週期組態。
+
+
+
+=== 驗證目標是否適用庫位生命週期到期
+
+您可以在發出「放置物件」、「標頭物件」或「取得物件」要求時、判斷生命週期組態中的到期規則是否適用於特定物件。如果適用規則、回應會包含 `Expiration` 指出物件到期時間及符合到期規則的參數。
+
+
+NOTE: 因為儲存區生命週期會取代ILM `expiry-date` 顯示的是物件刪除的實際日期。如需詳細資訊、請參閱執行StorageGRID 支援的說明中的「如何決定物件保留」。
+
+例如、此Put物件要求是在2020年6月22日發出、並在中放置物件 `testbucket` 鏟斗。
+
+[listing]
+----
+aws s3api --endpoint-url <StorageGRID endpoint> put-object
+--bucket testbucket --key obj2test2 --body bktjson.json
+----
+成功回應表示物件將在100天（2020年10月1日）後過期、且符合生命週期組態的規則2。
+
+[source, subs="specialcharacters,quotes"]
+----
+{
+      *"Expiration": "expiry-date=\"Thu, 01 Oct 2020 09:07:49 GMT\", rule-id=\"rule2\"",
+      "ETag": "\"9762f8a803bc34f5340579d4446076f7\""
+}
+----
+例如、此「標頭物件」要求是用來取得同一個物件在testBucket儲存區中的中繼資料。
+
+[listing]
+----
+aws s3api --endpoint-url <StorageGRID endpoint> head-object
+--bucket testbucket --key obj2test2
+----
+成功回應包括物件的中繼資料、指出物件將在100天內過期、且符合規則2。
+
+[source, subs="specialcharacters,quotes"]
+----
+{
+      "AcceptRanges": "bytes",
+      *"Expiration": "expiry-date=\"Thu, 01 Oct 2020 09:07:48 GMT\", rule-id=\"rule2\"",
+      "LastModified": "2020-06-23T09:07:48+00:00",
+      "ContentLength": 921,
+      "ETag": "\"9762f8a803bc34f5340579d4446076f7\""
+      "ContentType": "binary/octet-stream",
+      "Metadata": {}
+}
+----
+.相關資訊
+link:s3-rest-api-supported-operations-and-limitations.html["在貯體上作業"]
+
+link:../ilm/index.html["使用ILM管理物件"]

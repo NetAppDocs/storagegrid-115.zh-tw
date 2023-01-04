@@ -1,0 +1,68 @@
+---
+permalink: rhel/considerations-and-recommendations-for-mac-address-cloning.html 
+sidebar: sidebar 
+keywords:  
+summary: MAC位址複製會導致Docker容器使用主機的MAC位址、而主機使用您指定的位址或隨機產生的位址的MAC位址。您應該使用MAC位址複製來避免使用混雜模式網路組態。 
+---
+= MAC位址複製的考量與建議
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MAC位址複製會導致Docker容器使用主機的MAC位址、而主機使用您指定的位址或隨機產生的位址的MAC位址。您應該使用MAC位址複製來避免使用混雜模式網路組態。
+
+
+
+== 啟用MAC複製
+
+在某些環境中、您可以透過MAC位址複製來增強安全性、因為它可讓您將專用的虛擬NIC用於管理網路、網格網路和用戶端網路。讓Docker容器使用主機上專用NIC的MAC位址、可避免使用雜亂模式網路組態。
+
+
+IMPORTANT: Mac位址複製是設計用於虛擬伺服器安裝、可能無法在所有實體應用裝置組態中正常運作。
+
+
+NOTE: 如果某個節點因為MAC複製目標介面正忙線而無法啟動、您可能需要在啟動節點之前將連結設定為「關閉」。此外、虛擬環境可能會在連結啟動時、防止網路介面上的MAC複製。如果某個節點因為介面忙碌而無法設定MAC位址並啟動、請在啟動節點之前將連結設定為「關閉」、這樣可能可以解決此問題。
+
+Mac位址複製預設為停用、必須由節點組態金鑰設定。安裝StorageGRID 時應啟用此功能。
+
+每個網路都有一個金鑰：
+
+* `ADMIN_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+* `GRID_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+* `CLIENT_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+
+
+將金鑰設定為「true」會導致Docker容器使用主機NIC的MAC位址。此外、主機也會使用指定容器網路的MAC位址。根據預設、容器位址是隨機產生的位址、但如果您已使用設定一個位址 `_NETWORK_MAC` 節點組態金鑰、改用該位址。主機和容器將永遠擁有不同的MAC位址。
+
+
+IMPORTANT: 在虛擬主機上啟用MAC複製、而不同時在Hypervisor上啟用雜亂模式、可能會導致使用主機介面的Linux主機網路停止運作。
+
+
+
+== Mac複製使用案例
+
+有兩種使用案例可考慮使用MAC複製：
+
+* 未啟用Mac複製：當 `_CLONE_MAC` 節點組態檔中的金鑰未設定或設為「假」、除非在中指定MAC、否則主機將使用主機NIC MAC、而且容器將會產生StorageGRID產生的MAC `_NETWORK_MAC` 金鑰。如果在中設定了位址 `_NETWORK_MAC` 金鑰、容器將擁有在中指定的位址 `_NETWORK_MAC` 金鑰。此金鑰組態需要使用混雜模式。
+* 啟用Mac複製：當 `_CLONE_MAC` 節點組態檔中的金鑰設定為「true」、容器使用主機NIC MAC、且主機使用StorageGRID產生的MAC、除非在中指定了MAC `_NETWORK_MAC` 金鑰。如果在中設定了位址 `_NETWORK_MAC` 金鑰：主機使用指定的位址、而非產生的位址。在此金鑰組態中、您不應使用混雜模式。
+
+
+
+NOTE: 如果您不想使用MAC位址複製、而想要允許所有介面接收和傳輸非Hypervisor指派的MAC位址資料、 請確定虛擬交換器和連接埠群組層級的安全性內容已設定為*接受*、適用於混雜模式、MAC位址變更和假傳輸。虛擬交換器上設定的值可由連接埠群組層級的值覆寫、因此請確保兩個位置的設定都相同。
+
+若要啟用MAC複製、請參閱 link:creating-node-configuration-files.html["建立節點組態檔的指示"]。
+
+
+
+== Mac複製範例
+
+啟用MAC複製的範例、主機的MAC位址為11：22：33：44：55：66、介面ens256和節點組態檔中的下列金鑰：
+
+* `ADMIN_NETWORK_TARGET = ens256`
+* `ADMIN_NETWORK_MAC = b2:9c:02:c2:27:10`
+* `ADMIN_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC = true`
+
+
+*結果*：用於ens256的主機MAC為B2：9c：02：C2：27：10、管理網路MAC為11：22：33：44：55：66

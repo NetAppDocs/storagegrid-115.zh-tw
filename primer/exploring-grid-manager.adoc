@@ -1,0 +1,285 @@
+---
+permalink: primer/exploring-grid-manager.html 
+sidebar: sidebar 
+keywords: grid manager, primary Admin Node, web browser 
+summary: Grid Manager是瀏覽器型的圖形介面、可讓您設定、管理StorageGRID 及監控您的作業系統。 
+---
+= 瀏覽Grid Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Grid Manager是瀏覽器型的圖形介面、可讓您設定、管理StorageGRID 及監控您的作業系統。
+
+當您登入Grid Manager時、即連線至管理節點。每StorageGRID 個系統包含一個主要管理節點和任意數量的非主要管理節點。您可以連線至任何管理節點、每個管理節點都會顯示StorageGRID 類似的畫面、顯示有關該系統的資訊。
+
+您可以使用支援的網頁瀏覽器來存取Grid Manager。
+
+
+
+== 網頁瀏覽器需求
+
+您必須使用支援的網頁瀏覽器。
+
+[cols="1a,1a"]
+|===
+| 網頁瀏覽器 | 支援的最低版本 
+
+
+ a| 
+Google Chrome
+ a| 
+87
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+87
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+84.
+
+|===
+您應該將瀏覽器視窗設定為建議的寬度。
+
+[cols="1a,1a"]
+|===
+| 瀏覽器寬度 | 像素 
+
+
+ a| 
+最低
+ a| 
+1024.
+
+
+
+ a| 
+最佳化
+ a| 
+1280
+
+|===
+
+
+== Grid Manager儀表板
+
+第一次登入Grid Manager時、您可以使用儀表板來一目瞭然地監控系統活動。
+
+儀表板包含有關系統健全狀況、儲存使用、ILM程序、S3和Swift作業的摘要資訊。
+
+image::../media/grid_manager_dashboard.png[Grid Manager中的儀表板]
+
+如需每個面板資訊的說明、請按一下說明圖示 image:../media/icon_nms_question.gif["問號圖示"] 面板。
+
+.相關資訊
+link:../monitor/index.html["監控安培；疑難排解"]
+
+
+
+== 警示功能表
+
+警示功能表提供易於使用的介面、可偵測、評估及解決StorageGRID 可能在執行過程中發生的問題。
+
+image::../media/alerts_menu.png[警示功能表]
+
+您可以從警示功能表執行下列動作：
+
+* 檢閱目前的警示
+* 檢閱已解決的警示
+* 設定靜音以隱藏警示通知
+* 設定電子郵件伺服器以接收警示通知
+* 針對觸發警示的條件定義警示規則
+
+
+.相關資訊
+link:monitoring-and-managing-alerts.html["監控與管理警示"]
+
+link:../monitor/index.html["監控安培；疑難排解"]
+
+
+
+== 節點頁面
+
+「節點」頁面會顯示整個網格、網格中的每個站台、以及站台中的每個節點的相關資訊。
+
+節點首頁會顯示整個網格的合併度量。若要檢視特定站台或節點的資訊、請按一下左側的適當連結。
+
+image::../media/nodes_menu.png[節點頁面主頁]
+
+.相關資訊
+link:viewing-nodes-page.html["檢視節點頁面"]
+
+link:../monitor/index.html["監控安培；疑難排解"]
+
+
+
+== 租戶帳戶頁面
+
+「租戶帳戶」頁面可讓您建立及監控StorageGRID 適用於您的一套系統的儲存租戶帳戶。您必須建立至少一個租戶帳戶、以指定誰可以儲存及擷取物件、以及哪些功能可供他們使用。
+
+「租戶帳戶」頁面也會提供每個租戶的使用詳細資料、包括使用的儲存容量和物件數目。如果您在建立租戶時設定配額、就可以查看該配額的使用量。
+
+image::../media/tenants_menu_and_page.png[租戶功能表和頁面]
+
+.相關資訊
+link:managing-tenants-and-client-connections.html["管理租戶和用戶端連線"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../tenant/index.html["使用租戶帳戶"]
+
+
+
+== ILM功能表
+
+ILM功能表可讓您設定資訊生命週期管理（ILM）規則和原則、以管理資料的持久性和可用度。您也可以輸入物件識別碼、以檢視該物件的中繼資料。
+
+image::../media/ilm_menu_and_page.png[ILM功能表與頁面]
+
+.相關資訊
+link:using-information-lifecycle-management.html["使用資訊生命週期管理"]
+
+link:../ilm/index.html["使用ILM管理物件"]
+
+
+
+== 組態功能表
+
+「組態」功能表可讓您指定網路設定、系統設定、監控選項及存取控制選項。
+
+image::../media/configuration_menu.png[組態功能表]
+
+.相關資訊
+link:configuring-network-settings.html["設定網路設定"]
+
+link:managing-tenants-and-client-connections.html["管理租戶和用戶端連線"]
+
+link:reviewing-audit-messages.html["檢閱稽核訊息"]
+
+link:controlling-storagegrid-access.html["控制StorageGRID 存取"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../monitor/index.html["監控安培；疑難排解"]
+
+link:../audit/index.html["檢閱稽核記錄"]
+
+
+
+== 維護功能表
+
+「維護」功能表可讓您執行維護工作、網路工作和系統工作。
+
+image::../media/maintenance_menu_and_page.png[維護功能表和頁面]
+
+
+
+=== 維護工作
+
+維護工作包括：
+
+* 取消委任作業以移除未使用的網格節點和站台。
+* 擴充作業以新增網格節點和站台。
+* 還原作業、以取代故障節點並還原資料。
+
+
+
+
+=== 網路
+
+您可從「維護」功能表執行的網路工作包括：
+
+* 編輯DNS伺服器的相關資訊。
+* 設定網格網路上使用的子網路。
+* 編輯NTP伺服器的相關資訊。
+
+
+
+
+=== 系統
+
+您可從「維護」功能表執行的系統工作包括：
+
+* 檢閱目前StorageGRID 的「不完整」授權或上傳新授權的詳細資料。
+* 產生恢復套件。
+* 在StorageGRID 選定的應用裝置上執行更新、包括軟體升級、即時修復、SANtricity 以及更新作業系統軟體。
+
+
+.相關資訊
+link:performing-maintenance-procedures.html["執行維護程序"]
+
+link:downloading-recovery-package.html["正在下載恢復套件"]
+
+link:../expand/index.html["擴充網格"]
+
+link:../upgrade/index.html["升級軟體"]
+
+link:../maintain/index.html["維護"]
+
+link:../sg6000/index.html["SG6000儲存設備"]
+
+link:../sg5700/index.html["SG5700儲存設備"]
+
+link:../sg5600/index.html["SG5600儲存設備"]
+
+
+
+== 支援功能表
+
+「支援」功能表提供的選項可協助技術支援人員分析及疑難排解您的系統。「Support（支援）」功能表有兩個部分：「Tools and警示（舊版）」。
+
+image::../media/support_menu.png[支援功能表]
+
+
+
+=== 工具
+
+從「支援」功能表的「工具」區段、您可以：
+
+* 啟用AutoSupport 功能
+* 對網格的目前狀態執行一組診斷檢查。
+* 存取Grid拓撲樹狀結構、以檢視有關網格節點、服務和屬性的詳細資訊。
+* 擷取記錄檔和系統資料。
+* 檢閱詳細的指標和圖表。
++
+
+IMPORTANT: * Metrics *選項提供的工具、是專供技術支援使用。這些工具中的某些功能和功能表項目是刻意無法運作的。
+
+
+
+
+
+=== 警示（舊版）
+
+您可以從「支援」功能表的「警示（舊版）」區段中檢閱目前、歷史和全域警示、並設定舊版警示和AutoSupport 更新的電子郵件通知。
+
+.相關資訊
+link:storagegrid-architecture-and-network-topology.html["架構與網路拓撲StorageGRID"]
+
+link:storagegrid-attributes.html["屬性StorageGRID"]
+
+link:using-storagegrid-support-options.html["使用StorageGRID 支援選項"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../monitor/index.html["監控安培；疑難排解"]
+
+
+
+== 說明功能表
+
+「Help（說明）」選項可讓您存取StorageGRID 目前版本的「支援中心」及API文件。您也可以判斷StorageGRID 目前安裝的是哪個版本的更新版本。
+
+image::../media/help_menu.png[說明功能表]
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]

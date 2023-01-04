@@ -1,0 +1,49 @@
+---
+permalink: monitor/monitoring-events.html 
+sidebar: sidebar 
+keywords: monitor, monitoring events, events, storageGRID events 
+summary: 您可以監控網格節點偵測到的事件、包括您為追蹤記錄到syslog伺服器的事件所建立的自訂事件。Grid Manager中顯示的最後一則事件訊息、提供最新事件的詳細資訊。 
+---
+= 監控事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以監控網格節點偵測到的事件、包括您為追蹤記錄到syslog伺服器的事件所建立的自訂事件。Grid Manager中顯示的最後一則事件訊息、提供最新事件的詳細資訊。
+
+中也會列出事件訊息 `/var/local/log/bycast-err.log` 記錄檔。
+
+SMT（事件總數）警示可由網路問題、停電或升級等問題重複觸發。本節提供調查事件的相關資訊、讓您更瞭解發生這些警報的原因。如果某個事件是因為已知問題而發生、則可安全地重設事件計數器。
+
+
+
+== 從節點頁面檢閱事件
+
+「節點」頁面會列出每個網格節點的系統事件。
+
+. 選擇*節點*。
+. 選擇「*網格節點_*>*事件*」。
+. 在頁面頂端、判斷是否顯示*上次事件*的事件、此事件說明網格節點偵測到的最後一個事件。
++
+此事件會從網格節點逐字轉送、並包含嚴重性等級為錯誤或嚴重的任何記錄訊息。
+
+. 檢閱表格、查看是否有任何事件或錯誤的計數為零。
+. 解決問題後、請按一下*「重設事件數」*、將計數傳回零。
+
+
+
+
+== 從Grid拓撲頁面檢閱事件
+
+Grid拓撲頁面也會列出每個網格節點的系統事件。
+
+. 選取*支援*>*工具*>*網格拓撲*。
+. 選擇*站台_*>*網格節點_*>* SES*>*事件*>*總覽*>*主要*。
+
+
+.相關資訊
+link:resetting-event-counts.html["重設事件數"]
+
+link:../monitor/logs-files-reference.html["記錄檔參考"]

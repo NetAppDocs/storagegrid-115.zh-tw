@@ -1,0 +1,42 @@
+---
+permalink: ilm/how-objects-are-ingested.html 
+sidebar: sidebar 
+keywords:  
+summary: 透過執行同步放置或執行符合物件之ILM規則中指定的雙重提交、在擷取期間保護物件StorageGRID 。 
+---
+= 物件擷取方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過執行同步放置或執行符合物件之ILM規則中指定的雙重提交、在擷取期間保護物件StorageGRID 。
+
+當S3或Swift用戶端將物件儲存至網格時、StorageGRID 使用下列兩種方法之一來擷取物件：
+
+* *同步放置*：StorageGRID 此功能可立即建立所有符合ILM需求的物件複本。建立所有複本時、將「擷取最成功」訊息傳送給用戶端StorageGRID 。
++
+如果StorageGRID 無法立即建立所有物件複本（例如、因為所需位置暫時無法使用）、則會傳送「擷取失敗」訊息給用戶端、或者、視您在建立ILM規則時所做的選擇而定、它也會在稍後重新建立過渡物件複本並評估ILM。
+
+* *雙重提交*：StorageGRID 此功能會立即在不同的儲存節點上建立兩個物件的過渡複本、並傳送「擷取最成功」訊息給用戶端。接著、將物件排入佇列以進行ILM評估StorageGRID 。
++
+當執行ILM評估時、它會先檢查過渡複本是否符合ILM規則中的放置指示StorageGRID 。例如、這兩個過渡複本可能符合兩份ILM規則中的指示、但無法滿足銷毀編碼規則中的指示。如果過渡複本不符合ILM指示、StorageGRID 則會建立新的物件複本、並刪除不需要的任何過渡複本。
+
++
+如果StorageGRID 無法建立兩個過渡複本（例如、如果網路問題導致無法製作第二個複本）、StorageGRID 則無法重試。擷取失敗。
+
++
+
+NOTE: S3或Swift用戶端StorageGRID 可指定在擷取時建立單一的過渡複本 `REDUCED_REDUNDANCY` 適用於儲存類別。如需詳細資訊、請參閱實作S3或Swift用戶端的指示。
+
+
+
+根據預設StorageGRID 、在擷取期間、使用同步放置來保護物件。
+
+.相關資訊
+link:data-protection-options-for-ingest.html["用於擷取的資料保護選項"]
+
+link:../s3/index.html["使用S3"]
+
+link:../swift/index.html["使用Swift"]

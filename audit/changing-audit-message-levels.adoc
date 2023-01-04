@@ -1,0 +1,105 @@
+---
+permalink: audit/changing-audit-message-levels.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, log, message level, message levels, increase messages, decrease messages, message category 
+summary: 您可以調整稽核層級、以增加或減少稽核記錄中每個稽核訊息類別的稽核訊息數量。 
+---
+= 變更稽核訊息層級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以調整稽核層級、以增加或減少稽核記錄中每個稽核訊息類別的稽核訊息數量。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須擁有特定的存取權限。
+
+
+.關於這項工作
+稽核日誌中記錄的稽核訊息會根據「*組態*>*監控*>*稽核*」頁面上的設定進行篩選。
+
+您可以針對下列每個訊息類別設定不同的稽核層級：
+
+* *系統*：此層級預設為正常。
+* * Storage *：此層級預設為「錯誤」。
+* *管理*：依預設、此層級設為正常。
+* *用戶端讀取*：此層級預設為「正常」。
+* *用戶端寫入*：此層級預設為正常。
+
+
+
+NOTE: 如果您最初使用StorageGRID 版本10.3或更新版本安裝了這些預設值、則適用這些預設值。如果您已從StorageGRID 舊版的更新版本進行升級、則所有類別的預設值都會設為「正常」。
+
+
+NOTE: 在升級期間、稽核層級的組態將無法立即生效。
+
+.步驟
+. 選擇*組態*>*監控*>*稽核*。
++
+image::../media/default_audit_settings.gif[組態>稽核的螢幕擷取畫面]
+
+. 針對每個稽核訊息類別、從下拉式清單中選取稽核層級：
++
+[cols="20,80"]
+|===
+| 稽核層級 | 說明 
+
+
+ a| 
+關
+ a| 
+不會記錄任何類別的稽核訊息。
+
+
+
+ a| 
+錯誤
+ a| 
+僅記錄錯誤訊息、稽核結果代碼「不成功」（SUCS）的訊息。
+
+
+
+ a| 
+正常
+ a| 
+記錄標準交易訊息：此類別的說明中所列訊息。
+
+
+
+ a| 
+偵錯
+ a| 
+已過時。此層級的行為與正常稽核層級相同。
+
+|===
++
+針對任何特定層級所包含的訊息、包括將記錄在較高層級的訊息。例如、「正常」層級包含所有的錯誤訊息。
+
+. 在「*稽核傳輸協定標頭*」下、輸入要包含在「用戶端讀取」和「用戶端寫入」稽核訊息中的HTTP要求標頭名稱。使用星號（\*）做為萬用字元、或使用轉義序列（\*）做為文字星號。按一下加號以建立標題名稱欄位清單。
++
+
+NOTE: 稽核傳輸協定標頭僅適用於S3和Swift要求。
+
++
+在要求中找到這類HTTP標頭時、這些標頭會包含在稽核訊息的「HTRH」欄位中。
+
++
+
+NOTE: 僅當*用戶端讀取*或*用戶端寫入*的稽核層級不是*關閉*時、才會記錄稽核傳輸協定要求標頭。
+
+. 按一下「 * 儲存 * 」。
+
+
+.相關資訊
+link:system-audit-messages.html["系統稽核訊息"]
+
+link:object-storage-audit-messages.html["物件儲存稽核訊息"]
+
+link:management-audit-message.html["管理稽核訊息"]
+
+link:client-read-audit-messages.html["用戶端讀取稽核訊息"]
+
+link:../admin/index.html["管理StorageGRID"]

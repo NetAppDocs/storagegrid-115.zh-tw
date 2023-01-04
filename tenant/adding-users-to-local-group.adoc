@@ -1,0 +1,44 @@
+---
+permalink: tenant/adding-users-to-local-group.html 
+sidebar: sidebar 
+keywords: StorageGRID, tenant manager, tenant local group, adding users to group, add users to group, add local users, adding local users 
+summary: 您可以視需要將使用者新增至本機群組。 
+---
+= 新增使用者至本機群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以視需要將使用者新增至本機群組。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入租戶管理程式。
+* 您必須屬於具有「根存取」權限的使用者群組。
+
+
+.步驟
+. 選擇*存取管理*>*群組*。
+. 選取您要新增使用者的本機群組名稱。
++
+或者、您也可以選取*「動作」*>*「檢視群組詳細資料」*。
+
++
+隨即顯示群組詳細資料頁面。
+
++
+image::../media/tenant_group_details.png[檢視群組詳細資料]
+
+. 選取*管理使用者*、然後選取*新增使用者*。
++
+image::../media/manage_users.png[管理使用者]
+
+. 選取您要新增至群組的使用者、然後選取*新增使用者*。
++
+image::../media/add_users_to_group.png[新增使用者至群組]
+
++
+頁面右上角會出現確認訊息。由於快取、變更可能需要15分鐘才能生效。
+
+

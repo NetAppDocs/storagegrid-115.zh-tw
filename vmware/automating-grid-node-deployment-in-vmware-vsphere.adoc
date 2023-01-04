@@ -1,0 +1,78 @@
+---
+permalink: vmware/automating-grid-node-deployment-in-vmware-vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在StorageGRID VMware vSphere中自動化部署VMware vSphere中的VMware Grid節點。 
+---
+= 在VMware vSphere中自動化網格節點部署
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在StorageGRID VMware vSphere中自動化部署VMware vSphere中的VMware Grid節點。
+
+.您需要的產品
+* 您可以使用Bash 3.2或更新版本存取Linux/Unix系統。
+* 您已安裝並正確設定VMware OVF Tool 4.1。
+* 您知道使用OVF Tool存取VMware vSphere所需的使用者名稱和密碼。
+* 您知道vSphere中要部署StorageGRID VMware虛擬機器之位置的虛擬基礎架構（VI）URL。此URL通常是vApp或資源池。例如： `vi://vcenter.example.com/vi/sgws`
++
+
+NOTE: 您可以使用VMware `ovftool` 用於判斷此值的公用程式（請參閱 `ovftool` 詳細資料請參閱文件）。
+
++
+
+NOTE: 如果您要部署至vApp、虛擬機器將不會在第一次自動啟動、而且您必須手動啟動。
+
+* 您已收集組態檔的所有必要資訊。請參閱 link:collecting-information-about-your-deployment-environment.html["收集部署環境的相關資訊"] 以取得資訊。
+* 您可以從VMware的StorageGRID VMware安裝歸檔文件存取下列檔案、以供VMware使用：
+
+
+[cols="1a,1a"]
+|===
+| 檔案名稱 | 說明 
+
+
+| NetApp-SG-VERSION SHA-VMDK  a| 
+用來做為建立網格節點虛擬機器範本的虛擬機器磁碟檔案。
+
+*附註：*此檔案必須與位於相同資料夾中 `.ovf` 和 `.mf` 檔案：
+
+
+
+| vSphere-primer-admin.OVF vSphere-prime-admin.mf  a| 
+開放式虛擬化格式範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署主管理節點。
+
+
+
+| vsphere-non-prime-admin.OVF vsphere-non-prime-admin.mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署非主要管理節點。
+
+
+
+| vSphere-archive：OVF vSphere-archive：mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署歸檔節點。
+
+
+
+| vSphere-gateway.OVF vSphere-gateway.mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署閘道節點。
+
+
+
+| vSphere-storage。OVF vSphere-storage。mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署虛擬機器型儲存節點。
+
+
+
+| deploy-vsphere-ovftool.sh  a| 
+Bash Shell指令碼用於自動化虛擬網格節點的部署。
+
+
+
+| deploy-vsphere-ovftool-sample.ini  a| 
+與搭配使用的範例組態檔 `deploy-vsphere-ovftool.sh` 指令碼：
+
+|===

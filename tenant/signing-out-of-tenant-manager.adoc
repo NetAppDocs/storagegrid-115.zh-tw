@@ -1,0 +1,45 @@
+---
+permalink: tenant/signing-out-of-tenant-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, tenant manager, sign out, signing out 
+summary: 使用Tenant Manager之後、您必須登出、以確保未獲授權的使用者無法存取StorageGRID 該系統。根據瀏覽器Cookie設定、關閉瀏覽器可能不會將您登出系統。 
+---
+= 登出租戶管理程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用Tenant Manager之後、您必須登出、以確保未獲授權的使用者無法存取StorageGRID 該系統。根據瀏覽器Cookie設定、關閉瀏覽器可能不會將您登出系統。
+
+.步驟
+. 在使用者介面的右上角找到使用者名稱下拉式清單。
++
+image::../media/tenant_user_sign_out.png[登出連結]
+
+. 選取使用者名稱、然後選取*登出*。
++
+[cols="1a,2a"]
+|===
+| 選項 | 說明 
+
+
+ a| 
+SSO未在使用中
+ a| 
+您已登出管理節點。隨即顯示「租戶管理程式」登入頁面。
+
+*附註：*如果您登入一個以上的管理節點、則必須登出每個節點。
+
+
+
+ a| 
+SSO已啟用
+ a| 
+您已登出您正在存取的所有管理節點。畫面會顯示「此功能的登入」頁面。StorageGRID您剛存取的租戶帳戶名稱會在「*最近的帳戶*」下拉式清單中列為預設名稱、並顯示租戶的*帳戶ID*。
+
+*附註：*如果啟用SSO、而且您也已登入Grid Manager、您也必須登出Grid Manager以登出SSO。
+
+|===
+

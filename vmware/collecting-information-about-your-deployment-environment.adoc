@@ -1,0 +1,88 @@
+---
+permalink: vmware/collecting-information-about-your-deployment-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 在部署網格節點之前、您必須先收集網路組態和VMware環境的相關資訊。 
+---
+= 收集部署環境的相關資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在部署網格節點之前、您必須先收集網路組態和VMware環境的相關資訊。
+
+
+
+== VMware資訊
+
+您必須存取部署環境、並收集有關VMware環境、為Grid、Admin和Client Networks建立的網路、以及您計畫用於儲存節點的儲存Volume類型的資訊。
+
+您必須收集有關VMware環境的資訊、包括：
+
+* 具有完成部署之適當權限的VMware vSphere帳戶使用者名稱和密碼。
+* 每StorageGRID 部EGRID節點虛擬機器的主機、資料存放區和網路組態資訊。
+
+
+
+IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不支援任何類型的網格節點。雖然不多見、但時鐘時間不正確可能導致資料遺失或組態更新。
+
+
+
+== 網格網路資訊
+
+您必須收集StorageGRID 有關為「VMware Grid Network」（必填）所建立之VMware網路的資訊、包括：
+
+* 網路名稱。
+* 如果您不使用DHCP、則每個網格節點（IP位址、閘道和網路遮罩）的必要網路詳細資料。
+* 如果您不使用DHCP、則為Grid Network上主要管理節點的IP位址。如需詳細資訊、請參閱「網格節點探索主要管理節點的方式」。
+
+
+
+
+== 管理網路資訊
+
+若節點將連線至選用StorageGRID 的「VMware管理網路」、您必須收集有關為此網路所建立的VMware網路的資訊、包括：
+
+* 網路名稱。
+* 用於指派IP位址的方法、靜態或DHCP。
+* 如果您使用靜態IP位址、則每個網格節點（IP位址、閘道、網路遮罩）的必要網路詳細資料。
+* 管理網路的外部子網路清單（英文）。
+
+
+
+
+== 用戶端網路資訊
+
+對於要連線至選用StorageGRID 的「VMware用戶端網路」的節點、您必須收集有關為此網路建立的VMware網路的資訊、包括：
+
+* 網路名稱。
+* 用於指派IP位址的方法、靜態或DHCP。
+* 如果您使用靜態IP位址、則每個網格節點（IP位址、閘道、網路遮罩）的必要網路詳細資料。
+
+
+
+
+== 虛擬儲存節點的儲存磁碟區
+
+您必須針對虛擬機器型儲存節點收集下列資訊：
+
+* 您計畫新增的儲存磁碟區（儲存LUN）數量和大小。請參閱《儲存與效能要求》。
+
+
+
+
+== 網格組態資訊
+
+您必須收集資訊才能設定網格：
+
+* Grid授權
+* 網路時間傳輸協定（NTP）伺服器IP位址
+* 網域名稱系統（DNS）伺服器IP位址
+
+
+.相關資訊
+link:how-grid-nodes-discover-primary-admin-node.html["網格節點如何探索主要管理節點"]
+
+link:storage-and-performance-requirements.html["儲存與效能需求"]

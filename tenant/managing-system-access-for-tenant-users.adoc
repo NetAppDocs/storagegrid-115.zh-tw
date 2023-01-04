@@ -1,0 +1,19 @@
+---
+permalink: tenant/managing-system-access-for-tenant-users.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以從聯盟身分識別來源匯入群組並指派管理權限、藉此授予使用者存取租戶帳戶的權限。您也可以建立本機租戶群組和使用者、除非整個StorageGRID 整套的整套系統均已生效單一登入（SSO）。 
+---
+= 管理租戶使用者的系統存取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從聯盟身分識別來源匯入群組並指派管理權限、藉此授予使用者存取租戶帳戶的權限。您也可以建立本機租戶群組和使用者、除非整個StorageGRID 整個版的整套系統都有單一登入（SSO）功能。
+
+* link:using-identity-federation.html["使用身分識別聯盟"]
+* link:managing-groups.html["管理群組"]
+* link:managing-local-users.html["管理本機使用者"]
+

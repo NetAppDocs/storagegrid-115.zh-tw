@@ -1,0 +1,20 @@
+---
+permalink: upgrade/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 升級軟體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何將StorageGRID 更新版的版次升級至全新版本。
+
+* link:about-this-release.html["關於StorageGRID 產品介紹"]
+* link:upgrade-planning-and-preparation.html["升級規劃與準備"]
+* link:performing-upgrade.html["執行升級"]
+* link:troubleshooting-upgrade-issues.html["疑難排解升級問題"]
+

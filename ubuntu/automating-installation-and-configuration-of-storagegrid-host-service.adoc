@@ -1,0 +1,35 @@
+---
+permalink: ubuntu/automating-installation-and-configuration-of-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以StorageGRID 使用Ansible、Puppet、Chef、Fabric或SaltStack等標準協調架構來自動化安裝支援服務。 
+---
+= 自動化StorageGRID 安裝及設定支援服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以StorageGRID 使用Ansible、Puppet、Chef、Fabric或SaltStack等標準協調架構來自動化安裝支援服務。
+
+這個支援功能封裝在Deb中、由組態檔案驅動、這些檔案可預先準備（或以程式設計方式）以啟用自動安裝。StorageGRID如果您已經使用標準的協調架構來安裝及設定Ubuntu或DEBIAN,那麼在StorageGRID 您的教戰手冊或食譜中加入一些功能就應該很簡單。
+
+您可以將這些工作自動化：
+
+. 安裝Linux
+. 設定Linux
+. 設定主機網路介面以滿足StorageGRID 需求
+. 設定主機儲存設備以滿足StorageGRID 需求
+. 安裝Docker
+. 安裝StorageGRID 支援服務
+. 在中建立StorageGRID 節點組態檔案 `/etc/storagegrid/nodes`
+. 正在驗StorageGRID 證節點組態檔案
+. 啟動StorageGRID 支援服務
+
+
+
+
+== Ansible角色與方針範例
+
+範例Ansible角色與方針隨附於/Extras資料夾中的安裝歸檔。《Ansible》教戰手冊說明如何使用 `storagegrid` 角色負責準備主機、並將StorageGRID 其安裝在目標伺服器上。您可以視需要自訂角色或方針。

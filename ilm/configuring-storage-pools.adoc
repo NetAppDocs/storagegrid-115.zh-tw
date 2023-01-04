@@ -1,0 +1,24 @@
+---
+permalink: ilm/configuring-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: 定義ILM規則時、您可以使用儲存資源池來指定物件的儲存位置。在建立儲存資源池之前、您必須先檢閱儲存資源池準則。 
+---
+= 設定儲存資源池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+定義ILM規則時、您可以使用儲存資源池來指定物件的儲存位置。在建立儲存資源池之前、您必須先檢閱儲存資源池準則。
+
+* link:what-storage-pool-is.html["什麼是儲存資源池"]
+* link:guidelines-for-creating-storage-pools.html["建立儲存資源池的準則"]
+* link:using-multiple-storage-pools-for-cross-site-replication.html["使用多個儲存資源池進行跨站台複寫"]
+* link:using-storage-pool-as-temporary-location-deprecated.html["使用儲存資源池做為暫用位置（已過時）"]
+* link:creating-storage-pool.html["建立儲存資源池"]
+* link:viewing-storage-pool-details.html["檢視儲存資源池詳細資料"]
+* link:editing-storage-pool.html["編輯儲存資源池"]
+* link:removing-storage-pool.html["移除儲存資源池"]
+

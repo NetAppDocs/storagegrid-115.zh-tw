@@ -1,0 +1,98 @@
+---
+permalink: primer/configuring-network-settings.html 
+sidebar: sidebar 
+keywords: network settings, configure, configuring, configuration, domain name, virtual hosted-style requests 
+summary: 您可以從Grid Manager設定各種網路設定、以微調StorageGRID 您的系統運作。 
+---
+= 設定網路設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從Grid Manager設定各種網路設定、以微調StorageGRID 您的系統運作。
+
+
+
+== 網域名稱
+
+如果您打算支援S3虛擬託管樣式的要求、則必須設定S3用戶端所連線的端點網域名稱清單。範例包括s3.example.com、s3.example.co.uk和s3-east.example.com。
+
+
+NOTE: 設定的伺服器憑證必須符合端點網域名稱。
+
+
+
+== 高可用度群組
+
+高可用度群組使用虛擬IP位址（VIP）來提供對閘道節點或管理節點服務的主動備份存取。HA群組由管理節點和閘道節點上的一或多個網路介面組成。建立HA群組時、請選取屬於Grid Network（eth0）或Client Network（eth2）的網路介面。
+
+
+NOTE: 管理網路不支援HA VIP。
+
+HA群組會維護一個或多個虛擬IP位址、這些位址會新增至群組的作用中介面。如果作用中介面無法使用、虛擬IP位址會移至另一個介面。此容錯移轉程序通常只需幾秒鐘、而且速度足夠快、用戶端應用程式只會遇到些微影響、而且可以仰賴正常的重試行為來繼續作業。
+
+您可能會因為幾個原因而想要使用高可用度（HA）群組。
+
+* HA群組可提供高可用度的管理連線至Grid Manager或Tenant Manager。
+* HA群組可為S3和Swift用戶端提供高可用度的資料連線。
+* 僅包含一個介面的HA群組可讓您提供多個VIP位址、並明確設定IPv6位址。
+
+
+
+
+== 連結成本
+
+您可以調整連結成本、以反映站台之間的延遲。當有兩個以上的資料中心站台存在時、連結成本會優先考慮哪些資料中心站台應提供所要求的服務。
+
+
+
+== 負載平衡器端點
+
+您可以使用負載平衡器來處理S3和Swift用戶端的擷取和擷取工作負載。負載平衡功能可將工作負載和連線分散到多個儲存節點、以最大化速度和連線容量。
+
+如果您想要使用StorageGRID 包含在管理節點和閘道節點上的「動態負載平衡器」服務、則必須設定一或多個負載平衡器端點。每個端點都會為S3和Swift要求儲存節點定義閘道節點或管理節點連接埠。
+
+
+
+== Proxy設定
+
+如果您使用的是S3平台服務或雲端儲存資源池、可以在儲存節點和外部S3端點之間設定不透明的Proxy伺服器。如果使用AutoSupport HTTPS或HTTP傳送靜態訊息、您可以在管理節點和技術支援之間設定不透明的Proxy伺服器。
+
+image::../media/proxy_settings_menu_storage.png[Proxy設定功能表-儲存設備]
+
+
+
+== 伺服器憑證
+
+您可以上傳兩種類型的伺服器憑證：
+
+* 管理介面伺服器憑證、這是用於存取管理介面的憑證。
+* 物件儲存API服務端點伺服器憑證、可保護S3和Swift端點、以直接連線至儲存節點、或在閘道節點上使用CLB服務。
++
+
+NOTE: CLB服務已過時。
+
+
+
+負載平衡器憑證是在「負載平衡器端點」頁面上設定的。金鑰管理伺服器（KMS）憑證是在金鑰管理伺服器頁面上設定。
+
+
+
+== 流量分類原則
+
+流量分類原則可讓您建立規則、以識別及處理不同類型的網路流量、包括與特定儲存區、租戶、用戶端子網路或負載平衡器端點相關的流量。這些原則可協助限制流量及監控。
+
+
+
+== 不受信任的用戶端網路
+
+如果您使用的是用戶端網路、StorageGRID 您可以指定每個節點上的用戶端網路不受信任、以協助防止惡意攻擊。如果節點的用戶端網路不受信任、則節點只接受明確設定為負載平衡器端點之連接埠上的傳入連線。
+
+例如、您可能希望閘道節點拒絕用戶端網路上的所有傳入流量、但HTTPS S3要求除外。或者、您可能想要啟用來自儲存節點的外傳S3平台服務流量、同時防止任何連入用戶端網路上該儲存節點的連線。
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:managing-tenants-and-client-connections.html["管理租戶和用戶端連線"]

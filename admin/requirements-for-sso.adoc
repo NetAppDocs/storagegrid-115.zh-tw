@@ -1,0 +1,55 @@
+---
+permalink: admin/requirements-for-sso.html 
+sidebar: sidebar 
+keywords:  
+summary: 在啟用StorageGRID 適用於某個環節的單一登入（SSO）之前、請先檢閱本節的要求。 
+---
+= 使用單一登入的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在啟用StorageGRID 適用於某個作業系統的單一登入（SSO）之前、請先檢閱本節的要求。
+
+
+IMPORTANT: 單一登入（SSO）無法在受限網格管理器或租戶管理器連接埠上使用。如果您想要使用者透過單一登入進行驗證、則必須使用預設的HTTPS連接埠（443）。
+
+
+
+== 身分識別供應商要求
+
+SSO的身分識別供應商（IDP）必須符合下列要求：
+
+* 下列任一版本的Active Directory Federation Service（AD FS）：
++
+** Windows Server 2016隨附的AD FS 4.0
++
+
+NOTE: Windows Server 2016應該使用 https://support.microsoft.com/en-us/help/3201845/cumulative-update-for-windows-10-version-1607-and-windows-server-2016["KB3201845更新"^]或更高版本。
+
+** Windows Server 2012 R2更新或更新版本隨附的AD FS 3.0。
+
+
+* 傳輸層安全性（TLS）1.2或1.3
+* Microsoft .NET Framework版本3.5.1或更新版本
+
+
+
+
+== 伺服器憑證需求
+
+在每個管理節點上使用管理介面伺服器憑證、以安全存取Grid Manager、租戶管理程式、Grid Management API及租戶管理API StorageGRID 。當您在StorageGRID AD FS中設定SSO依賴方信任功能時、您可以使用伺服器憑證做為簽署憑證、以利StorageGRID 向AD FS提出要求。
+
+如果您尚未為管理介面安裝自訂伺服器憑證、請立即安裝。當您安裝自訂伺服器憑證時、它會用於所有管理節點、您可以在StorageGRID 所有依賴方信任的情況下使用。
+
+
+NOTE: 不建議在AD FS信賴方信任中使用管理節點的預設伺服器憑證。如果節點發生故障、而您要將其恢復、則會產生新的預設伺服器憑證。在登入還原的節點之前、您必須使用新的憑證來更新AD FS中的依賴方信任。
+
+您可以登入節點的命令Shell並前往、以存取管理節點的伺服器憑證 `/var/local/mgmt-api` 目錄。自訂伺服器憑證即會命名 `custom-server.crt`。節點的預設伺服器憑證名稱為 `server.crt`。
+
+.相關資訊
+link:controlling-access-through-firewalls.html["透過防火牆控制存取"]
+
+link:configuring-custom-server-certificate-for-grid-manager-tenant-manager.html["為Grid Manager和Tenant Manager設定自訂伺服器憑證"]

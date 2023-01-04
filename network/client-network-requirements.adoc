@@ -1,0 +1,21 @@
+---
+permalink: network/client-network-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 用戶端網路為選用項目。如果您打算設定用戶端網路、請注意下列考量事項。 
+---
+= 用戶端網路需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+用戶端網路為選用項目。如果您打算設定用戶端網路、請注意下列考量事項。
+
+用戶端網路的設計可支援來自S3和Swift用戶端的流量。如果已設定、用戶端網路閘道會成為節點的預設閘道。
+
+如果您使用用戶端網路、StorageGRID 只有在明確設定的負載平衡器端點上接受傳入用戶端流量、才能保護不受惡意攻擊的可靠性。如需管理StorageGRID VMware的說明、請參閱有關管理負載平衡和管理不受信任的用戶端網路的資訊。
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]

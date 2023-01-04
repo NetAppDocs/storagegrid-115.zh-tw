@@ -1,0 +1,22 @@
+---
+permalink: sg5700/configuring-hardware-sg5712-60.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, hardware, configure, configuration, set up, setup, network, networking 
+summary: 在為應用裝置供電之後、您必須設定SANtricity 用來監控硬體的軟體、即「支援系統管理程式」。您也必須設定StorageGRID 將由景點使用的網路連線。 
+---
+= 設定硬體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在為應用裝置供電之後、您必須設定SANtricity 用來監控硬體的軟體、即「支援系統管理程式」。您也必須設定StorageGRID 將由景點使用的網路連線。
+
+.步驟
+* link:configuring-storagegrid-connections.html["設定StorageGRID 鏈接"]
+* link:accessing-and-configuring-santricity-system-manager.html["存取及設定SANtricity 功能"]
+* link:optional-enabling-node-encryption.html["選用：啟用節點加密"]
+* link:optional-changing-raid-mode-sg5760-only.html["選用：變更RAID模式（僅限SG5760）"]
+* link:optional-remapping-network-ports-for-appliance-sg5600-and-sg5700.html["選用：重新對應應用裝置的網路連接埠"]
+

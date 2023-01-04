@@ -1,0 +1,92 @@
+---
+permalink: monitor/monitoring-object-metadata-capacity-for-each-storage-node.html 
+sidebar: sidebar 
+keywords: object, metadata, monitoring, monitoring object metadata, metadata, metadata capacity 
+summary: '您必須監控每個儲存節點的中繼資料使用量、以確保有足夠的空間可供重要的資料庫作業使用。在物件中繼資料超過允許的100%中繼資料空間之前、您必須在每個站台新增儲存節點。' 
+---
+= 監控每個儲存節點的物件中繼資料容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須監控每個儲存節點的中繼資料使用量、以確保有足夠的空間可供重要的資料庫作業使用。在物件中繼資料超過允許的100%中繼資料空間之前、您必須在每個站台新增儲存節點。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+
+
+.關於這項工作
+支援在每個站台維護三份物件中繼資料複本、以提供備援功能、並保護物件中繼資料免於遺失。StorageGRID這三個複本會使用保留給每個儲存節點之儲存Volume 0上的中繼資料的空間、平均分散於每個站台的所有儲存節點。
+
+在某些情況下、網格的物件中繼資料容量使用速度可能比物件儲存容量快。例如、如果您通常會擷取大量的小型物件、則可能需要新增儲存節點來增加中繼資料容量、即使物件儲存容量仍足夠。
+
+可增加中繼資料使用量的部分因素包括使用者中繼資料和標記的大小和數量、多重內容上傳的零件總數、以及ILM儲存位置變更的頻率。
+
+.步驟
+. 選擇*節點*>*儲存節點*>*儲存設備*。
+. 將游標停留在「已使用的儲存設備-物件中繼資料」圖表上、即可查看特定時間的值。
++
+image::../media/storage_used_object_metadata.png[使用的儲存設備-物件中繼資料]
+
++
+|===
+| 價值 | 說明 | Prometheus指標 
+
+
+ a| 
+已用（%）
+ a| 
+此儲存節點上已使用之允許中繼資料空間的百分比。
+ a| 
+`storagegrid_storage_utilization_metadata_bytes/ storagegrid_storage_utilization_metadata_allowed_bytes`
+
+
+
+ a| 
+已使用
+ a| 
+此儲存節點上已使用之允許中繼資料空間的位元組。
+ a| 
+`storagegrid_storage_utilization_metadata_bytes`
+
+
+
+ a| 
+允許
+ a| 
+此儲存節點上允許用於物件中繼資料的空間。若要瞭解此值如何決定每個儲存節點、請參閱《管理StorageGRID 》的說明。
+ a| 
+`storagegrid_storage_utilization_metadata_allowed_bytes`
+
+
+
+ a| 
+實際保留
+ a| 
+保留給此儲存節點上中繼資料的實際空間。包括允許的空間及必要的中繼資料作業空間。若要瞭解如何計算每個儲存節點的此值、請參閱《管理StorageGRID 》的說明。
+ a| 
+`storagegrid_storage_utilization_metadata_reserved_bytes`
+
+|===
++
+
+NOTE: 站台或網格的總值不包含至少五分鐘未報告度量的節點、例如離線節點。
+
+. 如果*已用（%）*值為70%或更高、請StorageGRID 在每個站台新增儲存節點來擴充您的系統。
++
+
+IMPORTANT: 當*已用（%）*值達到特定臨界值時、會觸發*低中繼資料儲存*警示。如果物件中繼資料使用超過100%的允許空間、可能會產生不理想的結果。
+
++
+新增節點時、系統會自動在站台內的所有儲存節點之間重新平衡物件中繼資料。請參閱擴充StorageGRID 功能的說明。
+
+
+
+.相關資訊
+link:../troubleshoot/troubleshooting-storagegrid-system.html["疑難排解低中繼資料儲存警示"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../expand/index.html["擴充網格"]

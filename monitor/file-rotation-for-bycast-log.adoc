@@ -1,0 +1,26 @@
+---
+permalink: monitor/file-rotation-for-bycast-log.html 
+sidebar: sidebar 
+keywords: file rotation, bycast, log, file rotation, bycast.log 
+summary: '當 `bycast.log` 檔案達到1 GB、儲存現有檔案、並啟動新的記錄檔。' 
+---
+= bycast.log的檔案旋轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當 `bycast.log` 檔案達到1 GB、儲存現有檔案、並啟動新的記錄檔。
+
+儲存的檔案會重新命名 `bycast.log.1`，並命名新檔案 `bycast.log`。新功能 `bycast.log` 達到1 GB、 `bycast.log.1` 會重新命名並壓縮成 `bycast.log.2.gz`和 `bycast.log` 已重新命名 `bycast.log.1`。
+
+的旋轉限制 `bycast.log` 為21個檔案。第22版的 `bycast.log` 檔案隨即建立、最舊的檔案會被刪除。
+
+的旋轉限制 `bycast-err.log` 是七個檔案。
+
+
+NOTE: 如果記錄檔已壓縮、則不得將其解壓縮至寫入的相同位置。將檔案解壓縮到相同位置可能會干擾記錄檔的旋轉指令碼。
+
+.相關資訊
+link:collecting-log-files-and-system-data.html["收集記錄檔和系統資料"]

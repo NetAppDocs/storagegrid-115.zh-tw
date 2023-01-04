@@ -1,0 +1,36 @@
+---
+permalink: monitor/exporting-text-reports.html 
+sidebar: sidebar 
+keywords: reports, text, export text, report 
+summary: 匯出的文字報告會開啟新的瀏覽器索引標籤、讓您選取及複製資料。 
+---
+= 匯出文字報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+匯出的文字報告會開啟新的瀏覽器索引標籤、讓您選取及複製資料。
+
+.關於這項工作
+然後、複製的資料便可儲存至新文件（例如試算表）、並用於分析StorageGRID 整個過程的效能。
+
+.步驟
+. 選取*支援*>*工具*>*網格拓撲*。
+. 建立文字報告。
+. 按一下*匯出*image:../media/icon_export.gif["匯出圖示"]。
++
+image::../media/export_text_report.gif[周邊文字所述的螢幕擷取畫面]
+
++
+「匯出文字報告」視窗隨即開啟、顯示報告。
+
++
+image::../media/export_text_report_data.gif[顯示範例文字報告的快照]
+
+. 選取並複製匯出文字報告視窗的內容。
++
+此資料現在可以貼到第三方文件中、例如試算表。
+
+

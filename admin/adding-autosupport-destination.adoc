@@ -1,0 +1,67 @@
+---
+permalink: admin/adding-autosupport-destination.html 
+sidebar: sidebar 
+keywords:  
+summary: 啟用AutoSupport 此功能時、便會將健全狀況和狀態訊息傳送給NetApp支援部門。您可以為所有AutoSupport 的資訊提供額外的目的地。 
+---
+= 新增AutoSupport 其他的目的地
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+啟用AutoSupport 此功能時、便會將健全狀況和狀態訊息傳送給NetApp支援部門。您可以為所有AutoSupport 的資訊提供額外的目的地。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有「根存取」或「其他網格組態」權限。
+
+
+.關於這項工作
+若要驗證或變更用於傳送AutoSupport 靜態訊息的傳輸協定、請參閱指定AutoSupport 靜態傳輸協定的指示。
+
+
+NOTE: 您無法使用SMTP傳輸協定將AutoSupport 無法傳送的資訊傳送到其他目的地。
+
+link:specifying-protocol-for-autosupport-messages.html["指定AutoSupport 資訊不整訊息的傳輸協定"]
+
+.步驟
+. 選取*支援*>*工具*>* AutoSupport 參考*。
++
+畫面上會出現「*設定*」索引標籤、並已選取此索引標籤。AutoSupport
+
+. 選取*啟用其他AutoSupport 目的地*。
++
+此時會出現其他AutoSupport 的「目的地」欄位。
+
++
+image::../media/autosupport_additional_destinations.png[添加其他目的地AutoSupport]
+
+. 輸入額外AutoSupport 的目的地伺服器的伺服器主機名稱或IP位址。
++
+
+NOTE: 您只能輸入一個額外的目的地。
+
+. 輸入用來連線至其他AutoSupport 目的地伺服器的連接埠（HTTP預設為連接埠80、HTTPS預設為連接埠443）。
+. 若要使用AutoSupport 憑證驗證傳送您的不完整訊息、請在「*憑證驗證*」下拉式清單中選取「*使用自訂CA套裝組合*」。然後執行下列其中一項：
++
+** 使用編輯工具、將每個PEP-編碼CA憑證檔案的所有內容複製貼到* CA bundch*欄位、並以憑證鏈順序串聯。您必須包含 `----BEGIN CERTIFICATE----` 和 `----END CERTIFICATE----` 在您的選擇中。
++
+image::../media/autosupport_certificate.png[認證AutoSupport]
+
+** 選取*瀏覽*、瀏覽至內含憑證的檔案、然後選取*開啟*上傳檔案。憑證驗證可確保AutoSupport 資訊的傳輸安全無虞。
+
+
+. 若要在AutoSupport 不驗證憑證的情況下傳送您的不實訊息、請在「*憑證驗證*」下拉式清單中選取「*請勿驗證憑證*」。
++
+只有當您有充分理由不使用憑證驗證時（例如憑證暫時有問題時）、才選取此選項。
+
++
+出現一則警示訊息：「您並未使用TLS憑證來保護連線至其他AutoSupport 目的地的安全。」
+
+. 選擇*保存*。
++
+所有未來每週、事件觸發及使用者觸發AutoSupport 的消息都會傳送至其他目的地。
+
+

@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-messages-list.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, messages, message 
+summary: 當系統事件發生時StorageGRID 、The現象系統會產生稽核訊息、並將其記錄在稽核記錄中。 
+---
+= 稽核訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當系統事件發生時StorageGRID 、The現象系統會產生稽核訊息、並將其記錄在稽核記錄中。

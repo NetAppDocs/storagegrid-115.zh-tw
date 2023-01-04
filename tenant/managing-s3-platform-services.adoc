@@ -1,0 +1,22 @@
+---
+permalink: tenant/managing-s3-platform-services.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您的S3租戶帳戶允許使用平台服務、您可以使用平台服務來運用外部服務、並設定CloudMirror複寫、通知、以及搜尋S3時段的整合功能。 
+---
+= 管理S3平台服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您的S3租戶帳戶允許使用平台服務、您可以使用平台服務來運用外部服務、並設定CloudMirror複寫、通知、以及搜尋S3時段的整合功能。
+
+* link:what-platform-services-are.html["什麼是平台服務"]
+* link:considerations-for-using-platform-services.html["使用平台服務的考量"]
+* link:configuring-platform-services-endpoints.html["設定平台服務端點"]
+* link:configuring-cloudmirror-replication.html["設定CloudMirror複寫"]
+* link:configuring-event-notifications.html["設定事件通知"]
+* link:using-search-integration-service.html["使用搜尋整合服務"]
+

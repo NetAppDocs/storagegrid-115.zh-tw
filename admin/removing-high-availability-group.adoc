@@ -1,0 +1,43 @@
+---
+permalink: admin/removing-high-availability-group.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以移除不再使用的高可用度（HA）群組。 
+---
+= 移除高可用度群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以移除不再使用的高可用度（HA）群組。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有「根存取」權限。
+
+
+.完成這項工作
+如果您移除HA群組、任何設定為使用群組其中一個虛擬IP位址的S3或Swift用戶端、將無法再連線StorageGRID 至Suse。若要避免用戶端中斷、您應該先更新所有受影響的S3或Swift用戶端應用程式、再移除HA群組。更新每個用戶端以使用其他IP位址進行連線、例如、不同HA群組的虛擬IP位址、或是安裝期間或使用DHCP設定介面的IP位址。
+
+.步驟
+. 選擇*組態*>*網路設定*>*高可用度群組*。
++
+此時會出現「高可用度群組」頁面。
+
++
+image::../media/ha_groups_page_with_two_groups.png[HA群組主畫面]
+
+. 選取您要移除的HA群組、然後按一下*移除*。
++
+此時會出現「刪除高可用度群組」警告。
+
++
+image::../media/ha_group_remove_warning.png[HA群組移除警告]
+
+. 按一下「*確定*」。
++
+HA群組隨即移除。
+
+

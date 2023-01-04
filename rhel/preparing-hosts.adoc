@@ -1,0 +1,17 @@
+---
+permalink: rhel/preparing-hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必須完成下列步驟、才能為實體或虛擬主機做好StorageGRID 萬全準備、以利執行各項功能。請注意、您可以使用Ansible、Puppet或Chef等標準伺服器組態架構來自動化上述許多或所有步驟。 
+---
+= 準備主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須完成下列步驟、才能為實體或虛擬主機做好StorageGRID 萬全準備、以利執行各項功能。請注意、您可以使用Ansible、Puppet或Chef等標準伺服器組態架構來自動化上述許多或所有步驟。
+
+.相關資訊
+link:automating-installation-and-configuration-of-storagegrid-host-service.html["自動化StorageGRID 安裝及設定支援服務"]

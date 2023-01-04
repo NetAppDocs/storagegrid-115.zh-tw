@@ -1,0 +1,42 @@
+---
+permalink: maintain/introduction-to-storagegrid-recovery-and-maintenance.html 
+sidebar: sidebar 
+keywords: storagegrid, recovery, maintenance 
+summary: 還原與維護StorageGRID 程序包括套用軟體修補程式、恢復網格節點、恢復故障站台、解除委任網格節點或整個站台、執行網路維護、執行主機層級與中介軟體維護程序、以及執行網格節點程序。 
+---
+= 介紹還原與維護StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原與維護StorageGRID 程序包括套用軟體修補程式、恢復網格節點、恢復故障站台、解除委任網格節點或整個站台、執行網路維護、執行主機層級與中介軟體維護程序、以及執行網格節點程序。
+
+所有的恢復和維護活動都需要對StorageGRID 這個系統有廣泛的瞭解。您應該檢閱StorageGRID 您的整個過程、以確保您瞭解網格組態。
+
+您必須確實遵循所有指示、並留意所有警告。
+
+不支援未說明的維護程序、或需要服務參與。
+
+如需硬體程序、請參閱StorageGRID 您的應用程式的安裝與維護說明。
+
+
+NOTE: 「Linux」是指Red Hat®Enterprise Linux®、Ubuntu®、CentOS或DEBIANR®部署。使用NetApp互通性對照表工具取得支援版本的清單。
+
+.相關資訊
+link:../primer/index.html["網格入門指南"]
+
+link:../network/index.html["網路準則"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../sg100-1000/index.html["SG100  機；SG1000服務應用裝置"]
+
+link:../sg6000/index.html["SG6000儲存設備"]
+
+link:../sg5700/index.html["SG5700儲存設備"]
+
+link:../sg5600/index.html["SG5600儲存設備"]
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]

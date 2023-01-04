@@ -1,0 +1,43 @@
+---
+permalink: maintain/grid-node-procedures.html 
+sidebar: sidebar 
+keywords: storagegrid, grid node procedure 
+summary: 您可能需要在特定的網格節點上執行程序。雖然您可以從Grid Manager執行其中幾項程序、但大部分的程序都需要從節點的命令列存取Server Manager。 
+---
+= 網格節點程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要在特定的網格節點上執行程序。雖然您可以從Grid Manager執行其中幾項程序、但大部分的程序都需要從節點的命令列存取伺服器管理員。
+
+伺服器管理程式會在每個網格節點上執行、以監督服務的啟動和停止、並確保服務順利加入StorageGRID 並離開此系統。伺服器管理員也會監控每個網格節點上的服務、並自動嘗試重新啟動任何報告故障的服務。
+
+
+IMPORTANT: 只有在技術支援指示您存取伺服器管理程式時、您才應該存取伺服器管理程式。
+
+
+NOTE: 您必須關閉目前的命令Shell工作階段、並在伺服器管理程式完成後登出。輸入： `exit`
+
+.選擇
+* link:viewing-server-manager-status-and-version.html["檢視伺服器管理員狀態和版本"]
+* link:viewing-current-status-of-all-services.html["檢視所有服務的目前狀態"]
+* link:starting-server-manager-and-all-services.html["啟動伺服器管理員和所有服務"]
+* link:restarting-server-manager-and-all-services.html["重新啟動伺服器管理員和所有服務"]
+* link:stopping-server-manager-and-all-services.html["停止伺服器管理員和所有服務"]
+* link:viewing-current-status-of-service.html["檢視服務的目前狀態"]
+* link:stopping-service.html["停止服務"]
+* link:placing-appliance-into-maintenance-mode.html["將應用裝置置於維護模式"]
+* link:forcing-service-to-terminate.html["強制終止服務"]
+* link:starting-or-restarting-service.html["啟動或重新啟動服務"]
+* link:removing-port-remaps.html["移除連接埠重新對應"]
+* link:removing-port-remaps-on-bare-metal-hosts.html["移除裸機主機上的連接埠重新對應"]
+* link:rebooting-grid-node.html["重新開機網格節點"]
+* link:shutting-down-grid-node.html["關閉網格節點"]
+* link:powering-down-host.html["關閉主機電源"]
+* link:powering-off-and-on-all-nodes-in-grid.html["關閉和開啟網格中的所有節點"]
+* link:using-donotstart-file.html["使用DoNotStart檔案"]
+* link:troubleshooting-server-manager.html["伺服器管理員疑難排解"]
+

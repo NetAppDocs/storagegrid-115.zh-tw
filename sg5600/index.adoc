@@ -1,0 +1,27 @@
+---
+permalink: sg5600/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance 
+summary: 瞭解如何安裝及維護StorageGRID SSG5612和SG5660應用裝置。 
+---
+= SG5600儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何安裝及維護StorageGRID SSG5612和SG5660應用裝置。
+
+* link:storagegrid-appliance-overview.html["應用程式概述StorageGRID"]
+* link:installation-and-deployment-overview.html["安裝與部署總覽"]
+* link:preparing-for-installation.html["準備安裝"]
+* link:installing-hardware.html["安裝硬體"]
+* link:configuring-hardware.html["設定硬體"]
+* link:deploying-appliance-storage-node.html["部署應用裝置儲存節點"]
+* link:monitoring-storage-appliance-installation.html["監控儲存應用裝置的安裝"]
+* link:automating-appliance-installation-and-configuration.html["自動化設備安裝與組態"]
+* link:overview-of-installation-rest-apis.html["安裝REST API總覽"]
+* link:troubleshooting-hardware-installation.html["疑難排解硬體安裝"]
+* link:maintaining-sg5600-appliance.html["維護SG5600應用裝置"]
+

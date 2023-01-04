@@ -1,0 +1,21 @@
+---
+permalink: sg5600/setting-up-santricity-storage-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, SANtricity Storage Manager, SANtricity, Storage Manager, configure, configuring, setup, set up, setting up 
+summary: 存取SANtricity 完「靜態儲存管理程式」之後、您可以使用它來設定硬體設定。一般而言、在StorageGRID 將應用裝置部署為位於整個系統的儲存節點之前、您必須先設定這些設定。 
+---
+= 設定SANtricity 功能不全儲存管理程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+存取SANtricity 完「靜態儲存管理程式」之後、您可以使用它來設定硬體設定。一般而言、在StorageGRID 將應用裝置部署為位於整個系統的儲存節點之前、您必須先設定這些設定。
+
+.步驟
+* link:configuring-autosupport.html["設定AutoSupport 功能"]
+* link:verifying-receipt-of-autosupport.html["驗證AutoSupport 是否收到"]
+* link:configuring-email-and-snmp-trap-alert-notifications.html["設定電子郵件和SNMP設陷警示通知"]
+* link:setting-passwords-for-santricity-storage-manager.html["設定SANtricity 密碼以供StorageManager使用"]
+

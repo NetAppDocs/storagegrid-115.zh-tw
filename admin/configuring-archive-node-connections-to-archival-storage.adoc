@@ -1,0 +1,25 @@
+---
+permalink: admin/configuring-archive-node-connections-to-archival-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 當您設定歸檔節點以連線至外部歸檔時、必須選取目標類型。 
+---
+= 設定歸檔儲存設備的歸檔節點連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您設定歸檔節點以連線至外部歸檔時、必須選取目標類型。
+
+支援透過S3介面將物件資料歸檔至雲端、或透過Tivoli Storage Manager（TSM）中介軟體將物件資料歸檔至磁帶StorageGRID 。
+
+
+NOTE: 歸檔目標類型一旦設定為歸檔節點、就無法變更目標類型。
+
+* link:archiving-to-cloud-through-s3-api.html["透過S3 API歸檔至雲端"]
+* link:archiving-to-tape-through-tsm-middleware.html["利用TSM中介軟體歸檔至磁帶"]
+* link:configuring-archive-node-retrieve-settings.html["設定歸檔節點擷取設定"]
+* link:configuring-archive-node-replication.html["設定歸檔節點複寫"]
+

@@ -1,0 +1,43 @@
+---
+permalink: admin/enabling-autosupport-on-demand.html 
+sidebar: sidebar 
+keywords:  
+summary: 根據需求提供支援、協助您解決技術支援部門正在積極處理的問題。AutoSupport啟用AutoSupport 「隨選即AutoSupport 用」功能時、技術支援人員可要求傳送不需您介入的消息。 
+---
+= 啟用AutoSupport 隨需功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據需求提供支援、協助您解決技術支援部門正在積極處理的問題。AutoSupport啟用AutoSupport 「隨選即AutoSupport 用」功能時、技術支援人員可要求傳送不需您介入的消息。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有「根存取」或「其他網格組態」權限。
+* 您必須啟用每週AutoSupport 的資訊更新訊息。
+* 您必須將傳輸傳輸傳輸傳輸協定設為HTTPS。
+
+
+.關於這項工作
+啟用此功能時、技術支援人員可要求StorageGRID 您的系統自動傳送AutoSupport 故障訊息。技術支援部門也可以設定AutoSupport 「根據需求進行查詢」的輪詢時間間隔。
+
+技術支援無法啟用或停用AutoSupport 隨需功能。
+
+.步驟
+. 選取*支援*>*工具*>* AutoSupport 參考*。
++
+畫面上會出現「*設定*」索引標籤、並已選取此索引標籤。AutoSupport
+
+. 在頁面的「*傳輸協定詳細資料*」區段中選取「HTTPS」選項按鈕。
++
+image::../media/autosupport_on_demand.png[隨需ASUP]
+
+. 選取「*啟用每週AutoSupport 資訊*」核取方塊。
+. 選中* Enable AutoSupport SRAID on Demand*（*按需啓用*）複選框。
+. 選擇*保存*。
++
+支援隨需提供支援、技術支援人員可將「根據需求提出的要求」傳送至AutoSupport AutoSupport StorageGRID
+
+

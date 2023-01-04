@@ -1,0 +1,39 @@
+---
+permalink: admin/copying-storagegrid-system-ca-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用內部憑證授權單位（CA）來保護內部流量。StorageGRID如果您上傳自己的憑證、此憑證不會變更。 
+---
+= 複製StorageGRID 該系統的CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用內部憑證授權單位（CA）來保護內部流量StorageGRID 。如果您上傳自己的憑證、此憑證不會變更。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須擁有特定的存取權限。
+
+
+.關於這項工作
+如果已設定自訂伺服器憑證、用戶端應用程式應使用自訂伺服器憑證來驗證伺服器。他們不應該從StorageGRID 這個系統複製CA憑證。
+
+.步驟
+. 選擇*組態*>*網路設定*>*伺服器憑證*。
+. 在「*內部CA憑證*」區段中、選取所有的憑證文字。
++
+您必須包含 `-----BEGIN CERTIFICATE-----` 和 `-----END CERTIFICATE-----` 在您的選擇中。
+
++
+image::../media/ca_certificate_export.png[CA憑證匯出]
+
+. 在選取的文字上按一下滑鼠右鍵、然後選取*複製*。
+. 將複製的憑證貼到文字編輯器中。
+. 以副檔名儲存檔案 `.pem`。
++
+例如： `storagegrid_certificate.pem`
+
+

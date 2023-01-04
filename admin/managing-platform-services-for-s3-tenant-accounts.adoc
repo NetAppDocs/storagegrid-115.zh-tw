@@ -1,0 +1,20 @@
+---
+permalink: admin/managing-platform-services-for-s3-tenant-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您為S3租戶帳戶啟用平台服務、則必須設定網格、讓租戶能夠存取使用這些服務所需的外部資源。 
+---
+= 管理S3租戶帳戶的平台服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您為S3租戶帳戶啟用平台服務、則必須設定網格、讓租戶能夠存取使用這些服務所需的外部資源。
+
+* link:what-platform-services-are.html["什麼是平台服務"]
+* link:networking-and-ports-for-platform-services.html["平台服務的網路和連接埠"]
+* link:per-site-delivery-of-platform-services-messages.html["每個站台提供平台服務訊息"]
+* link:troubleshooting-platform-services.html["平台服務疑難排解"]
+

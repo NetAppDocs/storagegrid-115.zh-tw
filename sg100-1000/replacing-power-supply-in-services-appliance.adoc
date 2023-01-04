@@ -1,0 +1,52 @@
+---
+permalink: sg100-1000/replacing-power-supply-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: 服務應用裝置有兩個電源供應器以提供備援。如果其中一個電源供應器故障、您必須儘快更換、以確保產品具備備援電力。 
+---
+= 更換服務應用裝置中的電源供應器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+服務應用裝置有兩個電源供應器以提供備援。如果其中一個電源供應器故障、您必須儘快更換、以確保產品具備備援電力。
+
+.您需要的產品
+* 您已解壓縮更換的電源供應器。
+* 您實際將設備放置在資料中心內要更換電源供應器的位置。
++
+link:locating-controller-in-data-center.html["將控制器定位在資料中心"]
+
+* 您可以確認其他電源供應器已安裝並正在執行。
+
+
+.關於這項工作
+圖中顯示SG100的兩個電源供應器單元、可從產品背面存取。
+
+image::../media/sg1000_power_supplies.png[SG100後端配備兩個電源供應器]
+
+
+NOTE: SG1000的電源供應器完全相同。
+
+.步驟
+. 從電源供應器拔下電源線。
+. 提起CAM握把。
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[提起CAM握把以移除SG1000 PSU]
+
+. 按下藍色栓鎖、將電源供應器拉出。
++
+image::../media/sg6000_cn_remove_power_supply.gif[卸下SG1000電源供應器]
+
+. 將替換電源供應器滑入機箱。
++
+將裝置滑入時、請確定藍色栓鎖位於右側。
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[將電源供應器滑入SG1000]
+
+. 向下推CAM握把以固定電源供應器。
+. 將電源線連接至電源供應器、並確保綠色LED亮起。
+

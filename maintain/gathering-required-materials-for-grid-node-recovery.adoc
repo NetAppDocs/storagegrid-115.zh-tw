@@ -1,0 +1,71 @@
+---
+permalink: maintain/gathering-required-materials-for-grid-node-recovery.html 
+sidebar: sidebar 
+keywords: storagegrid, recovery, grid node recovery, node recovery 
+summary: 在執行維護程序之前、您必須確保擁有必要的資料來恢復故障的網格節點。 
+---
+= 收集網格節點恢復所需的資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行維護程序之前、您必須確保擁有必要的資料來恢復故障的網格節點。
+
+[cols="1a,2a"]
+|===
+| 項目 | 附註 
+
+
+ a| 
+安裝歸檔StorageGRID
+ a| 
+如果您需要恢復網格節點、則需要StorageGRID 針對您的平台提供一套完整的安裝歸檔資料。
+
+*附註：*如果您要在儲存節點上恢復故障的儲存磁碟區、則不需要下載檔案。
+
+
+
+ a| 
+恢復套件 `.zip` 檔案
+ a| 
+取得最新的恢復套件複本 `.zip` 檔案：
+`sgws-recovery-package-_id-revision_.zip`
+
+的內容 `.zip` 檔案會在每次修改系統時更新。進行此類變更後、系統會將最新版的恢復套件儲存在安全的位置。使用最新的複本從網格故障中恢復。
+
+如果主要管理節點正常運作、您可以從Grid Manager下載恢復套件。選擇*維護**系統*恢復套件*。
+
+如果您無法存取Grid Manager、可以在某些包含該ADC服務的儲存節點上找到恢復套件的加密複本。在每個儲存節點上、檢查此還原套件位置： `/var/local/install/sgws-recovery-package-_grid-id_-_revision_.zip.gpg` 使用修訂版編號最高的「恢復套件」。
+
+
+
+ a| 
+`Passwords.txt` 檔案
+ a| 
+包含存取命令列上網格節點所需的密碼。包含在恢復套件中。
+
+
+
+ a| 
+資源配置通關密碼
+ a| 
+當StorageGRID 首次安裝此功能時、系統會建立並記錄密碼。資源配置通關密碼不在中 `Passwords.txt` 檔案：
+
+
+
+ a| 
+您平台的最新文件
+ a| 
+如需目前支援的平台版本、請參閱互通性對照表工具。
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+
+如需文件、請前往平台廠商的網站。
+
+|===
+.相關資訊
+link:downloading-and-extracting-storagegrid-installation-files.html["下載及解壓縮StorageGRID 安裝文件"]
+
+link:web-browser-requirements.html["網頁瀏覽器需求"]

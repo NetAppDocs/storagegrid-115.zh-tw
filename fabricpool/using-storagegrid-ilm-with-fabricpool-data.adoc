@@ -1,0 +1,45 @@
+---
+permalink: fabricpool/using-storagegrid-ilm-with-fabricpool-data.html 
+sidebar: sidebar 
+keywords: FabricPool, requirements, ILM, information lifecycle management, ILM rule, ILM rules, ILM policy, erasure-coding, replication, cloud storage pool, glacier 
+summary: 如果您使用FabricPool 支援資料的功能來將資料分層StorageGRID 以供參考、則必須瞭解建立StorageGRID 資訊生命週期管理（ILM）規則的需求、以及管理FabricPool 資料的ILM原則。您必須確保適用於FabricPool 不中斷營運的ILM規則。 
+---
+= 利用支援資料的資訊生命週期管理功能FabricPool StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用FabricPool 支援資料的功能來將資料分層StorageGRID 以供參考、則必須瞭解建立StorageGRID 資訊生命週期管理（ILM）規則的需求、以及管理FabricPool 資訊的ILM原則。您必須確保適用於FabricPool 不中斷營運的ILM規則。
+
+[IMPORTANT]
+====
+不知道什麼是無法理解的ILM規則或原則。FabricPool StorageGRID如果無法設定不正確的ILM原則、就可能發生資料遺失StorageGRID 。
+
+若要深入瞭解： link:../ilm/index.html["使用ILM管理物件"]
+
+====
+
+
+== ILM指南FabricPool 、以利資料的運用
+
+請檢閱這些準則、確保您的ILM規則和ILM原則適用於FabricPool 各種資料和業務需求。如果您已經在使用StorageGRID 無法修復的ILM、您可能需要更新使用中的ILM原則、以符合這些準則。
+
+* 您可以使用複寫和銷毀編碼規則的任何組合來保護雲端層資料。
++
+建議的最佳實務做法是在站台內使用2+1銷毀編碼、以達到具成本效益的資料保護。銷毀編碼使用的CPU數量較多、但儲存容量卻比複寫少得多。4+1和6+1方案使用的容量少於2+1、但在網格擴充期間新增儲存節點時、處理量較低且靈活度較低。
+
+* 套用至FabricPool 資料的每個規則都必須使用銷毀編碼、否則必須至少建立兩個複製複本。
++
+
+IMPORTANT: ILM規則只會在任何時間段建立一個複寫複本、使資料有永久遺失的風險。如果只有一個物件複寫複本存在、則當儲存節點故障或發生重大錯誤時、該物件就會遺失。在升級等維護程序期間、您也會暫時失去物件的存取權。
+
+* 請勿使用將過期或刪除FabricPool 的ILM規則。將每個ILM規則中的保留期間設為「Forever（永久）」、以確保FabricPool 不會由StorageGRID ILM刪除任何物件。
+* 請勿建立規則、將FabricPool 不再需要的雲端層資料移出儲存庫、移至其他位置。您無法使用ILM規則FabricPool 、使用歸檔節點將資料歸檔至磁帶、或使用雲端儲存資源池將FabricPool 資料移至Glacier。
++
+
+NOTE: 由於從雲端儲存資源池目標擷取物件的延遲增加、因此不支援使用FabricPool 含有支援功能的雲端儲存資源池。
+
+* 從功能完善的9.8開始ONTAP 、您可以選擇性地建立物件標記、以協助分類及排序階層式資料、以便更輕鬆地進行管理。例如、您只能在FabricPool 附加StorageGRID 到該功能的不含資料的地方設定標籤。然後、當您在StorageGRID 物件標籤進階篩選器中建立ILM規則時、可以使用物件標籤進階篩選器來選取及放置此資料。
+

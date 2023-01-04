@@ -1,0 +1,24 @@
+---
+permalink: maintain/recovering-from-gateway-node-failures.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, gateway node failure 
+summary:  
+---
+= 從閘道節點故障中恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須準確完成一系列工作、才能從閘道節點故障中恢復。
+
+image::../media/overview_api_gateway_node_recovery.png[閘道節點還原流程圖總覽]
+
+.相關資訊
+link:../sg100-1000/index.html["SG100  機；SG1000服務應用裝置"]
+
+.步驟
+* link:replacing-gateway-node.html["更換閘道節點"]
+* link:selecting-start-recovery-to-configure-gateway-node.html["選取「Start Recovery（開始恢復）」以設定閘道節點"]
+

@@ -1,0 +1,23 @@
+---
+permalink: network/network-topology-examples.html 
+sidebar: sidebar 
+keywords: storagegrid, network topology 
+summary: 除了所需的Grid Network之外、您也可以選擇在設計單一或多站台部署的網路拓撲時、是否要設定管理網路和用戶端網路介面。 
+---
+= 網路拓撲範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了所需的Grid Network之外、您也可以選擇在設計單一或多站台部署的網路拓撲時、是否要設定管理網路和用戶端網路介面。
+
+內部連接埠只能透過Grid Network存取。外部連接埠可從所有網路類型存取。這種靈活度提供多種選項、可設計StorageGRID 出一套功能豐富的功能、並在交換器和防火牆中設定外部IP和連接埠篩選功能。如需內部和外部連接埠的詳細資訊、請參閱網路連接埠參考。
+
+如果您指定節點的用戶端網路介面不受信任、請設定負載平衡器端點以接受傳入流量。如需設定不受信任的用戶端網路和負載平衡器端點的相關資訊、請參閱《管理StorageGRID 》。
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:network-port-reference.html["網路連接埠參考"]

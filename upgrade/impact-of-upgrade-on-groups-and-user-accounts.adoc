@@ -1,0 +1,41 @@
+---
+permalink: upgrade/impact-of-upgrade-on-groups-and-user-accounts.html 
+sidebar: sidebar 
+keywords: upgrade, permissions 
+summary: 您必須瞭解StorageGRID 升級過程的影響、才能在升級完成後適當地更新群組和使用者帳戶。 
+---
+= 升級對群組和使用者帳戶的影響
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解StorageGRID 升級過程的影響、才能在升級完成後適當地更新群組和使用者帳戶。
+
+
+
+== 群組權限和選項的變更
+
+升級StorageGRID 至版本S11.5之後、可選擇下列新權限和選項（*組態*>*存取控制*>*管理群組*）。
+
+[cols="1a,2a"]
+|===
+| 權限或選項 | 說明 
+
+
+ a| 
+儲存設備管理員
+ a| 
+需要從SANtricity Grid Manager存取《The NetApp System Manager》使用者介面。
+
+
+
+ a| 
+存取模式
+ a| 
+管理群組時、您可以針對此新選項選取*唯讀*、以防止使用者變更為群組選取的設定和功能。使用唯讀存取模式的群組使用者可以檢視設定、但無法變更設定。
+
+|===
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]

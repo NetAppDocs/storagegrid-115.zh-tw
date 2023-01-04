@@ -1,0 +1,33 @@
+---
+section: fabricpool
+title: 設定StorageGRID 適用於FabricPool 靜態的
+url: "/fabricpool/index.html"
+entries:
+- title: 設定StorageGRID 支援FabricPool 功能的支援
+  url: "/fabricpool/configuring-storagegrid-for-fabricpool.html"
+- title: 以StorageGRID 雲端層形式附加解決方案所需的資訊
+  url: "/fabricpool/information-needed-to-attach-storagegrid-as-cloud-tier.html"
+  entries:
+  - title: 負載平衡的最佳實務做法
+    url: "/fabricpool/best-practices-for-load-balancing.html"
+  - title: 高可用度群組的最佳實務做法
+    url: "/fabricpool/best-practices-for-high-availability-groups.html"
+  - title: 將DNS伺服器設定為StorageGRID 使用靜態IP位址
+    url: "/fabricpool/configuring-dns-for-storagegrid-ip-addresses.html"
+  - title: 建立FabricPool 高可用度（HA）群組以供使用
+    url: "/fabricpool/creating-ha-group-for-fabricpool.html"
+  - title: 建立FabricPool 負載平衡器端點以利執行
+    url: "/fabricpool/creating-load-balancer-endpoint-for-fabricpool.html"
+  - title: 建立客戶帳戶FabricPool 以供使用
+    url: "/fabricpool/creating-tenant-account-for-fabricpool.html"
+  - title: 建立S3儲存區並取得存取金鑰
+    url: "/fabricpool/creating-s3-bucket-and-access-key.html"
+- title: 利用支援資料的資訊生命週期管理功能FabricPool StorageGRID
+  url: "/fabricpool/using-storagegrid-ilm-with-fabricpool-data.html"
+  entries:
+  - title: ILM原則範例FabricPool ：資料不整
+    url: "/fabricpool/example-ilm-policy-for-fabricpool-data.html"
+- title: 建立FabricPool 一套資訊流量分類原則
+  url: "/fabricpool/creating-traffic-classification-policy-for-fabricpool.html"
+- title: 其他關於功能與功能的最佳實務做法StorageGRID FabricPool
+  url: "/fabricpool/other-best-practices-for-storagegrid-and-fabricpool.html"

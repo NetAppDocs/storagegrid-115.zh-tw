@@ -1,0 +1,23 @@
+---
+permalink: rhel/automating-installation-and-configuration-of-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以StorageGRID 使用Ansible、Puppet、Chef、Fabric或SaltStack等標準協調架構來自動化安裝支援服務。 
+---
+= 自動化StorageGRID 安裝及設定支援服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以StorageGRID 使用Ansible、Puppet、Chef、Fabric或SaltStack等標準協調架構來自動化安裝支援服務。
+
+此支援以RPM封裝、並由組態檔案驅動、StorageGRID 可預先準備（或以程式設計方式）以啟用自動安裝。如果您已使用標準協調架構來安裝及設定RHEL或CentOS、則在StorageGRID 您的教戰手冊或食譜中加入功能不易。
+
+中的安裝歸檔隨附了Ansible角色和方針範例 `/extras` 資料夾。《Ansible》教戰手冊說明如何使用 `storagegrid` 角色負責準備主機、並將StorageGRID 其安裝在目標伺服器上。您可以視需要自訂角色或方針。
+
+
+NOTE: 範例播放手冊不包含在開始StorageGRID 執行「支援服務」之前建立網路裝置所需的步驟。在完成及使用本方針之前、請先新增這些步驟。
+
+您可以自動化準備主機和部署虛擬網格節點的所有步驟。

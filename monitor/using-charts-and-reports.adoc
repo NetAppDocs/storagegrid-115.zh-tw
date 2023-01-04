@@ -1,0 +1,14 @@
+---
+permalink: monitor/using-charts-and-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用圖表和報告來監控StorageGRID 整個系統的狀態、並疑難排解問題。Grid Manager中可用的圖表和報告類型包括圓形圖（僅適用於儀表板）、圖表和文字報告。 
+---
+= 使用圖表和報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用圖表和報告來監控StorageGRID 整個系統的狀態、並疑難排解問題。Grid Manager中可用的圖表和報告類型包括圓形圖（僅適用於儀表板）、圖表和文字報告。

@@ -1,0 +1,39 @@
+---
+permalink: rhel/example-2-lacp-bond-carrying-vlans.html 
+sidebar: sidebar 
+keywords:  
+summary: 範例2假設您熟悉連結網路介面、以及在所使用的Linux發佈版本上建立VLAN介面。 
+---
+= 範例2：LACP連結傳輸VLAN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+範例2假設您熟悉連結網路介面、以及在所使用的Linux發佈版本上建立VLAN介面。
+
+範例2說明通用、靈活、以VLAN為基礎的配置、可在單一主機上的所有節點之間共享所有可用的網路頻寬。此範例特別適用於裸機主機。
+
+若要瞭解此範例、假設每個資料中心的Grid、Admin和Client Networks各有三個子網路。子網路位於不同的VLAN（1001、1002和1003）上、並以LACP連結主幹連接埠（bond0）呈現給主機。您可以在連結上設定三個VLAN介面：bond0.1001、bond0.1002和bond0.1003。
+
+如果同一主機上的節點網路需要不同的VLAN和子網路、您可以在連結上新增VLAN介面、然後將它們對應到主機（如圖中的bond0.1004所示）。
+
+image::../media/rhel_install_vlan_diag_2.gif[此影像由周邊文字說明。]
+
+.步驟
+. 將StorageGRID 用於實現無線網路連接的所有實體網路介面、整合到單一LACP連結中。
++
+在每個主機上使用相同的連結名稱、例如bond0。
+
+. 建立使用此連結作為其關聯「實體裝置」的VLAN介面,`" using the standard VLAN interface naming convention `physdev-name.VLAN ID`。
++
+請注意、步驟1和步驟2需要在邊緣交換器上進行適當的組態、以終止網路連結的其他端點。邊緣交換器連接埠也必須整合至LACP連接埠通道（設定為主幹）、並允許通過所有必要的VLAN。
+
++
+提供此每個主機網路組態配置方案的介面組態檔範例。
+
+
+
+.相關資訊
+link:example-etc-sysconfig-network-scripts.html["例如：etc/sysconfig/network-scripts"]

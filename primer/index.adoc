@@ -1,0 +1,22 @@
+---
+permalink: primer/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 網格入門指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解NetApp StorageGRID 的基礎知識。
+
+* link:about-storagegrid.html["關於StorageGRID 本產品"]
+* link:storagegrid-architecture-and-network-topology.html["架構與網路拓撲StorageGRID"]
+* link:how-storagegrid-manages-data.html["如何管理資料StorageGRID"]
+* link:exploring-grid-manager.html["瀏覽Grid Manager"]
+* link:exploring-tenant-manager.html["探索租戶管理程式"]
+* link:using-storagegrid.html["使用StorageGRID"]
+

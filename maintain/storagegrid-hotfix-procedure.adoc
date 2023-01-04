@@ -1,0 +1,24 @@
+---
+permalink: maintain/storagegrid-hotfix-procedure.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果在功能版本之間偵測到並解決軟體問題、您可能需要將修補程式套用StorageGRID 至您的無法修復的系統。 
+---
+= 修復程序StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在功能版本之間偵測到並解決軟體問題、您可能需要將修補程式套用StorageGRID 至您的無法修復的系統。
+
+不含功能或修補程式版本、而可在其中進行軟體變更。StorageGRID未來版本也會包含相同的變更。此外、每個修補程式版本都包含功能或修補程式版本中所有先前修復程式的彙總。
+
+* link:considerations-for-applying-hotfix.html["套用修補程式的考量"]
+* link:how-your-system-is-affected-when-you-apply-hotfix.html["套用熱修復程式時、系統受到的影響"]
+* link:obtaining-required-materials-for-hotfix.html["取得修補程式所需的資料"]
+* link:downloading-hotfix-file.html["正在下載熱修復檔案"]
+* link:checking-systems-condition-before-applying-hotfix.html["在套用修補程式之前、請先檢查系統的狀況"]
+* link:applying-hotfix.html["套用修補程式"]
+

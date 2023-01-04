@@ -1,0 +1,23 @@
+---
+permalink: expand/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 擴充網格
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何在StorageGRID 不中斷系統作業的情況下擴充一套功能完善的系統。
+
+* link:planning-expansion.html["規劃StorageGRID 功能擴充"]
+* link:preparing-for-expansion.html["準備擴充"]
+* link:overview-of-expansion-procedure.html["擴充程序總覽"]
+* link:adding-storage-volumes-to-storage-nodes.html["將儲存磁碟區新增至儲存節點"]
+* link:adding-grid-nodes-to-existing-site-or-adding-new-site.html["將網格節點新增至現有站台或新增站台"]
+* link:configuring-expanded-storagegrid-system.html["設定擴充StorageGRID 的功能強大的系統"]
+* link:contacting-technical-support.html["聯絡技術支援人員"]
+

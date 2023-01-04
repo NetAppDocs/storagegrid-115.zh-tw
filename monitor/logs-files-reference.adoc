@@ -1,0 +1,34 @@
+---
+permalink: monitor/logs-files-reference.html 
+sidebar: sidebar 
+keywords: log, logs, log files 
+summary: 下列各節列出用來擷取事件、診斷訊息和錯誤狀況的記錄。系統可能會要求您收集記錄檔、並將其轉送至技術支援部門、以協助進行疑難排解。 
+---
+= 記錄檔參考
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下列各節列出用來擷取事件、診斷訊息和錯誤狀況的記錄。系統可能會要求您收集記錄檔、並將其轉送至技術支援部門、以協助進行疑難排解。
+
+* link:storagegrid-software-logs.html["軟體記錄StorageGRID"]
+* link:deployment-and-maintenance-logs.html["部署與維護記錄"]
+* link:logs-for-third-party-software.html["協力廠商軟體的記錄"]
+* link:about-bycast-log.html["關於bycast.log"]
+
+
+
+IMPORTANT: 本節中的表格僅供參考。這些記錄可由技術支援人員進行進階疑難排解。使用稽核記錄和應用程式記錄檔來重新建構問題歷程記錄的進階技術不在本指南的討論範圍之內。
+
+若要存取這些記錄、您可以收集記錄檔和系統資料（*支援*>*工具*>*記錄*）。或者、如果主要管理節點無法使用或無法連線至特定節點、您可以存取每個網格節點的記錄、如下所示：
+
+. 輸入下列命令： `ssh admin@grid_node_IP`
+. 輸入中所列的密碼 `Passwords.txt` 檔案：
+. 輸入下列命令以切換至root： `su -`
+. 輸入中所列的密碼 `Passwords.txt` 檔案：
+
+
+.相關資訊
+link:collecting-log-files-and-system-data.html["收集記錄檔和系統資料"]

@@ -1,0 +1,21 @@
+---
+permalink: ilm/how-objects-are-stored-replication-erasure-coding.html 
+sidebar: sidebar 
+keywords:  
+summary: 透過儲存複本或儲存銷毀編碼複本、可保護物件免於遺失StorageGRID 。您可以在ILM規則的放置指示中指定要建立的複本類型。 
+---
+= 物件的儲存方式（複寫或銷毀編碼）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過儲存複本或儲存銷毀編碼複本、可保護物件免於遺失StorageGRID 。您可以在ILM規則的放置指示中指定要建立的複本類型。
+
+* link:what-replication-is.html["什麼是複寫"]
+* link:why-you-should-not-use-single-copy-replication.html["為何不應使用單一複製複寫"]
+* link:what-erasure-coding-is.html["什麼是銷毀編碼"]
+* link:what-erasure-coding-schemes-are.html["什麼是銷毀編碼方案"]
+* link:advantages-disadvantages-and-requirements-for-ec.html["銷毀編碼的優缺點與要求"]
+

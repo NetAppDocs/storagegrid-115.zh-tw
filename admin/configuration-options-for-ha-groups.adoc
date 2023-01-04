@@ -1,0 +1,66 @@
+---
+permalink: admin/configuration-options-for-ha-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: 下圖提供不同的HA群組設定方式範例。每個選項都有優點和缺點。 
+---
+= HA群組的組態選項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下圖提供不同的HA群組設定方式範例。每個選項都有優點和缺點。
+
+image::../media/high_availability_examples.png[HA範例]
+
+建立多個重疊的HA群組（如Active-Active HA範例所示）時、總處理量會隨節點數和HA群組數而擴充。有了三個以上的節點和三個以上的HA群組、您也能繼續使用任何VIP進行作業、即使是在需要將節點離線的維護程序中也一樣。
+
+下表摘要說明各HA組態的優點、如圖所示。
+
+[cols="1a,1a,1a"]
+|===
+| 組態 | 優勢 | 缺點 
+
+
+ a| 
+主動備份HA
+ a| 
+* 由不需依賴外部資源的不受依賴的功能執行管理StorageGRID 。
+* 快速容錯移轉：
+
+ a| 
+* HA群組中只有一個節點處於作用中狀態。每個HA群組至少有一個節點處於閒置狀態。
+
+
+
+
+ a| 
+DNS循環配置資源
+ a| 
+* 增加Aggregate處理量。
+* 無閒置主機。
+
+ a| 
+* 慢速容錯移轉、可能取決於用戶端行為。
+* 需要在StorageGRID 不屬於此功能的情況下組態硬體。
+* 需要客戶實作的健全狀況檢查。
+
+
+
+
+ a| 
+雙主動式
+ a| 
+* 流量分散於多個HA群組。
+* 高Aggregate處理量、可隨HA群組數量而擴充。
+* 快速容錯移轉：
+
+ a| 
+* 更複雜的設定。
+* 需要在StorageGRID 不屬於此功能的情況下組態硬體。
+* 需要客戶實作的健全狀況檢查。
+
+
+|===

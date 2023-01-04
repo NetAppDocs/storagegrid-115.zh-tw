@@ -1,0 +1,33 @@
+---
+permalink: sg100-1000/unable-to-connect-to-appliance-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, troubleshoot, troubleshooting, connect, connection, unable to connect, no connection 
+summary: 如果您無法連線至服務應用裝置、可能是網路問題、或是硬體安裝尚未成功完成。 
+---
+= 無法連線至應用裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您無法連線至服務應用裝置、可能是網路問題、或是硬體安裝尚未成功完成。
+
+.步驟
+. 嘗試使用應用裝置的IP位址ping應用裝置：+
+`*ping _services_appliance_IP_*`
+. 如果ping沒有回應、請確認您使用的是正確的IP位址。
++
+您可以在Grid Network、管理網路或用戶端網路上使用應用裝置的IP位址。
+
+. 如果IP位址正確、請檢查設備纜線、QSFP或SFP收發器、以及網路設定。
++
+如果仍無法解決問題、請聯絡技術支援部門。
+
+. 如果ping成功、請開啟網頁瀏覽器。
+. 輸入StorageGRID 「The URL for the URL for the不支援應用程式安裝程式：+」
+`*https://_appliances_controller_IP_:8443*`
++
+隨即顯示首頁。
+
+

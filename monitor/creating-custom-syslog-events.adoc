@@ -1,0 +1,46 @@
+---
+permalink: monitor/creating-custom-syslog-events.html 
+sidebar: sidebar 
+keywords: event tracking, syslog, log 
+summary: 自訂事件可讓您追蹤記錄到syslog伺服器的所有核心、精靈、錯誤和重要層級使用者事件。自訂事件有助於監控系統記錄訊息的發生（從而監控網路安全事件和硬體故障）。 
+---
+= 建立自訂的syslog事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自訂事件可讓您追蹤記錄到syslog伺服器的所有核心、精靈、錯誤和重要層級使用者事件。自訂事件可用於監控系統記錄訊息的發生（從而監控網路安全事件和硬體故障）。
+
+.關於這項工作
+請考慮建立自訂事件、以監控重複發生的問題。下列考量事項適用於自訂事件。
+
+* 建立自訂事件之後、每次發生的事件都會受到監控。您可以在「*節點*>*網格節點_*>*事件*」頁面上檢視所有自訂事件的累計計數值。
+* 根據中的關鍵字建立自訂事件 `/var/log/messages` 或 `/var/log/syslog` 檔案、這些檔案中的記錄必須是：
++
+** 由核心產生
+** 由精靈或使用者程式在錯誤或嚴重層級產生
+
+
+
+
+*附註：*並非所有的項目都在中 `/var/log/messages` 或 `/var/log/syslog` 除非檔案符合上述要求、否則將會進行比對。
+
+.步驟
+. 選擇*組態*>*監控*>*事件*。
+. 按一下*編輯* image:../media/icon_nms_edit.gif["鉛筆圖示"] （或* Insert * image:../media/icon_nms_insert.gif["加號圖示"] 如果這不是第一個事件）。
+. 輸入自訂事件字串、例如：關機
++
+image::../media/custom_events.gif[顯示自訂事件字串輸入位置的快照]
+
+. 按一下*套用變更*。
+. 選擇*節點*。然後選取「*網格節點_*>*事件*」。
+. 在「事件」表格中找出「自訂事件」項目、然後監控* Count*的值。
++
+如果計數增加、您正在監控的自訂事件就會在該網格節點上觸發。
+
++
+image::../media/custom_events_count.gif[「超棒」>「活動」>「總覽」頁面]
+
+

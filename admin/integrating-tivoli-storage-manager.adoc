@@ -1,0 +1,19 @@
+---
+permalink: admin/integrating-tivoli-storage-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 本節包含將歸檔節點與Tivoli Storage Manager（TSM\）伺服器整合的最佳實務做法和設定資訊、包括影響TSM伺服器組態的歸檔節點作業詳細資料。 
+---
+= 整合Tivoli Storage Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節包含將歸檔節點與Tivoli Storage Manager（TSM）伺服器整合的最佳實務做法和設定資訊、包括影響TSM伺服器組態的歸檔節點作業詳細資料。
+
+* link:archive-node-configuration-and-operation.html["歸檔節點組態與作業"]
+* link:configuration-best-practices.html["組態最佳實務做法"]
+* link:completing-archive-node-setup.html["完成歸檔節點設定"]
+

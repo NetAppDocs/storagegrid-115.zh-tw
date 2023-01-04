@@ -1,0 +1,22 @@
+---
+permalink: admin/controlling-administrator-access-to-storagegrid.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以開啟StorageGRID 或關閉防火牆連接埠、管理管理群組和使用者、設定單一登入（SSO）、以及提供用戶端憑證、以安全地從外部存取StorageGRID 各項指標、藉此控制管理員對該系統的存取。 
+---
+= 控制系統管理員存取StorageGRID 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以開啟StorageGRID 或關閉防火牆連接埠、管理管理群組和使用者、設定單一登入（SSO）、以及提供用戶端憑證、以便安全地從外部存取StorageGRID 各項效能數據、藉此控制管理員對該系統的存取。
+
+* link:controlling-access-through-firewalls.html["透過防火牆控制存取"]
+* link:using-identity-federation.html["使用身分識別聯盟"]
+* link:managing-admin-groups.html["管理管理群組"]
+* link:managing-local-users.html["管理本機使用者"]
+* link:using-single-sign-on.html["使用單一登入（SSO）StorageGRID 進行支援"]
+* link:configuring-administrator-client-certificates.html["設定系統管理員用戶端憑證"]
+

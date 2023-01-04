@@ -1,0 +1,23 @@
+---
+permalink: tenant/s3-object-lock-workflow.html 
+sidebar: sidebar 
+keywords: S3 Object Lock 
+summary: 工作流程圖顯示StorageGRID 使用S3物件鎖定功能的高階步驟。 
+---
+= S3物件鎖定工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流程圖顯示StorageGRID 使用S3物件鎖定功能的高階步驟。
+
+在啟用S3物件鎖定功能的情況下建立儲存區之前、網格管理員必須先為整個StorageGRID 支援整個系統啟用全域S3物件鎖定設定。網格管理員也必須確保資訊生命週期管理（ILM）原則符合「法規遵循」、而且必須符合啟用S3物件鎖定的儲存區需求。如需詳細資料、請聯絡網格管理員、或參閱資訊生命週期管理的物件管理說明。
+
+啟用全域S3物件鎖定設定之後、您可以建立啟用S3物件鎖定的儲存區。然後、您可以使用S3用戶端應用程式、選擇性地為每個物件版本指定保留設定。
+
+image::../media/s3_object_lock_workflow_tenant.png[S3物件鎖定工作流程浮動授權]
+
+.相關資訊
+link:../ilm/index.html["使用ILM管理物件"]

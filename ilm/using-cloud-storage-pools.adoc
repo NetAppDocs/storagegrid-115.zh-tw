@@ -1,0 +1,25 @@
+---
+permalink: ilm/using-cloud-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用Cloud Storage Pool將StorageGRID 物件移至外部儲存位置、例如S3 Glacier或Microsoft Azure Blob儲存設備。將物件移出網格、可讓您利用低成本的儲存層進行長期歸檔。 
+---
+= 使用雲端儲存資源池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Cloud Storage Pool將StorageGRID 物件移至外部儲存位置、例如S3 Glacier或Microsoft Azure Blob儲存設備。將物件移出網格、可讓您利用低成本的儲存層進行長期歸檔。
+
+* link:what-cloud-storage-pool-is.html["什麼是雲端儲存資源池"]
+* link:lifecycle-of-cloud-storage-pool-object.html["Cloud Storage Pool物件的生命週期"]
+* link:when-to-use-cloud-storage-pools.html["何時使用雲端儲存資源池"]
+* link:considerations-for-cloud-storage-pools.html["雲端儲存資源池的考量"]
+* link:comparing-cloud-storage-pools-to-cloudmirror-replication.html["比較雲端儲存資源池和CloudMirror複寫"]
+* link:creating-cloud-storage-pool.html["建立雲端儲存資源池"]
+* link:editing-cloud-storage-pool.html["編輯雲端儲存資源池"]
+* link:removing-cloud-storage-pool.html["移除雲端儲存資源池"]
+* link:troubleshooting-cloud-storage-pools.html["疑難排解雲端儲存資源池"]
+

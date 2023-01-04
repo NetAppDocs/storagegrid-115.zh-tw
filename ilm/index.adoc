@@ -1,0 +1,19 @@
+---
+permalink: ilm/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 使用ILM管理物件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何使用資訊生命週期規則和原則來管理物件、以及如何使用S3物件鎖定來遵守物件保留的法規。
+
+* link:managing-objects-with-information-lifecycle-management.html["利用資訊生命週期管理來管理物件"]
+* link:managing-objects-with-s3-object-lock.html["使用S3物件鎖定來管理物件"]
+* link:example-ilm-rules-and-policies.html["ILM規則與原則範例"]
+

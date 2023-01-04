@@ -1,0 +1,34 @@
+---
+permalink: monitor/viewing-events-tab.html 
+sidebar: sidebar 
+keywords:  
+summary: 「事件」索引標籤會顯示節點的任何系統錯誤或故障事件計數、包括網路錯誤等錯誤。 
+---
+= 檢視「事件」索引標籤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「事件」索引標籤會顯示節點的任何系統錯誤或故障事件計數、包括網路錯誤等錯誤。
+
+此時會顯示所有節點的「事件」索引標籤。
+
+如果您遇到特定節點的問題、可以使用「事件」索引標籤深入瞭解問題。技術支援也可以使用「事件」索引標籤上的資訊來協助疑難排解。
+
+image::../media/nodes_page_events_tab.png[節點頁面事件索引標籤]
+
+您可以從「事件」索引標籤執行下列工作：
+
+* 請使用表格頂端*上次事件*欄位所顯示的資訊來判斷最近發生的事件。
+* 按一下圖表圖示 image:../media/icon_chart_new.gif["圖表圖示"] 查看特定事件的發生時間。
+* 解決任何問題後、將事件數重設為零。
+
+
+.相關資訊
+link:monitoring-events.html["監控事件"]
+
+link:displaying-charts-and-graphs.html["顯示圖表"]
+
+link:resetting-event-counts.html["重設事件數"]

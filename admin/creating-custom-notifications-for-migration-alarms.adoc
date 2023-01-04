@@ -1,0 +1,34 @@
+---
+permalink: admin/creating-custom-notifications-for-migration-alarms.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能想StorageGRID 要將警示通知或警示（舊系統）通知傳送給負責監控移轉的系統管理員、如果某些值超過建議的臨界值。 
+---
+= 建立移轉警示的自訂通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果StorageGRID 某些值超過建議的臨界值、您可能需要將警示通知或警示（舊系統）通知傳送給負責監控移轉的系統管理員。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須擁有特定的存取權限。
+* 您必須已設定警示（或警示）通知的電子郵件設定。
+
+
+.步驟
+. 針對StorageGRID 您想要在資料移轉期間監控的每個Prometheus指標或Es0屬性、建立自訂警示規則或全域自訂警示。
++
+警示會根據Prometheus度量值觸發。警示會根據屬性值觸發。如StorageGRID 需詳細資訊、請參閱監控和疑難排解的說明。
+
+. 資料移轉完成後、請停用自訂警示規則或全域自訂警示。
++
+請注意、全域自訂警示會覆寫預設警示。
+
+
+
+.相關資訊
+link:../monitor/index.html["監控安培；疑難排解"]

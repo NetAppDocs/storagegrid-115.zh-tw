@@ -1,0 +1,49 @@
+---
+permalink: monitor/managing-alerts-and-alarms.html 
+sidebar: sidebar 
+keywords: managing, alarms, alerts 
+summary: 此系統旨在StorageGRID 通知您需要注意的作業問題。您也可以視需要使用舊版警報系統來監控系統。 
+---
+= 管理警示與警示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此系統旨在StorageGRID 通知您需要注意的作業問題。您也可以視需要使用舊版警報系統來監控系統。本節包含下列子區段：
+
+* link:comparing-alerts-and-alarms.html["比較警示與警示"]
+* link:managing-alerts.html["管理警示"]
+* link:managing-alarms.html["管理警示（舊系統）"]
+
+
+包含兩個系統、可讓您瞭解相關問題StorageGRID 。
+
+
+
+== 警示系統
+
+警示系統是您監控StorageGRID 可能在您的作業系統中發生的任何問題的主要工具。警示系統提供易於使用的介面、可偵測、評估及解決問題。
+
+當警示規則條件評估為真時、警示會以特定的嚴重性層級觸發。觸發警示時、會發生下列動作：
+
+* Grid Manager的儀表板上會顯示警示嚴重性圖示、而目前警示的計數會遞增。
+* 警示顯示於*節點*>*節點_*>*總覽*索引標籤。
+* 系統會傳送電子郵件通知、前提是您已設定一個SMTP伺服器、並提供收件者的電子郵件地址。
+* 假設您已設定StorageGRID 好Sing SNMP代理程式、系統就會傳送簡單網路管理傳輸協定（SNMP）通知。
+
+
+
+
+== 舊版警示系統
+
+支援警示系統、但被視為老舊系統。如同警示、當屬性達到定義的臨界值時、警示會以特定的嚴重性層級觸發。不過、與警示不同的是、許多警示會針對您可以安全忽略的事件觸發、這可能導致電子郵件或SNMP通知過多。
+
+觸發警示時、會發生下列動作：
+
+* 儀表板上的舊警示計數會遞增。
+* 此警示會出現在「*支援*>*警示（舊版）*>*目前警示*」頁面上。
+* 系統會傳送電子郵件通知、前提是您已設定一個SMTP伺服器並設定一個或多個郵件清單。
+* 如果您已設定StorageGRID 好Sing SNMP代理程式、則可能會傳送SNMP通知。（並非針對所有警示或警示嚴重性傳送SNMP通知。）
+

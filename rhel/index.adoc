@@ -1,0 +1,25 @@
+---
+permalink: rhel/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 瞭解如何在StorageGRID Red Hat Enterprise Linux或CentOS部署中安裝支援功能的軟體。 
+---
+= 安裝Red Hat Enterprise Linux或CentOS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何在StorageGRID Red Hat Enterprise Linux或CentOS部署中安裝支援功能的軟體。
+
+* link:installation-overview.html["安裝總覽"]
+* link:planning-and-preparation.html["規劃與準備"]
+* link:deploying-virtual-grid-nodes.html["部署虛擬網格節點"]
+* link:configuring-grid-and-completing-installation.html["設定網格並完成安裝"]
+* link:automating-installation.html["自動化安裝"]
+* link:overview-of-installation-rest-api.html["安裝REST API總覽"]
+* link:where-to-go-next.html["下一步"]
+* link:troubleshooting-installation-issues.html["疑難排解安裝問題"]
+* link:example-etc-sysconfig-network-scripts.html["例如：etc/sysconfig/network-scripts"]
+

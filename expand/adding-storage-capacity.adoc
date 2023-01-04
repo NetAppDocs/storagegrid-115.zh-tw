@@ -1,0 +1,22 @@
+---
+permalink: expand/adding-storage-capacity.html 
+sidebar: sidebar 
+keywords: storage, capacity, add, adding, expand, expansion, full storage node 
+summary: 當現有的儲存節點已滿時、您必須增加StorageGRID 您的整套系統的儲存容量。 
+---
+= 增加儲存容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當現有的儲存節點已滿時、您必須增加StorageGRID 您的整套系統的儲存容量。
+
+若要增加儲存容量、您必須先瞭解目前儲存資料的位置、然後在所有必要位置新增容量。例如、如果您目前在多個站台儲存物件資料複本、可能需要增加每個站台的儲存容量。
+
+* link:guidelines-for-adding-object-capacity.html["新增物件容量的準則"]
+* link:adding-storage-capacity-for-replicated-objects.html["新增複寫物件的儲存容量"]
+* link:adding-storage-capacity-for-erasure-coded-objects.html["新增銷毀編碼物件的儲存容量"]
+* link:considerations-for-rebalancing-erasure-coded-data.html["重新平衡銷毀編碼資料的考量事項"]
+

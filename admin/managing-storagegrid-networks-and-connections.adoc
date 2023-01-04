@@ -1,0 +1,27 @@
+---
+permalink: admin/managing-storagegrid-networks-and-connections.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用Grid Manager來設定及管理StorageGRID 各種不一致的網路和連線。 
+---
+= 管理StorageGRID 鏈路和連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Grid Manager來設定及管理StorageGRID 各種不一致的網路和連線。
+
+請參閱 link:configuring-client-connections.html["設定S3和Swift用戶端連線"] 以瞭解如何連接S3或Swift用戶端。
+
+* link:guidelines-for-storagegrid-networks.html["關於鏈路的準則StorageGRID"]
+* link:viewing-ip-addresses.html["檢視IP位址"]
+* link:supported-ciphers-for-outgoing-tls-connections.html["用於傳出TLS連線的支援密碼"]
+* link:changing-network-transfer-encryption.html["變更網路傳輸加密"]
+* link:configuring-server-certificates.html["設定伺服器憑證"]
+* link:configuring-storage-proxy-settings.html["設定儲存Proxy設定"]
+* link:configuring-admin-proxy-settings.html["設定管理Proxy設定"]
+* link:managing-traffic-classification-policies.html["管理流量分類原則"]
+* link:what-link-costs-are.html["什麼是連結成本"]
+

@@ -1,0 +1,68 @@
+---
+permalink: admin/generating-self-signed-certificate-for-management-interface.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用指令碼為需要嚴格主機名稱驗證的管理API用戶端、產生自我簽署的伺服器憑證。 
+---
+= 為管理介面產生自我簽署的伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用指令碼為需要嚴格主機名稱驗證的管理API用戶端、產生自我簽署的伺服器憑證。
+
+.您需要的產品
+* 您必須擁有特定的存取權限。
+* 您必須擁有 `Passwords.txt` 檔案：
+
+
+.關於這項工作
+在正式作業環境中、您應該使用由已知憑證授權單位（CA）簽署的憑證。由CA簽署的憑證可在不中斷營運的情況下循環。它們也更安全、因為它們能更有效地防範攔截式攻擊。
+
+.步驟
+. 取得每個管理節點的完整網域名稱（FQDN）。
+. 登入主要管理節點：
++
+.. 輸入下列命令： `ssh admin@primary_Admin_Node_IP`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
+.. 輸入下列命令以切換至root： `su -`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
++
+當您以root登入時、提示會從變更 `$` 至 `#`。
+
+
+
+. 使用StorageGRID 新的自我簽署憑證來設定功能。
++
+`$ sudo make-certificate --domains _wildcard-admin-node-fqdn_ --type management`
+
++
+** 適用於 `--domains`、使用萬用字元代表所有管理節點的完整網域名稱。例如、 `*.ui.storagegrid.example.com` 使用*萬用字元表示 `admin1.ui.storagegrid.example.com` 和 `admin2.ui.storagegrid.example.com`。
+** 設定 `--type` 至 `management` 設定Grid Manager和Tenant Manager使用的憑證。
+** 根據預設、產生的憑證有效期間為一年（365天）、必須在到期前重新建立。您可以使用 `--days` 用於置換預設有效期間的引數。
++
+
+NOTE: 憑證的有效期間始於何時 `make-certificate` 執行。您必須確保管理API用戶端與StorageGRID 其他來源同步、否則用戶端可能會拒絕該憑證。
+
++
+ $ sudo make-certificate --domains *.ui.storagegrid.example.com --type management --days 365
++
+產生的輸出包含管理API用戶端所需的公開憑證。
+
+
+
+. 選取並複製憑證。
++
+在您的選擇中加入開始標記和結束標記。
+
+. 登出命令Shell。 `$ exit`
+. 確認已設定憑證：
++
+.. 存取Grid Manager。
+.. 選擇*組態**伺服器憑證*管理介面伺服器憑證*。
+
+
+. 設定您的管理API用戶端使用您複製的公用憑證。包括開始和結束標記。
+

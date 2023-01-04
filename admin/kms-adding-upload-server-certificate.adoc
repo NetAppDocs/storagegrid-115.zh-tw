@@ -1,0 +1,36 @@
+---
+permalink: admin/kms-adding-upload-server-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: 在「新增金鑰管理伺服器」精靈的步驟2 \（上傳伺服器憑證\）中、您上傳KMS的伺服器憑證（或憑證套件組合\）。伺服器憑證可讓外部KMS驗證自己StorageGRID 以供驗證。 
+---
+= 步驟2：上傳伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在「新增金鑰管理伺服器」精靈的步驟2（上傳伺服器憑證）中、您會上傳KMS的伺服器憑證（或憑證套件組合）。伺服器憑證可讓外部KMS驗證自己StorageGRID 以供驗證。
+
+.步驟
+. 從*步驟2（上傳伺服器憑證）*瀏覽至儲存的伺服器憑證或憑證套裝組合位置。
++
+image::../media/kms_step_2_upload_server_certificate.png[KMS步驟2上傳伺服器認證]
+
+. 上傳憑證檔案。
++
+隨即顯示伺服器憑證中繼資料。
+
++
+image::../media/kms_step_2_server_certificate_metadata.png[KMS步驟2伺服器憑證中繼資料]
+
++
+
+NOTE: 如果您上傳了憑證套件組合、每個憑證的中繼資料都會顯示在其各自的索引標籤上。
+
+. 選擇*下一步*。
++
+出現「Add a Key Management Server（新增金鑰管理伺服器）」精靈的步驟3（上傳用戶端憑證）。
+
+

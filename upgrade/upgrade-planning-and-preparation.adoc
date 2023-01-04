@@ -1,0 +1,25 @@
+---
+permalink: upgrade/upgrade-planning-and-preparation.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必須規劃StorageGRID 升級您的支援系統、以確保系統已準備好進行升級、而且只要將中斷時間降至最低、即可完成升級。 
+---
+= 升級規劃與準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須規劃StorageGRID 升級您的支援系統、以確保系統已準備好進行升級、而且只要將中斷時間降至最低、即可完成升級。
+
+.步驟
+. link:estimating-time-to-complete-upgrade.html["預估完成升級的時間"]
+. link:how-your-system-is-affected-during-upgrade.html["系統在升級期間的影響"]
+. link:impact-of-upgrade-on-groups-and-user-accounts.html["升級對群組和使用者帳戶的影響"]
+. link:verifying-installed-version-of-storagegrid.html["驗證安裝的StorageGRID 版本的資訊"]
+. link:obtaining-required-materials-for-software-upgrade.html["取得軟體升級所需的資料"]
+. link:downloading-storagegrid-upgrade-files.html["正在下載StorageGRID 更新檔"]
+. link:downloading-recovery-package.html["正在下載恢復套件"]
+. link:checking-systems-condition-before-upgrading-software.html["在升級軟體之前、請先檢查系統狀況"]
+

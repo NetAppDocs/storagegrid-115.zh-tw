@@ -1,0 +1,25 @@
+---
+permalink: ilm/managing-objects-with-information-lifecycle-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 您StorageGRID 可以設定資訊生命週期管理（ILM）規則和原則、來管理整個物件系統中的物件。ILM規則和原則指示StorageGRID 如何建立及發佈物件資料複本、以及如何長期管理這些複本。 
+---
+= 利用資訊生命週期管理來管理物件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您StorageGRID 可以設定資訊生命週期管理（ILM）規則和原則、來管理整個物件系統中的物件。ILM規則和原則指示StorageGRID 如何建立及發佈物件資料複本、以及如何長期管理這些複本。
+
+設計及實作ILM規則和ILM原則需要仔細規劃。您必須瞭StorageGRID 解作業需求、您的作業系統拓撲、物件保護需求、以及可用的儲存類型。然後、您必須決定要如何複製、分散及儲存不同類型的物件。
+
+* link:how-ilm-operates-throughout-objects-life.html["ILM在物件生命週期內的運作方式"]
+* link:what-ilm-policy-is.html["什麼是ILM原則"]
+* link:what-ilm-rule-is.html["什麼是ILM規則"]
+* link:creating-storage-grades-storage-pools-ec-profiles-regions.html["建立儲存等級、儲存資源池、EC設定檔和地區"]
+* link:creating-ilm-rule.html["建立ILM規則"]
+* link:creating-ilm-policy.html["建立ILM原則"]
+* link:working-with-ilm-rules-and-ilm-policies.html["使用ILM規則和ILM原則"]
+

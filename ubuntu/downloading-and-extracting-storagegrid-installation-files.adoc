@@ -1,0 +1,125 @@
+---
+permalink: ubuntu/downloading-and-extracting-storagegrid-installation-files.html 
+sidebar: sidebar 
+keywords: storagegrid, ubuntu, debian, download installation files, downloading installation files 
+summary: 您必須下載StorageGRID 安裝檔案庫、並擷取所需的檔案。 
+---
+= 下載及解壓縮StorageGRID 安裝文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須下載StorageGRID 安裝檔案庫、並擷取所需的檔案。
+
+.步驟
+. 請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+
+. 選取下載最新版本的按鈕、或從下拉式功能表中選取其他版本、然後選取*執行*。
+. 以您NetApp帳戶的使用者名稱和密碼登入。
+. 如果出現Caution/MustRead說明、請閱讀並勾選核取方塊。
++
+安裝StorageGRID 完此版本的更新後、您必須套用所有必要的修補程式。如需詳細資訊、請參閱還原與維護指示中的修復程序程序。
+
+. 閱讀使用者授權合約、勾選核取方塊、然後選取*接受並繼續*。
++
+此時將顯示所選版本的下載頁面。頁面包含三欄：
+
+. 在*安裝StorageGRID S編*欄中、選取適當的軟體。
++
+選取 `.tgz` 或 `.zip` 為您的平台歸檔檔案。
+
++
+** `StorageGRID-Webscale-version-DEB-uniqueID.zip`
+** `StorageGRID-Webscale-version-DEB-uniqueID.tgz`
++
+壓縮檔案包含Ubuntu或Debian的Dub檔案和指令碼。
+
+
+
++
+
+NOTE: 使用 `.zip` 檔案（如果您是在服務筆記型電腦上執行Windows）。
+
+. 儲存並擷取歸檔檔案。
+. 從下列清單中選擇您需要的檔案。
++
+您所需的檔案集取決於您規劃的網格拓撲、以及如何部署StorageGRID 您的支援網格。
+
++
+
+NOTE: 表中列出的路徑是相對於擷取安裝歸檔所安裝的最上層目錄。
+
+
+
+[cols="1a,2a"]
+|===
+| 路徑和檔案名稱 | 說明 
+
+
+| 每個問題/讀我檔案  a| 
+說明StorageGRID 包含在更新檔中的所有檔案的文字檔。
+
+
+
+| ./cebs/NLF000000.txt  a| 
+非正式作業的NetApp授權檔案、可用於測試及概念驗證部署。
+
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb  a| 
+Deb套件、用於在StorageGRID Ubuntu或Debian主機上安裝不含節點的映像。
+
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb.md5  a| 
+檔案的md5 Checksum `/debs/storagegrid-webscale-images-version-SHA.deb`。
+
+
+
+| ./cebs/storagegrid-webscale-service-version-SHA.deb  a| 
+Deb套件、用於在StorageGRID Ubuntu或Debian主機上安裝支援功能主機服務。
+
+
+
+ a| 
+*部署指令碼工具*
+ a| 
+*說明*
+
+
+
+| ./cebs/configure-storagegrid.py  a| 
+Python指令碼、用於自動化StorageGRID 組態的功能。
+
+
+
+| ./cebs/configure-sga.py  a| 
+Python指令碼、用於自動化StorageGRID 設定不必要的應用程式。
+
+
+
+| ./cebs/storagegrid-ssoauth.py  a| 
+啟用單一登入時、您可用來登入Grid Management API的Python指令碼範例。
+
+
+
+| ./cebs/configure儲存格RID、same.json  a| 
+與搭配使用的範例組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| ./cebs/configure儲存格GRID、blank、json  a| 
+與搭配使用的空白組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| /扣款/額外費用/可選  a| 
+範例Ansible角色與方針、可用來設定Ubuntu或Debian主機以StorageGRID 進行列舉容器部署。您可以視需要自訂角色或方針。
+
+|===
+.相關資訊
+link:../maintain/index.html["維護"]

@@ -1,0 +1,23 @@
+---
+permalink: sg5700/preparing-for-installation.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, installation, preparation, get ready, prepare 
+summary: 準備安裝StorageGRID VMware應用程式需要準備場地、並取得所有必要的硬體、纜線和工具。您也應該收集IP位址和網路資訊。 
+---
+= 準備安裝
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+準備安裝StorageGRID VMware應用程式需要準備場地、並取得所有必要的硬體、纜線和工具。您也應該收集IP位址和網路資訊。
+
+.步驟
+* link:preparing-site-sg5700.html["準備站台（SG5700）"]
+* link:unpacking-boxes-sg5700.html["打開包裝箱（SG5700）"]
+* link:obtaining-additional-equipment-and-tools-sg5700.html["取得額外設備與工具（SG5700）"]
+* link:web-browser-requirements.html["網頁瀏覽器需求"]
+* link:reviewing-appliance-network-connections-sg5700.html["檢閱應用裝置網路連線"]
+* link:gathering-installation-information-sg5700.html["收集安裝資訊（SG5700）"]
+

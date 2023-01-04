@@ -1,0 +1,77 @@
+---
+permalink: vmware/running-bash-script.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用deploy-vsphere-ovftool.sh Bash指令碼和您修改的deploy-vsphere-ovftool.ini組態檔、將StorageGRID VMware vSphere中的VMware網格節點部署自動化。 
+---
+= 執行Bash指令碼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 `deploy-vsphere-ovftool.sh` 您修改的Bash指令碼和deploy-vsphere-ovftool.ini組態檔、可在StorageGRID VMware vSphere中自動部署VMware vSphere中的VMware網格節點。
+
+.您需要的產品
+* 您已為環境建立deploy-vsphere-ovftool.ini組態檔。
+
+
+您可以輸入說明命令、使用Bash指令碼提供的說明 (`-h/--help`）。例如：
+
+[listing]
+----
+./deploy-vsphere-ovftool.sh -h
+----
+或
+
+[listing]
+----
+./deploy-vsphere-ovftool.sh --help
+----
+.步驟
+. 登入您用來執行Bash指令碼的Linux機器。
+. 切換至您擷取安裝歸檔的目錄。
++
+例如：
+
++
+[listing]
+----
+cd StorageGRID-Webscale-version/vsphere
+----
+. 若要部署所有網格節點、請執行Bash指令碼、並針對您的環境提供適當的選項。
++
+例如：
+
++
+[listing]
+----
+./deploy-vsphere-ovftool.sh --username=user --password=pwd ./deploy-vsphere-ovftool.ini
+----
+. 如果網格節點因為錯誤而無法部署、請解決此錯誤、然後僅針對該節點重新執行Bash指令碼。
++
+例如：
+
++
+[listing]
+----
+./deploy-vsphere-ovftool.sh --username=user --password=pwd --single-node="DC1-S3" ./deploy-vsphere-ovftool.ini
+----
+
+
+當每個節點的狀態為「passed」時、即完成部署。
+
+[listing]
+----
+Deployment Summary
++-----------------------------+----------+----------------------+
+| node                        | attempts | status               |
++-----------------------------+----------+----------------------+
+| DC1-ADM1                    |        1 | Passed               |
+| DC1-G1                      |        1 | Passed               |
+| DC1-S1                      |        1 | Passed               |
+| DC1-S2                      |        1 | Passed               |
+| DC1-S3                      |        1 | Passed               |
++-----------------------------+----------+----------------------+
+----

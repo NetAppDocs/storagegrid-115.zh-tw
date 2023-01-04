@@ -1,0 +1,40 @@
+---
+permalink: primer/prometheus-metrics.html 
+sidebar: sidebar 
+keywords: prometheus, metrics, grafana 
+summary: 管理節點上的Prometheus服務會從所有節點上的服務收集時間序列指標。 
+---
+= Prometheus指標
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理節點上的Prometheus服務會從所有節點上的服務收集時間序列指標。
+
+Prometheus收集的指標會在Grid Manager的許多地方使用：
+
+* *節點頁面*：節點頁面上可用索引標籤上的圖表使用Grafana視覺化工具來顯示Prometheus所收集的時間序列指標。Grafana以圖表和圖表格式顯示時間序列資料、而Prometheus則是後端資料來源。
++
+image::../media/prometheus_graph.png[Prometheus圖表]
+
+* *警示*：當使用Prometheus度量的警示規則條件評估為真時、警示會在特定嚴重性層級觸發。
+* * Grid Management API*：您可以在自訂警示規則中使用Prometheus指標、或搭配外部自動化工具來監控StorageGRID 您的VMware系統。您可從Grid Management API（* Help *>* API Documentation *>* Metrics *）取得Prometheus指標的完整清單。雖然有超過一千種指標可供使用、但監控最關鍵StorageGRID 的功能只需要相對較少的數量。
++
+
+NOTE: 名稱中包含_Private的指標僅供內部使用、StorageGRID 可能會在不另行通知的情況下於各個版本之間變更。
+
+* 「*支援*>*工具*>*診斷*」頁面和「*支援*>*工具*>*指標*」頁面：這些頁面主要供技術支援使用、提供許多使用Prometheus指標值的工具和圖表。
++
+
+NOTE: 「指標」頁面中的某些功能和功能表項目會刻意無法運作、而且可能會有所變更。
+
+
+
+.相關資訊
+link:monitoring-and-managing-alerts.html["監控與管理警示"]
+
+link:using-storagegrid-support-options.html["使用StorageGRID 支援選項"]
+
+link:../monitor/index.html["監控安培；疑難排解"]

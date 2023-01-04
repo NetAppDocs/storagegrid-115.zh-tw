@@ -1,0 +1,25 @@
+---
+permalink: maintain/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 瞭解如何套用修補程式、恢復故障的網格節點、取消委任網格節點和站台、以及在系統故障時恢復物件。 
+---
+= 維持恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何套用修補程式、恢復故障的網格節點、取消委任網格節點和站台、以及在系統故障時恢復物件。
+
+* link:introduction-to-storagegrid-recovery-and-maintenance.html["介紹還原與維護StorageGRID"]
+* link:storagegrid-hotfix-procedure.html["修復程序StorageGRID"]
+* link:grid-node-recovery-procedures.html["網格節點還原程序"]
+* link:how-site-recovery-is-performed-by-technical-support.html["技術支援如何執行站台恢復"]
+* link:decommission-procedure.html["取消委任程序"]
+* link:network-maintenance-procedures.html["網路維護程序"]
+* link:host-level-and-middleware-procedures.html["主機層級與中介軟體程序"]
+* link:grid-node-procedures.html["網格節點程序"]
+* link:appliance-node-cloning.html["應用裝置節點複製"]
+

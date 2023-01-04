@@ -1,0 +1,20 @@
+---
+permalink: primer/monitoring-storagegrid-operations.html 
+sidebar: sidebar 
+keywords:  
+summary: Grid Manager提供監控StorageGRID 您的整個作業系統日常活動的資訊、包括其健全狀況。 
+---
+= 監控StorageGRID 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Grid Manager提供監控StorageGRID 您的整個作業系統日常活動的資訊、包括其健全狀況。
+
+* link:viewing-nodes-page.html["檢視節點頁面"]
+* link:monitoring-and-managing-alerts.html["監控與管理警示"]
+* link:using-snmp-monitoring.html["使用SNMP監控"]
+* link:reviewing-audit-messages.html["檢閱稽核訊息"]
+

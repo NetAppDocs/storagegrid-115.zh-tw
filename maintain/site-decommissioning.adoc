@@ -1,0 +1,29 @@
+---
+permalink: maintain/site-decommissioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能需要將資料中心站台從StorageGRID 這個系統移除。若要移除站台、您必須取消委任站台。 
+---
+= 站台汰換
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要將資料中心站台從StorageGRID 這個系統移除。若要移除站台、您必須取消委任站台。
+
+流程圖顯示停用站台的高階步驟。
+
+image::../media/overview_decommission_site.png[概述：取消委任站台]
+
+.步驟
+* link:considerations-for-removing-site.html["移除站台的考量"]
+* link:gathering-required-materials-site-decom.html["收集必要資料"]
+* link:step-1-select-site.html["步驟1：選取站台"]
+* link:step-2-view-details.html["步驟2：檢視詳細資料"]
+* link:step-3-revise-ilm-policy.html["步驟3：修改ILM原則"]
+* link:step-4-remove-ilm-references.html["步驟4：移除ILM參考"]
+* link:step-5-resolve-node-conflicts.html["步驟5：解決節點衝突（並開始取消委任）"]
+* link:step-6-monitor-decommission.html["步驟6：監控取消委任"]
+

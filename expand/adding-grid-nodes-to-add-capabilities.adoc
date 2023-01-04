@@ -1,0 +1,40 @@
+---
+permalink: expand/adding-grid-nodes-to-add-capabilities.html 
+sidebar: sidebar 
+keywords: grid nodes, expand, expansion, site, add 
+summary: 您可以StorageGRID 新增新的網格節點至現有站台、以新增備援功能或其他功能至該系統。 
+---
+= 新增網格節點以新增功能至系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以StorageGRID 新增新的網格節點至現有站台、以新增備援功能或其他功能至該系統。
+
+例如、您可以選擇新增其他閘道節點、以支援建立閘道節點的高可用度群組、或是在遠端站台新增管理節點、以允許使用本機節點進行監控。
+
+您可以在單一擴充作業中、將下列一種或多種類型的節點新增至一或多個現有站台：
+
+* 非主要管理節點
+* 儲存節點
+* 閘道節點
+* 歸檔節點
+
+
+準備新增網格節點時、請注意下列限制：
+
+* 主管理節點會在初始安裝期間部署。您無法在擴充期間新增主要管理節點。
+* 您可以在相同的擴充中新增儲存節點和其他類型的節點。
+* 新增儲存節點時、您必須仔細規劃新節點的數量和位置。
++
+link:adding-storage-capacity.html["增加儲存容量"]
+
+* 如果您要新增歸檔節點、請注意、每個歸檔節點僅透過Tivoli Storage Manager（TSM）中介軟體支援磁帶。
+* 如果「不受信任的用戶端網路」頁面上的*新節點用戶端網路預設*選項設定為*不受信任*、則使用用戶端網路連線至擴充節點的用戶端應用程式必須使用負載平衡器端點連接埠（*組態*>*網路設定*>*不受信任的用戶端網路*）進行連線。請參閱「管理StorageGRID 功能」的指示、以變更新節點的設定及設定負載平衡器端點。
+
+
+*相關資訊*
+
+link:../admin/index.html["管理StorageGRID"]

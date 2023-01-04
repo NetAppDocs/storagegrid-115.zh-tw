@@ -1,0 +1,58 @@
+---
+permalink: network/storagegrid-networking-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, network, networking, ethernet, subnet, routing 
+summary: 若要設定StorageGRID 適用於某個效能不穩定系統的網路功能、需要具備乙太網路交換、TCP/IP網路、子網路、網路路由和防火牆等豐富經驗。 
+---
+= 網路概述StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要設定StorageGRID 適用於某個效能不穩定系統的網路功能、需要具備乙太網路交換、TCP/IP網路、子網路、網路路由和防火牆等豐富經驗。
+
+在您設定網路之前、請先熟悉StorageGRID _網格入門_中所述的功能。
+
+在部署和設定StorageGRID 靜態之前、您必須先設定網路基礎架構。需要在網格中的所有節點之間、以及網格與外部用戶端和服務之間進行通訊。
+
+外部用戶端和外部服務需要連線StorageGRID 至無法分享的網路、才能執行下列功能：
+
+* 儲存及擷取物件資料
+* 接收電子郵件通知
+* 存取StorageGRID 功能完善的管理介面（Grid Manager與Tenant Manager）
+* 存取稽核共用區（選用）
+* 提供下列服務：
++
+** 網路時間傳輸協定（NTP）
+** 網域名稱系統（DNS）
+** 金鑰管理伺服器（KMS）
+
+
+
+
+必須適當設定以處理這些功能及其他功能的流量。StorageGRID
+
+在您決定要StorageGRID 使用哪三個資訊網、以及如何設定這些網路之後、StorageGRID 您可以依照適當的指示來安裝及設定這些節點。
+
+.相關資訊
+link:../primer/index.html["網格入門指南"]
+
+link:../admin/index.html["管理StorageGRID"]
+
+link:../release-notes/index.html["版本資訊"]
+
+link:../rhel/index.html["安裝Red Hat Enterprise Linux或CentOS"]
+
+link:../ubuntu/index.html["安裝Ubuntu或DEBIAN"]
+
+link:../vmware/index.html["安裝VMware"]
+
+link:../sg100-1000/index.html["SG100  機；SG1000服務應用裝置"]
+
+link:../sg6000/index.html["SG6000儲存設備"]
+
+link:../sg5700/index.html["SG5700儲存設備"]
+
+link:../sg5600/index.html["SG5600儲存設備"]

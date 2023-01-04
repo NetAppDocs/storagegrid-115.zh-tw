@@ -1,0 +1,18 @@
+---
+permalink: vmware/automating-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以自動化VMware虛擬網格節點的部署、網格節點的組態、StorageGRID 以及VMware應用裝置的組態。 
+---
+= 自動化安裝
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自動化VMware虛擬網格節點的部署、網格節點的組態、StorageGRID 以及VMware應用裝置的組態。
+
+* link:automating-grid-node-deployment-in-vmware-vsphere.html["在VMware vSphere中自動化網格節點部署"]
+* link:automating-configuration-of-storagegrid.html["自動化StorageGRID 功能組態"]
+

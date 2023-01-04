@@ -1,0 +1,19 @@
+---
+permalink: tenant/using-identity-federation.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用身分識別聯盟可更快設定租戶群組和使用者、並可讓租戶使用者使用熟悉的認證登入租戶帳戶。 
+---
+= 使用身分識別聯盟
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用身分識別聯盟可更快設定租戶群組和使用者、並可讓租戶使用者使用熟悉的認證登入租戶帳戶。
+
+* link:configuring-federated-identity-source.html["設定聯盟身分識別來源"]
+* link:forcing-synchronization-with-identity-source.html["強制與身分識別來源同步"]
+* link:disabling-identity-federation.html["停用身分識別聯盟"]
+

@@ -1,0 +1,21 @@
+---
+permalink: monitor/monitoring-storage-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必須監控儲存節點上可用的總空間、以確保StorageGRID 該系統不會耗盡物件或物件中繼資料的儲存空間。 
+---
+= 監控儲存容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須監控儲存節點上可用的總空間、以確保StorageGRID 該系統不會耗盡物件或物件中繼資料的儲存空間。
+
+物件資料和物件中繼資料會分開儲存、並針對包含物件中繼資料的分散式Cassandra資料庫保留特定空間量。StorageGRID監控物件和物件中繼資料所耗用的空間總量、以及各物件所耗用空間量的趨勢。這可讓您預先規劃新增節點、避免任何服務中斷。
+
+您可以檢視StorageGRID 整個網格、每個站台、以及整個系統中每個儲存節點的儲存容量資訊。
+
+.相關資訊
+link:viewing-storage-tab.html["檢視儲存索引標籤"]

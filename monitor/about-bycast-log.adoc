@@ -1,0 +1,16 @@
+---
+permalink: monitor/about-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, log 
+summary: '檔案/var/local/log/bycast.log是StorageGRID 適用於整個解決程序的主要疑難排解檔案。有 `bycast.log` 每個網格節點的檔案。檔案包含該網格節點的特定訊息。' 
+---
+= 關於bycast.log
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+檔案 `/var/local/log/bycast.log` 是StorageGRID 支援此功能的解決方案。有 `bycast.log` 每個網格節點的檔案。檔案包含該網格節點的特定訊息。
+
+檔案 `/var/local/log/bycast-err.log` 為的子集 `bycast.log`。其中包含嚴重性錯誤和嚴重的訊息。

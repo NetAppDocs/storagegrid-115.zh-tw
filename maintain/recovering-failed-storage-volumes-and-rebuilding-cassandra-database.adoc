@@ -1,0 +1,109 @@
+---
+permalink: maintain/recovering-failed-storage-volumes-and-rebuilding-cassandra-database.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, maintenance, maintain, failed storage volumes, failed volumes, cassandra, cassandra rebuild, rebuild cassandra, cassandra database 
+summary: 您必須執行指令碼、重新格式化及重新掛載故障儲存磁碟區上的儲存設備、並在系統判斷有必要時、在儲存節點上重新建置Cassandra資料庫。 
+---
+= 恢復故障的儲存磁碟區並重建Cassandra資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須執行指令碼、重新格式化及重新掛載故障儲存磁碟區上的儲存設備、並在系統判斷有必要時、在儲存節點上重新建置Cassandra資料庫。
+
+* 您必須擁有 `Passwords.txt` 檔案：
+* 伺服器上的系統磁碟機必須完整無缺。
+* 故障原因必須已確認、必要時必須已取得替換儲存硬體。
+* 替換儲存設備的總大小必須與原始儲存設備相同。
+* 您已檢查儲存節點汰換是否在進行中、或您已暫停節點取消委任程序。（在Grid Manager中、選取*維護*維護工作**取消配置*。）
+* 您已檢查擴充是否在進行中。（在Grid Manager中、選取*維護*維護工作**擴充*。）
+* 您已檢閱有關儲存磁碟區恢復的警告。
++
+link:reviewing-warnings-about-storage-volume-recovery.html["檢閱有關儲存磁碟區恢復的警告"]
+
++
+.. 視需要更換故障的實體或虛擬儲存設備、這些儲存設備與您先前識別並卸載的故障儲存磁碟區相關聯。
++
+更換儲存設備後、請務必重新掃描或重新開機、以確保作業系統能夠辨識該儲存設備、但不要重新掛載磁碟區。儲存設備會重新掛載並新增至 `/etc/fstab` 稍後再進行。
+
+.. 登入故障儲存節點：
++
+... 輸入下列命令： `ssh admin@_grid_node_IP_`
+... 輸入中所列的密碼 `Passwords.txt` 檔案：
+... 輸入下列命令以切換至root： `su -`
+... 輸入中所列的密碼 `Passwords.txt` 檔案：
+
+
+
+
++
+當您以root登入時、提示會從變更 `$` 至 `#`。
+
++
+.. 使用文字編輯器（VI或vim）從刪除故障磁碟區 `/etc/fstab` 然後儲存檔案。
++
+
+NOTE: 在中註釋掉故障的Volume `/etc/fstab` 檔案不足。磁碟區必須從刪除 `fstab` 當恢復程序驗證中的所有行時 `fstab` 檔案與掛載的檔案系統相符。
+
+.. 重新格式化任何故障的儲存磁碟區、並視需要重新建置Cassandra資料庫。輸入： `reformat_storage_block_devices.rb`
++
+*** 如果儲存服務正在執行、系統會提示您停止這些服務。輸入：* y*
+*** 如有必要、系統會提示您重新建置Cassandra資料庫。
++
+**** 檢閱警告。如果沒有任何應用程式、請重新建置Cassandra資料庫。輸入：* y*
+**** 如果有多個儲存節點離線、或是在過去15天內重建了另一個儲存節點。輸入：* n*
++
+指令碼將會結束而不重建Cassandra。聯絡技術支援。
+
+
+
+*** 當系統詢問您時、儲存節點上的每個rangedb磁碟機： `Reformat the rangedb drive _<name>_ (device _<major number>:<minor number>_)? [y/n]?`下、輸入下列其中一個回應：
++
+**** * y*重新格式化發生錯誤的磁碟機。這會重新格式化儲存磁碟區、並將重新格式化的儲存磁碟區新增至 `/etc/fstab` 檔案：
+**** *不*如果磁碟機沒有錯誤、而且您不想重新格式化。
++
+
+NOTE: 選取* n*會結束指令碼。掛載磁碟機（如果您認為應該保留磁碟機上的資料、而且磁碟機發生錯誤、請將其卸載）或移除磁碟機。然後執行 `reformat_storage_block_devices.rb` 命令。
+
++
+
+NOTE: 部分StorageGRID 還原程序會使用Reaper來處理Cassandra的修復作業。一旦相關或必要的服務開始、系統就會自動進行修復。您可能會注意到指令碼輸出中提到「Shaper」或「Cassandra repair」。 如果您看到指出修復失敗的錯誤訊息、請執行錯誤訊息中指示的命令。
+
++
+在下列輸出範例中、磁碟機 `/dev/sdf` 必須重新格式化、而且不需要重建Cassandra：
+
++
+[listing]
+----
+root@DC1-S1:~ # reformat_storage_block_devices.rb
+Storage services must be stopped before running this script.
+Stop storage services [y/N]? **y**
+Shutting down storage services.
+Storage services stopped.
+Formatting devices that are not in use...
+Skipping in use device /dev/sdc
+Skipping in use device /dev/sdd
+Skipping in use device /dev/sde
+Reformat the rangedb drive /dev/sdf (device 8:64)? [Y/n]? **y**
+Successfully formatted /dev/sdf with UUID c817f87f-f989-4a21-8f03-b6f42180063f
+Skipping in use device /dev/sdg
+All devices processed
+Running: /usr/local/ldr/setup_rangedb.sh 12075630
+Cassandra does not need rebuilding.
+Starting services.
+
+Reformatting done.  Now do manual steps to
+restore copies of data.
+----
+
+
+
+
+
+
+
+
+.相關資訊
+link:reviewing-warnings-about-storage-volume-recovery.html["檢閱有關儲存磁碟區恢復的警告"]

@@ -1,0 +1,84 @@
+---
+permalink: monitor/messages-in-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, bycast.log, bycast log, bycast message 
+summary: '訊息 `bycast.log` 由ADE（非同步分散式環境）寫入。ade是每個網格節點服務所使用的執行時間環境。' 
+---
+= bycast.log中的訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+訊息 `bycast.log` 由ADE（非同步分散式環境）撰寫。ade是每個網格節點服務所使用的執行時間環境。
+
+這是ADE訊息的範例：
+
+[listing]
+----
+May 15 14:07:11 um-sec-rg1-agn3 ADE: |12455685    0357819531
+SVMR EVHR 2019-05-05T27T17:10:29.784677| ERROR 0906 SVMR: Health
+check on volume 3 has failed with reason 'TOUT'
+----
+ade訊息包含下列資訊：
+
+|===
+| 訊息區段 | 範例中的值 
+
+
+ a| 
+節點ID
+ a| 
+12455685
+
+
+
+ a| 
+ade程序ID
+ a| 
+0357819531
+
+
+
+ a| 
+模組名稱
+ a| 
+SVMR
+
+
+
+ a| 
+訊息識別碼
+ a| 
+EVHR
+
+
+
+ a| 
+UTC系統時間
+ a| 
+2019年5月5日T27T17：10：29.784677（年-月-日-日/月：月：SS.uuuuuuuuuu）
+
+
+
+ a| 
+嚴重性等級
+ a| 
+錯誤
+
+
+
+ a| 
+內部追蹤編號
+ a| 
+906.
+
+
+
+ a| 
+訊息
+ a| 
+SVMR：磁碟區3的健全狀況檢查失敗、原因為「tout」
+
+|===

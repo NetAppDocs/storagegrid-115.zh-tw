@@ -1,0 +1,33 @@
+---
+permalink: maintain/recovering-from-system-drive-failure.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, system drive failure 
+summary: 如果軟體型儲存節點上的系統磁碟機故障、StorageGRID 則無法使用儲存節點。您必須完成一組特定的工作、才能從系統磁碟機故障中恢復。 
+---
+= 從系統磁碟機故障中恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果軟體型儲存節點上的系統磁碟機故障、StorageGRID 則無法使用儲存節點。您必須完成一組特定的工作、才能從系統磁碟機故障中恢復。
+
+.關於這項工作
+使用此程序可從軟體型儲存節點上的系統磁碟機故障中恢復。此程序包括當任何儲存磁碟區也發生故障或無法重新掛載時、應遵循的步驟。
+
+
+NOTE: 此程序僅適用於軟體型儲存節點。您必須依照不同的程序來恢復應用裝置儲存節點。
+
+link:recovering-storagegrid-appliance-storage-node.html["恢復StorageGRID 功能不整的應用程式儲存節點"]
+
+image::../media/storage_node_recovery_system_drive.gif[軟體型儲存節點上故障系統磁碟機的恢復步驟]
+
+.步驟
+* link:reviewing-warnings-for-system-drive-recovery.html["檢閱儲存節點系統磁碟機恢復的警告"]
+* link:replacing-storage-node.html["更換儲存節點"]
+* link:selecting-start-recovery-to-configure-storage-node.html["選取「Start Recovery」（開始還原）以設定儲存節點"]
+* link:remounting-and-reformatting-storage-volumes-manual-steps.html["重新掛載及重新格式化儲存磁碟區（「手動步驟」）"]
+* link:restoring-object-data-to-storage-volume-if-required.html["如有需要、可將物件資料還原至儲存Volume"]
+* link:checking-storage-state-after-recovering-storage-node-system-drive.html["恢復儲存節點系統磁碟機後、請檢查儲存狀態"]
+

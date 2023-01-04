@@ -1,0 +1,23 @@
+---
+permalink: admin/managing-admin-nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: 每個StorageGRID 站台在一個無法完成部署的站台上、都可以有一個或多個管理節點。 
+---
+= 管理管理節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+每個StorageGRID 站台在一個無法完成部署的站台上、都可以有一個或多個管理節點。
+
+* link:what-admin-node-is.html["什麼是管理節點"]
+* link:using-multiple-admin-nodes.html["使用多個管理節點"]
+* link:identifying-primary-admin-node.html["識別主要管理節點"]
+* link:selecting-preferred-sender.html["選取偏好的寄件者"]
+* link:viewing-notification-status-and-queues.html["檢視通知狀態和佇列"]
+* link:how-admin-nodes-show-acknowledged-alarms.html["管理節點如何顯示已確認的警示（舊系統）"]
+* link:configuring-audit-client-access.html["設定稽核用戶端存取"]
+

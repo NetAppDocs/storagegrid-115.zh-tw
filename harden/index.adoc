@@ -1,0 +1,22 @@
+---
+permalink: harden/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 系統強化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解系統設定、最佳實務做法、以及保護StorageGRID 作業系統免受安全威脅的建議。
+
+* link:hardening-storagegrid-system.html["強化StorageGRID 功能"]
+* link:hardening-guidelines-for-software-upgrades.html["強化軟體升級準則"]
+* link:hardening-guidelines-for-storagegrid-networks.html["強化有關資訊網路的準則StorageGRID"]
+* link:hardening-guidelines-for-storagegrid-nodes.html["強化有關節點的準則StorageGRID"]
+* link:hardening-guideline-for-server-certificates.html["伺服器憑證的強化準則"]
+* link:other-hardening-guidelines.html["其他強化準則"]]
+

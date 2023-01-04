@@ -1,0 +1,116 @@
+---
+permalink: ilm/example-2-ilm-rules-and-policy-for-ec-object-size-filtering.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 範例2：EC物件大小篩選的ILM規則和原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用下列範例規則和原則做為起點、定義ILM原則、根據物件大小篩選以符合建議的EC需求。
+
+
+CAUTION: 下列ILM規則和原則僅為範例。有許多方法可以設定ILM規則。在啟動新原則之前、請先模擬建議的原則、確認其運作方式符合保護內容免於遺失的目的。
+
+
+
+== ILM規則1（例如2）：所有大於200 KB的物件都使用EC
+
+此範例ILM規則銷毀會將所有大於200 KB（0.20 MB）的物件編碼。
+
+[cols="1a,2a"]
+|===
+| 規則定義 | 範例值 
+
+
+ a| 
+規則名稱
+ a| 
+僅EC物件> 200 KB
+
+
+
+ a| 
+參考時間
+ a| 
+擷取時間
+
+
+
+ a| 
+物件大小的進階篩選
+ a| 
+物件大小（MB）大於0.20
+
+
+
+ a| 
+內容放置
+ a| 
+使用三個站台建立2+1銷毀編碼複本
+
+|===
+image:../media/policy_2_rule_1_ec_objects_adv_filtering.gif["ILM規則1（例如2）：所有大於200 KB的物件都使用EC"]
+
+放置說明指定使用所有三個站台建立2+1銷毀編碼複本。
+
+image::../media/policy_2_rule_1_ec_objects_placements.png[ILM規則1（例如2）：所有大於200 KB的物件都使用EC]
+
+
+
+== ILM規則2例如2：兩個複寫複本
+
+此範例ILM規則會建立兩個複寫複本、而不會依物件大小進行篩選。此規則是原則中的第二條規則。因為ILM規則1（例如2）會篩選出所有大於200 KB的物件、所以ILM規則2（例如2）僅適用於200 KB或更小的物件。
+
+[cols="1a,2a"]
+|===
+| 規則定義 | 範例值 
+
+
+ a| 
+規則名稱
+ a| 
+兩個複寫複本
+
+
+
+ a| 
+參考時間
+ a| 
+擷取時間
+
+
+
+ a| 
+物件大小的進階篩選
+ a| 
+無
+
+
+
+ a| 
+內容放置
+ a| 
+建立兩個複寫複本、並將其儲存在DC1和DC2這兩個資料中心
+
+|===
+image:../media/ilm_rule_2_example_2_two_replicated_copies.png["範例ILM規則2例如2 -兩個複寫複本"]
+
+
+
+== 範例2的ILM原則：針對大於200 KB的物件使用EC
+
+在此範例原則中、大於200 KB的物件會以銷毀編碼。所有其他物件都會建立兩個複寫複本。
+
+此ILM原則範例包括下列ILM規則：
+
+* 銷毀程式碼所有大於200 KB的物件。
+* 如果物件不符合第一個ILM規則、請使用預設ILM規則來建立該物件的兩個複寫複本。由於規則1已篩選出大於200 KB的物件、因此規則2僅適用於200 KB或更小的物件。
++
+image::../media/policy_2_configured_policy.png[範例2的ILM原則：針對大於200 KB的物件使用EC]
+
+

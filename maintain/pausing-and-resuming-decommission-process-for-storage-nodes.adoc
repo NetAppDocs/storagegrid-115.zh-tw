@@ -1,0 +1,43 @@
+---
+permalink: maintain/pausing-and-resuming-decommission-process-for-storage-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, decommission, storage node 
+summary: 如有必要、您可以在特定階段暫停儲存節點的取消委任程序。您必須在儲存節點上暫停汰換、才能開始第二個維護程序。完成其他程序之後、您就可以繼續解除委任。 
+---
+= 暫停及恢復儲存節點的取消委任程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如有必要、您可以在特定階段暫停儲存節點的取消委任程序。您必須在儲存節點上暫停汰換、才能開始第二個維護程序。完成其他程序之後、您就可以繼續解除委任。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有維護或根存取權限。
+
+
+.步驟
+. 選擇*維護*>*維護工作*>*取消配置*。
++
+此時會出現「取消委任」頁面。
+
+. 按一下*取消委任節點*。
++
+此時會出現「取消委任節點」頁面。當取消委任程序達到下列任一階段時、*暫停*按鈕就會啟用。
+
++
+** 評估ILM
+** 解除委任銷毀編碼資料
+
+
+. 按一下*暫停*以暫停程序。
++
+目前階段會暫停、並啟用*恢復*按鈕。
+
++
+image::../media/decommission_nodes_procedure_paused.png[取消委任節點程序暫停]
+
+. 完成其他維護程序之後、按一下*恢復*以繼續取消委任。
+

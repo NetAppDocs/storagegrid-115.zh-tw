@@ -1,0 +1,24 @@
+---
+permalink: admin/restoring-default-server-certificates-for-s3-swift-api-endpoints.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以還原為使用S3和Swift REST API端點的預設伺服器憑證。 
+---
+= 還原S3和Swift REST API端點的預設伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以還原為使用S3和Swift REST API端點的預設伺服器憑證。
+
+.步驟
+. 選擇*組態*>*網路設定*>*伺服器憑證*。
+. 在「物件儲存API服務端點伺服器憑證」區段中、按一下「*使用預設憑證*」。
+. 按一下確認對話方塊中的*確定*。
++
+還原物件儲存API端點的預設伺服器憑證時、您設定的自訂伺服器憑證檔案將會刪除、無法從系統中還原。預設伺服器憑證會用於所有後續的新API用戶端連線。
+
+. 重新整理頁面以確保網頁瀏覽器已更新。
+

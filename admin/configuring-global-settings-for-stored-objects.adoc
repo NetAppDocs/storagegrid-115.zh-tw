@@ -1,0 +1,19 @@
+---
+permalink: admin/configuring-global-settings-for-stored-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用Grid Options（網格選項）來設定StorageGRID 儲存在您的還原系統中的所有物件設定、包括儲存的物件壓縮、儲存的物件加密。和儲存的物件雜湊。 
+---
+= 設定儲存物件的全域設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Grid Options（網格選項）來設定StorageGRID 儲存在您的還原系統中的所有物件設定、包括儲存的物件壓縮、儲存的物件加密。和儲存的物件雜湊。
+
+* link:configuring-stored-object-compression.html["設定儲存的物件壓縮"]
+* link:configuring-stored-object-encryption.html["設定儲存的物件加密"]
+* link:configuring-stored-object-hashing.html["設定儲存的物件雜湊"]
+

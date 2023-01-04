@@ -1,0 +1,54 @@
+---
+permalink: sg6000/accessing-bmc-interface-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, BMC, baseboard management controller, access, open, login 
+summary: 您可以使用BMC管理連接埠的DHCP或靜態IP位址來存取SG6000-CNs控制器上的BMC介面。 
+---
+= 存取BMC介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用BMC管理連接埠的DHCP或靜態IP位址來存取SG6000-CNs控制器上的BMC介面。
+
+.您需要的產品
+* SG6000-CN-控制器上的BMC管理連接埠會連接到您打算使用的管理網路。
++
+image::../media/sg6000_cn_bmc_management_port.gif[SG6000-CN-控制器上的BMC管理連接埠]
+
+* 管理用戶端使用支援的網頁瀏覽器。
+
+
+.步驟
+. 輸入BMC介面的URL：+
+`*https://_BMC_Port_IP_*`
++
+適用於 `_BMC_Port_IP_`中的DHCP或靜態IP位址。
+
++
+此時會出現BMC登入頁面。
+
+. 輸入root使用者名稱和密碼、使用您在變更預設root密碼時設定的密碼：+
+`*root*` +
+`*_password_*`
++
+image::../media/bmc_signin_page.gif[BMC登入頁面]
+
+. 選取*登入*。
++
+此時會出現BMC儀表板。
+
++
+image::../media/bmc_dashboard.gif[BMC儀表板]
+
+. 或者、選取*設定*>*使用者管理*、然後按一下任何「停用」使用者、即可建立其他使用者。
++
+
+NOTE: 使用者第一次登入時、系統可能會提示他們變更密碼、以提高安全性。
+
+
+
+.相關資訊
+link:changing-root-password-for-bmc-interface-sg6000.html["變更BMC介面的根密碼"]

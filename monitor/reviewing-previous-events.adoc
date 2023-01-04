@@ -1,0 +1,31 @@
+---
+permalink: monitor/reviewing-previous-events.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以產生先前事件訊息的清單、以協助隔離過去發生的問題。 
+---
+= 檢閱先前的事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以產生先前事件訊息的清單、以協助隔離過去發生的問題。
+
+. 選取*支援*>*工具*>*網格拓撲*。
+. 選擇*站台_*>*網格節點_*>* SUS*>*事件*>*報告*。
+. 選擇*文字*。
++
+「圖表」檢視中不會顯示*上次事件*屬性。
+
+. 將*屬性*變更為*上次事件*。
+. （可選）選擇*快速查詢*的時段。
+. 按一下 * 更新 * 。
++
+image::../media/events_report.gif[「事件」頁面]
+
+
+
+.相關資訊
+link:using-charts-and-reports.html["使用圖表和報告"]

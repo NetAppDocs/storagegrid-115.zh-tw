@@ -1,0 +1,89 @@
+---
+permalink: admin/configuring-s3-api-endpoint-domain-names.html 
+sidebar: sidebar 
+keywords:  
+summary: 若要支援S3虛擬託管樣式要求、您必須使用Grid Manager來設定S3用戶端所連線的端點網域名稱清單。 
+---
+= 設定S3 API端點網域名稱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要支援S3虛擬託管樣式要求、您必須使用Grid Manager來設定S3用戶端所連線的端點網域名稱清單。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須擁有特定的存取權限。
+* 您必須確認網格升級尚未進行。
++
+
+CAUTION: 進行網格升級時、請勿對網域名稱組態進行任何變更。
+
+
+
+.關於這項工作
+若要讓用戶端使用S3端點網域名稱、您必須執行下列所有工作：
+
+* 使用Grid Manager將S3端點網域名稱新增StorageGRID 至整個系統。
+* 請確認用戶端用於HTTPS連線StorageGRID 的驗證書已針對用戶端所需的所有網域名稱簽署。
++
+例如、如果端點是 `s3.company.com`、您必須確保用於HTTPS連線的憑證包含 `s3.company.com` 端點和端點的萬用字元主體替代名稱（SAN）： `*.s3.company.com`。
+
+* 設定用戶端使用的DNS伺服器。針對用戶端用來建立連線的IP位址、加入DNS記錄、並確保記錄會參考所有必要的端點網域名稱、包括任何萬用字元名稱。
++
+
+NOTE: 用戶端可以StorageGRID 使用閘道節點、管理節點或儲存節點的IP位址、或是連線至高可用度群組的虛擬IP位址、來連線至功能區。您應該瞭解用戶端應用程式如何連線至網格、以便在DNS記錄中包含正確的IP位址。
+
+
+
+用戶端用於HTTPS連線的憑證取決於用戶端連線至網格的方式：
+
+* 如果用戶端使用負載平衡器服務進行連線、則會使用特定負載平衡器端點的憑證。
++
+
+NOTE: 每個負載平衡器端點都有自己的憑證、而且每個端點都可設定為辨識不同的端點網域名稱。
+
+* 如果用戶端連線至閘道節點上的儲存節點或CLB服務、用戶端會使用已更新的網格自訂伺服器憑證、以包含所有必要的端點網域名稱。
++
+
+NOTE: CLB服務已過時。
+
+
+
+.步驟
+. 選擇*組態*>*網路設定*>*網域名稱*。
++
+此時會出現「端點網域名稱」頁面。
+
++
+image::../media/configure_endpoint_domain_names.png[端點網域名稱對話方塊的快照]
+
+. 使用（+）圖示新增其他欄位、在*端點*欄位中輸入S3 API端點網域名稱清單。
++
+如果此清單為空白、則會停用S3虛擬託管樣式要求的支援。
+
+. 按一下「 * 儲存 * 」。
+. 確保用戶端使用的伺服器憑證符合所需的端點網域名稱。
++
+** 對於使用負載平衡器服務的用戶端、請更新與用戶端連線的負載平衡器端點相關聯的憑證。
+** 對於直接連線至儲存節點或使用閘道節點上CLB服務的用戶端、請更新網格的自訂伺服器憑證。
+
+
+. 新增必要的DNS記錄、以確保端點網域名稱要求能夠解析。
+
+
+.結果
+現在、當用戶端使用端點時 `bucket.s3.company.com`、DNS伺服器會解析為正確的端點、而且憑證會依照預期驗證端點。
+
+.相關資訊
+link:../s3/index.html["使用S3"]
+
+link:viewing-ip-addresses.html["檢視IP位址"]
+
+link:creating-high-availability-group.html["建立高可用度群組"]
+
+link:configuring-custom-server-certificate-for-storage-node-or-clb.html["設定自訂伺服器憑證、以連線至儲存節點或CLB服務"]
+
+link:configuring-load-balancer-endpoints.html["設定負載平衡器端點"]

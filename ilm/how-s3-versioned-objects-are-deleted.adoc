@@ -1,0 +1,30 @@
+---
+permalink: ilm/how-s3-versioned-objects-are-deleted.html 
+sidebar: sidebar 
+keywords:  
+summary: 啟用S3儲存區的版本管理時、StorageGRID 無論是來自S3用戶端、S3儲存區生命週期到期、或ILM原則需求、均會遵循Amazon S3回應刪除要求的行為。 
+---
+= 如何刪除S3版本控制物件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+啟用S3儲存區的版本管理時、StorageGRID 無論是來自S3用戶端、S3儲存區生命週期到期、或ILM原則需求、均會遵循Amazon S3回應刪除要求的行為。
+
+物件版本控制時、物件刪除要求不會刪除物件的目前版本、也不會釋出空間。相反地、物件刪除要求只會建立刪除標記作為物件的目前版本、使物件的舊版變成「noncurrent」。
+
+即使物件尚未移除、StorageGRID 但功能上的功能仍然如同物件的目前版本已無法使用。對該物件的要求會傳回404 NotFound.但是、由於非目前物件資料尚未移除、因此指定物件非目前版本的要求可能會成功。
+
+若要在刪除版本控制的物件時釋出空間、您必須執行下列其中一項：
+
+* * S3用戶端要求*：在S3刪除物件要求中指定物件版本編號 (`DELETE /object?versionId=ID`）。請記住、此要求只會移除指定版本的物件複本（其他版本仍佔用空間）。
+* *生命週期*：使用 `NoncurrentVersionExpiration` 在儲存庫生命週期組態中採取行動。當符合指定的NoncurrentDays數量時、StorageGRID 不同時更新的物件版本會永久移除所有複本。這些物件版本無法還原。
+* * ILM *：在ILM原則中新增兩個ILM規則。在第一條規則中使用*非目前時間*做為參考時間、以符合物件的非目前版本。在第二個規則中使用*擷取時間*來符合目前的版本。*非目前時間*規則必須出現在*擷取時間*規則上方的原則中。
+
+
+.相關資訊
+link:../s3/index.html["使用S3"]
+
+link:example-4-ilm-rules-and-policy-for-s3-versioned-objects.html["範例4：S3版本化物件的ILM規則和原則"]

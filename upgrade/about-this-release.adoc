@@ -1,0 +1,20 @@
+---
+permalink: upgrade/about-this-release.html 
+sidebar: sidebar 
+keywords:  
+summary: 在開始升級之前、請先檢閱本節、瞭解StorageGRID 有關更新功能與增強功能的資訊、判斷是否有任何功能已過時或已移除、並瞭解StorageGRID 有關變更的資訊。 
+---
+= 關於StorageGRID 產品介紹
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在開始升級之前、請先檢閱本節、瞭解StorageGRID 有關更新功能與增強功能的資訊、判斷是否有任何功能已過時或已移除、並瞭解StorageGRID 有關變更的資訊。
+
+* link:whats-new.html["更新功能StorageGRID"]
+* link:removed-or-deprecated-features.html["已移除或已過時的功能"]
+* link:changes-to-grid-management-api.html["網格管理API的變更"]
+* link:changes-to-tenant-management-api.html["租戶管理API變更"]
+

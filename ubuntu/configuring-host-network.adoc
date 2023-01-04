@@ -1,0 +1,44 @@
+---
+permalink: ubuntu/configuring-host-network.html 
+sidebar: sidebar 
+keywords:  
+summary: 在主機上完成Linux安裝之後、您可能需要執行一些額外的組態、以便在每個主機上準備一組適合對應至StorageGRID 稍後部署之支援節點的網路介面。 
+---
+= 設定主機網路
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在主機上完成Linux安裝之後、您可能需要執行一些額外的組態、以便在每個主機上準備一組適合對應至StorageGRID 稍後部署之支援節點的網路介面。
+
+.您需要的產品
+* 您已檢閱StorageGRID 《The不完整的網路指南》。
++
+link:../network/index.html["網路準則"]
+
+* 您已檢閱有關節點容器移轉需求的資訊。
++
+link:node-container-migration-requirements.html["節點容器移轉需求"]
+
+* 如果您使用的是虛擬主機、在設定主機網路之前、請先閱讀有關MAC位址複製的考量與建議。
++
+link:considerations-and-recommendations-for-mac-address-cloning.html["MAC位址複製的考量與建議"]
+
+
+
+
+NOTE: 如果您使用VM做為主機、應該選取VMXNET 3做為虛擬網路介面卡。VMware E1000網路介面卡在StorageGRID 某些Linux版本上部署了VMware vCenter Container、導致連線問題。
+
+.關於這項工作
+網格節點必須能夠存取網格網路、以及管理網路和用戶端網路（可選）。您可以建立對應、將主機的實體介面與每個網格節點的虛擬介面建立關聯、藉此提供此存取。建立主機介面時、請使用易記的名稱來協助跨所有主機進行部署、並啟用移轉。
+
+同一個介面可在主機與一個或多個節點之間共用。例如、您可以使用相同的介面進行主機存取和節點管理網路存取、以利主機和節點維護。雖然主機與個別節點之間可以共用相同的介面、但所有介面都必須有不同的IP位址。無法在節點之間或主機與任何節點之間共用IP位址。
+
+您可以使用相同的主機網路介面、為StorageGRID 主機上的所有支援節點提供Grid Network介面；您可以為每個節點使用不同的主機網路介面；也可以在兩者之間執行某些作業。不過、您通常不會為單一節點提供與Grid和管理網路介面相同的主機網路介面、也不會提供與某個節點相同的Grid Network介面、以及與另一個節點相同的Client Network介面。
+
+您可以透過多種方式完成此工作。例如、如果您的主機是虛擬機器、而且您要為StorageGRID 每個主機部署一或兩個支援節點、您只需在Hypervisor中建立正確數量的網路介面、然後使用1對1對應。如果您要在裸機主機上部署多個節點以供正式作業使用、您可以利用Linux網路堆疊的VLAN和LACP支援來實現容錯能力和頻寬共用。以下各節提供這兩個範例的詳細方法。您不需要使用上述任一範例、您可以使用任何符合需求的方法。
+
+
+NOTE: 請勿直接使用連結或橋接裝置做為容器網路介面。這樣做可能會防止節點啟動、因為在容器命名空間中使用含有連結和橋接裝置的MAC VLAN時發生核心問題。而是使用非連結裝置、例如VLAN或虛擬乙太網路（vith）配對。將此裝置指定為節點組態檔中的網路介面。

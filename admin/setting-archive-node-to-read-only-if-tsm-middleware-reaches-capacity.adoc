@@ -1,0 +1,32 @@
+---
+permalink: admin/setting-archive-node-to-read-only-if-tsm-middleware-reaches-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果目標TSM中介軟體伺服器達到容量、則歸檔節點可最佳化、僅執行擷取。 
+---
+= 如果TSM中介軟體達到容量、請將歸檔節點設為唯讀
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果目標TSM中介軟體伺服器達到容量、則歸檔節點可最佳化、僅執行擷取。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須擁有特定的存取權限。
+
+
+.步驟
+. 選取*支援*>*工具*>*網格拓撲*。
+. 選擇「*歸檔節點** ARC** Target *」。
+. 選擇*組態*>*主要*。
+. 將擷取工作階段上限變更為與工作階段數目中所列的並行工作階段數目相同。
+. 將「最大儲存區工作階段數」變更為0。
++
+
+NOTE: 如果歸檔節點為唯讀、則不需要將最大儲存工作階段變更為0。不會建立零售店工作階段。
+
+. 按一下*套用變更*。
+

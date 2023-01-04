@@ -1,0 +1,25 @@
+---
+permalink: admin/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 管理StorageGRID
+:allow-uri-read: 
+
+
+[role="lead"]
+瞭解如何設定StorageGRID 此功能。
+
+* link:administering-storagegrid-system.html["管理StorageGRID 一套系統"]
+* link:controlling-administrator-access-to-storagegrid.html["控制系統管理員存取StorageGRID 功能"]
+* link:kms-configuring.html["設定金鑰管理伺服器"]
+* link:managing-tenants.html["管理租戶"]
+* link:configuring-client-connections.html["設定S3和Swift用戶端連線"]
+* link:managing-storagegrid-networks-and-connections.html["管理StorageGRID 鏈路和連線"]
+* link:configuring-autosupport.html["設定AutoSupport 功能"]
+* link:managing-storage-nodes.html["管理儲存節點"]
+* link:managing-admin-nodes.html["管理管理節點"]
+* link:managing-archive-nodes.html["管理歸檔節點"]
+* link:migrating-data-into-storagegrid.html["將資料移轉StorageGRID 至"]
+

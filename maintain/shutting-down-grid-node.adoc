@@ -1,0 +1,64 @@
+---
+permalink: maintain/shutting-down-grid-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, node shutdown, shut down node, node shut down 
+summary: 您可以從節點的命令Shell關閉網格節點。 
+---
+= 關閉網格節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從節點的命令Shell關閉網格節點。
+
+.您需要的產品
+* 您必須擁有 `Passwords.txt` 檔案：
+
+
+.關於這項工作
+執行此程序之前、請先檢閱下列考量事項：
+
+* 一般而言、您不應一次關閉多個節點、以免發生中斷。
+* 除非文件或技術支援明確指示、否則請勿在維護程序期間關閉節點。
+* 關機程序取決於節點的安裝位置、如下所示：
++
+** 關閉VMware節點會關閉虛擬機器。
+** 關閉Linux節點會關閉容器。
+** 關閉StorageGRID 一個不中斷的應用程式節點會關閉運算控制器。
+
+
+* 如果您打算關閉儲存節點、請注意下列事項：
++
+** 如果ILM規則指定「雙重認可」的擷取行為、或規則指定「平衡」、而且無法立即建立所有必要的複本、StorageGRID 則由部門立即將任何新擷取的物件提交至同一站台上的兩個儲存節點、並於稍後評估ILM。如果您想要關閉特定站台上的兩個或多個儲存節點、在關機期間可能無法存取這些物件。
+** 為了確保您可以在儲存節點關閉時存取所有物件、請在關閉節點之前、先停止在站台上擷取物件約一小時。
+
+
+
+
+.步驟
+. 登入網格節點：
++
+.. 輸入下列命令： `ssh admin@_grid_node_IP_`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
+.. 輸入下列命令以切換至root： `su -`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
+
+
++
+當您以root登入時、提示會從變更 `$` 至 `#`。
+
+. 停止所有服務： `service servermanager stop`
++
+服務關機最多需要15分鐘、您可能想要從遠端登入系統、以監控關機程序。
+
+. 登出命令Shell： `exit`
+
+
+關機後、您可以關閉網格節點。
+
+link:powering-down-host.html["關閉主機電源"]
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]

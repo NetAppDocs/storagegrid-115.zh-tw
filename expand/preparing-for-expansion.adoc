@@ -1,0 +1,440 @@
+---
+permalink: expand/preparing-for-expansion.html 
+sidebar: sidebar 
+keywords: expand, expansion, planning 
+summary: 您必須StorageGRID 取得必要的資料、安裝及設定任何新的硬體和網路、才能準備進行支援。 
+---
+= 準備擴充
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須StorageGRID 取得必要的資料、安裝及設定任何新的硬體和網路、才能準備進行支援。
+
+
+
+== 收集必要資料
+
+執行擴充作業之前、您必須先收集下表所列的資料。
+
+[cols="1a,2a"]
+|===
+| 項目 | 附註 
+
+
+ a| 
+安裝歸檔StorageGRID
+ a| 
+如果您要新增網格節點或新網站、則必須下載StorageGRID 並擷取此安裝檔案。您必須使用目前在網格上執行的相同版本。
+
+如需詳細資訊、請參閱下載及解壓縮StorageGRID 更新檔的說明。
+
+*附註：*如果您要新增儲存磁碟區至現有的儲存節點、或是安裝新StorageGRID 的功能不需要下載檔案。
+
+
+
+ a| 
+服務筆記型電腦
+ a| 
+服務型筆記型電腦必須符合下列要求：
+
+* 網路連接埠
+* SSH用戶端（例如Putty）
+* 支援的瀏覽器
+
+
+
+
+ a| 
+資源配置通關密碼
+ a| 
+當StorageGRID 首次安裝此功能時、系統會建立並記錄密碼。資源配置通關密碼不在中 `Passwords.txt` 檔案：
+
+
+
+ a| 
+本文檔StorageGRID
+ a| 
+* _管理StorageGRID SUR__
+* _發行說明_ StorageGRID
+* 適用於您平台的安裝說明
+
+
+
+
+ a| 
+您平台的最新文件
+ a| 
+如需支援的版本、請參閱互通性對照表。
+
+|===
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:../release-notes/index.html["版本資訊"]
+
+link:../vmware/index.html["安裝VMware"]
+
+link:../rhel/index.html["安裝Red Hat Enterprise Linux或CentOS"]
+
+link:../ubuntu/index.html["安裝Ubuntu或DEBIAN"]
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
+
+
+
+=== 網頁瀏覽器需求
+
+您必須使用支援的網頁瀏覽器。
+
+[cols="1a,1a"]
+|===
+| 網頁瀏覽器 | 支援的最低版本 
+
+
+ a| 
+Google Chrome
+ a| 
+87
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+87
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+84.
+
+|===
+您應該將瀏覽器視窗設定為建議的寬度。
+
+[cols="1a,1a"]
+|===
+| 瀏覽器寬度 | 像素 
+
+
+ a| 
+最低
+ a| 
+1024.
+
+
+
+ a| 
+最佳化
+ a| 
+1280
+
+|===
+
+
+== 下載及解壓縮StorageGRID 安裝文件
+
+在新增網格節點或新網站之前、您必須先下載適當StorageGRID 的安裝檔案、然後擷取檔案。
+
+.關於這項工作
+您必須使用StorageGRID 目前在網格上執行的版本的功能表來執行擴充作業。
+
+.步驟
+. 請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+
+. 選取StorageGRID 目前在網格上執行的版本的功能。
+. 以您NetApp帳戶的使用者名稱和密碼登入。
+. 閱讀使用者授權合約、勾選核取方塊、然後選取*接受並繼續*。
+. 在下載頁面的「*安裝StorageGRID S編*」欄中、選取 `.tgz` 或 `.zip` 適用於您的平台的檔案。
++
+安裝歸檔檔檔案中顯示的版本必須符合目前安裝的軟體版本。
+
++
+使用 `.zip` 檔案（如果您是在服務筆記型電腦上執行Windows）。
+
++
+[cols="1a,1a"]
+|===
+| 平台 | 安裝歸檔 
+
+
+ a| 
+VMware
+| StorageGRID-Webscale-_version_-VMware-_uniqueID_.zip StorageGRID-Webscale：_VERSION：-VMware-_uniqueID_.tgz 
+
+
+ a| 
+Red Hat Enterprise Linux或CentOS
+| StorageGRID-Webscale-_version_-RPM-_uniqueID_.zip StorageGRID-Webscale：_VERSION：-RPRPM：_uniqueID_.tgz 
+
+
+ a| 
+Ubuntu或Debian與應用裝置
+| StorageGRID-Webscale-_version_-DEB-_uniqueID_.zip StorageGRID-Webscale：_VERSION：Deb-_uniqueID_.tgz 
+
+
+ a| 
+OpenStack /其他Hypervisor
+ a| 
+若要在OpenStack上擴充現有部署、您必須部署執行上述其中一種支援Linux套裝作業系統的虛擬機器、並遵循適用於Linux的適當指示。
+
+|===
+. 下載並解壓縮歸檔檔案。
+. 請根據您的平台、規劃的網格拓撲、以及您將如何擴充StorageGRID 自己的系統、依照您平台的適當步驟來選擇所需的檔案。
++
+每個平台步驟中所列的路徑、都是相對於歸檔檔案所安裝的頂層目錄。
+
+. 如果您要擴充VMware系統、請選取適當的檔案。
++
+[cols="1a,1a"]
+|===
+| 路徑和檔案名稱 | 說明 
+
+
+| /vSphere/README  a| 
+說明StorageGRID 包含在更新檔中的所有檔案的文字檔。
+
+
+
+| ./vSphere/NLF000000.txt  a| 
+不提供產品任何支援權利的免費授權。
+
+
+
+| /vSphere/NetApp-SG-_VERON_SHA-VMDK  a| 
+用來做為建立網格節點虛擬機器範本的虛擬機器磁碟檔案。
+
+
+
+| /vSphere/vSphere-primer-admin.OVF ./vSphere/vSphere-prime-admin.mf  a| 
+開放式虛擬化格式範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署主管理節點。
+
+
+
+| /vSphere/vSphere-non-prime-admin.OVF ./vSphere/vSphere-non-prime-admin.mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署非主要管理節點。
+
+
+
+| /vSphere/vSphere-archive .OVF ./vSphere/vSphere-archive、mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署歸檔節點。
+
+
+
+| /vSphere/vSphere-gateway.OVF ./vSphere/vSphere-gateway.mf  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署閘道節點。
+
+
+
+| /vSphere/vSphere-storage。OVF ./vSphere/vSphere-storage  a| 
+範本檔案 (`.ovf`）和資訊清單檔案 (`.mf`）以部署虛擬機器型儲存節點。
+
+
+
+| 部署指令碼工具 | 說明 
+
+
+| ./vSphere/deploy-vsphere-ovftool.sh  a| 
+Bash Shell指令碼、用於自動化虛擬網格節點的部署。
+
+
+
+| ./vSphere/deploy-vsphere-ovftool-sample.ini  a| 
+與搭配使用的範例組態檔 `deploy-vsphere-ovftool.sh` 指令碼：
+
+
+
+| ./vSphere/configure-storagegrid.py  a| 
+Python指令碼、用於自動化StorageGRID 組態的功能。
+
+
+
+| ./vSphere/configure-sga.py  a| 
+Python指令碼、用於自動化StorageGRID 設定不必要的應用程式。
+
+
+
+| ./vSphere/storagegrid-ssoauth.py  a| 
+啟用單一登入時、您可用來登入Grid Management API的Python指令碼範例。
+
+
+
+| /vSphere/configure-storagegrid、same.json  a| 
+與搭配使用的範例組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| /vSphere/configure-storagegrid、blank.json  a| 
+與搭配使用的空白組態檔 `configure-storagegrid.py` 指令碼：
+
+|===
+. 如果您要擴充Red Hat Enterprise Linux或CentOS系統、請選取適當的檔案。
++
+[cols="1a,1a"]
+|===
+| 路徑和檔案名稱 | 說明 
+
+
+| ./rpms/README  a| 
+說明StorageGRID 包含在更新檔中的所有檔案的文字檔。
+
+
+
+| ./rpms/NLF000000.txt  a| 
+不提供產品任何支援權利的免費授權。
+
+
+
+| ./rpms/StorageGRID-Webscale-Images-version-SHA.rpm  a| 
+RPM套件、可在StorageGRID RHEL或CentOS主機上安裝節點鏡像。
+
+
+
+| ./rpms/StorageGRID-Webscale-Service-version-SHA.rpm  a| 
+RPM套件、用於在StorageGRID RHEL或CentOS主機上安裝R地 資訊主機服務。
+
+
+
+| 部署指令碼工具 | 說明 
+
+
+| ./rpms/configure-storagegrid.py  a| 
+Python指令碼、用於自動化StorageGRID 組態的功能。
+
+
+
+| ./rpms/configure-sga.py  a| 
+Python指令碼、用於自動化StorageGRID 設定不必要的應用程式。
+
+
+
+| ./rpms/configure儲存格RID、same.json  a| 
+與搭配使用的範例組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| ./rpms/storagegrid-ssoauth.py  a| 
+啟用單一登入時、您可用來登入Grid Management API的Python指令碼範例。
+
+
+
+| ./rpms/configure儲存格RID、blank、json  a| 
+與搭配使用的空白組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| ./rpms/Extas/Ansible  a| 
+設定RHEL或CentOS主機以StorageGRID 進行支援容器部署的Ansible角色與方針範例。您可以視需要自訂角色或方針。
+
+|===
+. 如果您要擴充Ubuntu或Debian系統、請選取適當的檔案。
++
+[cols="1a,1a"]
+|===
+| 路徑和檔案名稱 | 說明 
+
+
+| 每個問題/讀我檔案  a| 
+說明StorageGRID 包含在更新檔中的所有檔案的文字檔。
+
+
+
+| ./cebs/NLF000000.txt  a| 
+非正式作業的NetApp授權檔案、可用於測試及概念驗證部署。
+
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb  a| 
+Deb套件、用於在StorageGRID Ubuntu或Debian主機上安裝不含節點的映像。
+
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb.md5  a| 
+檔案的md5 Checksum `/debs/storagegrid-webscale-images-version-SHA.deb`。
+
+
+
+| ./cebs/storagegrid-webscale-service-version-SHA.deb  a| 
+Deb套件、用於在StorageGRID Ubuntu或Debian主機上安裝支援功能主機服務。
+
+
+
+| 部署指令碼工具 | 說明 
+
+
+| ./cebs/configure-storagegrid.py  a| 
+Python指令碼、用於自動化StorageGRID 組態的功能。
+
+
+
+| ./cebs/configure-sga.py  a| 
+Python指令碼、用於自動化StorageGRID 設定不必要的應用程式。
+
+
+
+| ./cebs/storagegrid-ssoauth.py  a| 
+啟用單一登入時、您可用來登入Grid Management API的Python指令碼範例。
+
+
+
+| ./cebs/configure儲存格RID、same.json  a| 
+與搭配使用的範例組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| ./cebs/configure儲存格GRID、blank、json  a| 
+與搭配使用的空白組態檔 `configure-storagegrid.py` 指令碼：
+
+
+
+| /扣款/額外費用/可選  a| 
+範例Ansible角色與方針、可用來設定Ubuntu或Debian主機以StorageGRID 進行列舉容器部署。您可以視需要自訂角色或方針。
+
+|===
+. 如果您要擴充StorageGRID 以應用程式為基礎的系統、請選取適當的檔案。
++
+[cols="1a,1a"]
+|===
+| 路徑和檔案名稱 | 說明 
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb  a| 
+DEB套件可在StorageGRID 您的應用裝置上安裝不含節點的影像。
+
+
+
+| ./cebs/storagegrid-webscale-images-version-SHA.deb.md5  a| 
+驗證StorageGRID 套件上傳後是否完整無缺的驗證、由不完整的Deb安裝套件的Checksum提供。
+
+|===
++
+
+NOTE: 在設備安裝方面、只有在您需要避免網路流量時才需要這些檔案。應用裝置可從主要管理節點下載所需的檔案。
+
+
+
+
+
+== 驗證硬體與網路
+
+開始擴充StorageGRID 您的整套系統之前、您必須先確定已安裝並設定必要的硬體、以支援新的網格節點或新站台。
+
+如需支援版本的相關資訊、請參閱互通性對照表。
+
+您也必須確認站台伺服器之間的網路連線能力、並確認主管理節點可與所有用於裝載StorageGRID 此系統的擴充伺服器通訊。
+
+如果您執行的擴充活動包括新增子網路、則必須在開始擴充程序之前新增Grid子網路。
+
+請勿在網格網路上的網格節點之間或StorageGRID 在各個站台之間使用網路位址轉譯（NAT）。當您將私有的IPv4位址用於Grid Network時、這些位址必須從每個站台的每個網格節點直接路由傳送。不過、您可以視需要在外部用戶端和網格節點之間使用NAT、例如為閘道節點提供公有IP位址。只有當您採用對網格中所有節點透明的通道應用程式時、才支援使用NAT來橋接公共網路區段、亦即網格節點不需要知道公有IP位址。
+
+*相關資訊*
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
+
+link:updating-subnets-for-grid-network.html["正在更新Grid Network的子網路"]

@@ -1,0 +1,24 @@
+---
+permalink: primer/using-storagegrid.html 
+sidebar: sidebar 
+keywords:  
+summary: 安裝網格節點和StorageGRID VMware網路之後、您就可以開始設定及使用StorageGRID VMware。您要執行的部分工作包括控制使用者對系統管理功能的存取、設定租戶帳戶、管理用戶端連線、設定組態選項、使用ILM管理物件位置、監控StorageGRID 您的作業系統健全狀況和日常活動、以及執行例行和非例行維護活動。 
+---
+= 使用StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝網格節點和StorageGRID VMware網路之後、您就可以開始設定及使用StorageGRID VMware。您要執行的部分工作包括控制使用者對系統管理功能的存取、設定租戶帳戶、管理用戶端連線、設定組態選項、使用ILM管理物件位置、監控StorageGRID 您的作業系統健全狀況和日常活動、以及執行例行和非例行維護活動。
+
+* link:controlling-storagegrid-access.html["控制StorageGRID 存取"]
+* link:managing-tenants-and-client-connections.html["管理租戶和用戶端連線"]
+* link:configuring-network-settings.html["設定網路設定"]
+* link:configuring-system-settings.html["設定系統設定"]
+* link:using-information-lifecycle-management.html["使用資訊生命週期管理"]
+* link:monitoring-storagegrid-operations.html["監控StorageGRID 功能"]
+* link:performing-maintenance-procedures.html["執行維護程序"]
+* link:using-storagegrid-support-options.html["使用StorageGRID 支援選項"]
+

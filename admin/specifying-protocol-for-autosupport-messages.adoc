@@ -1,0 +1,60 @@
+---
+permalink: admin/specifying-protocol-for-autosupport-messages.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用三種傳輸協定中的一種來傳送AutoSupport 不含資訊的訊息。 
+---
+= 指定AutoSupport 資訊不整訊息的傳輸協定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用三種傳輸協定中的一種來傳送AutoSupport 不含資訊的訊息。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有「根存取」或「其他網格組態」權限。
+* 如果您要使用HTTPS或HTTP傳輸協定來傳送AutoSupport 不實訊息、則必須直接或使用Proxy伺服器（不需要傳入連線）、提供對主要管理節點的傳出網際網路存取。
+* 如果您要使用HTTPS或HTTP傳輸協定、而且想要使用Proxy伺服器、則必須設定管理Proxy伺服器。
+* 如果您將使用SMTP做為AutoSupport 非功能性訊息的傳輸協定、則必須設定一個SMTP郵件伺服器。相同的郵件伺服器組態用於警示電子郵件通知（舊系統）。
+
+
+.關於這項工作
+可以使用下列任一種通訊協定來傳送資訊AutoSupport ：
+
+* * HTTPS *：這是新安裝的預設及建議設定。HTTPS傳輸協定使用連接埠443。如果您想要啟用AutoSupport 「根據需求提供支援」功能、則必須使用HTTPS傳輸協定。
+* * HTTP：此傳輸協定不安全、除非用於受信任的環境、在透過網際網路傳送資料時、Proxy伺服器會轉換成HTTPS。HTTP傳輸協定使用連接埠80。
+* * SMTP*：如果您想AutoSupport 要以電子郵件寄送不一樣的訊息、請使用此選項。如果您使用SMTP做為AutoSupport 不實訊息的傳輸協定、則必須在「舊版電子郵件設定」頁面（*支援**警告（舊版）**舊版電子郵件設定*）上設定一個SMTP郵件伺服器。
++
+
+NOTE: 在AutoSupport 發佈版更新版的過程中、只有使用SMTP作為唯一的傳輸協定、才能接收到有關消息的資訊。StorageGRID如果StorageGRID 您一開始安裝的是舊版的版本的、則可能是選取的傳輸協定。
+
+
+
+您設定的傳輸協定用於傳送所有類型AutoSupport 的資訊。
+
+.步驟
+. 選取*支援*>*工具*>* AutoSupport 參考*。
++
+畫面會出現「the S還原」頁面、並選取「* Settings*」索引標籤。AutoSupport
+
+. 選取您要用來傳送AutoSupport 資訊提示訊息的傳輸協定。
++
+image::../media/autosupport_protocol.png[通訊協定AutoSupport]
+
+. 請選擇* NetApp支援憑證驗證*。
++
+** 使用NetApp支援證書（預設）：憑證驗證可確保AutoSupport 傳輸的資訊安全無虞。NetApp支援證書已隨StorageGRID 支援軟體一起安裝。
+** 不驗證憑證：只有在有充分理由不使用憑證驗證時（例如憑證暫時有問題時）、才選取此選項。
+
+
+. 選擇*保存*。
++
+所有每週、使用者觸發和事件觸發的訊息都會使用選取的傳輸協定來傳送。
+
+
+
+.相關資訊
+link:configuring-admin-proxy-settings.html["設定管理Proxy設定"]

@@ -1,0 +1,19 @@
+---
+permalink: monitor/using-grid-manager-for-monitoring.html 
+sidebar: sidebar 
+keywords:  
+summary: Grid Manager是監控StorageGRID 您的系統的最重要工具。本節將介紹Grid Manager儀表板、並提供節點頁面的詳細資訊。 
+---
+= 使用Grid Manager進行監控
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Grid Manager是監控StorageGRID 您的系統的最重要工具。本節將介紹Grid Manager儀表板、並提供節點頁面的詳細資訊。
+
+* link:web-browser-requirements.html["網頁瀏覽器需求"]
+* link:viewing-dashboard.html["檢視儀表板"]
+* link:viewing-nodes-page.html["檢視節點頁面"]
+

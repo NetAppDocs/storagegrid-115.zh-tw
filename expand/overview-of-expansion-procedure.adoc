@@ -1,0 +1,36 @@
+---
+permalink: expand/overview-of-expansion-procedure.html 
+sidebar: sidebar 
+keywords: expand, expansion, overview 
+summary: 執行擴充功能的基本步驟StorageGRID 因擴充類型而異：將儲存磁碟區新增至儲存節點、新增節點至現有站台或新增站台。在任何情況下、您都可以執行擴充作業、而不會中斷目前系統的運作。 
+---
+= 擴充程序總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+執行擴充功能的基本步驟StorageGRID 因擴充類型而異：將儲存磁碟區新增至儲存節點、新增節點至現有站台或新增站台。在任何情況下、您都可以執行擴充作業、而不會中斷目前系統的運作。
+
+您要新增至網格的節點類型或新增節點的原因、不會影響基本的擴充程序。但如下方工作流程圖所示、新增節點的步驟會因新增StorageGRID 哪些應用裝置或執行VMware或Linux的主機而略有不同。
+
+
+NOTE: 不StorageGRID 再支援NetApp提供的虛擬機器磁碟檔案和指令碼、用於在OpenStack上新安裝或擴充功能。若要在OpenStack上擴充現有部署、請參閱Linux套裝作業系統的步驟。
+
+
+NOTE: 「Linux」是指Red Hat®Enterprise Linux®、Ubuntu®、CentOS或DEBIANR®部署。使用NetApp互通性對照表工具取得支援版本的清單。
+
+image::../media/expansion_workflow.png[顯示擴充程序總覽的流程圖]
+
+*相關資訊*
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
+
+link:planning-expansion.html["規劃StorageGRID 功能擴充"]
+
+link:preparing-for-expansion.html["準備擴充"]
+
+link:adding-storage-volumes-to-storage-nodes.html["將儲存磁碟區新增至儲存節點"]
+
+link:adding-grid-nodes-to-existing-site-or-adding-new-site.html["將網格節點新增至現有站台或新增站台"]

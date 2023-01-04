@@ -1,0 +1,57 @@
+---
+permalink: sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, controller, e2800, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 若儲存控制器目前使用SANtricity 的是08.42.20.00之前的版本（11.42\）、您必須使用維護模式程序來套用升級。 
+---
+= 使用SANtricity 維護模式升級E2800控制器上的支援作業系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若儲存控制器目前使用SANtricity 的是08.42.20.00（11.42）之前版本的作業系統、您必須使用維護模式程序來套用升級。
+
+.您需要的產品
+* 您已諮詢NetApp互通性對照表工具IMT （NetApp Interoperability Matrix Tool、簡稱「參考資訊」）、確認SANtricity 您用於升級的作業系統版本與您的應用裝置相容。
+* 您必須將E5700SG控制器置於維護模式、以中斷與E2800控制器的連線。將某個應用程式置StorageGRID 於維護模式、可能會使應用裝置無法遠端存取。
++
+link:placing-appliance-into-maintenance-mode.html["將應用裝置置於維護模式"]
+
+
+
+.關於這項工作
+請勿在SANtricity E系列控制器的StorageGRID 多個支援環境中、一次升級一個以上的應用環境。
+
+
+IMPORTANT: 視StorageGRID 部署模式和ILM原則而定、一次升級多個不適用的應用裝置可能會導致資料無法使用。
+
+.步驟
+. 從服務型筆記型電腦存取SANtricity 「NetApp系統管理程式」並登入。
+. 將全新SANtricity 的SKETOS軟體檔案和NVSRAM/檔案下載到管理用戶端。
++
+
+IMPORTANT: NVSRAM/SRAM/SRAM/VRAM/VRAM/VRAM/VRA StorageGRID請勿使用標準的NVSRAM下載。
+
+. 請遵循_E2800與E5700 SANtricity 《VMware更新軟體與韌體指南》_或SANtricity 《VMware系統管理程式》線上說明中的指示、以升級E2800控制器的韌體與NVSRAM.
++
+
+NOTE: 立即啟動升級檔案。請勿延後啟動。
+
+. 升級作業完成後、請重新啟動節點。從「the Sof the Sof the Some Installer」選取「*進階*>*重新開機控制器*」StorageGRID 、然後選取下列其中一個選項：
++
+** 選取*重新開機至StorageGRID SESW*、以重新啟動控制器、並使節點重新加入網格。如果您已在維護模式下完成工作、並準備好讓節點恢復正常作業、請選取此選項。
+** 選取*重新開機進入維護模式*、以重新啟動控制器、使節點保持維護模式。如果在重新加入網格之前需要在節點上執行其他維護作業、請選取此選項。image:../media/reboot_controller_from_maintenance_mode.png["以維護模式重新啟動控制器"]
++
+裝置重新開機和重新加入網格可能需要20分鐘的時間。若要確認重新開機已完成、且節點已重新加入網格、請返回Grid Manager。「*節點*」標籤應顯示正常狀態 image:../media/icon_alert_green_checkmark.png["圖示警示綠色勾選標記"] 對於應用裝置節點、表示沒有任何警示處於作用中狀態、且節點已連線至網格。
+
++
+image::../media/node_rejoin_grid_confirmation.png[應用裝置節點重新加入網格]
+
+
+
+
+
+.相關資訊
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html["使用Grid Manager在SANtricity 儲存控制器上升級作業系統"]

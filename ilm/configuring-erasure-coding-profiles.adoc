@@ -1,0 +1,19 @@
+---
+permalink: ilm/configuring-erasure-coding-profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以將儲存資源池與銷毀編碼方案（例如6+3）建立關聯、以設定「銷毀編碼」設定檔。然後、當您設定ILM規則的放置指示時、可以選取「刪除編碼」設定檔。如果物件符合規則、則會根據銷毀編碼方案、建立資料和同位元檢查片段、並將其分散至儲存資源池中的儲存位置。 
+---
+= 設定銷毀編碼設定檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將儲存資源池與銷毀編碼方案（例如6+3）建立關聯、以設定「銷毀編碼」設定檔。然後、當您設定ILM規則的放置指示時、可以選取「刪除編碼」設定檔。如果物件符合規則、則會根據銷毀編碼方案、建立資料和同位元檢查片段、並將其分散至儲存資源池中的儲存位置。
+
+* link:creating-erasure-coding-profile.html["建立銷毀編碼設定檔"]
+* link:renaming-erasure-coding-profile.html["重新命名銷毀編碼設定檔"]
+* link:deactivating-erasure-coding-profile.html["停用銷毀編碼設定檔"]
+

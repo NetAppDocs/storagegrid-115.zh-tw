@@ -1,0 +1,41 @@
+---
+permalink: rhel/troubleshooting-installation-issues.html 
+sidebar: sidebar 
+keywords: storagegrid, rhel, redhat, redhat linux, troubleshoot installation, troubleshooting installation 
+summary: 如果在安裝StorageGRID 您的作業系統時發生任何問題、您可以存取安裝記錄檔。技術支援人員也可能需要使用安裝記錄檔來解決問題。 
+---
+= 疑難排解安裝問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在安裝StorageGRID 您的作業系統時發生任何問題、您可以存取安裝記錄檔。技術支援人員也可能需要使用安裝記錄檔來解決問題。
+
+下列安裝記錄檔可從執行每個節點的容器取得：
+
+* `/var/local/log/install.log` （可在所有網格節點上找到）
+* `/var/local/log/gdu-server.log` （可在主要管理節點上找到）
+
+
+下列安裝記錄檔可從主機取得：
+
+* `/var/log/storagegrid/daemon.log`
+* `/var/log/storagegrid/nodes/node-name.log`
+
+
+若要瞭解如何存取記錄檔、請參閱監控StorageGRID 和疑難排解的指示資訊。如需疑難排解應用裝置安裝問題的說明、請參閱應用裝置的安裝與維護說明。如果您需要其他協助、請聯絡技術支援部門。
+
+.相關資訊
+link:../monitor/index.html["監控安培；疑難排解"]
+
+link:../sg100-1000/index.html["SG100  機；SG1000服務應用裝置"]
+
+link:../sg6000/index.html["SG6000儲存設備"]
+
+link:../sg5700/index.html["SG5700儲存設備"]
+
+link:../sg5600/index.html["SG5600儲存設備"]
+
+https://mysupport.netapp.com/site/global/dashboard["NetApp支援"^]

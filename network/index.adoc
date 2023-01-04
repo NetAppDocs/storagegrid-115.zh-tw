@@ -1,0 +1,22 @@
+---
+permalink: network/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 深入瞭解StorageGRID 架構與網路拓撲。熟悉網路組態和資源配置的需求。 
+---
+= 網路準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+深入瞭解StorageGRID 架構與網路拓撲。熟悉網路組態和資源配置的需求。
+
+* link:storagegrid-networking-overview.html["網路概述StorageGRID"]
+* link:networking-requirements-and-guidelines.html["網路需求與準則"]
+* link:deployment-specific-networking-requirements.html["部署特定的網路考量"]
+* link:network-installation-and-provisioning.html["網路安裝與資源配置"]
+* link:post-installation-guidelines.html["安裝後準則"]
+* link:network-port-reference.html["網路連接埠參考"]
+

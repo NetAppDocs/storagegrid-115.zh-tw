@@ -1,0 +1,26 @@
+---
+permalink: network/deployment-specific-networking-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 視您使用的部署平台而定、StorageGRID 您可能需要考量其他有關您的網路設計的考量。 
+---
+= 部署特定的網路考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+視您使用的部署平台而定、StorageGRID 您可能需要考量其他有關您的網路設計的考量。
+
+網格節點可部署為：
+
+* 以軟體為基礎的網格節點、部署為VMware vSphere Web Client中的虛擬機器
+* 部署在Linux主機上Docker容器內的軟體型網格節點
+* 應用裝置型節點
+
+
+如需網格節點的其他資訊、請參閱_Grid入門指南_。
+
+.相關資訊
+link:../primer/index.html["網格入門指南"]

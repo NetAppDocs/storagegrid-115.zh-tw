@@ -1,0 +1,39 @@
+---
+permalink: upgrade/performing-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, software upgrade 
+summary: 「軟體升級」頁面會引導您完成上傳所需檔案的程序、並升級StorageGRID 您的整個作業系統中的所有網格節點。 
+---
+= 執行升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「軟體升級」頁面會引導您完成上傳所需檔案的程序、並升級StorageGRID 您的整個作業系統中的所有網格節點。
+
+.您需要的產品
+您瞭解下列事項：
+
+* 您必須使用Grid Manager、從主要管理節點升級所有資料中心站台的所有網格節點。
+* 若要偵測並解決問題、您可以在開始實際升級之前、手動執行升級前置檢查。當您開始升級時、也會執行相同的預先檢查。預先檢查失敗將會停止升級程序、可能需要技術支援人員介入才能解決問題。
+* 當您開始升級時、系統會自動升級主要管理節點。
+* 升級主要管理節點之後、您可以選取要升級的網格節點。
+* 您必須升級StorageGRID 您的整套系統中的所有網格節點、才能完成升級、但您可以依任何順序升級個別網格節點。您可以選取個別的網格節點、網格節點群組或所有網格節點。您可以視需要重複選取網格節點的程序、直到升級所有站台的所有網格節點為止。
+* 在網格節點上開始升級時、該節點上的服務會停止。之後、網格節點會重新開機。除非確定節點已準備好停止並重新開機、否則請勿核准網格節點的升級。
+* 當所有網格節點都已升級時、系統會啟用新功能、您可以繼續作業；不過、您必須等到背景*升級資料庫*工作和*最終升級步驟*工作完成之後、再執行取消委任或擴充程序。
+* 您必須在剛開始的相同Hypervisor平台上完成升級。
+
+
+.步驟
+. link:linux-installing-rpm-or-deb-package-on-all-hosts.html["Linux：在所有主機上安裝RPM或Deb套件"]
+. link:starting-upgrade.html["開始升級"]
+. link:upgrading-grid-nodes-and-completing-upgrade.html["升級網格節點並完成升級"]
+. link:increasing-metadata-reserved-space-setting.html["增加中繼資料保留空間設定"]
+
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:estimating-time-to-complete-upgrade.html["預估完成升級的時間"]

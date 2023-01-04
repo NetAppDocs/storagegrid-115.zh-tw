@@ -1,0 +1,18 @@
+---
+permalink: tenant/managing-s3-tenant-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用租戶管理程式來管理S3存取金鑰、以及建立和管理S3儲存區。 
+---
+= 管理S3租戶帳戶
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用租戶管理程式來管理S3存取金鑰、以及建立和管理S3儲存區。
+
+* link:managing-s3-access-keys.html["管理S3存取金鑰"]
+* link:managing-s3-buckets.html["管理S3儲存區"]
+

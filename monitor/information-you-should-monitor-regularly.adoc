@@ -1,0 +1,91 @@
+---
+permalink: monitor/information-you-should-monitor-regularly.html 
+sidebar: sidebar 
+keywords: monitor, monitoring, StorageGRID, 
+summary: 支援容錯的分散式儲存系統、可在發生錯誤、節點或站台無法使用時繼續運作。StorageGRID您必須主動監控系統健全狀況、工作負載及使用量統計資料、以便在潛在問題影響網格的效率或可用度之前、採取行動解決這些問題。 
+---
+= 您應該定期監控的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援容錯的分散式儲存系統、可在發生錯誤、節點或站台無法使用時繼續運作。StorageGRID您必須主動監控系統健全狀況、工作負載及使用統計資料、以便在潛在問題影響網格的效率或可用度之前、採取行動來解決這些問題。
+
+忙碌的系統會產生大量資訊。本節提供持續監控最重要資訊的指引。本節包含下列子區段：
+
+* link:monitoring-system-health.html["監控系統健全狀況"]
+* link:monitoring-storage-capacity.html["監控儲存容量"]
+* link:monitoring-information-lifecycle-management.html["監控資訊生命週期管理"]
+* link:monitoring-performance-networking-and-system-resources.html["監控效能、網路及系統資源"]
+* link:monitoring-tenant-activity.html["監控租戶活動"]
+* link:monitoring-archival-capacity.html["監控歸檔容量"]
+* link:monitoring-load-balancing-operations.html["監控負載平衡作業"]
+* link:applying-hotfixes-or-upgrading-software-if-necessary.html["如有必要、請套用修補程式或升級軟體"]
+
+
+|===
+| 監控內容 | 頻率 
+
+
+ a| 
+Grid Manager Dashboard附 註中顯示的系統健全狀況資料、如果前一天有任何變更。
+ a| 
+每日
+
+
+
+ a| 
+使用儲存節點物件和中繼資料容量的速率
+ a| 
+每週
+
+
+
+ a| 
+資訊生命週期管理作業
+ a| 
+每週
+
+
+
+ a| 
+效能、網路和系統資源：
+
+* 查詢延遲
+* 連線與網路
+* 節點層級資源
+
+ a| 
+每週
+
+
+
+ a| 
+租戶活動
+ a| 
+每週
+
+
+
+ a| 
+外部歸檔儲存系統的容量
+ a| 
+每週
+
+
+
+ a| 
+負載平衡作業
+ a| 
+在初始組態之後以及任何組態變更之後
+
+
+
+ a| 
+提供軟體修補程式與軟體升級
+ a| 
+每月
+
+|===

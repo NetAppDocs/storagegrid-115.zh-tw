@@ -1,0 +1,22 @@
+---
+permalink: monitor/message-severities-in-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, log, severities 
+summary: bycast.log中的訊息會被指派嚴重性等級。 
+---
+= bycast.log中的訊息嚴重性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+中的訊息 `bycast.log` 指派的嚴重性等級。
+
+例如：
+
+* *通知*：應記錄的事件已發生。大多數記錄訊息都屬於此層級。
+* *警告*：發生非預期的情況。
+* *錯誤*：發生重大錯誤、會影響作業。
+* *臨界*：發生異常狀況、停止正常作業。您應該立即解決基本條件。Grid Manager中也會顯示重要訊息。選取*支援*>*工具*>*網格拓撲*。然後選擇*站台*>*節點*>* SDV*>*事件*。
+

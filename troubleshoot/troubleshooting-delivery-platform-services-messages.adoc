@@ -1,0 +1,42 @@
+---
+permalink: troubleshoot/troubleshooting-delivery-platform-services-messages.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果平台服務訊息傳送至無法接受資料的目的地、則會在Grid Manager中觸發事件總數（SMT）警示。 
+---
+= 平台服務訊息（SMtT警示）的疑難排解
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果平台服務訊息傳送至無法接受資料的目的地、則會在Grid Manager中觸發事件總數（SMT）警示。
+
+.關於這項工作
+例如、S3多部份上傳可能會成功、即使相關的複寫或通知訊息無法傳送至設定的端點。或者、如果中繼資料太長、CloudMirror複寫的訊息可能無法傳送。
+
+SMT警示包含最後一則事件訊息、指出： `Failed to publish notifications for _bucket-name object key_` 通知失敗的最後一個物件。
+
+如需疑難排解平台服務的其他資訊、請參閱《關於管理StorageGRID 功能的說明》。您可能需要從租戶管理程式存取租戶、以偵錯平台服務錯誤。
+
+.步驟
+. 若要檢視警示、請選取*節點*>*站台_*>*網格節點_*>*事件*。
+. 檢視表格頂端的「上次事件」。
++
+中也會列出事件訊息 `/var/local/log/bycast-err.log`。
+
+. 請遵循SMTT警示內容中提供的指引來修正問題。
+. 按一下*重設事件計數*。
+. 通知租戶其平台服務訊息尚未傳送的物件。
+. 指示租戶透過更新物件的中繼資料或標記來觸發失敗的複寫或通知。
+
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:../tenant/index.html["使用租戶帳戶"]
+
+link:../monitor/logs-files-reference.html["記錄檔參考"]
+
+link:../monitor/resetting-event-counts.html["重設事件數"]

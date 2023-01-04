@@ -1,0 +1,21 @@
+---
+permalink: ilm/creating-storage-grades-storage-pools-ec-profiles-regions.html 
+sidebar: sidebar 
+keywords:  
+summary: 您StorageGRID 必須先定義物件儲存位置、決定所需的複本類型、並選擇性地設定S3區域、才能建立適用於您的ILM系統的ILM規則。 
+---
+= 建立儲存等級、儲存資源池、EC設定檔和地區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您StorageGRID 必須先定義物件儲存位置、決定所需的複本類型、並選擇性地設定S3區域、才能建立適用於您的ILM系統的ILM規則。
+
+* link:creating-and-assigning-storage-grades.html["建立及指派儲存成績"]
+* link:configuring-storage-pools.html["設定儲存資源池"]
+* link:using-cloud-storage-pools.html["使用雲端儲存資源池"]
+* link:configuring-erasure-coding-profiles.html["設定銷毀編碼設定檔"]
+* link:configuring-regions-optional-and-s3-only.html["設定地區（選用和僅S3）"]
+

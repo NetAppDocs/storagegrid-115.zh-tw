@@ -1,0 +1,20 @@
+---
+permalink: expand/planning-expansion.html 
+sidebar: sidebar 
+keywords: expand, expansion, planning 
+summary: 您可以擴充StorageGRID 功能以增加儲存容量、新增中繼資料容量、新增備援或新功能、或新增站台。您需要新增的節點數量、類型和位置、取決於擴充的原因。 
+---
+= 規劃StorageGRID 功能擴充
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以擴充StorageGRID 功能以增加儲存容量、新增中繼資料容量、新增備援或新功能、或新增站台。您需要新增的節點數量、類型和位置、取決於擴充的原因。
+
+* link:adding-storage-capacity.html["增加儲存容量"]
+* link:adding-metadata-capacity.html["新增中繼資料容量"]
+* link:adding-grid-nodes-to-add-capabilities.html["新增網格節點以新增功能至系統"]
+* link:adding-new-site.html["新增站台"]
+

@@ -1,0 +1,26 @@
+---
+permalink: monitor/resetting-count-of-custom-events-to-zero.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您只想針對自訂事件重設計數器、則必須使用Support（支援）功能表中的Grid拓撲頁面。 
+---
+= 將自訂事件數重設為零
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您只想針對自訂事件重設計數器、則必須使用Support（支援）功能表中的Grid拓撲頁面。
+
+.關於這項工作
+重設計數器會使警示被下一個事件觸發。相反地、當您確認某個警示時、該警示只會在達到下一個臨界值等級時重新觸發。
+
+. 選取*支援*>*工具*>*網格拓撲*。
+. 選擇*網格節點_*>* SUS*>*事件*>*組態*>*主要*。
+. 選取「自訂事件」的「*重設*」核取方塊。
++
+image::../media/custom_events_reset.gif[在「超快照」>「事件」>「組態」>「主要」中的]
+
+. 按一下*套用變更*。
+

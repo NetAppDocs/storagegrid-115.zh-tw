@@ -1,0 +1,76 @@
+---
+permalink: maintain/linux-exporting-node-from-source-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, export node, linux source host 
+summary: 關閉網格節點、然後從來源Linux主機匯出。 
+---
+= Linux：從來源主機匯出節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+關閉網格節點、然後從來源Linux主機匯出。
+
+在來源Linux主機上執行下列命令。
+
+. 取得目前在來源主機上執行的所有節點狀態。
++
+[listing]
+----
+sudo storagegrid node status all
+----
++
+`Name Config-State Run-State`
+
++
+`DC1-ADM1 Configured Running`
+
++
+`DC1-ARC1 Configured Running`
+
++
+`DC1-GW1 Configured Running`
+
++
+`DC1-S1 Configured Running`
+
++
+`DC1-S2 Configured Running`
+
++
+`DC1-S3 Configured Running`
+
+. 識別您要移轉的節點名稱、如果執行狀態為、請停止該節點 `Running`。
++
+[listing]
+----
+sudo storagegrid node stop DC1-S3
+----
++
+`Stopping node DC1-S3`
+
++
+`Waiting up to 630 seconds for node shutdown`
+
+. 從來源主機匯出節點。
++
+[listing]
+----
+sudo storagegrid node export DC1-S3
+----
++
+`Finished exporting node DC1-S3 to /dev/mapper/sgws-dc1-s3-var-local.`
+
++
+`Use 'storagegrid node import /dev/mapper/sgws-dc1-s3-var-local' if you`
+
++
+`want to import it again.`
+
+. 請注意 `import command suggested in the output of the `export` 命令。
++
+您將在下一步在目標主機上執行此命令。
+
+

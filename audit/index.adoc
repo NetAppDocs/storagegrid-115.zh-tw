@@ -1,0 +1,20 @@
+---
+permalink: audit/index.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, logs, messages, log, message 
+summary: 瞭解StorageGRID 不必要的系統稽核記錄、並查看所有稽核訊息的清單。 
+---
+= 檢閱稽核記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解StorageGRID 不必要的系統稽核記錄、並查看所有稽核訊息的清單。
+
+* link:audit-message-overview.html["稽核訊息總覽"]
+* link:audit-file-and-message-formats.html["稽核記錄檔和訊息格式"]
+* link:audit-messages-and-object-lifecycle.html["稽核訊息和物件生命週期"]
+* link:audit-messages-main.html["稽核訊息"]
+

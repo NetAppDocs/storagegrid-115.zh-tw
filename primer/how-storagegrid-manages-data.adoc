@@ -1,0 +1,19 @@
+---
+permalink: primer/how-storagegrid-manages-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 當您開始使用StorageGRID 此功能時、瞭解StorageGRID 此功能如何管理資料、是很有幫助的。 
+---
+= 如何管理資料StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您開始使用StorageGRID 此功能時、瞭解StorageGRID 此功能如何管理資料、是很有幫助的。
+
+* link:what-object-is.html["物件是什麼"]
+* link:how-object-data-is-protected.html["物件資料的保護方式"]
+* link:life-of-object.html["物件的壽命"]
+

@@ -1,0 +1,51 @@
+---
+permalink: primer/configuring-system-settings.html 
+sidebar: sidebar 
+keywords: system settings, grid manager, configure, configuration, display options, grid options, key management server, S3 object lock, storage options 
+summary: 您可以從Grid Manager設定各種系統設定、以微調StorageGRID 您的作業系統運作。 
+---
+= 設定系統設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從Grid Manager設定各種系統設定、以微調StorageGRID 您的作業系統運作。
+
+
+
+== 顯示選項
+
+顯示選項可讓您指定使用者工作階段的逾時期間、並抑制舊版警示和事件觸發AutoSupport 的等字訊息的電子郵件通知。
+
+
+
+== 網格選項
+
+您可以使用Grid Options（網格選項）來設定StorageGRID 儲存在您的還原系統中的所有物件設定、包括儲存的物件壓縮、儲存的物件加密。和儲存的物件雜湊。
+
+您也可以使用這些選項來指定S3和Swift用戶端作業的全域設定。
+
+
+
+== 關鍵管理伺服器
+
+您可以設定一或多個外部金鑰管理伺服器（KMS）、為StorageGRID 各種服務和儲存設備提供加密金鑰。每個KMS或KMS叢集都會使用金鑰管理互通性傳輸協定（KMIP）、為相關StorageGRID 聯的站台上的應用裝置節點提供加密金鑰。即使StorageGRID 從資料中心移除應用裝置、使用關鍵管理伺服器也能保護不實資料。設備磁碟區加密之後、除非節點可以與KMS通訊、否則您無法存取應用裝置上的任何資料。
+
+
+NOTE: 若要使用加密金鑰管理、您必須在安裝期間、在將應用裝置新增至網格之前、為每個應用裝置啟用*節點加密*設定。
+
+
+
+== S3物件鎖定
+
+「物件鎖定」功能是物件保護解決方案、StorageGRID 相當於Amazon Simple Storage Service（Amazon S3）中的S3物件鎖定。您可以啟用StorageGRID 整個S3物件鎖定功能、讓S3租戶帳戶在啟用S3物件鎖定的情況下建立貯體。然後租戶可以使用S3用戶端應用程式、針對這些儲存區中的物件、選擇性地指定保留設定（保留至日期、合法保留或兩者皆保留）。
+
+image::../media/s3_object_lock_architecture.png[S3物件鎖定架構]
+
+
+
+== 儲存選項
+
+儲存選項可讓您控制物件分割、並定義儲存浮點、以管理儲存節點的可用儲存空間。

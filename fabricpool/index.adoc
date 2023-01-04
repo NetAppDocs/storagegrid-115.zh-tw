@@ -1,0 +1,21 @@
+---
+permalink: fabricpool/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 設定StorageGRID 適用於FabricPool 靜態的
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何將StorageGRID 解決方案設定為NetApp FabricPool 的不同步雲端層。
+
+* link:configuring-storagegrid-for-fabricpool.html["設定StorageGRID 支援FabricPool 功能的支援"]
+* link:information-needed-to-attach-storagegrid-as-cloud-tier.html["以StorageGRID 雲端層形式附加解決方案所需的資訊"]
+* link:using-storagegrid-ilm-with-fabricpool-data.html["利用支援資料的資訊生命週期管理功能FabricPool StorageGRID"]
+* link:creating-traffic-classification-policy-for-fabricpool.html["建立FabricPool 一套資訊流量分類原則"]
+* link:other-best-practices-for-storagegrid-and-fabricpool.html["其他關於功能與功能的最佳實務做法StorageGRID FabricPool"]
+

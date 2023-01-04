@@ -1,0 +1,55 @@
+---
+permalink: sg100-1000/verifying-and-upgrading-storagegrid-appliance-installer-version.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Verifying, verify, upgrading, upgrade, update, updating, Appliance Installer, version, release 
+summary: 應用裝置上的《產品安裝程式版本」必須與安裝在您的支援系統上的軟體版本相符、才能確保支援所有的功能。StorageGRID StorageGRID StorageGRID 
+---
+= 驗證StorageGRID 及升級《The效益管理系統安裝程式版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+應用裝置上的《產品安裝程式版本」必須與安裝在您的支援系統上的軟體版本相符、才能確保支援所有的功能。StorageGRID StorageGRID StorageGRID
+
+.您需要的產品
+您已存取StorageGRID 了《應用程式安裝程式：
+
+.關於這項工作
+來自原廠預先安裝的不含不含「功能」的應用程式。StorageGRID StorageGRID如果您要將應用裝置新增至最近升級StorageGRID 的更新的版本、可能需要手動升級StorageGRID 該應用裝置的安裝程式、才能將應用裝置安裝為新節點。
+
+當您升級至新版的更新版本時、會自動升級此產品的安裝程式。StorageGRID StorageGRID您不需要在StorageGRID 安裝的應用裝置節點上升級「效益設備安裝程式」。僅當您安裝的應用裝置含有StorageGRID 舊版的《一套》的《一套應用程式》安裝程式時、才需要執行此程序。
+
+.步驟
+. 從「VMware應用裝置安裝程式」StorageGRID 中、選取*進階*>*升級韌體*。
+. 將目前的韌體版本與StorageGRID 安裝在您的支援中心系統上的軟體版本進行比較（從Grid Manager中選取* Help *>* About *）。
++
+兩個版本中的第二個數字應該相符。例如StorageGRID 、如果您的支援系統執行的是11.*5*、_x_._y_版StorageGRID 、則支援的版本應為3.*5*、_z_。
+
+. 如果應用裝置的StorageGRID 版本為低階版本的《不適用的應用程式》、請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+
++
+以您NetApp帳戶的使用者名稱和密碼登入。
+
+. 下載StorageGRID 適當版本的*支援檔案for the Sof the Sof the Sof the Sof the Sof the Sof the Sof the Sof the Sof the Sof
++
+支援文件for the支援應用裝置檔案為StorageGRID `.zip` 歸檔文件、包含所有StorageGRID 版本的更新版本和先前版本的韌體、位於每種控制器類型的子目錄中。
+
++
+下載StorageGRID 完「支援檔案for the支援」for the支援檔案後、請擷取 `.zip` 請將README檔案歸檔、以瞭解安裝StorageGRID 《支援服務指南：應用程式指南（英文）：
+
+. 請依照StorageGRID 《更新韌體》頁面上的指令執行下列步驟：
++
+.. 上傳適當的支援檔案（韌體映像）以供控制器類型和Checksum檔案使用。
+.. 升級非使用中的分割區。
+.. 重新開機並切換分割區。
+.. 升級第二個分割區。
+
+
+
+
+.相關資訊
+link:accessing-storagegrid-appliance-installer-sg100-and-sg1000.html["存取StorageGRID 《The功能不整合應用程式安裝程式"]

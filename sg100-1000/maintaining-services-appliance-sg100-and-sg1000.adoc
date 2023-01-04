@@ -1,0 +1,28 @@
+---
+permalink: sg100-1000/maintaining-services-appliance-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: 您可能需要在設備上執行維護程序。本節中的程序假設應用裝置已部署為StorageGRID 位於整個系統的閘道節點或管理節點。 
+---
+= 維護應用裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要在設備上執行維護程序。本節中的程序假設應用裝置已部署為StorageGRID 位於整個系統的閘道節點或管理節點。
+
+.步驟
+* link:placing-appliance-into-maintenance-mode.html["將應用裝置置於維護模式"]
+* link:turning-controller-identify-led-on-and-off.html["開啟和關閉控制器識別LED"]
+* link:locating-controller-in-data-center.html["將控制器定位在資料中心"]
+* link:replacing-services-appliance.html["更換服務應用裝置"]
+* link:replacing-power-supply-in-services-appliance.html["更換服務應用裝置中的電源供應器"]
+* link:replacing-fan-in-services-appliance.html["更換服務應用裝置中的風扇"]
+* link:replacing-drive-in-services-appliance.html["更換服務應用裝置中的磁碟機"]
+* link:changing-link-configuration-of-services-appliance.html["變更服務應用裝置的連結組態"]
+* link:changing-mtu-setting.html["變更MTU設定"]
+* link:checking-dns-server-configuration.html["檢查DNS伺服器組態"]
+* link:monitoring-node-encryption-in-maintenance-mode.html["在維護模式下監控節點加密"]
+

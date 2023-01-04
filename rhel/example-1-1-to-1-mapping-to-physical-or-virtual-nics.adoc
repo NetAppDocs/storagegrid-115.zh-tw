@@ -1,0 +1,22 @@
+---
+permalink: rhel/example-1-1-to-1-mapping-to-physical-or-virtual-nics.html 
+sidebar: sidebar 
+keywords:  
+summary: 範例1說明簡單的實體介面對應、只需極少或不需要主機端組態。 
+---
+= 範例1：1對1對應至實體或虛擬NIC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+範例1說明簡單的實體介面對應、只需極少或不需要主機端組態。
+
+image::../media/rhel_install_vlan_diag_1.gif[此影像由周邊文字說明。]
+
+Linux作業系統會建立 `ensXYZ` 介面會在安裝或開機期間自動建立介面、或是熱新增介面時自動建立介面。除了確保介面設定為在開機後自動啟動之外、不需要任何組態。您必須決定哪一項 `ensXYZ` 對應於哪個StorageGRID 支援網（Grid、管理或用戶端）、以便稍後在組態程序中提供正確的對應。
+
+請注意、圖中顯示了多StorageGRID 個支援節點、不過您通常會將此組態用於單節點VM。
+
+如果交換器1是實體交換器、您應該將連接至介面10G1到10G3的連接埠設定為存取模式、然後將它們放在適當的VLAN上。

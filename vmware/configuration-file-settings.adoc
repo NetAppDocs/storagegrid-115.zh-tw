@@ -1,0 +1,407 @@
+---
+permalink: vmware/configuration-file-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: deploy-vsphere-ovftool.ini組態檔包含部署虛擬網格節點所需的設定。 
+---
+= 組態檔設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `deploy-vsphere-ovftool.ini` 組態檔包含部署虛擬網格節點所需的設定。
+
+組態檔會先列出全域參數、然後在節點名稱所定義的區段中列出節點專屬的參數。使用檔案時：
+
+* _Global參數_會套用至所有網格節點。
+* _Node專屬參數_會覆寫全域參數。
+
+
+
+
+== 全域參數
+
+除非個別區段中的設定會覆寫全域參數、否則會套用至所有網格節點。將套用至多個節點的參數放在「通用參數」區段中、然後視需要在個別節點的區段中覆寫這些設定。
+
+* * OFFTOOL_arguments*：您可以將OFFTOOL_arguments*指定為全域設定、也可以個別將引數套用至特定節點。例如：
++
+[source, subs="specialcharacters,quotes"]
+----
+OVFTOOL_ARGUMENTS = --powerOn --noSSLVerify --diskMode=thin --datastore='_datastore_name_'
+----
++
+您可以使用 `--powerOffTarget` 和 `--overwrite` 關閉及取代現有虛擬機器的選項。
+
++
+
+IMPORTANT: 您應該將節點部署至不同的資料存放區、並為每個節點指定OFFTOOL_arguments、而非全域。
+
+* *資料來源*：StorageGRID 指向「物件」虛擬機器範本的路徑 (`.vmdk`）檔案和 `.ovf` 和 `.mf` 個別網格節點的檔案。這會預設為目前目錄。
++
+[source, subs="specialcharacters,quotes"]
+----
+SOURCE = /downloads/StorageGRID-Webscale-_version_/vsphere
+----
+* *目標*：VMware vSphere虛擬基礎架構（VI）URL、用於StorageGRID 部署VMware vSphere的位置。例如：
++
+[listing]
+----
+TARGET = vi://vcenter.example.com/vm/sgws
+----
+* * GRID_NETWORD_config*：用於獲取IP位址的方法、靜態或DHCP。預設為靜態。如果所有或大部分節點都使用相同的方法來擷取IP位址、您可以在此處指定該方法。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+GRID_NETWORK_CONFIG = DHCP
+----
+* * GRID_NETWORD_Target *：用於Grid Network的現有VMware網路名稱。如果所有或大部分節點使用相同的網路名稱、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+GRID_NETWORK_TARGET = SG-Admin-Network
+----
+* * GRID_NETWORD_MANON*：Grid Network的網路遮罩。如果所有或大部分節點都使用相同的網路遮罩、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+GRID_NETWORK_MASK = 255.255.255.0
+----
+* * GRID_NETWORD_gateway*：Grid Network的網路閘道。如果所有或大部分節點都使用相同的網路閘道、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+GRID_NETWORK_GATEWAY = 10.1.0.1
+----
+* * GRID_NETWORD_MTU*：選用。Grid Network上的最大傳輸單位（MTU）。如果指定、則值必須介於1280和9216之間。例如：
++
+[listing]
+----
+GRID_NETWORK_MTU = 8192
+----
++
+如果省略、則會使用1400。
+
++
+如果您要使用巨型框架、請將MTU設為適合巨型框架的值、例如9000。否則、請保留預設值。
+
++
+
+IMPORTANT: 網路的MTU值必須符合節點所連接之交換器連接埠上所設定的值。否則、可能會發生網路效能問題或封包遺失。
+
++
+
+IMPORTANT: 為獲得最佳網路效能、所有節點都應在其Grid Network介面上設定類似的MTU值。如果個別節點上Grid Network的MTU設定有顯著差異、則會觸發* Grid Network MTU mismis*警示。所有網路類型的MTU值都不一定相同。
+
+* *管理網路組態*：用於取得IP位址的方法、包括停用、靜態或DHCP。預設為停用。如果所有或大部分節點都使用相同的方法來擷取IP位址、您可以在此處指定該方法。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_CONFIG = STATIC
+----
+* *管理網路目標*：要用於管理網路的現有VMware網路名稱。除非已停用管理網路、否則此設定為必填。如果所有或大部分節點使用相同的網路名稱、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_TARGET = SG-Admin-Network
+----
+* *管理網路的網路遮罩*：管理網路的網路遮罩。如果您使用靜態IP定址、則必須使用此設定。如果所有或大部分節點都使用相同的網路遮罩、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_MASK = 255.255.255.0
+----
+* *管理網路網路閘道*：管理網路的網路閘道。如果您使用靜態IP定址、並在admin_network_esl設定中指定外部子網路、則必須使用此設定。（也就是、如果admin_network_esl是空的、則不需要。） 如果所有或大部分節點都使用相同的網路閘道、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_GATEWAY = 10.3.0.1
+----
+* * admin_network_esl*：管理網路的外部子網路清單（路由）、指定為以逗號分隔的CIDR路由目的地清單。如果所有或大部分節點都使用相同的外部子網路清單、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_ESL = 172.16.0.0/21,172.17.0.0/21
+----
+* *管理網路MTU *：選用。管理網路上的最大傳輸單元（MTU）。如果admin_network_config = DHCP、請勿指定。如果指定、則值必須介於1280和9216之間。如果省略、則會使用1400。如果您要使用巨型框架、請將MTU設為適合巨型框架的值、例如9000。否則、請保留預設值。如果所有或大部分節點都使用相同的MTU來管理網路、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+ADMIN_NETWORK_MTU = 8192
+----
+* *用戶端網路組態*：用於取得IP位址的方法、包括停用、靜態或DHCP。預設為停用。如果所有或大部分節點都使用相同的方法來擷取IP位址、您可以在此處指定該方法。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+CLIENT_NETWORK_CONFIG = STATIC
+----
+* * Client_network_target *：用於用戶端網路的現有VMware網路名稱。除非停用「用戶端網路」、否則此設定為必填。如果所有或大部分節點使用相同的網路名稱、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+CLIENT_NETWORK_TARGET = SG-Client-Network
+----
+* *用戶端網路遮罩*：用戶端網路的網路遮罩。如果您使用靜態IP定址、則必須使用此設定。如果所有或大部分節點都使用相同的網路遮罩、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+CLIENT_NETWORK_MASK = 255.255.255.0
+----
+* *用戶端網路閘道*：用戶端網路的網路閘道。如果您使用靜態IP定址、則必須使用此設定。如果所有或大部分節點都使用相同的網路閘道、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+CLIENT_NETWORK_GATEWAY = 10.4.0.1
+----
+* *用戶端網路MTU *：選用。用戶端網路上的最大傳輸單位（MTU）。請勿指定client_network_config = DHCP。如果指定、則值必須介於1280和9216之間。如果省略、則會使用1400。如果您要使用巨型框架、請將MTU設為適合巨型框架的值、例如9000。否則、請保留預設值。如果所有或大部分節點都使用相同的MTU來連接用戶端網路、您可以在此處指定。然後、您可以為一個或多個個別節點指定不同的設定、以覆寫全域設定。例如：
++
+[listing]
+----
+CLIENT_NETWORK_MTU = 8192
+----
+* * port_remap*：重新對應節點用於內部網格節點通訊或外部通訊的任何連接埠。如果企業網路原則限制StorageGRID 了一個或多個由效益管理所使用的連接埠、則必須重新對應連接埠。如需StorageGRID 使用的連接埠清單、請參閱中的內部網格節點通訊和外部通訊 link:../network/index.html["網路準則"]。
++
+
+IMPORTANT: 請勿重新對應您打算用來設定負載平衡器端點的連接埠。
+
++
+
+NOTE: 如果只設定port_remap、則您指定的對應會同時用於傳入和傳出通訊。如果也指定port_remap_inbound、則port_remap僅適用於傳出通訊。
+
+
+
+使用的格式為： `_network type_/_protocol/_default port used by grid node_/_new port_`（其中網路類型為GRID、admin或用戶端、傳輸協定為TCP或udp）。
+
+例如：
+
+[listing]
+----
+PORT_REMAP = client/tcp/18082/443
+----
+如果單獨使用、此範例設定會對稱地將網格節點的傳入和傳出通訊從連接埠18082對應至連接埠443。如果與port_remap_inbound搭配使用、此範例設定會將連接埠18082的傳出通訊對應至連接埠443。
+
+* * port_remap_inbound *：重新對應指定連接埠的傳入通訊。如果您指定port_remap_inbound、但未指定port_remap的值、則連接埠的傳出通訊不會變更。
++
+
+IMPORTANT: 請勿重新對應您打算用來設定負載平衡器端點的連接埠。
+
+
+
+使用的格式為： `_network type_/_protocol/_default port used by grid node_/_new port_`（其中網路類型為GRID、admin或用戶端、傳輸協定為TCP或udp）。
+
+例如：
+
+[listing]
+----
+PORT_REMAP_INBOUND = client/tcp/443/18082
+----
+此範例會將傳送至連接埠443的流量引導至連接埠18082、讓網格節點偵聽S3要求。
+
+
+
+== 節點專屬參數
+
+每個節點都位於其本身的組態檔區段中。每個節點都需要下列設定：
+
+* 區段標題會定義網格管理器中顯示的節點名稱。您可以指定節點的選用節點名稱參數來覆寫該值。
+* *節點類型*：VM_admin_Node、VM_Storage_Node、VM_Archive_Node或VM_API_Gateway_Node
+* * GRID_NETWORD_IP*：網格網路上節點的IP位址。
+* *管理網路IP：管理網路上節點的IP位址。僅當節點連接至管理網路且admin_network_config設為靜態時才需要。
+* * Client_network_ip*：用戶端網路上節點的IP位址。僅當節點連接至用戶端網路時才需要、且此節點的用戶端網路組態設定為靜態時才需要。
+* *管理IP：網格網路上主要管理節點的IP位址。使用您指定為主要管理節點GRID_NETNET_IP的值。如果省略此參數、節點會嘗試使用mDNS探索主要管理節點IP。如需詳細資訊、請參閱 link:how-grid-nodes-discover-primary-admin-node.html["網格節點如何探索主要管理節點"]。
++
+
+NOTE: 主管理節點會忽略admin_ip參數。
+
+* 未全域設定的任何參數。例如、如果節點附加至管理網路、但您未全域指定admin_network參數、則必須為節點指定這些參數。
+
+
+
+
+== 主要管理節點
+
+主要管理節點需要下列額外設定：
+
+* *節點類型*：VM_admin_Node
+* *管理角色*：主要
+
+
+此範例項目適用於三個網路上的主要管理節點：
+
+[listing]
+----
+[DC1-ADM1]
+  ADMIN_ROLE = Primary
+  NODE_TYPE = VM_Admin_Node
+
+  GRID_NETWORK_IP = 10.1.0.2
+  ADMIN_NETWORK_IP = 10.3.0.2
+  CLIENT_NETWORK_IP = 10.4.0.2
+----
+下列額外設定為主要管理節點的選用項目：
+
+* *磁碟*：根據預設、管理節點會額外指派兩個200 GB硬碟以供稽核和資料庫使用。您可以使用磁碟參數來增加這些設定。例如：
++
+[listing]
+----
+DISK = INSTANCES=2, CAPACITY=300
+----
+
+
+
+NOTE: 對於管理節點、執行個體必須永遠等於2。
+
+
+
+== 儲存節點
+
+儲存節點需要下列額外設定：
+
+* *節點類型*：VM_Storage_Node
++
+此範例項目適用於網格和管理網路上的儲存節點、但不適用於用戶端網路。此節點使用ADD_IP設定、在Grid Network上指定主要管理節點的IP位址。
+
++
+[listing]
+----
+[DC1-S1]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.0.3
+  ADMIN_NETWORK_IP = 10.3.0.3
+
+  ADMIN_IP = 10.1.0.2
+----
++
+第二個範例是針對用戶端網路上的儲存節點、客戶的企業網路原則指出、S3用戶端應用程式只能使用連接埠80或443存取儲存節點。範例組態檔使用port_remap、讓Storage Node在連接埠443上傳送和接收S3訊息。
+
++
+[listing]
+----
+[DC2-S1]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.1.3
+  CLIENT_NETWORK_IP = 10.4.1.3
+  PORT_REMAP = client/tcp/18082/443
+
+  ADMIN_IP = 10.1.0.2
+----
++
+最後一個範例會建立從連接埠22到連接埠3022的ssh流量對稱重新對應、但會明確設定傳入和傳出流量的值。
+
++
+[listing]
+----
+[DC1-S3]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.1.3
+
+  PORT_REMAP = grid/tcp/22/3022
+  PORT_REMAP_INBOUND = grid/tcp/3022/22
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+儲存節點可選用下列額外設定：
+
+* *磁碟*：根據預設、儲存節點會指派三個4 TB磁碟供R地理DB使用。您可以使用磁碟參數來增加這些設定。例如：
++
+[listing]
+----
+DISK = INSTANCES=16, CAPACITY=4096
+----
+
+
+
+
+== 歸檔節點
+
+歸檔節點需要下列額外設定：
+
+* *節點類型*：VM_Archive_Node
+
+
+此範例項目適用於Grid和管理網路上的歸檔節點、但不適用於用戶端網路。
+
+[listing]
+----
+[DC1-ARC1]
+  NODE_TYPE = VM_Archive_Node
+
+  GRID_NETWORK_IP = 10.1.0.4
+  ADMIN_NETWORK_IP = 10.3.0.4
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+== 閘道節點
+
+閘道節點需要下列額外設定：
+
+* *節點類型*：VM_API_Gateway
+
+
+此範例項目是所有三個網路上的閘道節點範例。在此範例中、未在組態檔的全域區段中指定任何用戶端網路參數、因此必須為節點指定這些參數：
+
+[listing]
+----
+[DC1-G1]
+  NODE_TYPE = VM_API_Gateway
+
+  GRID_NETWORK_IP = 10.1.0.5
+  ADMIN_NETWORK_IP = 10.3.0.5
+
+  CLIENT_NETWORK_CONFIG = STATIC
+  CLIENT_NETWORK_TARGET = SG-Client-Network
+  CLIENT_NETWORK_MASK = 255.255.255.0
+  CLIENT_NETWORK_GATEWAY = 10.4.0.1
+  CLIENT_NETWORK_IP = 10.4.0.5
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+== 非主要管理節點
+
+非主要管理節點需要下列額外設定：
+
+* *節點類型*：VM_admin_Node
+* *管理角色*：非主要
+
+
+此範例項目適用於不在用戶端網路上的非主要管理節點：
+
+[listing]
+----
+[DC2-ADM1]
+  ADMIN_ROLE = Non-Primary
+  NODE_TYPE = VM_Admin_Node
+
+  GRID_NETWORK_TARGET = SG-Grid-Network
+  GRID_NETWORK_IP = 10.1.0.6
+  ADMIN_NETWORK_IP = 10.3.0.6
+
+  ADMIN_IP = 10.1.0.2
+----
+非主要管理節點可選用下列額外設定：
+
+* *磁碟*：根據預設、管理節點會額外指派兩個200 GB硬碟以供稽核和資料庫使用。您可以使用磁碟參數來增加這些設定。例如：
++
+[listing]
+----
+DISK = INSTANCES=2, CAPACITY=300
+----
+
+
+
+NOTE: 對於管理節點、執行個體必須永遠等於2。
+
+.相關資訊
+link:how-grid-nodes-discover-primary-admin-node.html["網格節點如何探索主要管理節點"]
+
+link:../network/index.html["網路準則"]

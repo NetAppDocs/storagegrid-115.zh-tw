@@ -1,0 +1,36 @@
+---
+permalink: tenant/disabling-identity-federation.html 
+sidebar: sidebar 
+keywords: storagegrid, tenant, disable identity federation, disabling identity federation, federated identity source 
+summary: 如果您為此租戶設定身分識別聯盟服務、則可以暫時或永久停用租戶群組和使用者的身分識別聯盟。停用身分識別聯盟時StorageGRID 、不會在該系統與身分識別來源之間進行通訊。不過、您已設定的任何設定都會保留下來、讓您日後可以輕鬆地重新啟用身分識別聯盟。 
+---
+= 停用身分識別聯盟
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您為此租戶設定身分識別聯盟服務、則可以暫時或永久停用租戶群組和使用者的身分識別聯盟。停用身分識別聯盟時StorageGRID 、不會在該系統與身分識別來源之間進行通訊。不過、您已設定的任何設定都會保留下來、讓您日後可以輕鬆地重新啟用身分識別聯盟。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入租戶管理程式。
+* 您必須擁有特定的存取權限。
+
+
+.關於這項工作
+在停用身分識別聯盟之前、您應注意下列事項：
+
+* 聯盟使用者將無法登入。
+* 目前已登入的聯盟使用者將保留對租戶帳戶的存取權、直到工作階段過期為止、但他們將無法在工作階段到期後登入。
+* 不會在StorageGRID 整個系統與身分識別來源之間進行同步。
+
+
+.步驟
+. 選擇*存取管理*>*身分識別聯盟*。
+. 取消選取「*啟用身分識別聯盟*」核取方塊。
+. 選擇*保存*。
+
+
+.相關資訊
+link:tenant-management-permissions.html["租戶管理權限"]

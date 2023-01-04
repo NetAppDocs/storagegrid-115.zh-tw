@@ -1,0 +1,14 @@
+---
+permalink: monitor/monitoring-performance-networking-and-system-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 您應該監控效能、網路和系統資源、以判斷StorageGRID 是否能處理目前的負載、並確保用戶端效能不會隨著時間而降低。 
+---
+= 監控效能、網路及系統資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該監控效能、網路和系統資源、以判斷StorageGRID 是否能處理目前的負載、並確保用戶端效能不會隨著時間而降低。

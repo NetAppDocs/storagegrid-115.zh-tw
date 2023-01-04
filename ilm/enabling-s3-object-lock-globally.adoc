@@ -1,0 +1,85 @@
+---
+permalink: ilm/enabling-s3-object-lock-globally.html 
+sidebar: sidebar 
+keywords: S3 Object Lock 
+summary: 如果S3租戶帳戶在儲存物件資料時需要遵守法規要求、您必須為整個StorageGRID 整個整個系統啟用S3物件鎖定。啟用全域S3物件鎖定設定、可讓任何S3租戶使用者使用S3物件鎖定來建立及管理儲存區和物件。 
+---
+= 全域啟用S3物件鎖定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果S3租戶帳戶在儲存物件資料時需要遵守法規要求、您必須為整個StorageGRID 整個整個系統啟用S3物件鎖定。啟用全域S3物件鎖定設定、可讓任何S3租戶使用者使用S3物件鎖定來建立及管理儲存區和物件。
+
+.您需要的產品
+* 您必須具有「根存取」權限。
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須檢閱S3物件鎖定工作流程、而且必須瞭解考量事項。
+* 作用中ILM原則中的預設規則必須相容。
++
+link:creating-default-ilm-rule.html["建立預設ILM規則"]
+
++
+link:creating-ilm-policy.html["建立ILM原則"]
+
+
+
+.關於這項工作
+網格管理員必須啟用全域S3物件鎖定設定、才能讓租戶使用者建立啟用S3物件鎖定的新儲存區。啟用此設定之後、就無法停用。
+
+[NOTE]
+====
+如果您使用舊版StorageGRID 的支援功能啟用全域規範設定、當您升級StorageGRID 至版本11.5時、新的S3物件鎖定設定會自動啟用。您可以繼續使用StorageGRID 「還原」來管理現有相容儲存桶的設定、但是您無法再建立新的相容儲存桶。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp知識庫：如何管理StorageGRID 支援老舊的知識庫、請參閱《知識庫文章"^]
+
+====
+.步驟
+. 選擇*組態*>*系統設定*>* S3物件鎖定*。
++
+「S3物件鎖定設定」頁面隨即出現。
+
++
+image::../media/s3_object_lock_global_setting.png[S3物件鎖定全域設定]
+
++
+如果您已使用舊版StorageGRID 的支援功能啟用「全球法規遵循」設定、則頁面會包含下列附註：
+
++
+image::../media/s3_object_lock_global_setting_compliant_note.png[S3物件鎖定全域設定相容附註]
+
+. 選取*啟用S3物件鎖定*。
+. 選擇*應用*。
++
+此時會出現確認對話方塊、提醒您啟用S3物件鎖定後、將無法停用該對話方塊。
+
++
+image::../media/s3_object_lock_global_setting_confirm.png[S3物件鎖定全域設定確認]
+
+. 如果確定要為整個系統永久啟用S3物件鎖定、請選取*確定*。
++
+當您選取*確定*時：
+
++
+** 如果作用中ILM原則中的預設規則相容、則「S3物件鎖定」現在會針對整個網格啟用、而且無法停用。
+** 如果預設規則不相容、則會出現錯誤、表示您必須建立並啟動新的ILM原則、其中包含以相容規則為預設規則的新ILM原則。選取*確定*、然後建立新的建議原則、加以模擬並加以啟動。
++
+image::../media/s3_object_lock_global_setting_error.gif[S3物件鎖定全域設定錯誤]
+
+
+
+
+
+.完成後
+啟用全域S3物件鎖定設定之後、您可能會想要建立新的ILM原則。啟用此設定之後、ILM原則可以選擇性地同時包含相容的預設規則和不相容的預設規則。例如、您可能想要使用不符合規定的規則、該規則不具備未啟用S3物件鎖定之儲存區中物件的篩選條件。
+
+.相關資訊
+link:creating-ilm-policy-after-s3-object-lock-is-enabled.html["在啟用S3物件鎖定之後建立ILM原則"]
+
+link:creating-ilm-rule.html["建立ILM規則"]
+
+link:creating-ilm-policy.html["建立ILM原則"]
+
+link:comparing-s3-object-lock-to-legacy-compliance.html["比較S3物件鎖定與舊版法規遵循"]

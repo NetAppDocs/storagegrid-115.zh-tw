@@ -1,0 +1,24 @@
+---
+permalink: admin/restoring-default-server-certificates-for-grid-manager-tenant-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以恢復使用Grid Manager和租戶管理程式的預設伺服器憑證。 
+---
+= 還原Grid Manager和Tenant Manager的預設伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以恢復使用Grid Manager和租戶管理程式的預設伺服器憑證。
+
+.步驟
+. 選擇*組態*>*網路設定*>*伺服器憑證*。
+. 在「管理介面伺服器憑證」區段中、按一下「*使用預設憑證*」。
+. 按一下確認對話方塊中的*確定*。
++
+還原預設伺服器憑證時、您設定的自訂伺服器憑證檔案將會刪除、無法從系統中還原。預設伺服器憑證會用於所有後續的新用戶端連線。
+
+. 重新整理頁面以確保網頁瀏覽器已更新。
+

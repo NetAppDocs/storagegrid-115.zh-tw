@@ -1,0 +1,28 @@
+---
+permalink: monitor/resetting-event-counts.html 
+sidebar: sidebar 
+keywords:  
+summary: 解決系統事件之後、您可以將事件數重設為零。 
+---
+= 重設事件數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+解決系統事件之後、您可以將事件數重設為零。
+
+.您需要的產品
+* 您必須使用支援的瀏覽器登入Grid Manager。
+* 您必須具有Grid拓撲頁面組態權限。
+
+
+.步驟
+. 選擇*節點*>*網格節點*>*事件*。
+. 請確定任何計數大於0的事件都已解決。
+. 按一下*重設事件計數*。
++
+image::../media/reset_event_counts.png[重設事件數]
+
+

@@ -1,0 +1,27 @@
+---
+permalink: monitor/collecting-additional-storagegrid-data.html 
+sidebar: sidebar 
+keywords: StorageGRID, collecting StorageGRID data 
+summary: 收集和分析資料還有許多其他方法、可在調查StorageGRID 您的系統狀態或與技術支援人員合作解決問題時使用。 
+---
+= 收集其他StorageGRID 的資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+收集和分析資料還有許多其他方法、可在調查StorageGRID 您的系統狀態或與技術支援人員合作解決問題時使用。
+
+* link:using-charts-and-reports.html["使用圖表和報告"]
+* link:monitoring-put-and-get-performance.html["監控成效與效能"]
+* link:monitoring-object-verification-operations.html["監控物件驗證作業"]
+* link:monitoring-events.html["監控事件"]
+* link:reviewing-audit-messages.html["檢閱稽核訊息"]
+* link:collecting-log-files-and-system-data.html["收集記錄檔和系統資料"]
+* link:manually-triggering-autosupport-message.html["手動觸發AutoSupport 資訊不整訊息"]
+* link:viewing-grid-topology-tree.html["檢視Grid拓撲樹狀結構"]
+* link:reviewing-support-metrics.html["檢閱支援指標"]
+* link:running-diagnostics.html["執行診斷"]
+* link:creating-custom-monitoring-applications.html["建立自訂監控應用程式"]
+

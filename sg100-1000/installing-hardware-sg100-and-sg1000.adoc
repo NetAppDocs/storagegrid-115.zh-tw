@@ -1,0 +1,22 @@
+---
+permalink: sg100-1000/installing-hardware-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, hardware, install, installing 
+summary: 硬體安裝需要將應用裝置安裝到機櫃或機架、連接纜線並接上電源。 
+---
+= 安裝硬體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬體安裝需要將應用裝置安裝到機櫃或機架、連接纜線並接上電源。
+
+.步驟
+* link:registering-hardware-sg100-and-sg1000.html["註冊硬體"]
+* link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["將應用裝置安裝到機櫃或機架（SG100和SG1000）"]
+* link:cabling-appliance-sg100-and-sg1000.html["應用裝置SG100和SG1000的纜線）"]
+* link:connecting-power-cords-and-applying-power-sg100-and-sg1000.html["連接電源線並接上電源（SG100和SG1000）"]
+* link:viewing-status-indicators-on-sg100-and-sg1000-appliances.html["檢視SG100和SG1000應用裝置上的狀態指示燈"]
+

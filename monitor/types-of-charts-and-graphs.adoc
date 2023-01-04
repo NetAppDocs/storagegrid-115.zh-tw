@@ -1,0 +1,64 @@
+---
+permalink: monitor/types-of-charts-and-graphs.html 
+sidebar: sidebar 
+keywords: chart,graph 
+summary: 圖表摘要說明特定StorageGRID 的功能性指標和屬性的價值。 
+---
+= 圖表和圖表的類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+圖表摘要說明特定StorageGRID 的功能性指標和屬性的價值。
+
+Grid Manager儀表板包含圓形圖（環圈圖）、可摘要列出網格和每個站台可用的儲存設備。
+
+image::../media/dashboard_available_storage_panel.png[儀表板可用的儲存面板]
+
+租戶管理程式儀表板上的儲存使用面板會顯示下列項目：
+
+* 租戶最大的貯體（S3）或容器（Swift）清單
+* 代表最大桶或容器之相對大小的長條圖
+* 已用空間總量、如果已設定配額、則會顯示剩餘空間的數量和百分比
+
+
+image::../media/tenant_dashboard_with_buckets.png[租戶儀表板]
+
+此外、StorageGRID 可從節點頁面和*支援*>*工具*>*網格拓撲*頁面、取得顯示隨著時間而改變的各項指標和屬性圖表。
+
+圖形有四種類型：
+
+* * Grafana圖表*：如節點頁面所示、Grafana圖表可用來繪製Prometheus測量數據的值。例如、管理節點的*節點*>*負載平衡器*索引標籤包含四個Grafana圖表。
++
+image::../media/nodes_page_load_balancer_tab.png[節點頁面負載平衡器索引標籤]
+
++
+
+NOTE: Grafana圖表也包含在預先建置的儀表板上、您可從*支援*>*工具*>*指標*頁面取得。
+
+* *折線圖*：可從「節點」頁面及「*支援*>*工具*>*網格拓撲*」頁面取得（按一下圖表圖示 image:../media/icon_chart_new.gif["圖示圖表（新增）"] 在資料值之後）、使用線路圖來繪製StorageGRID 具有單位值的各種屬性值（例如NTP頻率偏移、以百萬分之一為單位）。隨著時間推移、數值的變更會以一般資料時間間隔（資料箱）來繪製。
++
+image::../media/line_graph.gif[折線圖]
+
+* *區域圖*：可從「節點」頁面及「*支援*>*工具*>*網格拓撲*」頁面取得（按一下圖表圖示 image:../media/icon_chart_new.gif["圖示圖表（新增）"] 在資料值之後）、區域圖會用來繪製體積屬性數量、例如物件數或服務負載值。區域圖類似於線圖、但在線下方會加上淺褐色陰影。隨著時間推移、數值的變更會以一般資料時間間隔（資料箱）來繪製。
++
+image::../media/area_graph.gif[區域圖]
+
+* 有些圖表會以不同類型的圖表圖示表示 image:../media/icon_chart_new_for_11_5.png["圖表圖示-適用於11.5的新功能"] 並採用不同格式：
++
+image::../media/charts_lost_object_detected.png[偵測到圖表遺失物件]
+
+* *狀態圖*：可從*支援*>*工具*>*網格拓撲*頁面取得（按一下圖表圖示 image:../media/icon_chart_new.gif["圖示圖表（新增）"] 在資料值之後）、狀態圖表會用來繪製屬性值、這些屬性值代表不同的狀態、例如線上、待命或離線的服務狀態。狀態圖表類似於線圖、但轉換是不連續的；也就是值會從一個狀態值跳到另一個狀態值。
++
+image::../media/state_graph.gif[狀態圖表]
+
+
+
+.相關資訊
+link:viewing-nodes-page.html["檢視節點頁面"]
+
+link:viewing-grid-topology-tree.html["檢視Grid拓撲樹狀結構"]
+
+link:reviewing-support-metrics.html["檢閱支援指標"]

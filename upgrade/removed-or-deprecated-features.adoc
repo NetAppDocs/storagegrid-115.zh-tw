@@ -1,0 +1,227 @@
+---
+permalink: upgrade/removed-or-deprecated-features.html 
+sidebar: sidebar 
+keywords: features, removed, deprecated, weak consistency, compliance 
+summary: 部分功能已在StorageGRID 支援功能方面被移除或淘汰。您必須檢閱這些項目、瞭解升級前是否需要更新用戶端應用程式或修改組態。 
+---
+= 已移除或已過時的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+部分功能已在StorageGRID 支援功能方面被移除或淘汰。您必須檢閱這些項目、瞭解升級前是否需要更新用戶端應用程式或修改組態。
+
+
+
+== 已移除弱一致性控制
+
+針對不佳的一致性控制已移除StorageGRID 、適用於支援的對象為升級之後、將會出現下列行為：
+
+* 設定S3儲存區或Swift容器的弱一致性要求將會成功、但一致性層級實際上會設為「可用」。
+* 使用低一致性的現有儲存桶和容器將會自動更新、以使用可用的一致性。
+* 若要求的一致性控制標頭不佳、實際上會使用可用的一致性（如果適用）。
+
+
+可用的一致性控制與「全新寫入後的讀取」一致性層級相同、但只能提供最終的一致性。如果儲存節點無法使用、可用的一致性控制功能可提供比「全新寫入後的準備作業」更高的可用度。
+
+
+
+== Grid Health警示已過時
+
+。 `/grid/health/topology` API會在節點上檢查作用中的_als__、但已過時。就在它的位置、是全新的 `/grid/node-health` 已新增端點。此API會檢查節點上的作用中_alerts_、以傳回每個節點的目前狀態。
+
+
+
+== 法規遵循功能已過時
+
+S3物件鎖定功能StorageGRID 取代先前StorageGRID 版本的支援功能。由於新的S3物件鎖定功能符合Amazon S3的要求、因此取代了專屬StorageGRID 的「不符合要求」功能、這項功能現在稱為「舊版法規遵循」。
+
+如果您先前已啟用「全域規範」設定、則當您升級StorageGRID 至還原11.5時、新的全域S3物件鎖定設定會自動啟用。租戶使用者將不再能夠建立StorageGRID 新的儲存庫、並在其中啟用「法規遵循」功能；不過、根據需求、租戶使用者可以繼續使用及管理任何現有的舊有法規遵循儲存庫。
+
+在租戶管理程式中、會出現一個遮罩圖示 image:../media/icon_shield.png["遮罩圖示"] 表示符合舊規範的儲存區。符合舊規範的貯體也可能具有保留徽章 image:../media/hold_badge.png["持有徽章"] 表示該庫位處於合法持有狀態。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["KB：如何管理StorageGRID 符合舊規範的知識庫、請參閱《知識庫11.5"^]
+
+link:../ilm/index.html["使用ILM管理物件"]
+
+
+
+== 「3個多部分太小」警示已移除
+
+刪除了* S3多部分太小*警示。先前、當S3用戶端嘗試完成多部份上傳、但不符合Amazon S3大小限制的部分時、就會觸發此警示。升級StorageGRID 至支援對象支援對象範圍：升級至支援對象範圍：升級至支援對象範圍：升級至支援對象範圍：升級至支援對象範圍：升級至支援對象範圍：
+
+* 多部份上傳的每個部分必須介於5個mib（5、242,880位元組）和5 GiB（5、368,709,120位元組）之間。
+* 最後一部分可小於5個mib（5、242,880位元組）。
+* 一般而言、零件尺寸應盡量大。例如、對於100 GiB物件使用5 GiB的零件大小。由於每個零件都被視為獨特的物件、因此使用大尺寸的零件可減少StorageGRID 元資料負荷。
+* 對於小於5 GiB的物件、請考慮改用非多部份上傳。
+
+
+
+
+== 「應用裝置連結至Grid Network」警示已移除
+
+下列警示已移除。如果Grid Network停機、則無法存取觸發這些警示的度量：
+
+* 服務應用裝置在Grid Network上向下連結
+* Grid Network上的儲存應用裝置連結
+
+
+
+
+== 支援從SNMP組態中移除完整網域名稱
+
+在底板管理控制器（BMC）中為SG6000、SG100或SG1000設定SNMP伺服器時、您現在必須指定IP位址、而非完整網域名稱。如果先前已設定完整網域名稱、請先將其變更為IP位址、然後再升級StorageGRID 至整套11.5。
+
+
+
+== 舊屬性已移除
+
+下列舊屬性已移除。如適用、Prometheus指標會提供等效資訊：
+
+[cols="1a,2a"]
+|===
+| 舊屬性 | 等效的Prometheus指標 
+
+
+ a| 
+BREC
+ a| 
+storagegRid_service_network_receiped_bytes
+
+
+
+ a| 
+BTRA
+ a| 
+storagegRid_service_network_forted_bytes
+
+
+
+ a| 
+自由行
+ a| 
+storagegRid_meta數據查詢_average_dimetime_m毫秒
+
+
+
+ a| 
+Hais
+ a| 
+storagegRid_http工作階段傳入嘗試
+
+
+
+ a| 
+HCCS
+ a| 
+storagegRid_http工作階段傳入的_current_Estimated
+
+
+
+ a| 
+Heis
+ a| 
+storagegRid_htt_sessions_incoming_f失敗
+
+
+
+ a| 
+HISC
+ a| 
+storagegRid_htt_sesss_incoming_Successful
+
+
+
+ a| 
+LHAC
+ a| 
+_無_
+
+
+
+ a| 
+Nrec
+ a| 
+_無_
+
+
+
+ a| 
+NTSOO（所選時間來源偏移）
+ a| 
+儲存格RID_NTP_chosed_time_source_offset_毫秒
+
+
+
+ a| 
+無
+ a| 
+_無_
+
+
+
+ a| 
+SLOD
+ a| 
+storagegRid_service_load
+
+
+
+ a| 
+SMEM
+ a| 
+storagegRid_service_memory_usage_bytes
+
+
+
+ a| 
+SUTM
+ a| 
+storagegRid_service_cpo_seconds
+
+
+
+ a| 
+SVUT
+ a| 
+storagegRid_service_upde_seconds
+
+
+
+ a| 
+TRBs（每秒接收的總位元數）
+ a| 
+_無_
+
+
+
+ a| 
+TRXB
+ a| 
+storagegRid_network_receiped_bytes
+
+
+
+ a| 
+TBS（傳輸的每秒總位元數）
+ a| 
+_無_
+
+
+
+ a| 
+TXB
+ a| 
+storagegrid網路傳輸的位元組
+
+|===
+也進行了下列相關變更：
+
+* 。 `network_received_bytes` 和 `network_transmitted_bytes` 由於這些指標的值只會增加、因此Prometheus指標會從量表變更為計數器。如果您目前在Prometheus查詢中使用這些指標、您應該開始使用 `increase()` 查詢中的功能。
+* 「網路資源」表已從StorageGRID 「資源」索引標籤中移除、以供執行各種服務。（選擇* Support *>* Tools *>* Grid topology *。然後選擇*節點_*>*服務_*>* Resources *。）
+* 已移除儲存節點的HTTP工作階段頁面。以前、您可以選取*支援*>*工具*>*網格拓撲*、然後選取*儲存節點*>* LdR*>* HTTP來存取此頁面。
+* HCCS（目前建立的傳入工作階段）警示已移除。
+* NTSOO（所選時間來源偏移）警示已移除。
+

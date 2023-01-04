@@ -1,0 +1,43 @@
+---
+permalink: admin/configuring-server-certificates.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以自訂StorageGRID 由該系統使用的伺服器憑證。 
+---
+= 設定伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自訂StorageGRID 由該系統使用的伺服器憑證。
+
+本系統使用安全性憑證來實現多種不同目的StorageGRID ：
+
+* 管理介面伺服器憑證：用於保護網格管理程式、租戶管理程式、網格管理API及租戶管理API的存取安全。
+* 儲存API伺服器憑證：用於保護存取儲存節點和閘道節點的安全、API用戶端應用程式會使用這些節點來上傳和下載物件資料。
+
+
+您可以使用安裝期間建立的預設憑證、或是將這些預設類型的憑證或兩者都取代為您自己的自訂憑證。
+
+
+
+== 支援的自訂伺服器憑證類型
+
+支援使用RSA或ECDSA（Elliptic曲線數位簽章演算法）加密的自訂伺服器憑證StorageGRID 。
+
+如需StorageGRID 更多關於如何保護REST API用戶端連線的資訊、請參閱S3或Swift實作指南。
+
+
+
+== 負載平衡器端點的憑證
+
+可分別管理負載平衡器端點所使用的憑證。StorageGRID若要設定負載平衡器憑證、請參閱設定負載平衡器端點的指示。
+
+.相關資訊
+link:../s3/index.html["使用S3"]
+
+link:../swift/index.html["使用Swift"]
+
+link:configuring-load-balancer-endpoints.html["設定負載平衡器端點"]

@@ -1,0 +1,14 @@
+---
+permalink: tenant/managing-s3-buckets.html 
+sidebar: sidebar 
+keywords: StorageGRID, tenant, tenant manager, s3 bucket 
+summary: 如果您使用具有適當權限的S3租戶、可以建立、檢視及刪除S3儲存區、更新一致性層級設定、設定跨來源資源共用（CORS）、啟用及停用上次存取時間更新設定、以及管理S3平台服務。 
+---
+= 管理S3儲存區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用具有適當權限的S3租戶、可以建立、檢視及刪除S3儲存區、更新一致性層級設定、設定跨來源資源共用（CORS）、啟用及停用上次存取時間更新設定、以及管理S3平台服務。

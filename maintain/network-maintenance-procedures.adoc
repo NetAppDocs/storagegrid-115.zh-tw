@@ -1,0 +1,22 @@
+---
+permalink: maintain/network-maintenance-procedures.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在Grid Network上設定子網路清單、或更新StorageGRID 適用於您的BIOS系統的IP位址、DNS伺服器或NTP伺服器。 
+---
+= 網路維護程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Grid Network上設定子網路清單、或更新StorageGRID 適用於您的BIOS系統的IP位址、DNS伺服器或NTP伺服器。
+
+.選擇
+* link:updating-subnets-for-grid-network.html["正在更新Grid Network的子網路"]
+* link:configuring-ip-addresses.html["設定IP位址"]
+* link:configuring-dns-servers.html["設定DNS伺服器"]
+* link:configuring-ntp-servers.html["設定NTP伺服器"]
+* link:restoring-network-connectivity-for-isolated-nodes.html["還原隔離節點的網路連線能力"]
+

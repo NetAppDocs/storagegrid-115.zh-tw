@@ -1,0 +1,19 @@
+---
+permalink: admin/using-single-sign-on.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援使用安全聲明標記語言2.0（SAML 2.0）標準的單一登入（SSO）StorageGRID 。啟用SSO時、所有使用者必須先經過外部身分識別供應商的驗證、才能存取Grid Manager、租戶管理程式、Grid Management API或租戶管理API。本機使用者無法登入StorageGRID 到無法使用的功能。 
+---
+= 使用單一登入（SSO）StorageGRID 進行支援
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援使用安全聲明標記語言2.0（SAML 2.0）標準的單一登入（SSO）StorageGRID 。啟用SSO時、所有使用者必須先經過外部身分識別供應商的驗證、才能存取Grid Manager、租戶管理程式、Grid Management API或租戶管理API。本機使用者無法登入StorageGRID 到無法使用的功能。
+
+* link:how-sso-works.html["單一登入的運作方式"]
+* link:requirements-for-sso.html["使用單一登入的需求"]
+* link:configuring-sso.html["設定單一登入"]
+

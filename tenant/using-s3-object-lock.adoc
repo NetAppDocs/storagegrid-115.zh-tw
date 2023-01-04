@@ -1,0 +1,42 @@
+---
+permalink: tenant/using-s3-object-lock.html 
+sidebar: sidebar 
+keywords: storagegrid, tenant, s3 object lock, s3 bucket, retention, data retention 
+summary: 如果物件必須符合保留法規要求、您可以使用StorageGRID 支援功能的S3物件鎖定功能。 
+---
+= 使用S3物件鎖定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果物件必須符合保留法規要求、您可以使用StorageGRID 支援功能的S3物件鎖定功能。
+
+
+
+== 什麼是S3物件鎖定？
+
+「物件鎖定」功能是物件保護解決方案、StorageGRID 相當於Amazon Simple Storage Service（Amazon S3）中的S3物件鎖定。
+
+如圖所示、當啟用StorageGRID 全域S3物件鎖定設定以供支援某個功能時、S3租戶帳戶可以建立啟用或不啟用S3物件鎖定的儲存區。如果某個儲存區已啟用S3物件鎖定、則S3用戶端應用程式可選擇性地指定該儲存區中任何物件版本的保留設定。物件版本必須具有指定的保留設定、才能受到S3物件鎖定的保護。
+
+image::../media/s3_object_lock_architecture.png[S3物件鎖定架構]
+
+「S3物件鎖定」StorageGRID 功能提供單一保留模式、相當於Amazon S3法規遵循模式。依預設、受保護的物件版本無法由任何使用者覆寫或刪除。「S3物件鎖定」StorageGRID 功能不支援管理模式、也不允許具有特殊權限的使用者略過保留設定或刪除受保護的物件。
+
+如果某個儲存區已啟用S3物件鎖定、則S3用戶端應用程式可在建立或更新物件時、選擇性地指定下列任一或兩個物件層級保留設定：
+
+* *保留截止日期*：如果物件版本的保留截止日期在未來、則可擷取物件、但無法修改或刪除。視需要可增加物件的保留截止日期、但此日期不可減少。
+* *合法持有*：將合法持有套用至物件版本、會立即鎖定該物件。例如、您可能需要對與調查或法律爭議相關的物件保留法律。合法持有沒有到期日、但在明確移除之前、仍會保留到位。合法持有不受保留至日期的限制。
+
+
+如需這些設定的詳細資訊、請前往「使用S3物件鎖定」 link:../s3/s3-rest-api-supported-operations-and-limitations.html["S3 REST API支援的作業和限制"]。
+
+
+
+== 管理符合舊規範的儲存庫
+
+S3物件鎖定功能取代先前StorageGRID 版本的Compliance功能。如果您使用StorageGRID 舊版的《不規則》建立了相容的儲存桶、您可以繼續管理這些儲存桶的設定、但是您無法再建立新的相容儲存桶。如需相關指示、請參閱NetApp知識庫文章。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp知識庫：如何管理StorageGRID 支援老舊的知識庫、請參閱《知識庫文章"]

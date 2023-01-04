@@ -1,0 +1,67 @@
+---
+permalink: upgrade/verifying-installed-version-of-storagegrid.html 
+sidebar: sidebar 
+keywords: storagegrid, version, current version, previous version 
+summary: 在開始升級之前、您必須先確認StorageGRID 先前版本的更新已套用最新的可用修補程式、且目前已安裝舊版的。 
+---
+= 驗證安裝的StorageGRID 版本的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在開始升級之前、您必須先確認StorageGRID 先前版本的更新已套用最新的可用修補程式、且目前已安裝舊版的。
+
+.步驟
+. 使用支援的瀏覽器登入Grid Manager。
+. 選取*「說明」**「關於」*。
+. 確認*版本*為11.4._x.y_。
++
+在《The S411.4._x.y_ version Number StorageGRID ：
+
++
+** 主要版本的_x_值為0（11.4.0）。
+** 次要版本（如果有）的_x_值不是0（例如11.4.1）。
+** 如果有可用的熱修復程式、則會有_y_值（例如11.4.0.1）。
+
+
++
+
+IMPORTANT: 如果StorageGRID 您有較早版本的更新版本、則必須先升級至任何11.4版、再升級StorageGRID 至版本的版本才能升級至版本4。您不需要使用最新的11.4次要版本、即可升級StorageGRID 至版本號
+
+. 如果您不是StorageGRID 使用的是版本4、則必須依照每個版本的指示、一次升級至版本11.4、一次一個版本。
++
+您也必須先套用每StorageGRID 個版本的最新修補程式、才能升級至更高層級。
+
++
+範例中會顯示一個可能的升級路徑。
+
+. 一旦您進入StorageGRID 畫面11.4、請前往NetApp下載頁面查看StorageGRID 是否有任何適用於StorageGRID 您的版本的修補程式。11.4._x_版本。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+
+. 確認StorageGRID 您的版本為更新版本的更新版本。
+. 如有必要、請下載並套用StorageGRID 最新的適用於StorageGRID 您的《支援》11.4._x_版的《支援》修補程式。
++
+如需套用修補程式的相關資訊、請參閱還原與維護指示。
+
+
+
+
+
+== 範例：準備從StorageGRID 11.3.0.8版升級至5.2版
+
+以下範例顯示從StorageGRID 版本11.3.0.8升級至版本11.5的準備升級步驟。在升級StorageGRID 至32版之前、您的系統必須StorageGRID 先安裝有最新的更新程式才能使用支援功能的支援功能。
+
+請依下列順序下載並安裝軟體、以準備系統進行升級：
+
+. 套用最新StorageGRID 的更新版的更新版本。
+. 升級StorageGRID 至版本更新至版本更新。（您不需要安裝任何11.4._x_次要版本。）
+. 套用最新StorageGRID 的更新版的更新版本。
+
+
+.相關資訊
+link:../admin/index.html["管理StorageGRID"]
+
+link:../maintain/index.html["維護"]

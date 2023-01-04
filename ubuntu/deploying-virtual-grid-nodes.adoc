@@ -1,0 +1,28 @@
+---
+permalink: ubuntu/deploying-virtual-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, deploying grid nodes, deploy grid nodes, ubuntu, debian 
+summary: 當您在Ubuntu或Debian環境中部署網格節點時、會為所有節點建立節點組態檔案、驗證檔案、並啟動StorageGRID 啟動啟動節點的「支援服務」。如果您需要部署StorageGRID 任何的應用程式儲存節點、請在部署完所有虛擬節點之後、參閱應用裝置的安裝與維護說明。 
+---
+= 部署虛擬網格節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在Ubuntu或Debian環境中部署網格節點時、會為所有節點建立節點組態檔案、驗證檔案、並啟動StorageGRID 啟動啟動節點的「支援服務」。如果您需要部署StorageGRID 任何的應用程式儲存節點、請在部署完所有虛擬節點之後、參閱應用裝置的安裝與維護說明。
+
+* link:creating-node-configuration-files.html["正在建立節點組態檔"]
+* link:validating-storagegrid-configuration.html["正在驗證StorageGRID 該組態"]
+* link:starting-storagegrid-host-service.html["啟動StorageGRID 支援服務"]
+
+
+.相關資訊
+link:../sg100-1000/index.html["SG100  機；SG1000服務應用裝置"]
+
+link:../sg5600/index.html["SG5600儲存設備"]
+
+link:../sg5700/index.html["SG5700儲存設備"]
+
+link:../sg6000/index.html["SG6000儲存設備"]

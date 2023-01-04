@@ -1,0 +1,33 @@
+---
+permalink: primer/storagegrid-attributes.html 
+sidebar: sidebar 
+keywords: attributes 
+summary: 屬性報告StorageGRID 許多功能的值和狀態。每個網格節點、每個站台及整個網格都有可用的屬性值。 
+---
+= 屬性StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+屬性報告StorageGRID 許多功能的值和狀態。每個網格節點、每個站台及整個網格都有可用的屬性值。
+
+在Grid Manager中的許多地方使用了各種功能：StorageGRID
+
+* *節點頁面*：節點頁面上顯示的許多值都StorageGRID 是功能特性。（節點頁面上也會顯示Prometheus指標。）
+* *警示*：當屬性達到定義的臨界值時、StorageGRID 會在特定嚴重性等級觸發各種警示（舊系統）。
+* *網格拓撲樹狀結構*：屬性值顯示在網格拓撲樹狀結構（*支援*>*工具*>*網格拓撲*）中。
+* *事件*：當特定屬性記錄節點的錯誤或故障狀況時、系統事件發生、包括網路錯誤等錯誤。
+
+
+
+
+== 屬性值
+
+屬性會以最佳方式回報、而且大致正確。屬性更新在某些情況下可能會遺失、例如服務當機或故障、以及網格節點的重新建置。
+
+此外、傳播延遲可能會拖慢屬性的報告速度。大部分屬性的更新值會以StorageGRID 固定的時間間隔傳送至更新的版本。更新可能需要幾分鐘的時間才能在系統中顯示、而在稍微不同的時間、也可以報告兩個會同時變更多個或少個屬性的屬性。
+
+.相關資訊
+link:../monitor/index.html["監控安培；疑難排解"]

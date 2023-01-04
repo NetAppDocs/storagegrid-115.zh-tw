@@ -1,0 +1,23 @@
+---
+permalink: ilm/example-ilm-rules-and-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用本節中的範例做為自己ILM規則和原則的起點。 
+---
+= ILM規則與原則範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用本節中的範例做為自己ILM規則和原則的起點。
+
+* link:example-1-ilm-rules-and-policy-for-object-storage.html["範例1：物件儲存的ILM規則與原則"]
+* link:example-2-ilm-rules-and-policy-for-ec-object-size-filtering.html["範例2：EC物件大小篩選的ILM規則和原則"]
+* link:example-3-ilm-rules-and-policy-for-better-protection-for-image-files.html["範例3：ILM規則與原則、可更有效保護映像檔案"]
+* link:example-4-ilm-rules-and-policy-for-s3-versioned-objects.html["範例4：S3版本化物件的ILM規則和原則"]
+* link:example-5-ilm-rules-and-policy-for-strict-ingest-behavior.html["範例5：嚴格擷取行為的ILM規則與原則"]
+* link:example-6-changing-ilm-policy.html["範例6：變更ILM原則"]
+* link:example-7-compliant-ilm-policy-for-s3-object-lock.html["範例7：S3物件鎖定的符合ILM原則"]
+

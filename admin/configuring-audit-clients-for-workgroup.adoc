@@ -1,0 +1,172 @@
+---
+permalink: admin/configuring-audit-clients-for-workgroup.html 
+sidebar: sidebar 
+keywords:  
+summary: 針對StorageGRID 您要從中擷取稽核訊息的各個執行此程序、以利執行此程序。 
+---
+= 設定工作群組的稽核用戶端
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+針對StorageGRID 您要從中擷取稽核訊息的各個執行此程序、以利執行此程序。
+
+.您需要的產品
+* 您必須擁有 `Passwords.txt` 使用root / admin帳戶密碼的檔案（可在上述套件中找到）。
+* 您必須擁有 `Configuration.txt` 檔案（可在上述套件中取得）。
+
+
+.關於這項工作
+透過CIFS/Samba進行的稽核匯出已過時、將在未來StorageGRID 的版本中移除。
+
+.步驟
+. 登入主要管理節點：
++
+.. 輸入下列命令： `ssh admin@_primary_Admin_Node_IP_`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
+.. 輸入下列命令以切換至root： `su -`
+.. 輸入中所列的密碼 `Passwords.txt` 檔案：
++
+當您以root登入時、提示會從變更 `$` 至 `#`。
+
+
+
+. 確認所有服務的狀態均為「執行中」或「已驗證」： `storagegrid-status`
++
+如果所有服務均未執行或「已驗證」、請先解決問題再繼續。
+
+. 返回命令列、按* Ctrl-+* C*。
+. 啟動CIFS組態公用程式： `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. 設定Windows工作群組的驗證：
++
+如果已設定驗證、則會顯示摘要報告訊息。如果已設定驗證、請前往下一步。
+
++
+.. 輸入： `set-authentication`
+.. 當系統提示您安裝Windows工作群組或Active Directory時、請輸入： `workgroup`
+.. 出現提示時、請輸入工作群組名稱： `_workgroup_name_`
+.. 出現提示時、請建立有意義的NetBios名稱： `_netbios_name_`
++
+或
+
++
+按* Enter *以使用管理節點的主機名稱做為NetBios名稱。
+
++
+指令碼會重新啟動Samba伺服器、並套用變更。這應不到一分鐘。設定驗證之後、請新增稽核用戶端。
+
+.. 出現提示時、請按* Enter *。
++
+此時會顯示CIFS組態公用程式。
+
+
+
+. 新增稽核用戶端：
++
+.. 輸入： `add-audit-share`
++
+
+NOTE: 共用區會自動新增為唯讀。
+
+.. 出現提示時、請新增使用者或群組： `_user_`
+.. 出現提示時、請輸入稽核使用者名稱： `_audit_user_name_`
+.. 出現提示時、請輸入稽核使用者的密碼： `_password_`
+.. 出現提示時、請重新輸入相同的密碼進行確認： `_password_`
+.. 出現提示時、請按* Enter *。
++
+此時會顯示CIFS組態公用程式。
+
+
+
++
+
+NOTE: 不需要輸入目錄。稽核目錄名稱已預先定義。
+
+. 如果允許多個使用者或群組存取稽核共用區、請新增其他使用者：
++
+.. 輸入： `add-user-to-share`
++
+隨即顯示已啟用共享區的編號清單。
+
+.. 出現提示時、請輸入稽核匯出共用區的數量： `_share_number_`
+.. 出現提示時、請新增使用者或群組： `user`
++
+或 `group`
+
+.. 出現提示時、請輸入稽核使用者或群組的名稱： `_audit_user or audit_group_`
+.. 出現提示時、請按* Enter *。
++
+此時會顯示CIFS組態公用程式。
+
+.. 針對每個具有稽核共用存取權的其他使用者或群組、重複這些子步驟。
+
+
+. 或者、請確認您的組態： `validate-config`
++
+系統會檢查並顯示這些服務。您可以安全地忽略下列訊息：
+
++
+[listing]
+----
+Can't find include file /etc/samba/includes/cifs-interfaces.inc
+Can't find include file /etc/samba/includes/cifs-filesystem.inc
+Can't find include file /etc/samba/includes/cifs-custom-config.inc
+Can't find include file /etc/samba/includes/cifs-shares.inc
+rlimit_max: increasing rlimit_max (1024) to minimum Windows limit (16384)
+----
++
+.. 出現提示時、請按* Enter *。
++
+隨即顯示稽核用戶端組態。
+
+.. 出現提示時、請按* Enter *。
++
+此時會顯示CIFS組態公用程式。
+
+
+
+. 關閉CIFS組態公用程式： `exit`
+. 啟動Samba服務： `service smbd start`
+. 如果StorageGRID 這個部署是單一站台、請前往下一步。
++
+或
+
++
+或者、如果StorageGRID 此功能的支援包括其他站台的管理節點、請視需要啟用這些稽核共用：
+
++
+.. 遠端登入站台的管理節點：
++
+... 輸入下列命令： `ssh admin@_grid_node_IP_`
+... 輸入中所列的密碼 `Passwords.txt` 檔案：
+... 輸入下列命令以切換至root： `su -`
+... 輸入中所列的密碼 `Passwords.txt` 檔案：
+
+
+.. 重複這些步驟、為每個額外的管理節點設定稽核共用區。
+.. 關閉遠端安全Shell登入遠端管理節點： `exit`
+
+
+. 登出命令Shell： `exit`
+
+
+.相關資訊
+link:../upgrade/index.html["升級軟體"]

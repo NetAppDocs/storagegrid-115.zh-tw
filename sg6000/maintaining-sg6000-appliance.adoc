@@ -1,0 +1,39 @@
+---
+permalink: sg6000/maintaining-sg6000-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: 您可能需要在SG6000應用裝置上執行維護程序。本節中的程序假設應用裝置已部署為StorageGRID 位於整個系統的儲存節點。 
+---
+= 維護SG6000應用裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要在SG6000應用裝置上執行維護程序。本節中的程序假設應用裝置已部署為StorageGRID 位於整個系統的儲存節點。
+
+.步驟
+* link:placing-appliance-into-maintenance-mode.html["將應用裝置置於維護模式"]
+* link:upgrading-santricity-os-on-storage-controllers.html["升級SANtricity 儲存控制器上的作業系統"]
+* link:upgrading-drive-firmware-using-santricity-system-manager.html["使用SANtricity 《支援系統管理程式》升級磁碟機韌體"]
+* link:adding-expansion-shelf-to-deployed-sg6060.html["將擴充櫃新增至部署的SG6060"]
+* link:turning-controller-identify-led-on-and-off.html["開啟和關閉控制器識別LED"]
+* link:locating-controller-in-data-center.html["將控制器定位在資料中心"]
+* link:replacing-storage-controller-sg6000.html["更換儲存控制器"]
+* link:replacing-hardware-components-in-storage-controller-shelf.html["更換儲存控制器機櫃中的硬體元件"]
+* link:replacing-hardware-components-in-optional-60-drive-expansion-shelf.html["更換選購的60磁碟機擴充櫃中的硬體元件"]
+* link:shutting-down-sg6000-cn-controller.html["關閉SG6000-CN.控制器"]
+* link:powering-on-sg6000-cn-controller-and-verifying-operation.html["啟動SG6000-CN-控制器並驗證作業"]
+* link:replacing-sg6000-cn-controller.html["更換SG6000-CN.控制器"]
+* link:replacing-power-supply-in-sg6000-cn-controller.html["更換SG6000-CN-控制器中的電源供應器"]
+* link:removing-sg6000-cn-controller-from-cabinet-or-rack.html["從機櫃或機架中移除SG6000-CN.控制器"]
+* link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html["將SG6000-CN-控制器重新安裝到機櫃或機架中"]
+* link:removing-sg6000-cn-controller-cover.html["卸下SG6000-CN-控制器護蓋"]
+* link:reinstalling-sg6000-cn-controller-cover.html["重新安裝SG6000-CN-控制器護蓋"]
+* link:replacing-fibre-channel-hba-in-sg6000-cn-controller.html["更換SG6000-CN-控制器中的Fibre Channel HBA"]
+* link:changing-link-configuration-of-sg6000-cn-controller.html["變更SG6000-CN-控制器的連結組態"]
+* link:changing-mtu-setting.html["變更MTU設定"]
+* link:checking-dns-server-configuration.html["檢查DNS伺服器組態"]
+* link:monitoring-node-encryption-in-maintenance-mode.html["在維護模式下監控節點加密"]
+

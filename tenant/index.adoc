@@ -1,0 +1,20 @@
+---
+permalink: tenant/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 瞭解如何使用StorageGRID 綁定帳戶。 
+---
+= 使用租戶帳戶
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解如何使用StorageGRID 綁定帳戶。
+
+* link:using-tenant-manager.html["使用租戶管理程式"]
+* link:managing-system-access-for-tenant-users.html["管理租戶使用者的系統存取"]
+* link:managing-s3-tenant-accounts.html["管理S3租戶帳戶"]
+* link:managing-s3-platform-services.html["管理S3平台服務"]
+

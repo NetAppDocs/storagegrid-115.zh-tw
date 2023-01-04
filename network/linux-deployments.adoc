@@ -1,0 +1,26 @@
+---
+permalink: network/linux-deployments.html 
+sidebar: sidebar 
+keywords:  
+summary: 為了提高效率、可靠性和安全性、StorageGRID 此功能可在Linux上以Docker容器的集合方式執行。不需要StorageGRID 在一個不支援的系統中使用與Docker相關的網路組態。 
+---
+= Linux部署
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+為了提高效率、可靠性和安全性、StorageGRID 此功能可在Linux上以Docker容器的集合方式執行。不需要StorageGRID 在一個不支援的系統中使用與Docker相關的網路組態。
+
+將非連結裝置（例如VLAN或虛擬乙太網路（varth）配對）用於容器網路介面。將此裝置指定為節點組態檔中的網路介面。
+
+
+IMPORTANT: 請勿直接使用連結或橋接裝置做為容器網路介面。這樣做可能會因為在Container命名空間中使用含Bond和Bridge裝置的Macvlan時發生核心問題、而導致節點無法啟動。
+
+請參閱Red Hat Enterprise Linux/CentOS或Ubuntu / Debian部署的安裝說明。
+
+.相關資訊
+link:../rhel/index.html["安裝Red Hat Enterprise Linux或CentOS"]
+
+link:../ubuntu/index.html["安裝Ubuntu或DEBIAN"]

@@ -1,0 +1,24 @@
+---
+permalink: vmware/defining-configuration-file-for-your-deployment.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在StorageGRID deploy-vsphere-ovftool.sh Bash指令碼所使用的組態檔中、指定部署虛擬網格節點以供使用的資訊。您可以修改範例組態檔、因此不需要從頭建立檔案。 
+---
+= 定義部署的組態檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在StorageGRID 組態檔中指定部署虛擬網格節點以供使用所需的資訊 `deploy-vsphere-ovftool.sh` Bash指令碼：您可以修改範例組態檔、因此不需要從頭建立檔案。
+
+.步驟
+. 複製範例組態檔 (`deploy-vsphere-ovftool.sample.ini`）。將新檔案另存為 `deploy-vsphere-ovftool.ini` 在相同的目錄中 `deploy-vsphere-ovftool.sh`。
+. 開啟 `deploy-vsphere-ovftool.ini`。
+. 輸入部署VMware虛擬網格節點所需的所有資訊。
++
+請參閱 link:configuration-file-settings.html["組態檔設定"] 以取得資訊。
+
+. 輸入並驗證所有必要資訊後、請儲存並關閉檔案。
+
