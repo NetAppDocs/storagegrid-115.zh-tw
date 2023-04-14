@@ -23257,6 +23257,6 @@
   <block id="02e1de7683e58012e382ad0522d47c2b" category="sidebar">建立其他使用者的S3存取金鑰</block>
   <block id="5b2a79adecc8d3cc03324c0ff8c3e657" category="sidebar">檢視其他使用者的S3存取金鑰</block>
   <block id="d4a4412fd4130eef9caedf4616926255" category="sidebar">刪除其他使用者的S3存取金鑰</block>
-  <block id="af4d73da90971496489b983213043e04" category="inline-link-macro">變更一致性層級</block>
-  <block id="89be7df175609147f17e262cfab59214" category="paragraph">對於「支援區」、建議的儲存區一致性層級為「全新寫入後讀取」FabricPool 。不建議使用「可用」一致性層級。請參閱 <block ref="413cea68bf83f659681660c3a9e8ec4f" category="inline-link-macro-rx"></block>。</block>
+  <block id="3cd0c734fa2c2ae0814d57215c59f108" category="paragraph">對於 FabricPool 貯體、建議的貯體一致性等級為 * 讀取後新寫入 * 、這是新貯體的預設設定。請勿編輯 FabricPool 儲存庫以使用 * 可用 * 或任何其他一致性層級。</block>
+  <block id="392d70ca39f31f10bd637936769788df" category="sidebar">StorageGRID</block>
 </blocks>
