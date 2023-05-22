@@ -32,10 +32,10 @@ image::../media/seven_segment_display_codes_for_e2800.gif[E2800的七區段顯�
 
 
 .相關資訊
-https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700與E2800系統監控指南"^]
+https://["E5700與E2800系統監控指南"^]
 
 link:troubleshooting-hardware-installation.html["疑難排解硬體安裝"]
 
-https://mysupport.netapp.com/site/global/dashboard["NetApp支援"^]
+https://["NetApp支援"^]
 
 link:powering-on-sg6000-cn-controller-and-verifying-operation.html["啟動SG6000-CN-控制器並驗證作業"]

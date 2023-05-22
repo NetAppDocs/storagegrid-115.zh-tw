@@ -48,7 +48,7 @@ NetApp是雲端型數位顧問、運用NetApp安裝基礎上的預測分析和�
 
 如果您想要在 NetApp 支援網站上使用的 Active IQ 儀表板和功能，則必須啟用 AutoSupport。
 
-https://docs.netapp.com/us-en/active-iq/index.html["Active IQ Digital Advisor 數位顧問文件"]
+https://["Active IQ Digital Advisor 數位顧問文件"]
 
 
 
@@ -86,4 +86,4 @@ image::../media/autosupport_accessing_settings.png[存取AutoSupport 功能設�
 
 
 .相關資訊
-https://mysupport.netapp.com/site/global/dashboard["NetApp支援"^]
+https://["NetApp支援"^]

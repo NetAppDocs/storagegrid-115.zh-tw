@@ -25,7 +25,7 @@ summary: 在將StorageGRID 「支援功能」附加為FabricPool 「支援功能
 
 雖然推薦使用「VMware負載平衡器」服務、但StorageGRID 您可能想要改為整合協力廠商負載平衡器。如需相關資訊、請聯絡您的NetApp客戶代表、或參閱下列技術報告：
 
-https://www.netapp.com/pdf.html?item=/media/17068-tr4626pdf.pdf["部分負載平衡器選項StorageGRID"^]
+https://["部分負載平衡器選項StorageGRID"^]
 
 
 NOTE: 閘道節點上的個別連線負載平衡器（CLB）服務已過時、不再建議搭配FabricPool 使用。

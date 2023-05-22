@@ -34,7 +34,7 @@ link:configuring-admin-proxy-settings.html["設定管理Proxy設定"]
 ====
 此程序僅適用於設定StorageGRID 適用於E系列AutoSupport 的支援服務器。如需E系列AutoSupport 的進一步資訊、請參閱E系列文件中心。
 
-http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E系列系統文件中心"^]
+http://["NetApp E系列系統文件中心"^]
 
 ====
 .步驟

@@ -471,9 +471,9 @@ Cassandra Reaper
 
 
 .相關資訊
-https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
+https://["NetApp 互通性對照表工具"^]
 
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
 link:../vmware/index.html["安裝VMware"]
 

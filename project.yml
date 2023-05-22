@@ -62,7 +62,7 @@ sidebar:
     entries:
     - section: expand
     - section: maintain
-  - title: 舊版
+  - title: 其他版本
     url: "/earlier-versions.html"
   - title: 法律聲明
     url: "/legal-notices.html"
@@ -148,9 +148,15 @@ homepage:
       url: https://netapp.com/blog/
     - title: NetApp社群
       url: https://community.netapp.com/
-  - title: 舊版
+  - title: 其他版本
     links:
+    - title: StorageGRID 11.7 文件
+      url: https://docs.netapp.com/us-en/storagegrid-117/index.html
+    - title: StorageGRID 11.6 文件
+      url: https://docs.netapp.com/us-en/storagegrid-116/index.html
     - title: 部分11.4文件StorageGRID
       url: https://docs.netapp.com/sgws-114/index.jsp
     - title: 部分11.3文件StorageGRID
       url: https://docs.netapp.com/sgws-113/index.jsp
+    - title: 部分11.2文件StorageGRID
+      url: https://docs.netapp.com/sgws-112/index.jsp

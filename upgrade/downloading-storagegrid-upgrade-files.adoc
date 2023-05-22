@@ -22,7 +22,7 @@ summary: 升級StorageGRID 您的作業系統之前、您必須先將所需的�
 .步驟
 . 請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+https://["NetApp下載StorageGRID"^]
 
 . 選取下載最新版本的按鈕、或從下拉式功能表中選取其他版本、然後選取*執行*。
 +

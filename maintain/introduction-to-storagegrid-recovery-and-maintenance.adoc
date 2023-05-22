@@ -39,4 +39,4 @@ link:../sg5700/index.html["SG5700儲存設備"]
 
 link:../sg5600/index.html["SG5600儲存設備"]
 
-https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+https://["NetApp 互通性對照表工具"]

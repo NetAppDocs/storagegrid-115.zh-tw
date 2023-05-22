@@ -171,7 +171,7 @@ link:../tenant/index.html["使用租戶帳戶"]
 請參閱OpenLDAP系統管理員指南中有關反轉群組成員資格維護的資訊。
 
 .相關資訊
-http://www.openldap.org/doc/admin24/index.html["OpenLDAP文件：2.4版管理員指南"^]
+http://["OpenLDAP文件：2.4版管理員指南"^]
 
 
 

@@ -51,7 +51,7 @@ NOTE: CLB服務已過時。
 +
 .. 請從NetApp下載頁面下載安裝歸檔StorageGRID 文件、以供使用。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+https://["NetApp下載StorageGRID"^]
 
 .. 擷取歸檔。
 .. 從《Sile Appliance Installer》StorageGRID （英文）中、選取*進階*>*上傳StorageGRID 《Some Software*》（英文）。

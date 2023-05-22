@@ -25,4 +25,4 @@ summary: 如果故障需要部署一或多個新的實體或虛擬主機、或�
 
 
 .相關資訊
-https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+https://["NetApp 互通性對照表工具"]

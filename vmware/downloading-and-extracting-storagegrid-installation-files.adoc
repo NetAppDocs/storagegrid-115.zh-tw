@@ -16,7 +16,7 @@ summary: 您必須下載StorageGRID 更新安裝歸檔並擷取檔案。
 .步驟
 . 請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
+https://["NetApp下載StorageGRID"^]
 
 . 選取下載最新版本的按鈕、或從下拉式功能表中選取其他版本、然後選取*執行*。
 . 以您NetApp帳戶的使用者名稱和密碼登入。

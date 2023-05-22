@@ -15,6 +15,6 @@ summary: 取得新功能、已知問題及修正問題的特定版本資訊。
 
 版本資訊可在此文件網站之外取得。系統會提示您使用 NetApp 支援網站認證資料登入。
 
-* https://library.netapp.com/ecmdocs/ECMLP2873529/html/frameset.html["html下載"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873529["PDF"^]
+* https://["html下載"^]
+* https://["PDF"^]
 

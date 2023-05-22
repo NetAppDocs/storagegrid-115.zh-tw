@@ -31,8 +31,8 @@ image::../media/fabricpool_storagegrid_workflow.png[功能工作流程FabricPool
 
 
 .相關資訊
-* https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598：FabricPool 《關於解決方案的最佳實務做法ONTAP 》（英文）"^]
-* https://docs.netapp.com/ontap-9/index.jsp["供應說明文件中心 ONTAP"^]
+* https://["TR-4598：FabricPool 《關於解決方案的最佳實務做法ONTAP 》（英文）"^]
+* https://["供應說明文件中心 ONTAP"^]
 
 
 
