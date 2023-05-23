@@ -33,7 +33,7 @@ link:creating-ilm-policy.html["建立ILM原則"]
 ====
 如果您使用舊版StorageGRID 的支援功能啟用全域規範設定、當您升級StorageGRID 至版本11.5時、新的S3物件鎖定設定會自動啟用。您可以繼續使用StorageGRID 「還原」來管理現有相容儲存桶的設定、但是您無法再建立新的相容儲存桶。
 
-https://["NetApp知識庫：如何管理StorageGRID 支援老舊的知識庫、請參閱《知識庫文章"^]
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp知識庫：如何管理StorageGRID 支援老舊的知識庫、請參閱《知識庫文章"^]
 
 ====
 .步驟

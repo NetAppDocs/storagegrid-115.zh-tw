@@ -94,7 +94,7 @@ NOTE: 如果您需要一次部署多個應用裝置節點、可以使用將安�
 +
 .. 請從NetApp下載頁面下載安裝歸檔StorageGRID 文件、以供使用。
 +
-https://["NetApp下載StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
 
 .. 擷取歸檔。
 .. 從《Sile Appliance Installer》StorageGRID （英文）中、選取*進階*>*上傳StorageGRID 《Some Software*》（英文）。

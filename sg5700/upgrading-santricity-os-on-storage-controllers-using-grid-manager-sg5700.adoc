@@ -38,7 +38,7 @@ NOTE: 此程序會自動將NVSRAM升級 至SANtricity 與更新版有關的最�
 請務必選擇SANtricity E2800儲存控制器的SESSIDE作業系統版本。
 
 +
-https://["NetApp下載：SANtricity 支援"^]
+https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["NetApp下載：SANtricity 支援"^]
 
 . 使用支援的瀏覽器登入Grid Manager。
 . 選擇*維護*。然後在功能表的「System（系統）」區段中、選取「* Software Update *（*軟體更新*）」。

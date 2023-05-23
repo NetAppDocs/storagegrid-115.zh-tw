@@ -38,7 +38,7 @@ NOTE: 此程序會自動將NVSRAM升級 至SANtricity 與更新版有關的最�
 請務必為SANtricity 應用裝置中的儲存控制器選擇正確的作業系統版本。SG6060使用E2800控制器、SGF6024使用EF570控制器。
 
 +
-https://["NetApp下載：SANtricity 支援"^]
+https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["NetApp下載：SANtricity 支援"^]
 
 . 使用支援的瀏覽器登入Grid Manager。
 . 選擇*維護*。然後在功能表的「System（系統）」區段中、選取「* Software Update *（*軟體更新*）」。
@@ -177,6 +177,6 @@ NOTE: 對於狀態為「Needs Attention（需要注意）」的任何節點、�
 
 
 .相關資訊
-https://["NetApp 互通性對照表工具"^]
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
 
 link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html["使用SANtricity 維護模式在儲存控制器上升級作業系統"]

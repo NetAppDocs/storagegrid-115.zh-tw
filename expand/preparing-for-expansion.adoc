@@ -81,7 +81,7 @@ link:../rhel/index.html["安裝Red Hat Enterprise Linux或CentOS"]
 
 link:../ubuntu/index.html["安裝Ubuntu或DEBIAN"]
 
-https://["NetApp 互通性對照表工具"^]
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
 
 
 
@@ -146,7 +146,7 @@ Mozilla Firefox
 .步驟
 . 請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
 +
-https://["NetApp下載StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
 
 . 選取StorageGRID 目前在網格上執行的版本的功能。
 . 以您NetApp帳戶的使用者名稱和密碼登入。
@@ -435,6 +435,6 @@ NOTE: 在設備安裝方面、只有在您需要避免網路流量時才需要�
 
 *相關資訊*
 
-https://["NetApp 互通性對照表工具"^]
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
 
 link:updating-subnets-for-grid-network.html["正在更新Grid Network的子網路"]

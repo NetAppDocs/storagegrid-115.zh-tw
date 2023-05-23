@@ -28,7 +28,7 @@ summary: 應用裝置上的《產品安裝程式版本」必須與安裝在您�
 
 . 如果應用裝置的StorageGRID 版本為低階版本的《不適用的應用程式》、請前往NetApp下載頁StorageGRID 面以瞭解決此問題。
 +
-https://["NetApp下載StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
 
 +
 以您NetApp帳戶的使用者名稱和密碼登入。

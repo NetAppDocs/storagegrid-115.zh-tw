@@ -112,4 +112,4 @@ link:s3-rest-api-supported-operations-and-limitations.html["啟動多部份上�
 
 link:object-versioning.html["物件版本管理"]
 
-https://["Amazon簡易儲存服務使用者指南：使用S3物件鎖定"]
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["Amazon簡易儲存服務使用者指南：使用S3物件鎖定"]

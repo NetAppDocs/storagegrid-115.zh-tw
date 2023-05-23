@@ -29,4 +29,4 @@ Grid Management API提供下列頂級資源：
 .相關資訊
 link:../tenant/index.html["使用租戶帳戶"]
 
-https://["Prometheus：查詢基礎"^]
+https://prometheus.io/docs/querying/basics/["Prometheus：查詢基礎"^]

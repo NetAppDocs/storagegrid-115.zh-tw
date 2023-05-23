@@ -237,4 +237,4 @@ NOTE: 如果原始控制器未將DHCP用於IP位址、則新控制器會採用�
 
 
 .相關資訊
-http://["NetApp E系列系統文件網站"^]
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E系列系統文件網站"^]

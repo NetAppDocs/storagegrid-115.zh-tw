@@ -42,7 +42,7 @@ S3物件鎖定功能StorageGRID 取代先前StorageGRID 版本的支援功能。
 
 在租戶管理程式中、會出現一個遮罩圖示 image:../media/icon_shield.png["遮罩圖示"] 表示符合舊規範的儲存區。符合舊規範的貯體也可能具有保留徽章 image:../media/hold_badge.png["持有徽章"] 表示該庫位處於合法持有狀態。
 
-https://["KB：如何管理StorageGRID 符合舊規範的知識庫、請參閱《知識庫11.5"^]
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["KB：如何管理StorageGRID 符合舊規範的知識庫、請參閱《知識庫11.5"^]
 
 link:../ilm/index.html["使用ILM管理物件"]
 

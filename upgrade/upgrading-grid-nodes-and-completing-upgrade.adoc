@@ -118,7 +118,7 @@ image::../media/software_upgrade_done.png[軟體升級完成]
 
 . 請查看NetApp下載頁StorageGRID 面以瞭解是否有任何適用於StorageGRID 您剛安裝之版本的修補程式可供使用。
 +
-https://["NetApp下載StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
 
 +
 在《S17 11.5._x.y_版本號碼：StorageGRID

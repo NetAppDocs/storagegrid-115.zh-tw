@@ -39,7 +39,7 @@ IMPORTANT: 如果StorageGRID 您有較早版本的更新版本、則必須先升
 
 . 一旦您進入StorageGRID 畫面11.4、請前往NetApp下載頁面查看StorageGRID 是否有任何適用於StorageGRID 您的版本的修補程式。11.4._x_版本。
 +
-https://["NetApp下載StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp下載StorageGRID"^]
 
 . 確認StorageGRID 您的版本為更新版本的更新版本。
 . 如有必要、請下載並套用StorageGRID 最新的適用於StorageGRID 您的《支援》11.4._x_版的《支援》修補程式。

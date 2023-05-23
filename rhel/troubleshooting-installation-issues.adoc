@@ -38,4 +38,4 @@ link:../sg5700/index.html["SG5700儲存設備"]
 
 link:../sg5600/index.html["SG5600儲存設備"]
 
-https://["NetApp支援"^]
+https://mysupport.netapp.com/site/global/dashboard["NetApp支援"^]

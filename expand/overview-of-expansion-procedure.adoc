@@ -25,7 +25,7 @@ image::../media/expansion_workflow.png[顯示擴充程序總覽的流程圖]
 
 *相關資訊*
 
-https://["NetApp 互通性對照表工具"^]
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
 
 link:planning-expansion.html["規劃StorageGRID 功能擴充"]
 
