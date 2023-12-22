@@ -21,7 +21,7 @@ summary: 安裝及設定StorageGRID 此產品時、您必須做出決策、並�
 
 * SG100 RJ-45連接埠*
 
-image::../media/sg100_rj_45_ports_circled.png[sg100 RJ 45連接埠圈選]
+image::../media/sg100_rj_45_ports_circled.png[SG100 RJ-45 連接埠]
 
 * SG1000 RJ-45連接埠*
 

@@ -38,7 +38,7 @@ summary: 利用此功能、您的整套系統可將健全狀況和狀態訊息�
 
 image::../media/autosupport_disabled_message.png[無法使用的訊息AutoSupport]
 
-您可以選取「x」符號 image:../media/autosupport_close_message.png[""] 以關閉訊息。除非清除瀏覽器快取、否則訊息不會再次出現、即使AutoSupport 停用了功能。
+您可以選取「x」符號 image:../media/autosupport_close_message.png["X 符號"] 以關閉訊息。除非清除瀏覽器快取、否則訊息不會再次出現、即使AutoSupport 停用了功能。
 
 
 

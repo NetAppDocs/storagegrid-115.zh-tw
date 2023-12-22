@@ -55,7 +55,7 @@ image::../media/dds_object_counts_queries.png[DDS總覽頁面]
 
 您也可以檢視因為一致性失敗而失敗的查詢總數。一致性層級失敗是因為在透過特定DDS服務執行查詢時、可用的中繼資料存放區數量不足所致。
 
-您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 link:../monitor/running-diagnostics.html.html["執行診斷"]。
+您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 link:../monitor/running-diagnostics.html["執行診斷"]。
 
 
 
@@ -92,7 +92,7 @@ LdR服務也會管理S3和Swift物件對應至StorageGRID 唯一的「內容控�
 
 您也可以檢視因為一致性失敗而失敗的查詢總數。一致性層級失敗的原因是在透過特定的LDR服務執行查詢時、可用的中繼資料存放區數量不足。
 
-您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 link:../monitor/running-diagnostics.html.html["執行診斷"]。
+您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 link:../monitor/running-diagnostics.html["執行診斷"]。
 
 
 

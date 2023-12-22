@@ -18,7 +18,7 @@ NOTE: 在全系統隱藏電子郵件通知時、事件觸發AutoSupport 的功�
 
 當無法傳送此資訊時、「'Failed'」會出現在*《*》頁面的「*結果*」索引標籤上。AutoSupport AutoSupport
 
-image::../media/autosupport_results_tab.png[「結果」索引標籤AutoSupport]
+image::../media/autosupport_results_tab.png[AutoSupport 結果索引標籤]
 
 
 

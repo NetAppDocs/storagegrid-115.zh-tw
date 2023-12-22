@@ -23,7 +23,7 @@ image::../media/kms_step_2_upload_server_certificate.png[KMS步驟2上傳伺服�
 隨即顯示伺服器憑證中繼資料。
 
 +
-image::../media/kms_step_2_server_certificate_metadata.png[KMS步驟2伺服器憑證中繼資料]
+image::../media/kms_step_2_server_certificate_metadata.png[伺服器憑證中繼資料]
 
 +
 

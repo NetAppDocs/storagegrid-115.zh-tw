@@ -15,7 +15,7 @@ summary: 對於服務應用裝置上的兩個1-GbE管理連接埠、您可以選
 
 * SG100網路管理連接埠*
 
-image::../media/sg100_bonded_management_ports.png[sg100連結式管理連接埠]
+image::../media/sg100_bonded_management_ports.png[SG100 連結式管理連接埠]
 
 * SG1000網路管理連接埠*
 

@@ -20,7 +20,7 @@ summary: 您可以使用BMC管理連接埠的DHCP或靜態IP位址、存取服�
 * SG100 BMC管理連接埠*
 
 +
-image::../media/sg100_bmc_management_port.png[sg100 bmc管理連接埠]
+image::../media/sg100_bmc_management_port.png[SG100管理連接埠]
 
 +
 * SG1000 BMC管理連接埠*

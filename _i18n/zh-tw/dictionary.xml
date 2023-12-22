@@ -7524,7 +7524,6 @@
   <block id="629e97bb58225304ea6fba3e3ee676fa" category="summary">對於服務應用裝置上的兩個1-GbE管理連接埠、您可以選擇「獨立網路連結模式」或「主動備份網路連結模式」來連線至選用的管理網路。</block>
   <block id="32b74433a7d723082e9f966c4242e4ff" category="doc">管理連接埠的網路連結模式</block>
   <block id="248ad3964f698de31768e56ef4354d45" category="paragraph">* SG100網路管理連接埠*</block>
-  <block id="41feb2441ba34f67f35bf731144b3c52" category="image-alt">sg100連結式管理連接埠</block>
   <block id="11f7ec5f79464f916cb8f330b8689d57" category="paragraph">* SG1000網路管理連接埠*</block>
   <block id="e0c983c2d8232b056cb0aa71754fd444" category="image-alt">SG1000網路管理連接埠</block>
   <block id="ef6533bb799c780596b4bfbf32d9aaa5" category="paragraph">在獨立模式中、只有左側的管理連接埠會連線至管理網路。此模式不提供備援路徑。右側的管理連接埠未連線、可用於暫用本機連線（使用IP位址169.254.0.1）</block>
@@ -7762,7 +7761,6 @@
   <block id="d431a6c84455f5b74b996efcdf35ed20" category="list-text">管理用戶端使用支援的網頁瀏覽器。</block>
   <block id="58b8ea0d3063a9201c41bc8e67d1952f" category="list-text">服務應用裝置上的BMC管理連接埠會連線至您打算使用的管理網路。</block>
   <block id="e6e03da0060789709bf98dd786f292c8" category="paragraph">* SG100 BMC管理連接埠*</block>
-  <block id="39e4ca894753bebe1ff238085c549465" category="image-alt">sg100 bmc管理連接埠</block>
   <block id="3ae90e46ac02b6c22a8d260083e11e1b" category="paragraph">* SG1000 BMC管理連接埠*</block>
   <block id="778da11a86a83173e4e6b49bb7e1d748" category="image-alt">SG1000 BMC管理連接埠</block>
   <block id="ec6bf1f67dead298c99ce0571160fd25" category="list-text">輸入BMC介面的URL：+<block ref="c45ccdbad45f36f8255e32c006fb43d6" prefix=" " category="inline-code"></block></block>
@@ -8098,7 +8096,6 @@
   <block id="e9b7bfe71840258365702506beff7cd0" category="section-title">系統管理與維護連接埠</block>
   <block id="5a233caf39ff6cb2c62f380671950cdd" category="paragraph">管理員網路for支援功能是選用的網路、可用於系統管理和維護。StorageGRID應用裝置會使用應用裝置上的下列1-GbE管理連接埠來連線至管理網路。</block>
   <block id="170f7eea9a02b42c196e89c3ad267242" category="paragraph">* SG100 RJ-45連接埠*</block>
-  <block id="d1f45fb8090b888f9ff7addad1017864" category="image-alt">sg100 RJ 45連接埠圈選</block>
   <block id="1aa93bb5b005d6aa673b526c73a99e80" category="paragraph">* SG1000 RJ-45連接埠*</block>
   <block id="bb09b9a31ec62215453be15285ffa467" category="image-alt">SG1000 RJ-45連接埠</block>
   <block id="97f5ea4ed01d2dd54255bec307c92588" category="paragraph">*管理與維護連線*</block>
@@ -10061,7 +10058,6 @@
   <block id="30faf660a4f6ec5e7c3942afb45cbda1" category="list-text">診斷指標</block>
   <block id="c8644a51cf5ee1549cc029cb0adb6e61" category="paragraph">您可以在AutoSupport 第一次安裝時啟用「支援」功能和個別AutoSupport 的「支援」選項StorageGRID 、也可以稍後啟用。如果AutoSupport 未啟用此功能、則Grid Manager儀表板上會顯示一則訊息。此訊息包含AutoSupport 指向「資訊功能」組態頁面的連結。</block>
   <block id="6f2b57873f23934ad6c928810dc2e827" category="image-alt">不可用消息AutoSupport</block>
-  <block id="a268224dd68eff2646e4d7e2241e8c84" category="paragraph">您可以選取「x」符號 <block ref="e41a259f363473ff19ec8ce2cd5fe877" category="inline-image-macro-rx" type="image"></block> 以關閉訊息。除非清除瀏覽器快取、否則訊息不會再次出現、即使AutoSupport 停用了功能。</block>
   <block id="77ddd7c6548d11d40992fa3df5ad85ed" category="section-title">使用Active IQ</block>
   <block id="e8324f218cbf7810c44427bc846931b5" category="paragraph">NetApp是雲端型數位顧問、運用NetApp安裝基礎上的預測分析和社群智慧。Active IQ其持續風險評估、預測性警示、說明性指引及自動化行動、可協助您在問題發生之前預防問題發生、進而改善系統健全狀況並提高系統可用度。</block>
   <block id="d74cfec1d23a36d44f3709e42bc1b615" category="paragraph">如果您想要在 NetApp 支援網站上使用的 Active IQ 儀表板和功能，則必須啟用 AutoSupport。</block>
@@ -12899,7 +12895,6 @@
   <block id="1819c4f951312dec6a56c2b7c19d37c6" category="paragraph">在擴充中新增儲存節點時StorageGRID 、功能區會將現有的物件中繼資料重新分配至每個站台的新節點、以增加網格的整體中繼資料容量。不需要使用者採取任何行動。</block>
   <block id="e1fe838d0e78f6227aa20d5dceb4d092" category="paragraph">下圖顯示StorageGRID 當您在擴充中新增儲存節點時、功能區的功能如何重新發佈物件中繼資料。圖左方表示三個儲存節點的Volume 0（磁碟區0）、然後再進行擴充。中繼資料佔用每個節點可用中繼資料空間的相對較大部分、而且已觸發*低中繼資料儲存*警示。</block>
   <block id="56dff3262bce4f6060e9fdb635a6996b" category="paragraph">右圖顯示在站台新增兩個儲存節點之後、如何重新分配現有的中繼資料。每個節點上的中繼資料量已減少、*低中繼資料儲存設備*警示不再觸發、而且中繼資料可用空間也已增加。</block>
-  <block id="ce65d0d41263db69f8d7597ce8443295" category="image-alt">擴充後的中繼資料空間</block>
   <block id="4e91bd37965a4b5ba84778c04e872517" category="summary">如果您在網格擴充程序期間遇到無法解決的錯誤、或網格工作失敗、請聯絡技術支援部門。</block>
   <block id="5c9f9ea2bda4cd1466de3a31f922a553" category="doc">聯絡技術支援人員</block>
   <block id="53f79d287d8978d2c300e7cd1d09cc11" category="paragraph">聯絡技術支援人員時、您必須提供所需的記錄檔、以協助疑難排解所遇到的錯誤。</block>
@@ -16690,7 +16685,6 @@
   <block id="64c9be72b4f9a997dc4e08287f3cead1" category="paragraph">如果嘗試傳送AutoSupport 資訊不成功、StorageGRID 則根據AutoSupport 資訊類型、系統會採取不同的行動。您可以選擇* Support ** Tools ** Ses*** Results *來檢查AutoSupport 支援訊息的狀態AutoSupport 。</block>
   <block id="7a5c9687e3c84697df0905e580577b23" category="admonition">在全系統隱藏電子郵件通知時、事件觸發AutoSupport 的功能不顯示。（選擇*組態*系統設定*顯示選項*。然後選取*通知全部隱藏*。）</block>
   <block id="bbea6728761bfd32f1d54f5957d630ae" category="paragraph">當無法傳送此資訊時、「'Failed'」會出現在*《*》頁面的「*結果*」索引標籤上。AutoSupport AutoSupport</block>
-  <block id="190671404790b5499b3aef930506b435" category="image-alt">「結果」索引標籤AutoSupport</block>
   <block id="d4955f1ab1ce778b36cee45684ee2cd8" category="section-title">每週AutoSupport 更新訊息失敗</block>
   <block id="156afeef6027d9b8caba18cce22417d5" category="paragraph">如果每週AutoSupport 更新訊息無法傳送、StorageGRID 則無法執行下列動作：</block>
   <block id="9a96e56d7690f76151c2865ed8afc82c" category="list-text">將最新的結果屬性更新為「Retrying（重新執行）」。</block>
@@ -17267,7 +17261,6 @@
   <block id="fbae1e31dac08653763a78ebe5da4c00" category="image-alt">KMS步驟2上傳伺服器認證</block>
   <block id="2347476c3a01d0ab2a2dd837e6b9cabb" category="list-text">上傳憑證檔案。</block>
   <block id="3a765779b4b38d99f3efa35489722c3a" category="paragraph">隨即顯示伺服器憑證中繼資料。</block>
-  <block id="77a06c19c70c8fd852c48558f3908829" category="image-alt">KMS步驟2伺服器憑證中繼資料</block>
   <block id="a5c4cd160e354187d263336dd464fc3a" category="admonition">如果您上傳了憑證套件組合、每個憑證的中繼資料都會顯示在其各自的索引標籤上。</block>
   <block id="f2a06267f0463ac751ef803310a9bf78" category="paragraph">出現「Add a Key Management Server（新增金鑰管理伺服器）」精靈的步驟3（上傳用戶端憑證）。</block>
   <block id="64440f04b9fb92f384a8680391c8ab13" category="summary">您必須在StorageGRID 授權條款變更時、隨時更新您的不適用系統的授權資訊。例如、如果您為網格購買額外的儲存容量、則必須更新授權資訊。</block>
@@ -17294,7 +17287,6 @@
   <block id="371bf9755a4289e229b6b3479dc1be2b" category="paragraph">您可以識別透過特定DDS服務對中繼資料儲存區執行查詢所需的平均時間、成功查詢的總數、以及因逾時問題而失敗的查詢總數。</block>
   <block id="43be0fddc4106d4e0611117a6b36f9c9" category="paragraph">您可能想要檢閱查詢資訊、以監控中繼資料儲存區Cassandra的健全狀況、這會影響系統的擷取和擷取效能。例如、如果平均查詢的延遲緩慢、而且由於逾時而導致的失敗查詢數高、則中繼資料存放區可能會遇到較高的負載或執行其他作業。</block>
   <block id="bba451fd0f1c66bf8c11295798306105" category="paragraph">您也可以檢視因為一致性失敗而失敗的查詢總數。一致性層級失敗是因為在透過特定DDS服務執行查詢時、可用的中繼資料存放區數量不足所致。</block>
-  <block id="5b4e7f133add9e8676cf796b099149da" category="paragraph">您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 <block ref="d082634052f703e6103497982561da2e" category="inline-link-macro-rx"></block>。</block>
   <block id="d006427725df025958b8ff94accd344d" category="paragraph">可確保新建立物件的寫入後讀取一致性。StorageGRID成功完成PUT作業之後的任何Get作業都能讀取新寫入的資料。覆寫現有物件、更新中繼資料及刪除資料、最終仍維持一致。</block>
   <block id="35ccabe448182d06064e161924447d05" category="section-title">什麼是LDR服務</block>
   <block id="4fe0c3c99a5f9b208b980d58bc477cd6" category="paragraph">本機經銷路由器（LMR）服務由每個儲存節點代管、負責StorageGRID 處理針對此系統的內容傳輸。內容傳輸包含許多工作、包括資料儲存、路由傳送和要求處理。LdR服務StorageGRID 處理資料傳輸負載和資料流量功能、是整個過程中大部分的功能都是由整個系統努力完成。</block>
@@ -18535,7 +18527,6 @@
   <block id="0b0b87f974999fac0db03c9f2795b5a9" category="admonition">將新的資源配置通關密碼儲存在安全的位置。安裝、擴充和維護程序都必須如此。</block>
   <block id="e069fa66f8cf06a6b4a99ce9680b228d" category="list-text">重新輸入新的通關密碼、然後按一下「*儲存*」。</block>
   <block id="77d8e48f606d4a1844baa805d3ea0c0b" category="paragraph">資源配置通關密碼變更完成時、系統會顯示綠色的成功標語。變更應在一分鐘內完成。</block>
-  <block id="c5f18faccc775c810db867e9a3439de7" category="image-alt">成功變更資源配置通關密碼</block>
   <block id="39b74537d27ca6a617722b4a4e3270e5" category="list-text">選取成功橫幅內的*恢復套件頁面*連結。</block>
   <block id="3c93009b64b8b1588f85b6c32be6ef3f" category="list-text">從Grid Manager下載新的恢復套件。選擇*維護*&gt;*恢復套件*、然後輸入新的資源配置通關密碼。</block>
   <block id="25160e50cc851973c0c97bc12ab49bad" category="admonition">變更資源配置通關密碼之後、您必須立即下載新的恢復套件。恢復套件檔案可讓您在發生故障時還原系統。</block>
@@ -23244,7 +23235,6 @@
   <block id="5b2a79adecc8d3cc03324c0ff8c3e657" category="sidebar">檢視其他使用者的S3存取金鑰</block>
   <block id="d4a4412fd4130eef9caedf4616926255" category="sidebar">刪除其他使用者的S3存取金鑰</block>
   <block id="3cd0c734fa2c2ae0814d57215c59f108" category="paragraph">對於 FabricPool 貯體、建議的貯體一致性等級為 * 讀取後新寫入 * 、這是新貯體的預設設定。請勿編輯 FabricPool 儲存庫以使用 * 可用 * 或任何其他一致性層級。</block>
-  <block id="392d70ca39f31f10bd637936769788df" category="sidebar">StorageGRID</block>
   <block id="59f62d8c25c967d6150f417081c13d1b" category="summary">您可以在此處找到 NetApp StorageGRID 軟體其他版本的文件。</block>
   <block id="d6802b050b61628b78b01c33ead6fac3" category="doc">其他版本的 NetApp StorageGRID 文件</block>
   <block id="d3de02aea811f82ea0ecb014267c4fbc" category="paragraph">您可以在此處找到 NetApp StorageGRID 軟體其他版本的文件：</block>
@@ -23265,4 +23255,13 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="8f7da263e66d604cc03ad9a3d5237a88" category="image-alt">擴充後的中繼資料空間</block>
+  <block id="bb20b0b3992c4d34d49d2a43d98da825" category="image-alt">SG100 RJ-45 連接埠</block>
+  <block id="b77267852c0d80fac4bd775605bfd6e3" category="image-alt">SG100 連結式管理連接埠</block>
+  <block id="bf620d5e76c200df3ac04340307ea13e" category="inline-image-macro">X 符號</block>
+  <block id="c54fdc71e96534e581e1141424a91fb9" category="paragraph">您可以選取「x」符號 <block ref="b8fb36b985382d655a8ff337bd65f94e" category="inline-image-macro-rx" type="image"></block> 以關閉訊息。除非清除瀏覽器快取、否則訊息不會再次出現、即使AutoSupport 停用了功能。</block>
+  <block id="4be7cbdb514f44407773d40331b3d092" category="image-alt">伺服器憑證中繼資料</block>
+  <block id="c3c1dd6b244e3eeb3a7833fd2f0187e3" category="image-alt">變更資源配置複雜密碼 - 成功訊息</block>
+  <block id="b329ef070be82f9c48080334a904126b" category="paragraph">您可以使用「診斷」頁面、取得有關網格目前狀態的其他資訊。請參閱 <block ref="154af4ab34c8b59ed2ab34f505b93e37" category="inline-link-macro-rx"></block>。</block>
+  <block id="df4b54a470e600d5b404fb8ac094b268" category="image-alt">AutoSupport 結果索引標籤</block>
 </blocks>
