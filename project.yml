@@ -1,6 +1,6 @@
 ---
 settings:
-  name: StorageGRID 11.5
+  name: StorageGRID
   search: storagegrid-enable,storagegrid-115
   downlevel: true
   internal:
@@ -9,10 +9,21 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
     lipi_enabled: false
-  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
+  versions:
+  - version-number: '11.5'
+    url: "/storagegrid-115"
+  - version-number: '11.9'
+    url: "/storagegrid"
+  - version-number: '11.8'
+    url: "/storagegrid-118"
+  - version-number: '11.7'
+    url: "/storagegrid-117"
+  - version-number: '11.6'
+    url: "/storagegrid-116"
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
-  - title: 全國11月5日文件StorageGRID
+  - title: StorageGRID 11.5 文件
     url: "/index.html"
   - section: release-notes
   - title: 開始使用
@@ -51,8 +62,6 @@ sidebar:
     entries:
     - section: expand
     - section: maintain
-  - title: 其他版本
-    url: "/earlier-versions.html"
   - title: 法律聲明
     url: "/legal-notices.html"
 product-family:
