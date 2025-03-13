@@ -1,5 +1,8 @@
 ---
 indexpage:
+  title: StorageGRID 11.5 文件
+  summary: NetApp StorageGRID 支援軟體定義的物件儲存套件、可支援各種公有、私有及混合式多雲端環境的使用案例。利用自動化生命週期管理等領先業界的創新技術、長期儲存、保護及保留非結構化資料、以供多重用途使用。StorageGRID
+  keywords: storagegrid 115 documentation
   lead: NetApp StorageGRID 支援軟體定義的物件儲存套件、可支援各種公有、私有及混合式多雲端環境的使用案例。利用自動化生命週期管理等領先業界的創新技術、長期儲存、保護及保留非結構化資料、以供多重用途使用。StorageGRID
   tiles:
   - title: 開始使用
