@@ -19,6 +19,7 @@ SMT（事件總數）警示可由網路問題、停電或升級等問題重複�
 
 
 
+[[reviewing-events-from-the-nodes-page]]
 == 從節點頁面檢閱事件
 
 「節點」頁面會列出每個網格節點的系統事件。
@@ -35,6 +36,7 @@ SMT（事件總數）警示可由網路問題、停電或升級等問題重複�
 
 
 
+[[reviewing-events-from-the-grid-topology-page]]
 == 從Grid拓撲頁面檢閱事件
 
 Grid拓撲頁面也會列出每個網格節點的系統事件。

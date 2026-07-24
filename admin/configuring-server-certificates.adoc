@@ -23,6 +23,7 @@ summary: 您可以自訂StorageGRID 由該系統使用的伺服器憑證。
 
 
 
+[[supported-types-of-custom-server-certificate]]
 == 支援的自訂伺服器憑證類型
 
 支援使用RSA或ECDSA（Elliptic曲線數位簽章演算法）加密的自訂伺服器憑證StorageGRID 。
@@ -31,6 +32,7 @@ summary: 您可以自訂StorageGRID 由該系統使用的伺服器憑證。
 
 
 
+[[certificates-for-load-balancer-endpoints]]
 == 負載平衡器端點的憑證
 
 可分別管理負載平衡器端點所使用的憑證。StorageGRID若要設定負載平衡器憑證、請參閱設定負載平衡器端點的指示。

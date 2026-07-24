@@ -15,6 +15,7 @@ summary:
 
 
 
+[[configuring-identity-federation]]
 == 設定身分識別聯盟
 
 如果您想要在另一個系統（例如Active Directory、OpenLDAP或Oracle Directory Server）中管理管理系統群組和使用者、可以設定身分識別聯盟。
@@ -144,6 +145,7 @@ link:../tenant/index.html["使用租戶帳戶"]
 
 
 
+[[guidelines-for-configuring-an-openldap-server]]
 === 設定OpenLDAP伺服器的準則
 
 如果您要使用OpenLDAP伺服器進行身分識別聯盟、則必須在OpenLDAP伺服器上設定特定設定。
@@ -175,6 +177,7 @@ http://www.openldap.org/doc/admin24/index.html["OpenLDAP文件：2.4版管理員
 
 
 
+[[forcing-synchronization-with-the-identity-source]]
 == 強制與身分識別來源同步
 
 此系統會定期同步來自身分識別來源的聯盟群組和使用者。StorageGRID如果您想要盡快啟用或限制使用者權限、可以強制啟動同步。
@@ -205,6 +208,7 @@ NOTE: 如果同步處理來自身分識別來源的聯盟群組和使用者時�
 
 
 
+[[disabling-identity-federation]]
 == 停用身分識別聯盟
 
 您可以暫時或永久停用群組和使用者的身分識別聯盟。停用身分識別聯盟時StorageGRID 、不會在驗證和身分識別來源之間進行通訊。不過、您已設定的任何設定都會保留下來、讓您日後可以輕鬆重新啟用身分識別聯盟。

@@ -195,6 +195,7 @@ link:configuring-custom-server-certificate-for-storage-node-or-clb.html["設定�
 |===
 
 
+[[example-1-load-balancer-service]]
 == 範例1：負載平衡器服務
 
 在此範例中StorageGRID 、用作伺服器的是功能。
@@ -209,6 +210,7 @@ link:configuring-custom-server-certificate-for-storage-node-or-clb.html["設定�
 
 
 
+[[example-2-external-key-management-server-kms]]
 == 範例2：外部金鑰管理伺服器（KMS）
 
 在此範例中StorageGRID 、由客戶扮演的角色就是

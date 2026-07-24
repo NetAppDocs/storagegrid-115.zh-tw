@@ -137,6 +137,7 @@ NOTE: 如果迫切需要擴充、請在升級至11.5之前執行擴充。
 
 
 
+[[example-estimating-the-time-to-upgrade-from-storagegrid-11-4-to-11-5]]
 == 範例：預估從StorageGRID 示例11.4升級到11.5的時間
 
 假設您的系統有14個網格節點、其中8個是Linux節點。此外、假設物件中繼資料的*已用*值為6 TB。

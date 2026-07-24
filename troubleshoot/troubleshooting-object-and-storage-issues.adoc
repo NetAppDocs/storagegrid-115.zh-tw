@@ -15,6 +15,7 @@ summary: 您可以執行多項工作、以協助判斷物件和儲存問題的�
 
 
 
+[[confirming-object-data-locations]]
 == 確認物件資料位置
 
 視問題而定、您可能需要確認物件資料的儲存位置。例如、您可能想要驗證ILM原則是否如預期般執行、而且物件資料是否儲存在預期的位置。
@@ -71,6 +72,7 @@ link:../swift/index.html["使用Swift"]
 
 
 
+[[object-store-storage-volume-failures]]
 == 物件存放區（儲存磁碟區）故障
 
 儲存節點上的基礎儲存設備分為物件存放區。這些物件存放區是實體分割區、可做StorageGRID 為適用於整個系統儲存設備的掛載點。物件存放區也稱為儲存磁碟區。

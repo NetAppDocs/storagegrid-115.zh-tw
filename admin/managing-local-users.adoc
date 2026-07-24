@@ -24,6 +24,7 @@ NOTE: 如果已啟用單一登入（SSO）、則本機使用者無法登入Stora
 
 
 
+[[creating-a-local-user]]
 == 建立本機使用者
 
 如果您已建立本機管理群組、則可以建立一或多個本機使用者、並將每個使用者指派給一或多個群組。群組的權限可控制使用者可以存取的Grid Manager功能。
@@ -47,6 +48,7 @@ link:managing-admin-groups.html["管理管理群組"]
 
 
 
+[[modifying-a-local-users-account]]
 == 修改本機使用者的帳戶
 
 您可以修改本機管理員使用者的帳戶、以更新使用者的顯示名稱或群組成員資格。您也可以暫時禁止使用者存取系統。
@@ -71,6 +73,7 @@ link:managing-admin-groups.html["管理管理群組"]
 
 
 
+[[deleting-a-local-users-account]]
 == 刪除本機使用者的帳戶
 
 您可以刪除不再需要存取Grid Manager的本機使用者帳戶。
@@ -91,6 +94,7 @@ NOTE: 您無法刪除預先定義的根本機使用者。
 
 
 
+[[changing-a-local-users-password]]
 == 變更本機使用者的密碼
 
 本機使用者可以使用Grid Manager橫幅中的*變更密碼*選項來變更自己的密碼。此外、具有「管理使用者」頁面存取權的使用者、也可以變更其他本機使用者的密碼。

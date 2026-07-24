@@ -50,6 +50,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab
 
 
 
+[[example-preparing-to-upgrade-to-storagegrid-11-5-from-version-11-3-0-8]]
 == 範例：準備從StorageGRID 11.3.0.8版升級至5.2版
 
 以下範例顯示從StorageGRID 版本11.3.0.8升級至版本11.5的準備升級步驟。在升級StorageGRID 至32版之前、您的系統必須StorageGRID 先安裝有最新的更新程式才能使用支援功能的支援功能。

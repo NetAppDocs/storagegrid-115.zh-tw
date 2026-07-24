@@ -19,12 +19,14 @@ image::../media/object_conceptual_drawing.png[物件]
 
 
 
+[[object-data]]
 == 物件資料
 
 物件資料可能是任何內容、例如照片、影片或醫療記錄。
 
 
 
+[[object-metadata]]
 == 物件中繼資料
 
 物件中繼資料是指描述物件的任何資訊。利用物件中繼資料來追蹤整個網格中所有物件的位置、並長期管理每個物件的生命週期。StorageGRID

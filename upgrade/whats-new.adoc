@@ -15,6 +15,7 @@ summary: 支援S3物件鎖定、支援KMIP資料加密、ILM的使用性改善�
 
 
 
+[[s3-object-lock-for-compliant-data]]
 == S3物件鎖定以取得相容的資料
 
 S3物件鎖定功能在StorageGRID 物件保護解決方案中、相當於Amazon Simple Storage Service（Amazon S3）中的S3物件鎖定。您可以啟用StorageGRID 整個S3物件鎖定功能、讓S3租戶帳戶在啟用S3物件鎖定的情況下建立貯體。然後租戶可以使用S3用戶端應用程式、選擇性地為這些儲存區中的物件指定保留和合法保留設定。
@@ -29,6 +30,7 @@ S3物件鎖定可讓租戶使用者遵守規定、規定某些物件必須保留
 
 
 
+[[kms-encryption-key-management]]
 == kms加密金鑰管理
 
 您現在可以在Grid Manager中設定一或多個外部金鑰管理伺服器（KMS）、為StorageGRID 各項服務和儲存設備提供加密金鑰。每個KMS或KMS叢集都會使用金鑰管理互通性傳輸協定（KMIP）、為相關StorageGRID 聯的站台上的應用裝置節點提供加密金鑰。設備磁碟區加密之後、除非節點可以與KMS通訊、否則您無法存取應用裝置上的任何資料。
@@ -42,6 +44,7 @@ NOTE: 如果您想要使用加密金鑰管理、則必須先使用StorageGRID �
 
 
 
+[[usability-enhancements-for-information-lifecycle-management-ilm]]
 == 資訊生命週期管理（ILM）的可用性增強功能
 
 * 您現在可以檢視儲存資源池的總容量、包括已使用量和可用空間。您也可以查看儲存資源池中包含哪些節點、以及使用儲存資源池的ILM規則和刪除編碼設定檔。
@@ -67,6 +70,7 @@ NOTE: 不建議使用All Storage Node儲存資源池、因為此儲存資源池�
 
 
 
+[[enhancements-to-the-grid-manager]]
 == Grid Manager增強功能
 
 * 重新設計的「租戶帳戶」頁面可讓您更輕鬆地檢視租戶帳戶使用量。租戶摘要表格現在包含「已使用空間」、「配額使用率」、「配額」及「物件數」等欄。新的*檢視詳細資料*按鈕可存取每個租戶的總覽、以及帳戶S3時段或Swift容器的詳細資料。此外、您現在可以匯出兩個 `.csv` 租戶使用情況檔案：其中一個包含所有租戶的使用值、另一個包含租戶桶或容器的詳細資料。
@@ -99,6 +103,7 @@ NOTE: 如果AutoSupport 尚未啟用此功能、則Grid Manager儀表板上會�
 
 
 
+[[enhancements-to-the-tenant-manager]]
 == 租戶管理程式的增強功能
 
 * 租戶管理程式使用者介面的外觀與組織經過徹底重新設計、以改善使用者體驗。
@@ -111,6 +116,7 @@ NOTE: 如果AutoSupport 尚未啟用此功能、則Grid Manager儀表板上會�
 
 
 
+[[client-certificates-for-prometheus-metrics-export]]
 == Prometheus計量匯出的用戶端憑證
 
 您現在可以上傳或產生用戶端憑證（*組態*>*存取控制*>*用戶端憑證*）、以提供StorageGRID 安全、驗證的方式存取功能至《The S還原Prometheus資料庫》。例如、如果您需要使用StorageGRID Grafana從外部監控、可以使用用戶端憑證。
@@ -121,6 +127,7 @@ NOTE: 如果AutoSupport 尚未啟用此功能、則Grid Manager儀表板上會�
 
 
 
+[[load-balancer-enhancements]]
 == 負載平衡器增強功能
 
 * 在站台處理路由要求時、負載平衡器服務現在會執行負載感知路由：它會考量同一個站台上儲存節點的CPU可用度。在某些情況下、CPU可用度的相關資訊僅限於負載平衡器服務所在的站台。
@@ -137,6 +144,7 @@ NOTE: 在站台上至少三分之二的儲存節點升級StorageGRID 至支援�
 
 
 
+[[object-metadata-changes]]
 == 物件中繼資料變更
 
 * *新的實際保留空間指標*：為了協助您瞭解及監控每個儲存節點上的物件中繼資料空間使用量、新的Prometheus指標會顯示在儲存節點的「使用的儲存設備-物件中繼資料」圖表（*節點*>*儲存節點_*>* Storage *）上。
@@ -178,6 +186,7 @@ NOTE: 如果StorageGRID 您的系統在任何儲存節點上儲存（或預期�
 
 
 
+[[changes-to-s3-rest-api-support]]
 == S3 REST API支援變更
 
 * 您現在可以使用S3 REST API來指定 <<S3物件鎖定以取得相容的資料,S3物件鎖定>> 設定：
@@ -200,6 +209,7 @@ NOTE: 如果StorageGRID 您的系統在任何儲存節點上儲存（或預期�
 
 
 
+[[maximum-size-for-cloudmirror-objects-increased-to-5-tb]]
 == CloudMirror物件的最大大小增加至5 TB
 
 CloudMirror複寫服務可複寫至目的地儲存區的物件大小上限增加至5 TB、StorageGRID 這是支援的最大物件大小。
@@ -211,6 +221,7 @@ CloudMirror複寫服務可複寫至目的地儲存區的物件大小上限增加
 
 
 
+[[new-alerts-added]]
 == 新增警示
 
 針對下列功能新增了StorageGRID 適用於下列的更新警示：
@@ -246,6 +257,7 @@ CloudMirror複寫服務可複寫至目的地儲存區的物件大小上限增加
 
 
 
+[[tcp-support-for-snmp-traps]]
 == TCP支援SNMP設陷
 
 您現在可以選取傳輸控制傳輸協定（TCP）作為SNMP設陷目的地的傳輸協定。先前只支援使用者資料包傳輸協定（UDP）傳輸協定。
@@ -256,6 +268,7 @@ CloudMirror複寫服務可複寫至目的地儲存區的物件大小上限增加
 
 
 
+[[installation-and-networking-enhancements]]
 == 安裝與網路增強功能
 
 * * MAC位址複製*：您現在可以使用MAC位址複製來增強特定環境的安全性。Mac位址複製可讓您將專用虛擬NIC用於Grid Network、管理網路及用戶端網路。讓Docker容器使用主機上專用NIC的MAC位址、可避免使用雜亂模式網路組態。在Linux型（裸機）節點的節點組態檔中新增三個新的MAC位址複製金鑰。
@@ -269,6 +282,7 @@ CloudMirror複寫服務可複寫至目的地儲存區的物件大小上限增加
 
 
 
+[[support-for-rebalancing-erasure-coded-ec-data-after-storage-node-expansion]]
 == 支援在儲存節點擴充之後、重新平衡銷毀編碼（EC）資料
 
 EC重新平衡程序是新增儲存節點之後可能需要的新命令列指令碼。當您執行此程序時、StorageGRID 將以銷毀編碼的片段重新散佈到站台上現有和新擴充的儲存節點。
@@ -282,6 +296,7 @@ IMPORTANT: 您只能在有限的情況下執行EC重新平衡程序。例如、�
 
 
 
+[[new-and-revised-maintenance-procedures]]
 == 全新及修訂的維護程序
 
 * *站台取消委任*：您現在可以從StorageGRID 您的作業系統中移除作業站台。連線站台取消委任程序會移除作業站台並保留資料。全新的取消委任網站精靈會引導您完成整個程序（*維護*>*取消委任*>*取消委任網站*）。
@@ -300,6 +315,7 @@ NOTE: 如果您在升級StorageGRID 至VMware 11．5之後使用SSH登入節點�
 
 
 
+[[changes-to-storagegrid-appliances]]
 == 變更功能StorageGRID
 
 * *直接存取SANtricity 適用於儲存應用設備的《支援功能》*：您現在可以SANtricity 從StorageGRID 《支援功能》安裝程式》和《Grid Manager》存取《E系列支援功能》使用者介面。使用這些新方法、無需SANtricity 使用應用裝置上的管理連接埠、即可存取《支援系統管理程式》。需要SANtricity 從Grid Manager存取「更新系統管理程式」的使用者、必須擁有新的Storage Appliance系統管理員權限。
@@ -317,6 +333,7 @@ NOTE: 如果您在升級StorageGRID 至VMware 11．5之後使用SSH登入節點�
 
 
 
+[[changes-to-audit-messages]]
 == 稽核訊息的變更
 
 * *自動清除被覆寫的物件*：在特定情況下、先前被覆寫的物件不會從磁碟移除、導致額外的空間使用量。這些使用者無法存取的覆寫物件現在會自動移除、以節省儲存空間。如需詳細資訊、請參閱LKCU稽核訊息。
@@ -349,6 +366,7 @@ NOTE: 如果您在升級StorageGRID 至VMware 11．5之後使用SSH登入節點�
 
 
 
+[[new-nms-requestlog-file]]
 == 新的NMS.requestlog檔案
 
 新的記錄檔、 `/var/local/log/nms.requestlog`在所有管理節點上進行維護。此檔案包含從管理API傳出連線至內部StorageGRID 支援服務的相關資訊。
@@ -359,6 +377,7 @@ NOTE: 如果您在升級StorageGRID 至VMware 11．5之後使用SSH登入節點�
 
 
 
+[[storagegrid-documentation-changes]]
 == 文件變更StorageGRID
 
 * 為了讓網路資訊和需求更容易找到、並說明資訊也適用於StorageGRID VMware應用裝置節點、網路文件已從軟體安裝指南（RedHat Enterprise Linux/CentOS、Ubuntu / DEBIANE和VMware）移至新的網路指南。

@@ -26,6 +26,7 @@ summary:
 
 
 
+[[date-handling]]
 == 日期處理
 
 S3 REST API的支援僅支援有效的HTTP日期格式。StorageGRID
@@ -34,6 +35,7 @@ S3 REST API的支援僅支援有效的HTTP日期格式。StorageGRID
 
 
 
+[[common-request-headers]]
 == 一般要求標頭
 
 支援由_Simple Storage Service API Reference（簡易儲存服務API參考）定義的一般要求標頭、但有一個例外StorageGRID 。
@@ -62,6 +64,7 @@ X-amz-security-token
 |===
 
 
+[[common-response-headers]]
 == 通用回應標頭
 
 支援所有由_Simple Storage Service API Reference（簡易儲存服務API參考）定義的通用回應標頭、但有一項例外。StorageGRID

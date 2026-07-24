@@ -15,6 +15,7 @@ summary: 您可以使用StorageGRID 資訊檔來疑難排解問題。
 
 
 
+[[general-storagegrid-logs]]
 == 一般StorageGRID 資訊記錄
 
 |===
@@ -51,6 +52,7 @@ summary: 您可以使用StorageGRID 資訊檔來疑難排解問題。
 |===
 
 
+[[server-manager-logs]]
 == 伺服器管理員記錄
 
 |===
@@ -85,6 +87,7 @@ summary: 您可以使用StorageGRID 資訊檔來疑難排解問題。
 |===
 
 
+[[logs-for-storagegrid-services]]
 == 記錄以供StorageGRID 支援服務之用
 
 |===
@@ -400,6 +403,7 @@ CLB服務的錯誤資訊。
 |===
 
 
+[[nms-logs]]
 == NMS記錄
 
 |===

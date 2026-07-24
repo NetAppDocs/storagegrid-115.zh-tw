@@ -15,6 +15,7 @@ summary: 在實作平台服務之前、請先檢閱使用這些服務的建議�
 
 
 
+[[considerations-for-using-platform-services]]
 == 使用平台服務的考量
 
 [cols="1a,3a"]
@@ -59,6 +60,7 @@ ILM導向物件刪除
 |===
 
 
+[[considerations-for-using-the-cloudmirror-replication-service]]
 == 使用CloudMirror複寫服務的考量
 
 |===

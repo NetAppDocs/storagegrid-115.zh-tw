@@ -15,6 +15,7 @@ summary:
 
 
 
+[[creating-admin-groups]]
 == 建立管理群組
 
 管理群組可讓您決定哪些使用者可以存取Grid Manager和Grid Management API中的哪些功能和作業。
@@ -73,6 +74,7 @@ link:managing-local-users.html["管理本機使用者"]
 
 
 
+[[admin-group-permissions]]
 == 管理群組權限
 
 建立管理使用者群組時、您可以選取一或多個權限來控制對Grid Manager特定功能的存取。然後、您可以將每個使用者指派給一或多個這些管理群組、以決定使用者可以執行哪些工作。
@@ -95,18 +97,21 @@ link:managing-local-users.html["管理本機使用者"]
 
 
 
+[[root-access]]
 === root存取權
 
 此權限可讓您存取所有網格管理功能。
 
 
 
+[[manage-alerts]]
 === 管理警示
 
 此權限可讓您存取管理警示的選項。使用者必須擁有此權限、才能管理靜音、警示通知及警示規則。
 
 
 
+[[acknowledge-alarms-legacy-system]]
 === 認可警報（舊系統）
 
 此權限可讓您存取「Acknowledge and回應警示（舊系統）」。所有登入的使用者都可以檢視目前和歷史警報。
@@ -115,6 +120,7 @@ link:managing-local-users.html["管理本機使用者"]
 
 
 
+[[grid-topology-page-configuration]]
 === 網格拓撲頁面組態
 
 此權限可讓您存取下列功能表選項：
@@ -125,6 +131,7 @@ link:managing-local-users.html["管理本機使用者"]
 
 
 
+[[other-grid-configuration]]
 === 其他網格組態
 
 此權限可讓您存取其他網格組態選項。
@@ -170,6 +177,7 @@ IMPORTANT: 若要查看這些額外選項、使用者也必須具有Grid拓撲�
 
 
 
+[[tenant-accounts]]
 === 租戶帳戶
 
 此權限可讓您存取「*租戶*租戶帳戶*」頁面。
@@ -179,6 +187,7 @@ NOTE: Grid Management API第1版（已過時）使用此權限來管理租戶群
 
 
 
+[[change-tenant-root-password]]
 === 變更租戶根密碼
 
 此權限可讓您存取「租戶帳戶」頁面上的*變更根密碼*選項、讓您控制誰可以變更租戶本機根使用者的密碼。沒有此權限的使用者將無法看到*變更根密碼*選項。
@@ -188,6 +197,7 @@ NOTE: 您必須先將「租戶帳戶」權限指派給群組、才能指派此�
 
 
 
+[[maintenance]]
 === 維護
 
 此權限可讓您存取下列功能表選項：
@@ -239,12 +249,14 @@ NOTE: 您必須先將「租戶帳戶」權限指派給群組、才能指派此�
 
 
 
+[[metrics-query]]
 === 度量查詢
 
 此權限可讓您存取*支援**工具*指標*頁面。此權限也可讓您使用Grid Management API的* Metrics *區段、存取自訂的Prometheus度量查詢。
 
 
 
+[[ilm]]
 === ILM
 
 此權限可讓您存取下列* ILM *功能表選項：
@@ -260,24 +272,28 @@ NOTE: 存取* ILM ** Storage Pools*和* ILM * Storage Elgres*功能表選項是�
 
 
 
+[[object-metadata-lookup]]
 === 物件中繼資料查詢
 
 此權限可讓您存取* ILM *物件中繼資料查閱*功能表選項。
 
 
 
+[[storage-appliance-administrator]]
 === 儲存設備管理員
 
 此權限可SANtricity 讓您透過Grid Manager存取儲存設備上的E系列支援系統管理程式。
 
 
 
+[[interaction-between-permissions-and-access-mode]]
 === 權限與存取模式之間的互動
 
 對於所有權限、群組的「存取模式」設定會決定使用者是否可以變更設定及執行作業、或是否只能檢視相關的設定和功能。如果使用者屬於多個群組、且任何群組設定為*唯讀*、則使用者將擁有所有選取設定和功能的唯讀存取權。
 
 
 
+[[deactivating-features-from-the-grid-management-api]]
 === 從Grid Management API停用功能
 
 您可以使用Grid Management API來完全停用StorageGRID 作業系統中的某些功能。停用某項功能時、將無法指派權限給任何人、以執行與該功能相關的工作。
@@ -339,6 +355,7 @@ link:using-grid-management-api.html["使用Grid Management API"]
 
 
 
+[[modifying-an-admin-group]]
 == 修改管理群組
 
 您可以修改管理群組、以變更與群組相關的權限。對於本機管理群組、您也可以更新顯示名稱。
@@ -381,6 +398,7 @@ NOTE: 如果使用者屬於多個群組、且任何群組設定為*唯讀*、則
 
 
 
+[[deleting-an-admin-group]]
 == 刪除管理群組
 
 當您想要從系統中移除群組時、可以刪除管理群組、並移除與群組相關的所有權限。刪除管理群組會移除群組中的任何管理使用者、但不會刪除管理使用者。

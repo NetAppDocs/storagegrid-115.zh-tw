@@ -15,6 +15,7 @@ summary:
 
 
 
+[[deleting-an-ilm-rule]]
 == 刪除ILM規則
 
 若要讓目前ILM規則的清單保持可管理的狀態、請刪除您不可能使用的任何ILM規則。
@@ -60,6 +61,7 @@ link:creating-ilm-policy.html["建立ILM原則"]
 
 
 
+[[editing-an-ilm-rule]]
 == 編輯ILM規則
 
 您可能需要編輯ILM規則、才能變更篩選或放置指示。
@@ -112,6 +114,7 @@ link:using-advanced-filters-in-ilm-rules.html["在ILM規則中使用進階篩選
 
 
 
+[[cloning-an-ilm-rule]]
 == 複製ILM規則
 
 如果規則用於建議的ILM原則或作用中的ILM原則、則無法編輯該規則。您可以複製規則、並對複製的複本進行必要的變更。然後、如果需要、您可以從建議的原則中移除原始規則、並以修改後的版本加以取代。如果ILM規則是使用StorageGRID 版本10.2或更早版本建立、則無法複製該規則。
@@ -153,6 +156,7 @@ link:using-advanced-filters-in-ilm-rules.html["在ILM規則中使用進階篩選
 
 
 
+[[viewing-the-ilm-policy-activity-queue]]
 == 檢視ILM原則活動佇列
 
 您可以隨時檢視佇列中要根據ILM原則評估的物件數目。您可能想要監控ILM處理佇列、以判斷系統效能。大量佇列可能表示系統無法跟上擷取速度、用戶端應用程式的負載太大、或是存在異常狀況。

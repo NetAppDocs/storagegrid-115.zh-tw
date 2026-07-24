@@ -15,6 +15,7 @@ SG5712和SG5760 StorageGRID 機型的《》產品均包含E5700SG控制器和E28
 
 
 
+[[e5700sg-controller]]
 == E5700SG控制器
 
 * 做為應用裝置的運算伺服器。
@@ -111,6 +112,7 @@ image::../media/e5700sg_controller_with_callouts.gif[E5700SG控制器上的連�
 |===
 
 
+[[e2800-controller]]
 == E2800控制器
 
 * 作為應用裝置的儲存控制器運作。

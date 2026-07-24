@@ -17,6 +17,7 @@ summary:
 
 
 
+[[adding-administrator-client-certificates]]
 == 新增系統管理員用戶端憑證
 
 若要新增用戶端憑證、您可以提供自己的憑證、或使用Grid Manager產生一個憑證。
@@ -131,6 +132,7 @@ link:../monitor/index.html["監控安培；疑難排解"]
 
 
 
+[[editing-administrator-client-certificates]]
 == 編輯系統管理員用戶端憑證
 
 您可以編輯憑證以變更其名稱、啟用或停用Prometheus存取、或是在目前的憑證過期時上傳新的憑證。
@@ -185,6 +187,7 @@ IMPORTANT: 關閉對話方塊後、您將無法檢視或複製私密金鑰。將
 
 
 
+[[removing-administrator-client-certificates]]
 == 移除系統管理員用戶端憑證
 
 如果您不再需要憑證、可以將其移除。

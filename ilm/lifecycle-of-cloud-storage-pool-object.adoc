@@ -20,6 +20,7 @@ summary:
 
 
 
+[[s3-lifecycle-of-a-cloud-storage-pool-object]]
 == S3：Cloud Storage Pool物件的生命週期
 
 圖中顯示儲存在S3 Cloud Storage Pool中物件的生命週期階段。
@@ -72,6 +73,7 @@ link:../s3/index.html["使用S3"]
 
 
 
+[[azure-lifecycle-of-a-cloud-storage-pool-object]]
 == Azure：Cloud Storage Pool物件的生命週期
 
 圖中顯示儲存在Azure Cloud Storage Pool中物件的生命週期階段。

@@ -26,6 +26,7 @@ link:placing-appliance-into-maintenance-mode.html["將應用裝置置於維護�
 
 
 
+[[sg5612-component-replacement-instructions]]
 == SG5612元件更換說明
 
 |===
@@ -54,6 +55,7 @@ E2700控制器中的電池（需要移除控制器）
 |===
 
 
+[[sg5660-component-replacement-instructions]]
 == SG5660元件更換說明
 
 |===

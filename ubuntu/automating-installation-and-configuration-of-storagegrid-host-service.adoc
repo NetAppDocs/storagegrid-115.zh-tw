@@ -30,6 +30,7 @@ summary: 您可以StorageGRID 使用Ansible、Puppet、Chef、Fabric或SaltStack
 
 
 
+[[example-ansible-role-and-playbook]]
 == Ansible角色與方針範例
 
 範例Ansible角色與方針隨附於/Extras資料夾中的安裝歸檔。《Ansible》教戰手冊說明如何使用 `storagegrid` 角色負責準備主機、並將StorageGRID 其安裝在目標伺服器上。您可以視需要自訂角色或方針。

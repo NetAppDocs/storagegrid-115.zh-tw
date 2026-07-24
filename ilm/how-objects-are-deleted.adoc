@@ -66,6 +66,7 @@ summary: 由於S3儲存區生命週期到期或ILM原則要求到期、因此可
 
 
 
+[[understanding-the-impact-of-how-storagegrid-deletes-objects]]
 == 瞭解StorageGRID 如何使用物件功能刪除物件的影響
 
 物件的刪除方式StorageGRID 可能會影響系統的執行方式：

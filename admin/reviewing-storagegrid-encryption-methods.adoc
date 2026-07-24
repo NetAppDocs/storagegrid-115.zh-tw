@@ -122,6 +122,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html["
 |===
 
 
+[[using-multiple-encryption-methods]]
 == 使用多種加密方法
 
 視您的需求而定、您一次可以使用多種加密方法。例如：

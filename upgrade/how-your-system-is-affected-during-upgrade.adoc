@@ -15,6 +15,7 @@ summary: 您必須瞭StorageGRID 解升級過程中、您的不知道哪些系�
 
 
 
+[[storagegrid-upgrades-are-non-disruptive]]
 == 不中斷升級StorageGRID
 
 整個升級過程中、這個系統可以從用戶端應用程式擷取及擷取資料。StorageGRID網格節點在升級期間一次關閉一個節點、因此並非所有網格節點都無法使用。
@@ -29,6 +30,7 @@ summary: 您必須瞭StorageGRID 解升級過程中、您的不知道哪些系�
 
 
 
+[[appliance-firmware-is-upgraded]]
 == 應用裝置韌體已升級
 
 在升級過程中StorageGRID ：
@@ -40,6 +42,7 @@ summary: 您必須瞭StorageGRID 解升級過程中、您的不知道哪些系�
 
 
 
+[[alerts-might-be-triggered]]
 == 可能會觸發警示
 
 當服務啟動和停止時、StorageGRID 以及當作業系統以混合版本環境運作時、可能會觸發警示（部分網格節點執行較早版本、而其他節點則已升級至較新版本）。例如、當服務停止時、您可能會看到*無法與node*通訊警示、或者當某些節點已升級StorageGRID 至BIOS 11.5、但其他節點仍在執行StorageGRID 此功能時、您可能會看到* Cassandra通訊錯誤*警示。
@@ -53,12 +56,14 @@ NOTE: 在升級StorageGRID 至S不明11.5期間、當儲存節點停止時、可
 
 
 
+[[many-snmp-notifications-are-generated]]
 == 會產生許多SNMP通知
 
 請注意、當網格節點在升級期間停止並重新啟動時、可能會產生大量的SNMP通知。若要避免過多通知、請取消選取*啟用SNMP代理程式通知*核取方塊（*組態*>*監控*>* SNMP代理程式*）、以在開始升級之前停用SNMP通知。然後在升級完成後重新啟用通知。
 
 
 
+[[configuration-changes-are-restricted]]
 == 組態變更受到限制
 
 在*啟用新功能*工作完成之前：

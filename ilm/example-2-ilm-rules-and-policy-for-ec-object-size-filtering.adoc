@@ -18,6 +18,7 @@ CAUTION: 下列ILM規則和原則僅為範例。有許多方法可以設定ILM�
 
 
 
+[[ilm-rule-1-for-example-2-use-ec-for-all-objects-larger-than-200-kb]]
 == ILM規則1（例如2）：所有大於200 KB的物件都使用EC
 
 此範例ILM規則銷毀會將所有大於200 KB（0.20 MB）的物件編碼。
@@ -62,6 +63,7 @@ image::../media/policy_2_rule_1_ec_objects_placements.png[ILM規則1（例如2�
 
 
 
+[[ilm-rule-2-for-example-2-two-replicated-copies]]
 == ILM規則2例如2：兩個複寫複本
 
 此範例ILM規則會建立兩個複寫複本、而不會依物件大小進行篩選。此規則是原則中的第二條規則。因為ILM規則1（例如2）會篩選出所有大於200 KB的物件、所以ILM規則2（例如2）僅適用於200 KB或更小的物件。
@@ -102,6 +104,7 @@ image:../media/ilm_rule_2_example_2_two_replicated_copies.png["範例ILM規則2�
 
 
 
+[[ilm-policy-for-example-2-use-ec-for-objects-larger-than-200-kb]]
 == 範例2的ILM原則：針對大於200 KB的物件使用EC
 
 在此範例原則中、大於200 KB的物件會以銷毀編碼。所有其他物件都會建立兩個複寫複本。

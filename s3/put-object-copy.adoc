@@ -15,18 +15,21 @@ summary: 您可以使用「S3放置物件-複製」要求來建立S3中已儲存
 
 
 
+[[resolving-conflicts]]
 == 解決衝突
 
 相互衝突的用戶端要求（例如兩個寫入同一個金鑰的用戶端）會以「最新致勝」的方式解決。「最新致勝」評估的時間、是根據StorageGRID 下列條件而定：當系統完成特定要求時、S3用戶端開始作業時、不會開啟。
 
 
 
+[[object-size]]
 == 物件大小
 
 支援高達5 TB大小的物件StorageGRID 。
 
 
 
+[[utf-8-characters-in-user-metadata]]
 == 使用者中繼資料中的UTF-8字元
 
 如果要求在使用者定義的中繼資料金鑰名稱或值中包含（未轉義）utf-8值、StorageGRID 則無法定義任何不正常的行為。
@@ -39,6 +42,7 @@ summary: 您可以使用「S3放置物件-複製」要求來建立S3中已儲存
 
 
 
+[[supported-request-headers]]
 == 支援的要求標頭
 
 支援下列要求標頭：
@@ -87,6 +91,7 @@ link:s3-rest-api-supported-operations-and-limitations.html["要求伺服器端�
 
 
 
+[[unsupported-request-headers]]
 == 不支援的要求標頭
 
 不支援下列要求標頭：
@@ -101,6 +106,7 @@ link:s3-rest-api-supported-operations-and-limitations.html["要求伺服器端�
 
 
 
+[[storage-class-options]]
 == 儲存類別選項
 
 。 `x-amz-storage-class` 如果StorageGRID 相符的ILM規則指定「雙重認可」或「平衡」的擷取行為、則會支援要求標頭、並影響到所建立的物件複本數量。
@@ -121,6 +127,7 @@ NOTE: 如果您將物件擷取至啟用S3物件鎖定的儲存區、則會顯示
 
 
 
+[[using-x-amz-copy-source-in-put-object-copy]]
 == 在「放置物件-複製」中使用x-amz-copy-來源
 
 如果來源儲存區和金鑰、請在中指定 `x-amz-copy-source` 標頭與目的地桶和金鑰不同、來源物件資料的複本會寫入目的地。
@@ -136,6 +143,7 @@ NOTE: 如果您將物件擷取至啟用S3物件鎖定的儲存區、則會顯示
 
 
 
+[[request-headers-for-server-side-encryption]]
 == 要求伺服器端加密的標頭
 
 如果您使用伺服器端加密、所提供的要求標頭取決於來源物件是否加密、以及您是否打算加密目標物件。
@@ -169,6 +177,7 @@ NOTE: 如果您將物件擷取至啟用S3物件鎖定的儲存區、則會顯示
 
 
 
+[[versioning]]
 == 版本管理
 
 如果來源儲存區已版本化、您可以使用 `x-amz-copy-source` 標頭以複製物件的最新版本。若要複製物件的特定版本、您必須使用明確指定要複製的版本 `versionId` 子資源：如果目標儲存區已版本化、則會在中傳回所產生的版本 `x-amz-version-id` 回應標頭：如果目標儲存區的版本設定已暫停、則 `x-amz-version-id` 傳回「'null」值。

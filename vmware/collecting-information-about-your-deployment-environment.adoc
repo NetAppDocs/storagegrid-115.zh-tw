@@ -15,6 +15,7 @@ summary: 在部署網格節點之前、您必須先收集網路組態和VMware�
 
 
 
+[[vmware-information]]
 == VMware資訊
 
 您必須存取部署環境、並收集有關VMware環境、為Grid、Admin和Client Networks建立的網路、以及您計畫用於儲存節點的儲存Volume類型的資訊。
@@ -30,6 +31,7 @@ IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不�
 
 
 
+[[grid-network-information]]
 == 網格網路資訊
 
 您必須收集StorageGRID 有關為「VMware Grid Network」（必填）所建立之VMware網路的資訊、包括：
@@ -41,6 +43,7 @@ IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不�
 
 
 
+[[admin-network-information]]
 == 管理網路資訊
 
 若節點將連線至選用StorageGRID 的「VMware管理網路」、您必須收集有關為此網路所建立的VMware網路的資訊、包括：
@@ -53,6 +56,7 @@ IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不�
 
 
 
+[[client-network-information]]
 == 用戶端網路資訊
 
 對於要連線至選用StorageGRID 的「VMware用戶端網路」的節點、您必須收集有關為此網路建立的VMware網路的資訊、包括：
@@ -64,6 +68,7 @@ IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不�
 
 
 
+[[storage-volumes-for-virtual-storage-nodes]]
 == 虛擬儲存節點的儲存磁碟區
 
 您必須針對虛擬機器型儲存節點收集下列資訊：
@@ -73,6 +78,7 @@ IMPORTANT: VMware Live VMotion會使虛擬機器時鐘時間跳過、而且不�
 
 
 
+[[grid-configuration-information]]
 == 網格組態資訊
 
 您必須收集資訊才能設定網格：

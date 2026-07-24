@@ -17,6 +17,7 @@ Grid Management API使用Swagger開放原始碼API平台。Swagger提供直覺�
 
 
 
+[[top-level-resources]]
 == 頂級資源
 
 Grid Management API提供下列頂級資源：

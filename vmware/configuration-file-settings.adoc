@@ -21,6 +21,7 @@ summary: deploy-vsphere-ovftool.ini組態檔包含部署虛擬網格節點所需
 
 
 
+[[global-parameters]]
 == 全域參數
 
 除非個別區段中的設定會覆寫全域參數、否則會套用至所有網格節點。將套用至多個節點的參數放在「通用參數」區段中、然後視需要在個別節點的區段中覆寫這些設定。
@@ -200,6 +201,7 @@ PORT_REMAP_INBOUND = client/tcp/443/18082
 
 
 
+[[node-specific-parameters]]
 == 節點專屬參數
 
 每個節點都位於其本身的組態檔區段中。每個節點都需要下列設定：
@@ -219,6 +221,7 @@ NOTE: 主管理節點會忽略admin_ip參數。
 
 
 
+[[primary-admin-node]]
 == 主要管理節點
 
 主要管理節點需要下列額外設定：
@@ -254,6 +257,7 @@ NOTE: 對於管理節點、執行個體必須永遠等於2。
 
 
 
+[[storage-node]]
 == 儲存節點
 
 儲存節點需要下列額外設定：
@@ -318,6 +322,7 @@ DISK = INSTANCES=16, CAPACITY=4096
 
 
 
+[[archive-node]]
 == 歸檔節點
 
 歸檔節點需要下列額外設定：
@@ -339,6 +344,7 @@ DISK = INSTANCES=16, CAPACITY=4096
 ----
 
 
+[[gateway-node]]
 == 閘道節點
 
 閘道節點需要下列額外設定：
@@ -366,6 +372,7 @@ DISK = INSTANCES=16, CAPACITY=4096
 ----
 
 
+[[non-primary-admin-node]]
 == 非主要管理節點
 
 非主要管理節點需要下列額外設定：

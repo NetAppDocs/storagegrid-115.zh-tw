@@ -15,6 +15,7 @@ MAC位址複製會導致Docker容器使用主機的MAC位址、而主機使用�
 
 
 
+[[enabling-mac-cloning]]
 == 啟用MAC複製
 
 在某些環境中、您可以透過MAC位址複製來增強安全性、因為它可讓您將專用的虛擬NIC用於管理網路、網格網路和用戶端網路。讓Docker容器使用主機上專用NIC的MAC位址、可避免使用雜亂模式網路組態。
@@ -41,6 +42,7 @@ IMPORTANT: 在虛擬主機上啟用MAC複製、而不同時在Hypervisor上啟�
 
 
 
+[[mac-cloning-use-cases]]
 == Mac複製使用案例
 
 有兩種使用案例可考慮使用MAC複製：
@@ -58,6 +60,7 @@ link:creating-node-configuration-files.html["正在建立節點組態檔"]
 
 
 
+[[mac-cloning-example]]
 == Mac複製範例
 
 啟用MAC複製的範例、主機的MAC位址為11：22：33：44：55：66、介面ens256和節點組態檔中的下列金鑰：

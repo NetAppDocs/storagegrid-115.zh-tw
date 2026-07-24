@@ -22,6 +22,7 @@ summary: 如果您使用FabricPool 支援資料的功能來將資料分層Storag
 ====
 
 
+[[ilm-guidelines-for-fabricpool-data]]
 == ILM指南FabricPool 、以利資料的運用
 
 請檢閱這些準則、確保您的ILM規則和ILM原則適用於FabricPool 各種資料和業務需求。如果您已經在使用StorageGRID 無法修復的ILM、您可能需要更新使用中的ILM原則、以符合這些準則。

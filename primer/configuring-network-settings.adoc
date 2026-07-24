@@ -15,6 +15,7 @@ summary: 您可以從Grid Manager設定各種網路設定、以微調StorageGRID
 
 
 
+[[domain-names]]
 == 網域名稱
 
 如果您打算支援S3虛擬託管樣式的要求、則必須設定S3用戶端所連線的端點網域名稱清單。範例包括s3.example.com、s3.example.co.uk和s3-east.example.com。
@@ -24,6 +25,7 @@ NOTE: 設定的伺服器憑證必須符合端點網域名稱。
 
 
 
+[[high-availability-groups]]
 == 高可用度群組
 
 高可用度群組使用虛擬IP位址（VIP）來提供對閘道節點或管理節點服務的主動備份存取。HA群組由管理節點和閘道節點上的一或多個網路介面組成。建立HA群組時、請選取屬於Grid Network（eth0）或Client Network（eth2）的網路介面。
@@ -42,12 +44,14 @@ HA群組會維護一個或多個虛擬IP位址、這些位址會新增至群組�
 
 
 
+[[link-costs]]
 == 連結成本
 
 您可以調整連結成本、以反映站台之間的延遲。當有兩個以上的資料中心站台存在時、連結成本會優先考慮哪些資料中心站台應提供所要求的服務。
 
 
 
+[[load-balancer-endpoints]]
 == 負載平衡器端點
 
 您可以使用負載平衡器來處理S3和Swift用戶端的擷取和擷取工作負載。負載平衡功能可將工作負載和連線分散到多個儲存節點、以最大化速度和連線容量。
@@ -56,6 +60,7 @@ HA群組會維護一個或多個虛擬IP位址、這些位址會新增至群組�
 
 
 
+[[proxy-settings]]
 == Proxy設定
 
 如果您使用的是S3平台服務或雲端儲存資源池、可以在儲存節點和外部S3端點之間設定不透明的Proxy伺服器。如果使用AutoSupport HTTPS或HTTP傳送靜態訊息、您可以在管理節點和技術支援之間設定不透明的Proxy伺服器。
@@ -64,6 +69,7 @@ image::../media/proxy_settings_menu_storage.png[Proxy設定功能表-儲存設�
 
 
 
+[[server-certificates]]
 == 伺服器憑證
 
 您可以上傳兩種類型的伺服器憑證：
@@ -80,12 +86,14 @@ NOTE: CLB服務已過時。
 
 
 
+[[traffic-classification-policies]]
 == 流量分類原則
 
 流量分類原則可讓您建立規則、以識別及處理不同類型的網路流量、包括與特定儲存區、租戶、用戶端子網路或負載平衡器端點相關的流量。這些原則可協助限制流量及監控。
 
 
 
+[[untrusted-client-networks]]
 == 不受信任的用戶端網路
 
 如果您使用的是用戶端網路、StorageGRID 您可以指定每個節點上的用戶端網路不受信任、以協助防止惡意攻擊。如果節點的用戶端網路不受信任、則節點只接受明確設定為負載平衡器端點之連接埠上的傳入連線。

@@ -15,6 +15,7 @@ summary: 在StorageGRID Docker Container平台上開始進行支援前、請先�
 
 
 
+[[physical-hosts]]
 == 實體主機
 
 如果您使用實體主機來支援網格節點：
@@ -30,6 +31,7 @@ NOTE: 主機上的實體介面可由主機本身和主機上執行的一或多�
 
 
 
+[[minimum-bandwidth-recommendations]]
 == 建議的最低頻寬
 
 下表提供每種StorageGRID 類型的節點和每種網路類型的最低頻寬建議。您必須為每部實體或虛擬主機配置足夠的網路頻寬、以符合StorageGRID 您計畫在該主機上執行的所有節點數和類型的總頻寬需求。

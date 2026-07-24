@@ -10275,7 +10275,6 @@
   <block id="8d2a3eedf773a72befa932aed8d7f9ac" category="paragraph">將用戶端流量轉送至儲存節點時、每個節點上的負載平衡器服務都會獨立運作。透過加權程序、負載平衡器服務會將更多要求路由傳送至CPU可用度較高的儲存節點。</block>
   <block id="aedf3f783f27485fe21314b2ff0bd571" category="paragraph">雖然推薦使用「VMware負載平衡器」服務、但StorageGRID 您可能想要改為整合協力廠商負載平衡器。如需相關資訊、請聯絡您的NetApp客戶代表、或參閱下列技術報告：</block>
   <block id="5deb145f1f49e339e87f30735b488ef0" category="inline-link">部分負載平衡器選項StorageGRID</block>
-  <block id="55e486fda91da8d0978c0a57423fc8e6" category="paragraph"><block ref="55e486fda91da8d0978c0a57423fc8e6" category="inline-link-rx"></block></block>
   <block id="7a70566cdfe11f85775164ef0744c103" category="admonition">閘道節點上的個別連線負載平衡器（CLB）服務已過時、不再建議搭配FabricPool 使用。</block>
   <block id="ffc35660cb01781fda0d8ca8311aa666" category="section-title">最佳實務做法StorageGRID</block>
   <block id="9bcefc0e8993bfb452f4ca0a7403ced1" category="paragraph">一般最佳實務做法StorageGRID 是、您的一套系統應該在負載平衡器服務中包含兩個或多個節點。例如、站台可能同時包含管理節點和閘道節點、甚至是兩個管理節點。無論您使用SG100或SG1000服務應用裝置、裸機節點或虛擬機器（VM）型節點、請確定每個負載平衡節點都有足夠的網路、硬體或虛擬化基礎架構。</block>
@@ -23254,4 +23253,5 @@
   <block id="6d307701f8a2621afa3c68f86b66b9f7" category="doc">StorageGRID 11.5 文件</block>
   <block id="27a5fc98d432133572f8dd4b135b3de1" category="sidebar">舊版</block>
   <block id="ab398ea621033d0dc867640f4114bddd" category="sidebar">StorageGRID 11.5 文件</block>
+  <block id="801debe845a567d1f0030d845fba3e7d" category="paragraph"><block ref="801debe845a567d1f0030d845fba3e7d" category="inline-link-rx"></block></block>
 </blocks>

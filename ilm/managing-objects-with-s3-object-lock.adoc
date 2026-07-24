@@ -15,6 +15,7 @@ summary: 身為網格管理員、您可以為StorageGRID 您的系統啟用S3物
 
 
 
+[[what-is-s3-object-lock]]
 == 什麼是S3物件鎖定？
 
 「物件鎖定」功能是物件保護解決方案、StorageGRID 相當於Amazon Simple Storage Service（Amazon S3）中的S3物件鎖定。

@@ -15,6 +15,7 @@ summary: 您必須StorageGRID 取得必要的資料、安裝及設定任何新�
 
 
 
+[[gathering-required-materials]]
 == 收集必要資料
 
 執行擴充作業之前、您必須先收集下表所列的資料。
@@ -85,6 +86,7 @@ https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]
 
 
 
+[[web-browser-requirements]]
 === 網頁瀏覽器需求
 
 您必須使用支援的網頁瀏覽器。
@@ -136,6 +138,7 @@ Mozilla Firefox
 |===
 
 
+[[downloading-and-extracting-the-storagegrid-installation-files]]
 == 下載及解壓縮StorageGRID 安裝文件
 
 在新增網格節點或新網站之前、您必須先下載適當StorageGRID 的安裝檔案、然後擷取檔案。
@@ -421,6 +424,7 @@ NOTE: 在設備安裝方面、只有在您需要避免網路流量時才需要�
 
 
 
+[[verifying-hardware-and-networking]]
 == 驗證硬體與網路
 
 開始擴充StorageGRID 您的整套系統之前、您必須先確定已安裝並設定必要的硬體、以支援新的網格節點或新站台。

@@ -24,6 +24,7 @@ link:alerts-reference.html["警示參考資料"]
 
 
 
+[[what-alerts-are]]
 == 什麼是警示
 
 警示系統提供易於使用的介面、可偵測、評估及解決StorageGRID 在執行過程中可能發生的問題。
@@ -41,12 +42,14 @@ link:alerts-reference.html["警示參考資料"]
 
 
 
+[[managing-alert-rules]]
 == 管理警示規則
 
 警示規則定義觸發特定警示的條件。包含一組預設警示規則、您可以使用或修改這些規則、也可以建立自訂警示規則。StorageGRID
 
 
 
+[[viewing-alert-rules]]
 === 檢視警示規則
 
 您可以檢視所有預設和自訂警示規則的清單、以瞭解哪些條件會觸發每個警示、並查看是否已停用任何警示。
@@ -114,6 +117,7 @@ link:alerts-reference.html["警示參考資料"]
 
 
 
+[[creating-custom-alert-rules]]
 === 建立自訂警示規則
 
 您可以建立自訂警示規則、以定義自己觸發警示的條件。
@@ -227,6 +231,7 @@ https://prometheus.io/docs/querying/basics/["Prometheus：查詢基礎"]
 
 
 
+[[editing-an-alert-rule]]
 === 編輯警示規則
 
 您可以編輯警示規則來變更觸發條件、針對自訂警示規則、也可以更新規則名稱、說明及建議的動作。
@@ -356,6 +361,7 @@ https://prometheus.io/docs/querying/basics/["Prometheus：查詢基礎"]
 
 
 
+[[disabling-an-alert-rule]]
 === 停用警示規則
 
 您可以變更預設或自訂警示規則的啟用/停用狀態。
@@ -397,6 +403,7 @@ NOTE: 如果停用目前警示的警示規則、您必須等待數分鐘、讓�
 
 
 
+[[removing-a-custom-alert-rule]]
 === 移除自訂警示規則
 
 如果您不想再使用自訂警示規則、可以將其移除。
@@ -427,12 +434,14 @@ NOTE: 如果停用目前警示的警示規則、您必須等待數分鐘、讓�
 
 
 
+[[managing-alert-notifications]]
 == 管理警示通知
 
 觸發警示時StorageGRID 、功能區可傳送電子郵件通知和簡單網路管理傳輸協定（SNMP）通知（陷阱）。
 
 
 
+[[setting-up-snmp-notifications-for-alerts]]
 === 設定SNMP警示通知
 
 如果您想StorageGRID 要在警示發生時傳送SNMP通知、您必須啟用StorageGRID 此功能、並設定一個或多個設陷目的地。
@@ -464,6 +473,7 @@ link:alarms-that-generate-snmp-notifications.html["產生SNMP通知的警示（�
 
 
 
+[[setting-up-email-notifications-for-alerts]]
 === 設定警示的電子郵件通知
 
 如果您想要在警示發生時傳送電子郵件通知、您必須提供有關您的SMTP伺服器的資訊。您也必須輸入警示通知收件者的電子郵件地址。
@@ -634,6 +644,7 @@ link:../maintain/index.html["維護"]
 
 
 
+[[information-included-in-alert-email-notifications]]
 === 警示電子郵件通知中包含的資訊
 
 設定好SMTP電子郵件伺服器之後、除非警示規則被靜音抑制、否則會在觸發警示時、將電子郵件通知傳送給指定的收件者。
@@ -686,6 +697,7 @@ link:managing-alerts.html["將警示通知靜音"]
 
 
 
+[[how-storagegrid-groups-alerts-in-email-notifications]]
 === 如何在電子郵件通知中群組警示StorageGRID
 
 為了避免在觸發警示時傳送過多的電子郵件通知、StorageGRID 所以當同一通知中、我們會嘗試將多個警示分組。
@@ -753,6 +765,7 @@ link:managing-alerts.html["將警示通知靜音"]
 |===
 
 
+[[troubleshooting-alert-email-notifications]]
 === 疑難排解警示電子郵件通知
 
 如果觸發*電子郵件通知失敗*警示、或您無法接收測試警示電子郵件通知、請依照下列步驟解決問題。
@@ -783,6 +796,7 @@ link:collecting-log-files-and-system-data.html["收集記錄檔和系統資料"]
 
 
 
+[[silencing-alert-notifications]]
 == 將警示通知靜音
 
 或者、您可以設定靜音、以暫時抑制警示通知。

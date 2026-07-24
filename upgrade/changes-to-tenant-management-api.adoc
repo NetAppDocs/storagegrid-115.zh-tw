@@ -18,6 +18,7 @@ IMPORTANT: 您可以繼續使用StorageGRID 版本1和版本2的管理API搭配�
 
 
 
+[[new-parameter-for-tenant-storage-usage-api]]
 == 租戶儲存使用API的新參數
 
 。 `GET /org/usage` API現在有 `strictConsistency` 參數。若要在跨儲存節點擷取儲存使用量資訊時、強制執行強大的全域一致性、請將此參數設為 `true`。當此參數設定為時 `false` （預設）StorageGRID 、此功能會嘗試使用強大的全域一致性來擷取使用資訊、但如果無法達到強大的全域一致性、則會回復到強式站台一致性。

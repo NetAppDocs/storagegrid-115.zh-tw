@@ -15,6 +15,7 @@ summary:
 
 
 
+[[creating-load-balancer-endpoints]]
 == 建立負載平衡器端點
 
 每個負載平衡器端點都會指定連接埠、網路傳輸協定（HTTP或HTTPS）和服務類型（S3或Swift）。如果您建立HTTPS端點、則必須上傳或產生伺服器憑證。
@@ -152,6 +153,7 @@ link:managing-untrusted-client-networks.html["管理不受信任的用戶端網�
 
 
 
+[[editing-load-balancer-endpoints]]
 == 編輯負載平衡器端點
 
 對於不安全的（HTTP）端點、您可以在S3和Swift之間變更端點服務類型。對於安全（HTTPS）端點、您可以編輯端點服務類型、並檢視或變更安全性憑證。
@@ -211,6 +213,7 @@ NOTE: 若要變更現有端點的傳輸協定、例如從HTTP變更為HTTPS、�
 
 
 
+[[removing-load-balancer-endpoints]]
 == 移除負載平衡器端點
 
 如果不再需要負載平衡器端點、您可以將其移除。

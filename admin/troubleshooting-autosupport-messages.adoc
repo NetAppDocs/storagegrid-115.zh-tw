@@ -22,6 +22,7 @@ image::../media/autosupport_results_tab.png[AutoSupport 結果索引標籤]
 
 
 
+[[weekly-autosupport-message-failure]]
 == 每週AutoSupport 更新訊息失敗
 
 如果每週AutoSupport 更新訊息無法傳送、StorageGRID 則無法執行下列動作：
@@ -36,6 +37,7 @@ image::../media/autosupport_results_tab.png[AutoSupport 結果索引標籤]
 
 
 
+[[user-triggered-or-event-triggered-autosupport-message-failure]]
 == 使用者觸發或事件觸發AutoSupport 的資訊不全訊息故障
 
 如果使用者觸發或事件觸發AutoSupport 的故障訊息無法傳送、StorageGRID 則無法執行下列動作：
@@ -51,6 +53,7 @@ image::../media/autosupport_results_tab.png[AutoSupport 結果索引標籤]
 
 
 
+[[correcting-an-autosupport-message-failure]]
 == 修正AutoSupport 資訊故障
 
 如果發生故障且選擇了使用SMTP,請確認StorageGRID 該系統的電子郵件伺服器已正確設定,而且您的電子郵件伺服器正在執行中。下列錯誤訊息可能會出現在AutoSupport 「介紹」頁面上： `AutoSupport messages cannot be sent using SMTP protocol due to incorrect settings on the E-mail Server page.`

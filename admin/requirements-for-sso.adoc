@@ -18,6 +18,7 @@ IMPORTANT: 單一登入（SSO）無法在受限網格管理器或租戶管理器
 
 
 
+[[identity-provider-requirements]]
 == 身分識別供應商要求
 
 SSO的身分識別供應商（IDP）必須符合下列要求：
@@ -38,6 +39,7 @@ NOTE: Windows Server 2016應該使用 https://support.microsoft.com/en-us/help/3
 
 
 
+[[server-certificate-requirements]]
 == 伺服器憑證需求
 
 在每個管理節點上使用管理介面伺服器憑證、以安全存取Grid Manager、租戶管理程式、Grid Management API及租戶管理API StorageGRID 。當您在StorageGRID AD FS中設定SSO依賴方信任功能時、您可以使用伺服器憑證做為簽署憑證、以利StorageGRID 向AD FS提出要求。

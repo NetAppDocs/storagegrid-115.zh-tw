@@ -360,6 +360,7 @@ link:../tenant/index.html["使用租戶帳戶"]
 
 
 
+[[creating-an-s3-lifecycle-configuration]]
 == 建立S3生命週期組態
 
 您可以建立S3生命週期組態、以控制何時從StorageGRID 作業系統刪除特定物件。
@@ -370,6 +371,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html["Amaz
 
 
 
+[[what-a-lifecycle-configuration-is]]
 === 什麼是生命週期組態
 
 生命週期組態是套用至特定S3儲存區中物件的一組規則。每個規則都會指定受影響的物件、以及這些物件何時到期（在特定日期或幾天之後）。
@@ -399,6 +401,7 @@ NOTE: 庫位生命週期組態可搭配已啟用S3物件鎖定的庫位使用、
 
 
 
+[[creating-the-lifecycle-configuration]]
 === 建立生命週期組態
 
 建立生命週期組態的第一步、就是建立一個包含一或多個規則的Json檔案。例如、此Json檔案包含三個規則、如下所示：
@@ -459,6 +462,7 @@ IMPORTANT: 指定天數的規則是相對於擷取物件的時間。如果目前
 ----
 
 
+[[applying-a-lifecycle-configuration-to-a-bucket]]
 === 將生命週期組態套用至儲存庫
 
 建立生命週期組態檔案之後、您可以發出「放入庫位」生命週期要求、將其套用至庫位。
@@ -481,6 +485,7 @@ aws s3api --endpoint-url <StorageGRID endpoint> get-bucket-lifecycle-configurati
 
 
 
+[[validating-that-bucket-lifecycle-expiration-applies-to-an-object]]
 === 驗證目標是否適用庫位生命週期到期
 
 您可以在發出「放置物件」、「標頭物件」或「取得物件」要求時、判斷生命週期組態中的到期規則是否適用於特定物件。如果適用規則、回應會包含 `Expiration` 指出物件到期時間及符合到期規則的參數。

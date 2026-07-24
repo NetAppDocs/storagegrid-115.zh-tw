@@ -17,6 +17,7 @@ image::../media/grid_manager_dashboard.png[Grid Manager儀表板]
 
 
 
+[[health-panel]]
 == 健全狀況面板
 
 |===
@@ -45,6 +46,7 @@ image::../media/grid_manager_dashboard.png[Grid Manager儀表板]
 |===
 
 
+[[available-storage-panel]]
 == 「可用儲存設備」面板
 
 |===
@@ -70,6 +72,7 @@ image::../media/grid_manager_dashboard.png[Grid Manager儀表板]
 |===
 
 
+[[information-lifecycle-management-ilm-panel]]
 == 資訊生命週期管理（ILM）面板
 
 |===
@@ -96,6 +99,7 @@ image::../media/grid_manager_dashboard.png[Grid Manager儀表板]
 |===
 
 
+[[protocol-operations-panel]]
 == 傳輸協定作業面板
 
 |===

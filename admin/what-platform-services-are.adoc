@@ -45,6 +45,7 @@ NOTE: 雖然可在啟用S3物件鎖定的儲存區上設定Elasticsearch整合�
 
 
 
+[[recommendations-for-using-platform-services]]
 == 使用平台服務的建議
 
 在使用平台服務之前、您必須瞭解下列建議：
