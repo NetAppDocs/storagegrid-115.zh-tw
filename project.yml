@@ -1,5 +1,4 @@
 ---
-jekyll: gtome-fix-ux-bugs
 settings:
   name: StorageGRID
   search: storagegrid-enable,storagegrid-115
